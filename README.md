@@ -2,11 +2,11 @@
 
 ## Project information
 
-- Project name:
-- Project description:
+- Project name: Let's Share
+- Project description: “Let’s share” website encourages people who live in the same region  to share their daily extra food, clothes , furniture, etc
 - Technology used: Nextjs, TailwindCSS, i18next, Husky, Prettier, Eslint, Commitlinter (Conventional Commits)
-- Team members:
-- Team lead:
+- Team members: Amjad, Ghufran, Heni, Kemal, Mohamad
+- Team lead: Salah
 - Bootcamp: BPRM TR 2022
 
 ## Development process
