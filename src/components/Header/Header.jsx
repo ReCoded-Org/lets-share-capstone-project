@@ -1,30 +1,28 @@
 import { useTranslation } from "react-i18next";
 import Link from "next/link";
 import { Disclosure } from "@headlessui/react";
-import { MenuIcon, XIcgion } from "@heroicons/react/outline";
+import { MenuIcon, XIcon } from "@heroicons/react/outline";
 import UserMenu from "./UserMenu";
 import LangMenu from "./LangMenu";
-
 const navigation = [
     { name: "Home", href: "/home", current: false },
     { name: "About us", href: "/aboutus", current: false },
     { name: "Goods", href: "/goods", current: false },
     { name: "Blogs", href: "/blogs", current: false },
 ];
-
 export function classNames(...classes) {
     return classes.filter(Boolean).join(" ");
 }
-
 export default function Header() {
     return (
         <Disclosure as='nav' className='bg-transperent'>
             {({ open }) => (
                 <>
-                    <div className='mx-auto mb-2 max-w-7xl px-2 sm:px-3 lg:px-4'>
+                    <div className=' mx-auto mb-2 max-w-7xl px-2 sm:px-3 lg:px-4'>
                         <div className=' flex items-center justify-end'>
                             <div className='absolute flex items-center md:hidden'>
-                                <Disclosure.Button className='inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-slate-200 hover:text-slate-900  focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white'>
+                                {/* Mobile menu button*/}
+                                <Disclosure.Button className='text-gray-400 hover:text-slate-900 focus:ring-white inline-flex items-center justify-center rounded-md p-2  hover:bg-btnBgHover focus:outline-none focus:ring-2 focus:ring-inset'>
                                     <span className='sr-only'>
                                         Open main menu
                                     </span>
@@ -45,23 +43,26 @@ export default function Header() {
                                 <div className='hidden sm:ml-6 md:block'>
                                     <div className='flex space-x-4'>
                                         {navigation.map((item) => (
-                                            <a
+                                            <Link
                                                 key={item.name}
                                                 href={item.href}
-                                                className={classNames(
-                                                    item.current
-                                                        ? " text-white"
-                                                        : "text-gray-300 hover:bg-gray-700 hover:text-white",
-                                                    "rounded-md px-3 py-2 font-medium"
-                                                )}
-                                                aria-current={
-                                                    item.current
-                                                        ? "page"
-                                                        : undefined
-                                                }
                                             >
-                                                {item.name}
-                                            </a>
+                                                <a
+                                                    className={classNames(
+                                                        item.current
+                                                            ? " text-white text-fontColor"
+                                                            : " hover:bg-[gray-700] hover:text-white",
+                                                        "rounded-md px-3 py-2 font-medium"
+                                                    )}
+                                                    aria-current={
+                                                        item.current
+                                                            ? "page"
+                                                            : undefined
+                                                    }
+                                                >
+                                                    {item.name}
+                                                </a>
+                                            </Link>
                                         ))}
                                     </div>
                                 </div>
@@ -81,12 +82,8 @@ export default function Header() {
                                                     href={item.href}
                                                 >
                                                     <a
-                                                        className={classNames(
-                                                            item.current
-                                                                ? "text-white"
-                                                                : "text-gray-300 hover:bg-slate-200 hover:text-white",
-                                                            "rounded-md px-3 py-2 text-sm font-medium"
-                                                        )}
+                                                        className='hover:text-white rounded-md px-3
+                                                        py-2 text-sm font-medium text-fontColor hover:bg-btnBgHover'
                                                         aria-current={
                                                             item.current
                                                                 ? "page"
@@ -109,7 +106,6 @@ export default function Header() {
                             </div>
                         </div>
                     </div>
-
                     <Disclosure.Panel className='md:hidden'>
                         <div className='space-y-1 px-2 pt-2 pb-3'>
                             <div className='flex justify-end'>
@@ -123,12 +119,7 @@ export default function Header() {
                                     key={item.name}
                                     as='a'
                                     href={item.href}
-                                    className={classNames(
-                                        item.current
-                                            ? "hover:text-slat-600"
-                                            : "text-gray-300 hover:bg-slate-200 hover:text-white",
-                                        "block rounded-md px-3 py-2 text-end font-medium"
-                                    )}
+                                    className='-z-20 block rounded-md px-3 py-2 text-end font-medium text-fontColor hover:bg-btnBgHover'
                                     aria-current={
                                         item.current ? "page" : undefined
                                     }

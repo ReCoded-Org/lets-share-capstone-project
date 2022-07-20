@@ -13,6 +13,7 @@ module.exports = {
             primary: "#33956D",
             secondary: "#F07167",
             fontColor: "#3C4347",
+            btnBgHover: "#dce6ef",
         },
     },
     plugins: [require("@tailwindcss/forms")],

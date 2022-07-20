@@ -14,6 +14,7 @@ const UserMenu = () => {
                     />
                 </Menu.Button>
             </div>
+
             <Transition
                 as={Fragment}
                 enter='transition ease-out duration-100'
@@ -23,11 +24,11 @@ const UserMenu = () => {
                 leaveFrom='transform opacity-100 scale-100'
                 leaveTo='transform opacity-0 scale-95'
             >
-                <Menu.Items className='absolute right-14 top-1 z-10 mt-1 flex w-24 flex-col rounded-md bg-white py-1 shadow md:right-0 md:top-10'>
+                <Menu.Items className='bg-white absolute right-14 top-1 z-50 mt-1 flex w-24 flex-col rounded-md py-1 shadow md:right-0 md:top-10'>
                     <Menu.Item>
                         <a
                             href='#'
-                            className='hover:text-slat-600 my-1 px-2 text-center text-sm hover:bg-slate-200'
+                            className='my-1   px-2 text-center text-sm text-fontColor hover:bg-btnBgHover'
                         >
                             Login
                         </a>
@@ -35,7 +36,7 @@ const UserMenu = () => {
                     <Menu.Item>
                         <a
                             href='#'
-                            className='hover:text-slat-600 my-1 px-2  text-center text-sm hover:bg-slate-200'
+                            className=' my-1  px-2 text-center  text-sm text-fontColor hover:bg-btnBgHover'
                         >
                             Sign up
                         </a>
@@ -43,7 +44,7 @@ const UserMenu = () => {
                     <Menu.Item>
                         <a
                             href='#'
-                            className='hover:text-slat-600 my-1 px-2  text-center text-sm hover:bg-slate-200'
+                            className='my-1   px-2 text-center  text-sm text-fontColor hover:bg-btnBgHover'
                         >
                             Logout
                         </a>

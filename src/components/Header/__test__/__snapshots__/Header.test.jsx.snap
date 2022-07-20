@@ -5,7 +5,7 @@ exports[`renders correctly 1`] = `
   className="bg-transperent"
 >
   <div
-    className="mx-auto mb-2 max-w-7xl px-2 sm:px-3 lg:px-4"
+    className=" mx-auto mb-2 max-w-7xl px-2 sm:px-3 lg:px-4"
   >
     <div
       className=" flex items-center justify-end"
@@ -15,7 +15,7 @@ exports[`renders correctly 1`] = `
       >
         <button
           aria-expanded={false}
-          className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-slate-200 hover:text-slate-900 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+          className="text-gray-400 hover:text-slate-900 focus:ring-white inline-flex items-center justify-center rounded-md p-2 hover:bg-btnBgHover focus:outline-none focus:ring-2 focus:ring-inset"
           id="headlessui-disclosure-button-:r0:"
           onClick={[Function]}
           onKeyDown={[Function]}
@@ -50,26 +50,34 @@ exports[`renders correctly 1`] = `
             className="flex space-x-4"
           >
             <a
-              className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 font-medium"
+              className=" hover:bg-[gray-700] hover:text-white rounded-md px-3 py-2 font-medium"
               href="/home"
+              onClick={[Function]}
+              onMouseEnter={[Function]}
             >
               Home
             </a>
             <a
-              className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 font-medium"
+              className=" hover:bg-[gray-700] hover:text-white rounded-md px-3 py-2 font-medium"
               href="/aboutus"
+              onClick={[Function]}
+              onMouseEnter={[Function]}
             >
               About us
             </a>
             <a
-              className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 font-medium"
+              className=" hover:bg-[gray-700] hover:text-white rounded-md px-3 py-2 font-medium"
               href="/goods"
+              onClick={[Function]}
+              onMouseEnter={[Function]}
             >
               Goods
             </a>
             <a
-              className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 font-medium"
+              className=" hover:bg-[gray-700] hover:text-white rounded-md px-3 py-2 font-medium"
               href="/blogs"
+              onClick={[Function]}
+              onMouseEnter={[Function]}
             >
               Blogs
             </a>
@@ -94,7 +102,7 @@ exports[`renders correctly 1`] = `
               className="flex space-x-4"
             >
               <a
-                className="text-gray-300 hover:bg-slate-200 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+                className="hover:text-white rounded-md px-3 py-2 text-sm font-medium text-fontColor hover:bg-btnBgHover"
                 href="/home"
                 onClick={[Function]}
                 onMouseEnter={[Function]}
@@ -102,7 +110,7 @@ exports[`renders correctly 1`] = `
                 Home
               </a>
               <a
-                className="text-gray-300 hover:bg-slate-200 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+                className="hover:text-white rounded-md px-3 py-2 text-sm font-medium text-fontColor hover:bg-btnBgHover"
                 href="/aboutus"
                 onClick={[Function]}
                 onMouseEnter={[Function]}
@@ -110,7 +118,7 @@ exports[`renders correctly 1`] = `
                 About us
               </a>
               <a
-                className="text-gray-300 hover:bg-slate-200 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+                className="hover:text-white rounded-md px-3 py-2 text-sm font-medium text-fontColor hover:bg-btnBgHover"
                 href="/goods"
                 onClick={[Function]}
                 onMouseEnter={[Function]}
@@ -118,7 +126,7 @@ exports[`renders correctly 1`] = `
                 Goods
               </a>
               <a
-                className="text-gray-300 hover:bg-slate-200 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+                className="hover:text-white rounded-md px-3 py-2 text-sm font-medium text-fontColor hover:bg-btnBgHover"
                 href="/blogs"
                 onClick={[Function]}
                 onMouseEnter={[Function]}
@@ -168,7 +176,7 @@ exports[`renders correctly 1`] = `
                 <button
                   aria-expanded={false}
                   aria-haspopup={true}
-                  className=" mr-4 flex flex-row-reverse rounded-full text-sm md:mr-0 md:flex-row"
+                  className=" z-1 mr-4 flex flex-row-reverse rounded-full text-sm md:mr-0 md:flex-row"
                   id="headlessui-menu-button-:r3:"
                   onClick={[Function]}
                   onKeyDown={[Function]}
@@ -239,7 +247,7 @@ exports[`renders correctly 1`] = `
                       />
                     </span>
                     <img
-                      className="arrow rotate-90 md:rotate-0 "
+                      className="arrow absolute -z-10 rotate-90 md:rotate-0 "
                       data-nimg="intrinsic"
                       decoding="async"
                       onError={[Function]}
@@ -270,7 +278,7 @@ exports[`renders correctly 1`] = `
                     />
                     <noscript>
                       <img
-                        className="arrow rotate-90 md:rotate-0 "
+                        className="arrow absolute -z-10 rotate-90 md:rotate-0 "
                         data-nimg="intrinsic"
                         decoding="async"
                         loading="lazy"
