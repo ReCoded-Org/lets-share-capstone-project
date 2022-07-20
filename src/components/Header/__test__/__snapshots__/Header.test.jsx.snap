@@ -5,7 +5,7 @@ exports[`renders correctly 1`] = `
   className="bg-transperent"
 >
   <div
-    className="mx-auto max-w-7xl px-2 sm:px-3 lg:px-4 mb-2"
+    className="mx-auto mb-2 max-w-7xl px-2 sm:px-3 lg:px-4"
   >
     <div
       className=" flex items-center justify-end"
@@ -51,25 +51,25 @@ exports[`renders correctly 1`] = `
           >
             <a
               className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 font-medium"
-              href="#"
+              href="/home"
             >
               Home
             </a>
             <a
               className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 font-medium"
-              href="#"
+              href="/aboutus"
             >
               About us
             </a>
             <a
               className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 font-medium"
-              href="#"
+              href="/goods"
             >
               Goods
             </a>
             <a
               className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 font-medium"
-              href="#"
+              href="/blogs"
             >
               Blogs
             </a>
@@ -95,25 +95,33 @@ exports[`renders correctly 1`] = `
             >
               <a
                 className="text-gray-300 hover:bg-slate-200 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
-                href="#"
+                href="/home"
+                onClick={[Function]}
+                onMouseEnter={[Function]}
               >
                 Home
               </a>
               <a
                 className="text-gray-300 hover:bg-slate-200 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
-                href="#"
+                href="/aboutus"
+                onClick={[Function]}
+                onMouseEnter={[Function]}
               >
                 About us
               </a>
               <a
                 className="text-gray-300 hover:bg-slate-200 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
-                href="#"
+                href="/goods"
+                onClick={[Function]}
+                onMouseEnter={[Function]}
               >
                 Goods
               </a>
               <a
                 className="text-gray-300 hover:bg-slate-200 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
-                href="#"
+                href="/blogs"
+                onClick={[Function]}
+                onMouseEnter={[Function]}
               >
                 Blogs
               </a>

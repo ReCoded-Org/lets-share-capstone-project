@@ -1,5 +1,3 @@
-/* This example requires Tailwind CSS v2.0+ */
-
 import { useTranslation } from "react-i18next";
 import Link from "next/link";
 import { Disclosure } from "@headlessui/react";
@@ -8,10 +6,10 @@ import UserMenu from "./UserMenu";
 import LangMenu from "./LangMenu";
 
 const navigation = [
-    { name: "Home", href: "#", current: false },
-    { name: "About us", href: "#", current: false },
-    { name: "Goods", href: "#", current: false },
-    { name: "Blogs", href: "#", current: false },
+    { name: "Home", href: "/home", current: false },
+    { name: "About us", href: "/aboutus", current: false },
+    { name: "Goods", href: "/goods", current: false },
+    { name: "Blogs", href: "/blogs", current: false },
 ];
 
 export function classNames(...classes) {
@@ -79,10 +77,11 @@ export default function Header() {
                                     <div className='hidden sm:ml-6 md:block'>
                                         <div className='flex space-x-4'>
                                             {navigation.map((item) => (
-                                                <a
-                                                    key={item.name}
+                                                <Link
+                                                key={item.name}
                                                     href={item.href}
-                                                    className={classNames(
+                                                    >
+                                                <a className={classNames(
                                                         item.current
                                                             ? "text-white"
                                                             : "text-gray-300 hover:bg-slate-200 hover:text-white",
@@ -93,9 +92,11 @@ export default function Header() {
                                                             ? "page"
                                                             : undefined
                                                     }
+                                                    
                                                 >
                                                     {item.name}
                                                 </a>
+                                                </Link>
                                             ))}
                                         </div>
                                     </div>
