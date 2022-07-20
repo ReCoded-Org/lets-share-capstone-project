@@ -3,8 +3,9 @@ module.exports = {
         browser: true,
         es2021: true,
         node: true,
+        "jest/globals": true,
     },
-    plugins: ["simple-import-sort", "unused-imports"],
+    plugins: ["simple-import-sort", "unused-imports", "jest"],
     extends: ["eslint:recommended", "next", "next/core-web-vitals", "prettier"],
     rules: {
         "no-unused-vars": "off",
@@ -28,44 +29,6 @@ module.exports = {
             },
         ],
         //#endregion  //*======== Unused Import ===========
-
-        //#region  //*=========== Import Sort ===========
-        "simple-import-sort/exports": "warn",
-        "simple-import-sort/imports": [
-            "warn",
-            {
-                groups: [
-                    // ext library & side effect imports
-                    ["^@?\\w", "^\\u0000"],
-                    // {s}css files
-                    ["^.+\\.s?css$"],
-                    // Lib and hooks
-                    ["^@/lib", "^@/hooks"],
-                    // static data
-                    ["^@/data"],
-                    // components
-                    ["^@/components", "^@/container"],
-                    // zustand store
-                    ["^@/store"],
-                    // Other imports
-                    ["^@/"],
-                    // relative paths up until 3 level
-                    [
-                        "^\\./?$",
-                        "^\\.(?!/?$)",
-                        "^\\.\\./?$",
-                        "^\\.\\.(?!/?$)",
-                        "^\\.\\./\\.\\./?$",
-                        "^\\.\\./\\.\\.(?!/?$)",
-                        "^\\.\\./\\.\\./\\.\\./?$",
-                        "^\\.\\./\\.\\./\\.\\.(?!/?$)",
-                    ],
-                    // other that didnt fit in
-                    ["^"],
-                ],
-            },
-        ],
-        //#endregion  //*======== Import Sort ===========
     },
     globals: {
         React: true,
