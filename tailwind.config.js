@@ -9,6 +9,11 @@ module.exports = {
                 primary: ["Inter", ...fontFamily.sans],
             },
         },
+        colors: {
+            primary: "#33956D",
+            secondary: "#F07167",
+            fontColor: "#3C4347",
+        },
     },
     plugins: [require("@tailwindcss/forms")],
 };
