@@ -2,9 +2,12 @@ import * as React from "react";
 import { Fragment } from "react";
 import Link from "next/link";
 import Image from "next/image";
-
+import { useRouter } from "next/router";
 import { Menu, Transition } from "@headlessui/react";
+
 const LangMenu = () => {
+    const { asPath } = useRouter();
+    const { locale } = useRouter();
     return (
         <Menu as='div' className='relative  ml-3'>
             <div>
@@ -12,11 +15,11 @@ const LangMenu = () => {
                     <span className='sr-only'>Open user menu</span>
                     <img
                         className='h-8 w-8 rounded-full '
-                        src={`/images/enFlag.svg`}
+                        src={`/images/${locale}Flag.svg`}
                         alt=''
                     />
                     <Image
-                        className='arrow absolute -z-10 rotate-90 md:rotate-0 '
+                        className='arrow  rotate-90 md:rotate-0 '
                         height='30px'
                         width='20px'
                         src='/images/arrowIcon.svg'
@@ -32,9 +35,9 @@ const LangMenu = () => {
                 leaveFrom='transform opacity-100 scale-100'
                 leaveTo='transform opacity-0 scale-95'
             >
-                <Menu.Items className=' bg-white ring-black absolute right-16 top-1 z-50  mt-1 w-24 rounded-md py-1 shadow-lg md:right-0 md:top-10'>
+                <Menu.Items className=' ring-black absolute right-16 top-1 z-50 mt-1  w-24 rounded-md bg-[white] py-1 shadow-lg md:right-0 md:top-10'>
                     <Menu.Item>
-                        <Link href='/' locale='en'>
+                        <Link href={asPath} locale='en'>
                             <div className='my-1 flex cursor-pointer justify-between  px-2 text-sm text-fontColor hover:bg-btnBgHover'>
                                 <Image
                                     className='m-5 rounded-full'
@@ -47,7 +50,7 @@ const LangMenu = () => {
                         </Link>
                     </Menu.Item>
                     <Menu.Item>
-                        <Link href='/' locale='ar'>
+                        <Link href={asPath} locale='ar'>
                             <div className='my-1 flex cursor-pointer justify-between  px-2 text-sm text-fontColor  hover:bg-btnBgHover'>
                                 <Image
                                     className='m-5 rounded-full'
@@ -60,7 +63,7 @@ const LangMenu = () => {
                         </Link>
                     </Menu.Item>
                     <Menu.Item>
-                        <Link href='/' locale='tr'>
+                        <Link href={asPath} locale='tr'>
                             <div className='my-1 flex cursor-pointer justify-between  px-2 text-sm text-fontColor hover:bg-btnBgHover'>
                                 <Image
                                     className='m-5 rounded-full'
@@ -73,7 +76,7 @@ const LangMenu = () => {
                         </Link>
                     </Menu.Item>
                     <Menu.Item>
-                        <Link href='/' locale='ja'>
+                        <Link href={asPath} locale='ja'>
                             <div className='my-1 flex cursor-pointer justify-between  px-2 text-sm text-fontColor hover:bg-btnBgHover'>
                                 <Image
                                     className='m-5 rounded-full'

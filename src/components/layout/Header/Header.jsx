@@ -106,7 +106,7 @@ export default function Header() {
                             </div>
                         </div>
                     </div>
-                    <Disclosure.Panel className='md:hidden'>
+                    <Disclosure.Panel className='bg-[white] md:hidden'>
                         <div className='space-y-1 px-2 pt-2 pb-3'>
                             <div className='flex justify-end'>
                                 <UserMenu />

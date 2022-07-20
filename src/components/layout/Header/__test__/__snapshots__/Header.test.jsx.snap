@@ -191,7 +191,7 @@ exports[`renders correctly 1`] = `
                   <img
                     alt=""
                     className="h-8 w-8 rounded-full "
-                    src="/images/enFlag.svg"
+                    src="/images/undefinedFlag.svg"
                   />
                   <span
                     style={
@@ -247,7 +247,7 @@ exports[`renders correctly 1`] = `
                       />
                     </span>
                     <img
-                      className="arrow absolute -z-10 rotate-90 md:rotate-0 "
+                      className="arrow rotate-90 md:rotate-0 "
                       data-nimg="intrinsic"
                       decoding="async"
                       onError={[Function]}
@@ -278,7 +278,7 @@ exports[`renders correctly 1`] = `
                     />
                     <noscript>
                       <img
-                        className="arrow absolute -z-10 rotate-90 md:rotate-0 "
+                        className="arrow rotate-90 md:rotate-0 "
                         data-nimg="intrinsic"
                         decoding="async"
                         loading="lazy"
