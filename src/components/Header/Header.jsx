@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 import Link from "next/link";
 import { Disclosure } from "@headlessui/react";
-import { MenuIcon, XIcon } from "@heroicons/react/outline";
+import { MenuIcon, XIcgion } from "@heroicons/react/outline";
 import UserMenu from "./UserMenu";
 import LangMenu from "./LangMenu";
 
