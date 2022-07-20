@@ -1,0 +1,305 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<nav
+  className="bg-transperent"
+>
+  <div
+    className="mx-auto max-w-7xl px-2 sm:px-3 lg:px-4 mb-2"
+  >
+    <div
+      className=" flex items-center justify-end"
+    >
+      <div
+        className="absolute flex items-center md:hidden"
+      >
+        <button
+          aria-expanded={false}
+          className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-slate-200 hover:text-slate-900 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+          id="headlessui-disclosure-button-:r0:"
+          onClick={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          type="button"
+        >
+          <span
+            className="sr-only"
+          >
+            Open main menu
+          </span>
+          <svg
+            aria-hidden="true"
+            className="block h-6 w-6"
+            fill="none"
+            stroke="#97dbbf"
+            strokeWidth={2}
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M4 6h16M4 12h16M4 18h16"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
+        </button>
+        <div
+          className="hidden sm:ml-6 md:block"
+        >
+          <div
+            className="flex space-x-4"
+          >
+            <a
+              className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 font-medium"
+              href="#"
+            >
+              Home
+            </a>
+            <a
+              className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 font-medium"
+              href="#"
+            >
+              About us
+            </a>
+            <a
+              className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 font-medium"
+              href="#"
+            >
+              Goods
+            </a>
+            <a
+              className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 font-medium"
+              href="#"
+            >
+              Blogs
+            </a>
+          </div>
+        </div>
+      </div>
+      <img
+        alt="Lets share logo"
+        className="h-14 w-auto"
+        src="/images/dummyLogo.svg"
+      />
+      <div
+        className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-end"
+      >
+        <div
+          className="flex flex-shrink-0 items-center"
+        >
+          <div
+            className="hidden sm:ml-6 md:block"
+          >
+            <div
+              className="flex space-x-4"
+            >
+              <a
+                className="text-gray-300 hover:bg-slate-200 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+                href="#"
+              >
+                Home
+              </a>
+              <a
+                className="text-gray-300 hover:bg-slate-200 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+                href="#"
+              >
+                About us
+              </a>
+              <a
+                className="text-gray-300 hover:bg-slate-200 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+                href="#"
+              >
+                Goods
+              </a>
+              <a
+                className="text-gray-300 hover:bg-slate-200 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+                href="#"
+              >
+                Blogs
+              </a>
+            </div>
+          </div>
+          <div
+            className="hidden md:block"
+          >
+            <div
+              className="relative ml-3"
+            >
+              <div>
+                <button
+                  aria-expanded={false}
+                  aria-haspopup={true}
+                  className="mr-4 mb-2 flex rounded-full text-sm md:mr-1 md:mb-0 "
+                  id="headlessui-menu-button-:r2:"
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
+                  onKeyUp={[Function]}
+                  type="button"
+                >
+                  <span
+                    className="sr-only"
+                  >
+                    Open user menu
+                  </span>
+                  <img
+                    alt=""
+                    className="h-8 w-8 rounded-full"
+                    src="/images/noUserPic.svg"
+                  />
+                </button>
+              </div>
+            </div>
+          </div>
+          <div
+            className="hidden md:block"
+          >
+            <div
+              className="relative ml-3"
+            >
+              <div>
+                <button
+                  aria-expanded={false}
+                  aria-haspopup={true}
+                  className=" mr-4 flex flex-row-reverse rounded-full text-sm md:mr-0 md:flex-row"
+                  id="headlessui-menu-button-:r3:"
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
+                  onKeyUp={[Function]}
+                  type="button"
+                >
+                  <span
+                    className="sr-only"
+                  >
+                    Open user menu
+                  </span>
+                  <img
+                    alt=""
+                    className="h-8 w-8 rounded-full "
+                    src="/images/enFlag.svg"
+                  />
+                  <span
+                    style={
+                      Object {
+                        "background": "none",
+                        "border": 0,
+                        "boxSizing": "border-box",
+                        "display": "inline-block",
+                        "height": "initial",
+                        "margin": 0,
+                        "maxWidth": "100%",
+                        "opacity": 1,
+                        "overflow": "hidden",
+                        "padding": 0,
+                        "position": "relative",
+                        "width": "initial",
+                      }
+                    }
+                  >
+                    <span
+                      style={
+                        Object {
+                          "background": "none",
+                          "border": 0,
+                          "boxSizing": "border-box",
+                          "display": "block",
+                          "height": "initial",
+                          "margin": 0,
+                          "maxWidth": "100%",
+                          "opacity": 1,
+                          "padding": 0,
+                          "width": "initial",
+                        }
+                      }
+                    >
+                      <img
+                        alt=""
+                        aria-hidden={true}
+                        src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%2720%27%20height=%2730%27/%3e"
+                        style={
+                          Object {
+                            "background": "none",
+                            "border": 0,
+                            "display": "block",
+                            "height": "initial",
+                            "margin": 0,
+                            "maxWidth": "100%",
+                            "opacity": 1,
+                            "padding": 0,
+                            "width": "initial",
+                          }
+                        }
+                      />
+                    </span>
+                    <img
+                      className="arrow rotate-90 md:rotate-0 "
+                      data-nimg="intrinsic"
+                      decoding="async"
+                      onError={[Function]}
+                      onLoad={[Function]}
+                      src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                      style={
+                        Object {
+                          "border": "none",
+                          "bottom": 0,
+                          "boxSizing": "border-box",
+                          "display": "block",
+                          "height": 0,
+                          "left": 0,
+                          "margin": "auto",
+                          "maxHeight": "100%",
+                          "maxWidth": "100%",
+                          "minHeight": "100%",
+                          "minWidth": "100%",
+                          "objectFit": undefined,
+                          "objectPosition": undefined,
+                          "padding": 0,
+                          "position": "absolute",
+                          "right": 0,
+                          "top": 0,
+                          "width": 0,
+                        }
+                      }
+                    />
+                    <noscript>
+                      <img
+                        className="arrow rotate-90 md:rotate-0 "
+                        data-nimg="intrinsic"
+                        decoding="async"
+                        loading="lazy"
+                        src="/images/arrowIcon.svg"
+                        srcSet="/images/arrowIcon.svg 1x, /images/arrowIcon.svg 2x"
+                        style={
+                          Object {
+                            "border": "none",
+                            "bottom": 0,
+                            "boxSizing": "border-box",
+                            "display": "block",
+                            "height": 0,
+                            "left": 0,
+                            "margin": "auto",
+                            "maxHeight": "100%",
+                            "maxWidth": "100%",
+                            "minHeight": "100%",
+                            "minWidth": "100%",
+                            "objectFit": undefined,
+                            "objectPosition": undefined,
+                            "padding": 0,
+                            "position": "absolute",
+                            "right": 0,
+                            "top": 0,
+                            "width": 0,
+                          }
+                        }
+                      />
+                    </noscript>
+                  </span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+`;

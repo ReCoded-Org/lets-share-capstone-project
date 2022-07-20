@@ -1,0 +1,145 @@
+/* This example requires Tailwind CSS v2.0+ */
+
+import { useTranslation } from "react-i18next";
+import Link from "next/link";
+import { Disclosure } from "@headlessui/react";
+import { MenuIcon, XIcon } from "@heroicons/react/outline";
+import UserMenu from "./UserMenu";
+import LangMenu from "./LangMenu";
+
+const navigation = [
+    { name: "Home", href: "#", current: false },
+    { name: "About us", href: "#", current: false },
+    { name: "Goods", href: "#", current: false },
+    { name: "Blogs", href: "#", current: false },
+];
+
+export function classNames(...classes) {
+    return classes.filter(Boolean).join(" ");
+}
+
+export default function Header() {
+    return (
+        <Disclosure as='nav' className='bg-transperent'>
+            {({ open }) => (
+                <>
+                    <div className='mx-auto mb-2 max-w-7xl px-2 sm:px-3 lg:px-4'>
+                        <div className=' flex items-center justify-end'>
+                            <div className='absolute flex items-center md:hidden'>
+                                {/* Mobile menu button*/}
+                                <Disclosure.Button className='inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-slate-200 hover:text-slate-900  focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white'>
+                                    <span className='sr-only'>
+                                        Open main menu
+                                    </span>
+                                    {open ? (
+                                        <XIcon
+                                            className='block h-6 w-6'
+                                            aria-hidden='true'
+                                            stroke='#97dbbf'
+                                        />
+                                    ) : (
+                                        <MenuIcon
+                                            className='block h-6 w-6'
+                                            aria-hidden='true'
+                                            stroke='#97dbbf'
+                                        />
+                                    )}
+                                </Disclosure.Button>
+                                <div className='hidden sm:ml-6 md:block'>
+                                    <div className='flex space-x-4'>
+                                        {navigation.map((item) => (
+                                            <a
+                                                key={item.name}
+                                                href={item.href}
+                                                className={classNames(
+                                                    item.current
+                                                        ? " text-white"
+                                                        : "text-gray-300 hover:bg-gray-700 hover:text-white",
+                                                    "rounded-md px-3 py-2 font-medium"
+                                                )}
+                                                aria-current={
+                                                    item.current
+                                                        ? "page"
+                                                        : undefined
+                                                }
+                                            >
+                                                {item.name}
+                                            </a>
+                                        ))}
+                                    </div>
+                                </div>
+                            </div>
+                            <img
+                                className='h-14 w-auto'
+                                src='/images/dummyLogo.svg'
+                                alt='Lets share logo'
+                            />
+                            <div className='flex flex-1 items-center justify-center sm:items-stretch sm:justify-end'>
+                                <div className='flex flex-shrink-0 items-center'>
+                                    <div className='hidden sm:ml-6 md:block'>
+                                        <div className='flex space-x-4'>
+                                            {navigation.map((item) => (
+                                                <a
+                                                    key={item.name}
+                                                    href={item.href}
+                                                    className={classNames(
+                                                        item.current
+                                                            ? "text-white"
+                                                            : "text-gray-300 hover:bg-slate-200 hover:text-white",
+                                                        "rounded-md px-3 py-2 text-sm font-medium"
+                                                    )}
+                                                    aria-current={
+                                                        item.current
+                                                            ? "page"
+                                                            : undefined
+                                                    }
+                                                >
+                                                    {item.name}
+                                                </a>
+                                            ))}
+                                        </div>
+                                    </div>
+                                    <div className='hidden md:block'>
+                                        <UserMenu />
+                                    </div>
+                                    <div className='hidden md:block'>
+                                        <LangMenu />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <Disclosure.Panel className='md:hidden'>
+                        <div className='space-y-1 px-2 pt-2 pb-3'>
+                            <div className='flex justify-end'>
+                                <UserMenu />
+                            </div>
+                            <div className='flex justify-end'>
+                                <LangMenu />
+                            </div>
+                            {navigation.map((item) => (
+                                <Disclosure.Button
+                                    key={item.name}
+                                    as='a'
+                                    href={item.href}
+                                    className={classNames(
+                                        item.current
+                                            ? "hover:text-slat-600"
+                                            : "text-gray-300 hover:bg-slate-200 hover:text-white",
+                                        "block rounded-md px-3 py-2 text-end font-medium"
+                                    )}
+                                    aria-current={
+                                        item.current ? "page" : undefined
+                                    }
+                                >
+                                    {item.name}
+                                </Disclosure.Button>
+                            ))}
+                        </div>
+                    </Disclosure.Panel>
+                </>
+            )}
+        </Disclosure>
+    );
+}
