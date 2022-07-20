@@ -1,8 +1,11 @@
 import * as React from "react";
+import { useTranslation } from "next-i18next";
 import Image from "next/image";
 import { IoIosHelpBuoy } from "react-icons/io";
 
 const HeroSection = () => {
+    const { t } = useTranslation("common");
+
     return (
         <div>
             <div
@@ -19,64 +22,44 @@ const HeroSection = () => {
                 </div>
                 <div className='my-[30px] flex flex-col items-center justify-center text-center'>
                     <p className='mb-8 py-5 text-2xl md:text-3xl'>
-                        Lorem ipsum dolor sit amet, consectetur hello adipiscing
-                        elit, sed do eiusmod tempor incididunt ut labore et
-                        dolore magna aliqua. Ut enim ad minim veniam, quis
-                        nostrud exercitation ullamco laboris nisi ut aliquip ex
-                        ea commodo consequat.
+                        {t("heroMain")}
                     </p>
                     <button
                         type='submit'
                         className='rounded-full bg-primary py-3 px-6 text-3xl font-bold  text-[white]'
                     >
-                        donate Now
+                        {t("donate now")}
                     </button>
                 </div>
             </div>
             <hr className='my-10 mx-20 border-primary' />
             <div id='causes' className='my-10'>
                 <h2 className='text-center text-4xl font-black text-fontColor'>
-                    Causes
+                    {t("causes")}
                 </h2>
                 <div className='grid grid-cols-1 items-center md:grid-cols-2 lg:grid-cols-3 '>
                     <div className='mx-10 my-10 flex flex-col items-center gap-5 px-5'>
                         <IoIosHelpBuoy size={130} color='#F07167' />
                         <h3 className='text-2xl font-bold text-fontColor'>
-                            title
+                            {t("causeTitle1")}
                         </h3>
                         <p className='text-center text-lg md:text-xl'>
-                            Lorem ipsum dolor, sit amet consectetur adipisicing
-                            elit. Necessitatibus deleniti minima voluptatem
-                            autem sequi, ut non. Qui harum quisquam asperiores
-                            impedit, quas velit consectetur ducimus adipisci et
-                            fugit placeat blanditiis.
+                            {t("causeText1")}
                         </p>
                     </div>
                     <div className='mx-10 my-10 flex flex-col items-center gap-5 px-5'>
                         <IoIosHelpBuoy size={130} color='#F07167' />
                         <h3 className='text-2xl font-bold text-fontColor'>
-                            title
+                            {t("causeTitle2")}
                         </h3>
-                        <p className='text-center text-lg'>
-                            Lorem ipsum dolor, sit amet consectetur adipisicing
-                            elit. Necessitatibus deleniti minima voluptatem
-                            autem sequi, ut non. Qui harum quisquam asperiores
-                            impedit, quas velit consectetur ducimus adipisci et
-                            fugit placeat blanditiis.
-                        </p>
+                        <p className='text-center text-lg'>{t("causeText2")}</p>
                     </div>
                     <div className='mx-10 my-10 flex flex-col items-center gap-5 px-5'>
                         <IoIosHelpBuoy size={130} color='#F07167' />
                         <h3 className='text-2xl font-bold text-fontColor'>
-                            title
+                            {t("causeTitle3")}
                         </h3>
-                        <p className='text-center text-lg'>
-                            Lorem ipsum dolor, sit amet consectetur adipisicing
-                            elit. Necessitatibus deleniti minima voluptatem
-                            autem sequi, ut non. Qui harum quisquam asperiores
-                            impedit, quas velit consectetur ducimus adipisci et
-                            fugit placeat blanditiis.
-                        </p>
+                        <p className='text-center text-lg'>{t("causeText3")}</p>
                     </div>
                 </div>
             </div>
