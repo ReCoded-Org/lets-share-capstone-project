@@ -24,7 +24,6 @@ export default function Header() {
                     <div className='mx-auto mb-2 max-w-7xl px-2 sm:px-3 lg:px-4'>
                         <div className=' flex items-center justify-end'>
                             <div className='absolute flex items-center md:hidden'>
-                                {/* Mobile menu button*/}
                                 <Disclosure.Button className='inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-slate-200 hover:text-slate-900  focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white'>
                                     <span className='sr-only'>
                                         Open main menu
