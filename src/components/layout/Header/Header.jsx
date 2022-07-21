@@ -18,7 +18,7 @@ export default function Header() {
         <Disclosure as='nav' className='bg-transperent'>
             {({ open }) => (
                 <>
-                    <div className=' mx-auto mb-2 max-w-7xl px-2 sm:px-3 lg:px-4'>
+                    <div className=' max-w-auto mx-10 mb-2 px-2 sm:px-3 lg:px-4'>
                         <div className=' flex items-center justify-end'>
                             <div className='absolute flex items-center md:hidden'>
                                 {/* Mobile menu button*/}
@@ -28,13 +28,13 @@ export default function Header() {
                                     </span>
                                     {open ? (
                                         <XIcon
-                                            className='block h-6 w-6'
+                                            className='w-10y block h-10'
                                             aria-hidden='true'
                                             stroke='#97dbbf'
                                         />
                                     ) : (
                                         <MenuIcon
-                                            className='block h-6 w-6'
+                                            className='block h-10 w-10'
                                             aria-hidden='true'
                                             stroke='#97dbbf'
                                         />
@@ -75,15 +75,15 @@ export default function Header() {
                             <div className='flex flex-1 items-center justify-center sm:items-stretch sm:justify-end'>
                                 <div className='flex flex-shrink-0 items-center'>
                                     <div className='hidden sm:ml-6 md:block'>
-                                        <div className='flex space-x-4'>
+                                        <div className='mr-5 flex space-x-4'>
                                             {navigation.map((item) => (
                                                 <Link
                                                     key={item.name}
                                                     href={item.href}
                                                 >
                                                     <a
-                                                        className='hover:text-white rounded-md px-3
-                                                        py-2 text-sm font-medium text-fontColor hover:bg-btnBgHover'
+                                                        className='hover:text-white mx-1 rounded-md px-3
+                                                        py-2 text-lg  font-medium text-fontColor hover:bg-btnBgHover'
                                                         aria-current={
                                                             item.current
                                                                 ? "page"

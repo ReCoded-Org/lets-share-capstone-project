@@ -5,7 +5,7 @@ exports[`renders correctly 1`] = `
   className="bg-transperent"
 >
   <div
-    className=" mx-auto mb-2 max-w-7xl px-2 sm:px-3 lg:px-4"
+    className=" max-w-auto mx-10 mb-2 px-2 sm:px-3 lg:px-4"
   >
     <div
       className=" flex items-center justify-end"
@@ -29,7 +29,7 @@ exports[`renders correctly 1`] = `
           </span>
           <svg
             aria-hidden="true"
-            className="block h-6 w-6"
+            className="block h-10 w-10"
             fill="none"
             stroke="#97dbbf"
             strokeWidth={2}
@@ -99,10 +99,10 @@ exports[`renders correctly 1`] = `
             className="hidden sm:ml-6 md:block"
           >
             <div
-              className="flex space-x-4"
+              className="mr-5 flex space-x-4"
             >
               <a
-                className="hover:text-white rounded-md px-3 py-2 text-sm font-medium text-fontColor hover:bg-btnBgHover"
+                className="hover:text-white mx-1 rounded-md px-3 py-2 text-lg font-medium text-fontColor hover:bg-btnBgHover"
                 href="/home"
                 onClick={[Function]}
                 onMouseEnter={[Function]}
@@ -110,7 +110,7 @@ exports[`renders correctly 1`] = `
                 Home
               </a>
               <a
-                className="hover:text-white rounded-md px-3 py-2 text-sm font-medium text-fontColor hover:bg-btnBgHover"
+                className="hover:text-white mx-1 rounded-md px-3 py-2 text-lg font-medium text-fontColor hover:bg-btnBgHover"
                 href="/aboutus"
                 onClick={[Function]}
                 onMouseEnter={[Function]}
@@ -118,7 +118,7 @@ exports[`renders correctly 1`] = `
                 About us
               </a>
               <a
-                className="hover:text-white rounded-md px-3 py-2 text-sm font-medium text-fontColor hover:bg-btnBgHover"
+                className="hover:text-white mx-1 rounded-md px-3 py-2 text-lg font-medium text-fontColor hover:bg-btnBgHover"
                 href="/goods"
                 onClick={[Function]}
                 onMouseEnter={[Function]}
@@ -126,7 +126,7 @@ exports[`renders correctly 1`] = `
                 Goods
               </a>
               <a
-                className="hover:text-white rounded-md px-3 py-2 text-sm font-medium text-fontColor hover:bg-btnBgHover"
+                className="hover:text-white mx-1 rounded-md px-3 py-2 text-lg font-medium text-fontColor hover:bg-btnBgHover"
                 href="/blogs"
                 onClick={[Function]}
                 onMouseEnter={[Function]}
