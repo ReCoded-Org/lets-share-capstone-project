@@ -1,0 +1,321 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<nav
+  className="bg-transperent"
+>
+  <div
+    className=" max-w-auto mx-10 mb-2 px-2 sm:px-3 lg:px-4"
+  >
+    <div
+      className=" flex items-center justify-end"
+    >
+      <div
+        className="absolute flex items-center md:hidden"
+      >
+        <button
+          aria-expanded={false}
+          className="text-gray-400 hover:text-slate-900 focus:ring-white inline-flex items-center justify-center rounded-md p-2 hover:bg-btnBgHover focus:outline-none focus:ring-2 focus:ring-inset"
+          id="headlessui-disclosure-button-:r0:"
+          onClick={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          type="button"
+        >
+          <span
+            className="sr-only"
+          >
+            Open main menu
+          </span>
+          <svg
+            aria-hidden="true"
+            className="block h-10 w-10"
+            fill="none"
+            stroke="#97dbbf"
+            strokeWidth={2}
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M4 6h16M4 12h16M4 18h16"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
+        </button>
+        <div
+          className="hidden sm:ml-6 md:block"
+        >
+          <div
+            className="flex space-x-4"
+          >
+            <a
+              className=" hover:bg-[gray-700] hover:text-white rounded-md px-3 py-2 font-medium"
+              href="/home"
+              onClick={[Function]}
+              onMouseEnter={[Function]}
+            >
+              Home
+            </a>
+            <a
+              className=" hover:bg-[gray-700] hover:text-white rounded-md px-3 py-2 font-medium"
+              href="/aboutus"
+              onClick={[Function]}
+              onMouseEnter={[Function]}
+            >
+              About us
+            </a>
+            <a
+              className=" hover:bg-[gray-700] hover:text-white rounded-md px-3 py-2 font-medium"
+              href="/goods"
+              onClick={[Function]}
+              onMouseEnter={[Function]}
+            >
+              Goods
+            </a>
+            <a
+              className=" hover:bg-[gray-700] hover:text-white rounded-md px-3 py-2 font-medium"
+              href="/blogs"
+              onClick={[Function]}
+              onMouseEnter={[Function]}
+            >
+              Blogs
+            </a>
+          </div>
+        </div>
+      </div>
+      <img
+        alt="Lets share logo"
+        className="h-14 w-auto"
+        src="/images/dummyLogo.svg"
+      />
+      <div
+        className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-end"
+      >
+        <div
+          className="flex flex-shrink-0 items-center"
+        >
+          <div
+            className="hidden sm:ml-6 md:block"
+          >
+            <div
+              className="mr-5 flex space-x-4"
+            >
+              <a
+                className="hover:text-white mx-1 rounded-md px-3 py-2 text-lg font-medium text-fontColor hover:bg-btnBgHover"
+                href="/home"
+                onClick={[Function]}
+                onMouseEnter={[Function]}
+              >
+                Home
+              </a>
+              <a
+                className="hover:text-white mx-1 rounded-md px-3 py-2 text-lg font-medium text-fontColor hover:bg-btnBgHover"
+                href="/aboutus"
+                onClick={[Function]}
+                onMouseEnter={[Function]}
+              >
+                About us
+              </a>
+              <a
+                className="hover:text-white mx-1 rounded-md px-3 py-2 text-lg font-medium text-fontColor hover:bg-btnBgHover"
+                href="/goods"
+                onClick={[Function]}
+                onMouseEnter={[Function]}
+              >
+                Goods
+              </a>
+              <a
+                className="hover:text-white mx-1 rounded-md px-3 py-2 text-lg font-medium text-fontColor hover:bg-btnBgHover"
+                href="/blogs"
+                onClick={[Function]}
+                onMouseEnter={[Function]}
+              >
+                Blogs
+              </a>
+            </div>
+          </div>
+          <div
+            className="hidden md:block"
+          >
+            <div
+              className="relative ml-3"
+            >
+              <div>
+                <button
+                  aria-expanded={false}
+                  aria-haspopup={true}
+                  className="mr-4 mb-2 flex rounded-full text-sm md:mr-1 md:mb-0 "
+                  id="headlessui-menu-button-:r2:"
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
+                  onKeyUp={[Function]}
+                  type="button"
+                >
+                  <span
+                    className="sr-only"
+                  >
+                    Open user menu
+                  </span>
+                  <img
+                    alt=""
+                    className="h-8 w-8 rounded-full"
+                    src="/images/noUserPic.svg"
+                  />
+                </button>
+              </div>
+            </div>
+          </div>
+          <div
+            className="hidden md:block"
+          >
+            <div
+              className="relative ml-3"
+            >
+              <div>
+                <button
+                  aria-expanded={false}
+                  aria-haspopup={true}
+                  className=" z-1 mr-4 flex flex-row-reverse rounded-full text-sm md:mr-0 md:flex-row"
+                  id="headlessui-menu-button-:r3:"
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
+                  onKeyUp={[Function]}
+                  type="button"
+                >
+                  <span
+                    className="sr-only"
+                  >
+                    Open user menu
+                  </span>
+                  <img
+                    alt=""
+                    className="h-8 w-8 rounded-full "
+                    src="/images/undefinedFlag.svg"
+                  />
+                  <span
+                    style={
+                      Object {
+                        "background": "none",
+                        "border": 0,
+                        "boxSizing": "border-box",
+                        "display": "inline-block",
+                        "height": "initial",
+                        "margin": 0,
+                        "maxWidth": "100%",
+                        "opacity": 1,
+                        "overflow": "hidden",
+                        "padding": 0,
+                        "position": "relative",
+                        "width": "initial",
+                      }
+                    }
+                  >
+                    <span
+                      style={
+                        Object {
+                          "background": "none",
+                          "border": 0,
+                          "boxSizing": "border-box",
+                          "display": "block",
+                          "height": "initial",
+                          "margin": 0,
+                          "maxWidth": "100%",
+                          "opacity": 1,
+                          "padding": 0,
+                          "width": "initial",
+                        }
+                      }
+                    >
+                      <img
+                        alt=""
+                        aria-hidden={true}
+                        src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%2720%27%20height=%2730%27/%3e"
+                        style={
+                          Object {
+                            "background": "none",
+                            "border": 0,
+                            "display": "block",
+                            "height": "initial",
+                            "margin": 0,
+                            "maxWidth": "100%",
+                            "opacity": 1,
+                            "padding": 0,
+                            "width": "initial",
+                          }
+                        }
+                      />
+                    </span>
+                    <img
+                      className="arrow rotate-90 md:rotate-0 "
+                      data-nimg="intrinsic"
+                      decoding="async"
+                      onError={[Function]}
+                      onLoad={[Function]}
+                      src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                      style={
+                        Object {
+                          "border": "none",
+                          "bottom": 0,
+                          "boxSizing": "border-box",
+                          "display": "block",
+                          "height": 0,
+                          "left": 0,
+                          "margin": "auto",
+                          "maxHeight": "100%",
+                          "maxWidth": "100%",
+                          "minHeight": "100%",
+                          "minWidth": "100%",
+                          "objectFit": undefined,
+                          "objectPosition": undefined,
+                          "padding": 0,
+                          "position": "absolute",
+                          "right": 0,
+                          "top": 0,
+                          "width": 0,
+                        }
+                      }
+                    />
+                    <noscript>
+                      <img
+                        className="arrow rotate-90 md:rotate-0 "
+                        data-nimg="intrinsic"
+                        decoding="async"
+                        loading="lazy"
+                        src="/images/arrowIcon.svg"
+                        srcSet="/images/arrowIcon.svg 1x, /images/arrowIcon.svg 2x"
+                        style={
+                          Object {
+                            "border": "none",
+                            "bottom": 0,
+                            "boxSizing": "border-box",
+                            "display": "block",
+                            "height": 0,
+                            "left": 0,
+                            "margin": "auto",
+                            "maxHeight": "100%",
+                            "maxWidth": "100%",
+                            "minHeight": "100%",
+                            "minWidth": "100%",
+                            "objectFit": undefined,
+                            "objectPosition": undefined,
+                            "padding": 0,
+                            "position": "absolute",
+                            "right": 0,
+                            "top": 0,
+                            "width": 0,
+                          }
+                        }
+                      />
+                    </noscript>
+                  </span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+`;
