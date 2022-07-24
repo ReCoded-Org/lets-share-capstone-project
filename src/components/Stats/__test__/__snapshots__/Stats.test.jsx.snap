@@ -1,0 +1,676 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+Array [
+  <div
+    className="flex h-60 justify-center bg-primary md:h-80 xl:h-80"
+  >
+    <span
+      style={
+        Object {
+          "background": "none",
+          "border": 0,
+          "boxSizing": "border-box",
+          "display": "inline-block",
+          "height": "initial",
+          "margin": 0,
+          "maxWidth": "100%",
+          "opacity": 1,
+          "overflow": "hidden",
+          "padding": 0,
+          "position": "relative",
+          "width": "initial",
+        }
+      }
+    >
+      <span
+        style={
+          Object {
+            "background": "none",
+            "border": 0,
+            "boxSizing": "border-box",
+            "display": "block",
+            "height": "initial",
+            "margin": 0,
+            "maxWidth": "100%",
+            "opacity": 1,
+            "padding": 0,
+            "width": "initial",
+          }
+        }
+      >
+        <img
+          alt=""
+          aria-hidden={true}
+          src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27600%27%20height=%271000%27/%3e"
+          style={
+            Object {
+              "background": "none",
+              "border": 0,
+              "display": "block",
+              "height": "initial",
+              "margin": 0,
+              "maxWidth": "100%",
+              "opacity": 1,
+              "padding": 0,
+              "width": "initial",
+            }
+          }
+        />
+      </span>
+      <img
+        alt="donate"
+        className=" -z-1 ml-10 h-full w-full opacity-25"
+        data-nimg="intrinsic"
+        decoding="async"
+        onError={[Function]}
+        onLoad={[Function]}
+        src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+        style={
+          Object {
+            "border": "none",
+            "bottom": 0,
+            "boxSizing": "border-box",
+            "display": "block",
+            "height": 0,
+            "left": 0,
+            "margin": "auto",
+            "maxHeight": "100%",
+            "maxWidth": "100%",
+            "minHeight": "100%",
+            "minWidth": "100%",
+            "objectFit": undefined,
+            "objectPosition": undefined,
+            "padding": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+            "width": 0,
+          }
+        }
+      />
+      <noscript>
+        <img
+          alt="donate"
+          className=" -z-1 ml-10 h-full w-full opacity-25"
+          data-nimg="intrinsic"
+          decoding="async"
+          loading="lazy"
+          src="/_next/image?url=%2Fimages%2Fdonate.png&w=1200&q=75"
+          srcSet="/_next/image?url=%2Fimages%2Fdonate.png&w=640&q=75 1x, /_next/image?url=%2Fimages%2Fdonate.png&w=1200&q=75 2x"
+          style={
+            Object {
+              "border": "none",
+              "bottom": 0,
+              "boxSizing": "border-box",
+              "display": "block",
+              "height": 0,
+              "left": 0,
+              "margin": "auto",
+              "maxHeight": "100%",
+              "maxWidth": "100%",
+              "minHeight": "100%",
+              "minWidth": "100%",
+              "objectFit": undefined,
+              "objectPosition": undefined,
+              "padding": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+              "width": 0,
+            }
+          }
+        />
+      </noscript>
+    </span>
+  </div>,
+  <div
+    className="relative ml-8 mr-8 -mt-12 grid grid-cols-1 items-center gap-x-6 gap-y-6 rounded-2xl bg-[white] py-8 px-2 shadow-lg sm:grid-cols-2 md:-mt-24 lg:grid-cols-4 xl:-mt-24"
+  >
+    <div
+      className="basis-1/4 text-center "
+    >
+      <span
+        style={
+          Object {
+            "background": "none",
+            "border": 0,
+            "boxSizing": "border-box",
+            "display": "inline-block",
+            "height": "initial",
+            "margin": 0,
+            "maxWidth": "100%",
+            "opacity": 1,
+            "overflow": "hidden",
+            "padding": 0,
+            "position": "relative",
+            "width": "initial",
+          }
+        }
+      >
+        <span
+          style={
+            Object {
+              "background": "none",
+              "border": 0,
+              "boxSizing": "border-box",
+              "display": "block",
+              "height": "initial",
+              "margin": 0,
+              "maxWidth": "100%",
+              "opacity": 1,
+              "padding": 0,
+              "width": "initial",
+            }
+          }
+        >
+          <img
+            alt=""
+            aria-hidden={true}
+            src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%2760%27%20height=%2760%27/%3e"
+            style={
+              Object {
+                "background": "none",
+                "border": 0,
+                "display": "block",
+                "height": "initial",
+                "margin": 0,
+                "maxWidth": "100%",
+                "opacity": 1,
+                "padding": 0,
+                "width": "initial",
+              }
+            }
+          />
+        </span>
+        <img
+          alt="icon"
+          data-nimg="intrinsic"
+          decoding="async"
+          onError={[Function]}
+          onLoad={[Function]}
+          src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+          style={
+            Object {
+              "border": "none",
+              "bottom": 0,
+              "boxSizing": "border-box",
+              "display": "block",
+              "height": 0,
+              "left": 0,
+              "margin": "auto",
+              "maxHeight": "100%",
+              "maxWidth": "100%",
+              "minHeight": "100%",
+              "minWidth": "100%",
+              "objectFit": undefined,
+              "objectPosition": undefined,
+              "padding": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+              "width": 0,
+            }
+          }
+        />
+        <noscript>
+          <img
+            alt="icon"
+            data-nimg="intrinsic"
+            decoding="async"
+            loading="lazy"
+            src="/_next/image?url=%2Fimages%2FIcon1.png&w=128&q=75"
+            srcSet="/_next/image?url=%2Fimages%2FIcon1.png&w=64&q=75 1x, /_next/image?url=%2Fimages%2FIcon1.png&w=128&q=75 2x"
+            style={
+              Object {
+                "border": "none",
+                "bottom": 0,
+                "boxSizing": "border-box",
+                "display": "block",
+                "height": 0,
+                "left": 0,
+                "margin": "auto",
+                "maxHeight": "100%",
+                "maxWidth": "100%",
+                "minHeight": "100%",
+                "minWidth": "100%",
+                "objectFit": undefined,
+                "objectPosition": undefined,
+                "padding": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+                "width": 0,
+              }
+            }
+          />
+        </noscript>
+      </span>
+      <h2
+        className="font-bold text-fontColor "
+      >
+        1/3
+      </h2>
+      <p
+        className="text-fontColor"
+      >
+        Lorem ipsum dolor sit amet,
+        <br />
+         consectetur adipiscing elit,
+        <br />
+         sed do eiusmod tempor incididunt ut
+        <br />
+         labore et dolore magna aliqua.
+      </p>
+    </div>
+    <div
+      className="basis-1/4 text-center "
+    >
+      <span
+        style={
+          Object {
+            "background": "none",
+            "border": 0,
+            "boxSizing": "border-box",
+            "display": "inline-block",
+            "height": "initial",
+            "margin": 0,
+            "maxWidth": "100%",
+            "opacity": 1,
+            "overflow": "hidden",
+            "padding": 0,
+            "position": "relative",
+            "width": "initial",
+          }
+        }
+      >
+        <span
+          style={
+            Object {
+              "background": "none",
+              "border": 0,
+              "boxSizing": "border-box",
+              "display": "block",
+              "height": "initial",
+              "margin": 0,
+              "maxWidth": "100%",
+              "opacity": 1,
+              "padding": 0,
+              "width": "initial",
+            }
+          }
+        >
+          <img
+            alt=""
+            aria-hidden={true}
+            src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%2760%27%20height=%2760%27/%3e"
+            style={
+              Object {
+                "background": "none",
+                "border": 0,
+                "display": "block",
+                "height": "initial",
+                "margin": 0,
+                "maxWidth": "100%",
+                "opacity": 1,
+                "padding": 0,
+                "width": "initial",
+              }
+            }
+          />
+        </span>
+        <img
+          alt="icon"
+          data-nimg="intrinsic"
+          decoding="async"
+          onError={[Function]}
+          onLoad={[Function]}
+          src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+          style={
+            Object {
+              "border": "none",
+              "bottom": 0,
+              "boxSizing": "border-box",
+              "display": "block",
+              "height": 0,
+              "left": 0,
+              "margin": "auto",
+              "maxHeight": "100%",
+              "maxWidth": "100%",
+              "minHeight": "100%",
+              "minWidth": "100%",
+              "objectFit": undefined,
+              "objectPosition": undefined,
+              "padding": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+              "width": 0,
+            }
+          }
+        />
+        <noscript>
+          <img
+            alt="icon"
+            data-nimg="intrinsic"
+            decoding="async"
+            loading="lazy"
+            src="/_next/image?url=%2Fimages%2FIcon2.png&w=128&q=75"
+            srcSet="/_next/image?url=%2Fimages%2FIcon2.png&w=64&q=75 1x, /_next/image?url=%2Fimages%2FIcon2.png&w=128&q=75 2x"
+            style={
+              Object {
+                "border": "none",
+                "bottom": 0,
+                "boxSizing": "border-box",
+                "display": "block",
+                "height": 0,
+                "left": 0,
+                "margin": "auto",
+                "maxHeight": "100%",
+                "maxWidth": "100%",
+                "minHeight": "100%",
+                "minWidth": "100%",
+                "objectFit": undefined,
+                "objectPosition": undefined,
+                "padding": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+                "width": 0,
+              }
+            }
+          />
+        </noscript>
+      </span>
+      <h2
+        className="font-bold text-fontColor "
+      >
+        75%
+      </h2>
+      <p
+        className="text-fontColor"
+      >
+        Lorem ipsum dolor sit amet,
+        <br />
+         consectetur adipiscing elit,
+        <br />
+         sed do eiusmod tempor incididunt ut
+        <br />
+         labore et dolore magna aliqua.
+      </p>
+    </div>
+    <div
+      className="basis-1/4 text-center "
+    >
+      <span
+        style={
+          Object {
+            "background": "none",
+            "border": 0,
+            "boxSizing": "border-box",
+            "display": "inline-block",
+            "height": "initial",
+            "margin": 0,
+            "maxWidth": "100%",
+            "opacity": 1,
+            "overflow": "hidden",
+            "padding": 0,
+            "position": "relative",
+            "width": "initial",
+          }
+        }
+      >
+        <span
+          style={
+            Object {
+              "background": "none",
+              "border": 0,
+              "boxSizing": "border-box",
+              "display": "block",
+              "height": "initial",
+              "margin": 0,
+              "maxWidth": "100%",
+              "opacity": 1,
+              "padding": 0,
+              "width": "initial",
+            }
+          }
+        >
+          <img
+            alt=""
+            aria-hidden={true}
+            src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%2760%27%20height=%2760%27/%3e"
+            style={
+              Object {
+                "background": "none",
+                "border": 0,
+                "display": "block",
+                "height": "initial",
+                "margin": 0,
+                "maxWidth": "100%",
+                "opacity": 1,
+                "padding": 0,
+                "width": "initial",
+              }
+            }
+          />
+        </span>
+        <img
+          alt="icon"
+          data-nimg="intrinsic"
+          decoding="async"
+          onError={[Function]}
+          onLoad={[Function]}
+          src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+          style={
+            Object {
+              "border": "none",
+              "bottom": 0,
+              "boxSizing": "border-box",
+              "display": "block",
+              "height": 0,
+              "left": 0,
+              "margin": "auto",
+              "maxHeight": "100%",
+              "maxWidth": "100%",
+              "minHeight": "100%",
+              "minWidth": "100%",
+              "objectFit": undefined,
+              "objectPosition": undefined,
+              "padding": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+              "width": 0,
+            }
+          }
+        />
+        <noscript>
+          <img
+            alt="icon"
+            data-nimg="intrinsic"
+            decoding="async"
+            loading="lazy"
+            src="/_next/image?url=%2Fimages%2FIcon3.png&w=128&q=75"
+            srcSet="/_next/image?url=%2Fimages%2FIcon3.png&w=64&q=75 1x, /_next/image?url=%2Fimages%2FIcon3.png&w=128&q=75 2x"
+            style={
+              Object {
+                "border": "none",
+                "bottom": 0,
+                "boxSizing": "border-box",
+                "display": "block",
+                "height": 0,
+                "left": 0,
+                "margin": "auto",
+                "maxHeight": "100%",
+                "maxWidth": "100%",
+                "minHeight": "100%",
+                "minWidth": "100%",
+                "objectFit": undefined,
+                "objectPosition": undefined,
+                "padding": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+                "width": 0,
+              }
+            }
+          />
+        </noscript>
+      </span>
+      <h2
+        className="font-bold text-fontColor "
+      >
+        300
+      </h2>
+      <p
+        className="text-fontColor"
+      >
+        Lorem ipsum dolor sit amet,
+        <br />
+         consectetur adipiscing elit,
+        <br />
+         sed do eiusmod tempor incididunt ut
+        <br />
+         labore et dolore magna aliqua.
+      </p>
+    </div>
+    <div
+      className="basis-1/4 text-center "
+    >
+      <span
+        style={
+          Object {
+            "background": "none",
+            "border": 0,
+            "boxSizing": "border-box",
+            "display": "inline-block",
+            "height": "initial",
+            "margin": 0,
+            "maxWidth": "100%",
+            "opacity": 1,
+            "overflow": "hidden",
+            "padding": 0,
+            "position": "relative",
+            "width": "initial",
+          }
+        }
+      >
+        <span
+          style={
+            Object {
+              "background": "none",
+              "border": 0,
+              "boxSizing": "border-box",
+              "display": "block",
+              "height": "initial",
+              "margin": 0,
+              "maxWidth": "100%",
+              "opacity": 1,
+              "padding": 0,
+              "width": "initial",
+            }
+          }
+        >
+          <img
+            alt=""
+            aria-hidden={true}
+            src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%2790%27%20height=%2750%27/%3e"
+            style={
+              Object {
+                "background": "none",
+                "border": 0,
+                "display": "block",
+                "height": "initial",
+                "margin": 0,
+                "maxWidth": "100%",
+                "opacity": 1,
+                "padding": 0,
+                "width": "initial",
+              }
+            }
+          />
+        </span>
+        <img
+          alt="icon"
+          data-nimg="intrinsic"
+          decoding="async"
+          onError={[Function]}
+          onLoad={[Function]}
+          src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+          style={
+            Object {
+              "border": "none",
+              "bottom": 0,
+              "boxSizing": "border-box",
+              "display": "block",
+              "height": 0,
+              "left": 0,
+              "margin": "auto",
+              "maxHeight": "100%",
+              "maxWidth": "100%",
+              "minHeight": "100%",
+              "minWidth": "100%",
+              "objectFit": undefined,
+              "objectPosition": undefined,
+              "padding": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+              "width": 0,
+            }
+          }
+        />
+        <noscript>
+          <img
+            alt="icon"
+            data-nimg="intrinsic"
+            decoding="async"
+            loading="lazy"
+            src="/_next/image?url=%2Fimages%2FIcon4.png&w=256&q=75"
+            srcSet="/_next/image?url=%2Fimages%2FIcon4.png&w=96&q=75 1x, /_next/image?url=%2Fimages%2FIcon4.png&w=256&q=75 2x"
+            style={
+              Object {
+                "border": "none",
+                "bottom": 0,
+                "boxSizing": "border-box",
+                "display": "block",
+                "height": 0,
+                "left": 0,
+                "margin": "auto",
+                "maxHeight": "100%",
+                "maxWidth": "100%",
+                "minHeight": "100%",
+                "minWidth": "100%",
+                "objectFit": undefined,
+                "objectPosition": undefined,
+                "padding": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+                "width": 0,
+              }
+            }
+          />
+        </noscript>
+      </span>
+      <h2
+        className="font-bold text-fontColor "
+      >
+        Facts
+      </h2>
+      <p
+        className="text-fontColor"
+      >
+        Lorem ipsum dolor sit amet,
+        <br />
+         consectetur adipiscing elit,
+        <br />
+         sed do eiusmod tempor incididunt ut
+        <br />
+         labore et dolore magna aliqua.
+      </p>
+    </div>
+  </div>,
+]
+`;
