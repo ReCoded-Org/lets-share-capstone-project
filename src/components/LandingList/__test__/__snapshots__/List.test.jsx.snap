@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+Array [
+  <h2
+    className="my-10 text-center text-2xl font-bold text-primary"
+  />,
+  <div
+    className=" container mx-auto mt-10 flex grid-cols-2 flex-col gap-5 px-4 text-center sm:grid md:grid-cols-4 md:text-left xl:grid-cols-4"
+  />,
+]
+`;

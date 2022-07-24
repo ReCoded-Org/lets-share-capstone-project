@@ -1,0 +1,133 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className=" group cursor-pointer overflow-hidden text-primary"
+>
+  <div
+    className="relative aspect-video overflow-hidden rounded-md transition-all group-hover:scale-110 "
+  >
+    <span
+      style={
+        Object {
+          "background": "none",
+          "border": 0,
+          "bottom": 0,
+          "boxSizing": "border-box",
+          "display": "block",
+          "height": "initial",
+          "left": 0,
+          "margin": 0,
+          "opacity": 1,
+          "overflow": "hidden",
+          "padding": 0,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+          "width": "initial",
+        }
+      }
+    >
+      <img
+        alt="Sunset in the mountains"
+        className="abso h-full w-full"
+        data-nimg="fill"
+        decoding="async"
+        onError={[Function]}
+        onLoad={[Function]}
+        src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+        style={
+          Object {
+            "border": "none",
+            "bottom": 0,
+            "boxSizing": "border-box",
+            "display": "block",
+            "height": 0,
+            "left": 0,
+            "margin": "auto",
+            "maxHeight": "100%",
+            "maxWidth": "100%",
+            "minHeight": "100%",
+            "minWidth": "100%",
+            "objectFit": "cover",
+            "objectPosition": undefined,
+            "padding": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+            "width": 0,
+          }
+        }
+      />
+      <noscript>
+        <img
+          alt="Sunset in the mountains"
+          className="abso h-full w-full"
+          data-nimg="fill"
+          decoding="async"
+          loading="lazy"
+          sizes="100vw"
+          src="/_next/image?url=%2FPhoto.png&w=3840&q=75"
+          srcSet="/_next/image?url=%2FPhoto.png&w=640&q=75 640w, /_next/image?url=%2FPhoto.png&w=750&q=75 750w, /_next/image?url=%2FPhoto.png&w=828&q=75 828w, /_next/image?url=%2FPhoto.png&w=1080&q=75 1080w, /_next/image?url=%2FPhoto.png&w=1200&q=75 1200w, /_next/image?url=%2FPhoto.png&w=1920&q=75 1920w, /_next/image?url=%2FPhoto.png&w=2048&q=75 2048w, /_next/image?url=%2FPhoto.png&w=3840&q=75 3840w"
+          style={
+            Object {
+              "border": "none",
+              "bottom": 0,
+              "boxSizing": "border-box",
+              "display": "block",
+              "height": 0,
+              "left": 0,
+              "margin": "auto",
+              "maxHeight": "100%",
+              "maxWidth": "100%",
+              "minHeight": "100%",
+              "minWidth": "100%",
+              "objectFit": "cover",
+              "objectPosition": undefined,
+              "padding": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+              "width": 0,
+            }
+          }
+        />
+      </noscript>
+    </span>
+  </div>
+  <div
+    className=" py-4 "
+  >
+    <div
+      className="flex items-center"
+    >
+      <svg
+        className="h-5 w-5 group-hover:animate-bounce"
+        fill="#F07167"
+        viewBox="0 0 20 20"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          clipRule="evenodd"
+          d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+          fillRule="evenodd"
+        />
+      </svg>
+       
+      <span
+        className="ml-2"
+      />
+    </div>
+    <h2
+      className="text-brand-primary dark:text-white mt-2 text-lg font-semibold tracking-normal"
+    >
+      <span
+        className=" from-green-400 to-green-100 dark:from-purple-800 dark:to-purple-900 bg-gradient-to-r bg-[length:0px_10px] bg-left-bottom bg-no-repeat transition-[background-size] duration-500 hover:bg-[length:100%_3px] group-hover:bg-[length:100%_10px]"
+      />
+    </h2>
+    <p
+      className="text-gray-700 mt-2 text-base "
+    />
+  </div>
+</div>
+`;
