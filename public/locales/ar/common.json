@@ -1,3 +1,12 @@
 {
-    "test": "مرحبا"
+    "test": "مرحبا",
+    "heroMain": "هنا يأتي النص العربي",
+    "donate now": "تبرع الآن",
+    "causes": "لماذا هذا المشروع",
+    "causeTitle1": "عنوان 1",
+    "causeText1": "نص 1",
+    "causeTitle2": "عنوان 2",
+    "causeText2": "نص 2",
+    "causeTitle3": "عنوان 3",
+    "causeText3": "نص 3"
 }

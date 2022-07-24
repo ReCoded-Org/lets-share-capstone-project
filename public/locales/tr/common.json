@@ -1,3 +1,12 @@
 {
-    "test": "Merhaba"
+    "test": "Merhaba",
+    "heroMain": "Türkçe metin burada geliyor ",
+    "donate now": "şimdi Bağış yap",
+    "causes": "neden bu proje",
+    "causeTitle1": "Başlık1",
+    "causeText1": "Metin1",
+    "causeTitle2": "Başlık2",
+    "causeText2": "Metin2",
+    "causeTitle3": "Başlık3",
+    "causeText3": "Metin3"
 }
