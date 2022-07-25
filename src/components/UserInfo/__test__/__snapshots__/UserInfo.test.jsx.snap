@@ -1,0 +1,303 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="m-3 flex flex-col items-center justify-center md:flex-row "
+>
+  <div
+    className="m-4 flex flex-row items-center justify-center md:flex-col "
+  >
+    <span
+      style={
+        Object {
+          "background": "none",
+          "border": 0,
+          "boxSizing": "border-box",
+          "display": "inline-block",
+          "height": "initial",
+          "margin": 0,
+          "maxWidth": "100%",
+          "opacity": 1,
+          "overflow": "hidden",
+          "padding": 0,
+          "position": "relative",
+          "width": "initial",
+        }
+      }
+    >
+      <span
+        style={
+          Object {
+            "background": "none",
+            "border": 0,
+            "boxSizing": "border-box",
+            "display": "block",
+            "height": "initial",
+            "margin": 0,
+            "maxWidth": "100%",
+            "opacity": 1,
+            "padding": 0,
+            "width": "initial",
+          }
+        }
+      >
+        <img
+          alt=""
+          aria-hidden={true}
+          src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27100%27%20height=%27100%27/%3e"
+          style={
+            Object {
+              "background": "none",
+              "border": 0,
+              "display": "block",
+              "height": "initial",
+              "margin": 0,
+              "maxWidth": "100%",
+              "opacity": 1,
+              "padding": 0,
+              "width": "initial",
+            }
+          }
+        />
+      </span>
+      <img
+        className=" rounded-full p-2 "
+        data-nimg="intrinsic"
+        decoding="async"
+        onError={[Function]}
+        onLoad={[Function]}
+        src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+        style={
+          Object {
+            "border": "none",
+            "bottom": 0,
+            "boxSizing": "border-box",
+            "display": "block",
+            "height": 0,
+            "left": 0,
+            "margin": "auto",
+            "maxHeight": "100%",
+            "maxWidth": "100%",
+            "minHeight": "100%",
+            "minWidth": "100%",
+            "objectFit": undefined,
+            "objectPosition": undefined,
+            "padding": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+            "width": 0,
+          }
+        }
+      />
+      <noscript>
+        <img
+          className=" rounded-full p-2 "
+          data-nimg="intrinsic"
+          decoding="async"
+          loading="lazy"
+          src="/images/noPicInfo.svg"
+          srcSet="/images/noPicInfo.svg 1x, /images/noPicInfo.svg 2x"
+          style={
+            Object {
+              "border": "none",
+              "bottom": 0,
+              "boxSizing": "border-box",
+              "display": "block",
+              "height": 0,
+              "left": 0,
+              "margin": "auto",
+              "maxHeight": "100%",
+              "maxWidth": "100%",
+              "minHeight": "100%",
+              "minWidth": "100%",
+              "objectFit": undefined,
+              "objectPosition": undefined,
+              "padding": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+              "width": 0,
+            }
+          }
+        />
+      </noscript>
+    </span>
+    <span
+      className=" m-1 flex justify-center p-1 text-center "
+    >
+      John Doe
+      <br />
+      Kocaeli
+    </span>
+  </div>
+  <div
+    className="m-4 flex flex-row justify-center rounded-lg bg-userInfoBg text-sm md:h-28 md:w-[60%] "
+  >
+    <div
+      className=" flex flex-1 flex-col flex-wrap items-start justify-around p-3 md:flex-row md:items-center "
+    >
+      <span
+        className=" flex flex-col "
+      >
+        <span
+          className="mb-1 md:mb-2"
+        >
+          Name: 
+          John Doe
+        </span>
+        <span
+          className="mb-1 md:mb-2"
+        >
+          Location: 
+          Kocaeli
+        </span>
+      </span>
+      <span
+        className=" flex flex-col"
+      >
+        <span
+          className="mb-1 md:mb-2"
+        >
+          Phone: 
+          01234567890
+        </span>
+        <span
+          className="mb-1 md:mb-2"
+        >
+          Email: 
+          blabla@example.com
+        </span>
+      </span>
+      <span>
+        Language: 
+        En
+      </span>
+    </div>
+    <div
+      className="flex h-[35px] flex-col p-1 hover:rounded-lg hover:bg-[#e8e8e8] md:h-[100%] md:justify-center"
+    >
+      <a
+        href="/editUser"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
+      >
+        <span
+          style={
+            Object {
+              "background": "none",
+              "border": 0,
+              "boxSizing": "border-box",
+              "display": "inline-block",
+              "height": "initial",
+              "margin": 0,
+              "maxWidth": "100%",
+              "opacity": 1,
+              "overflow": "hidden",
+              "padding": 0,
+              "position": "relative",
+              "width": "initial",
+            }
+          }
+        >
+          <span
+            style={
+              Object {
+                "background": "none",
+                "border": 0,
+                "boxSizing": "border-box",
+                "display": "block",
+                "height": "initial",
+                "margin": 0,
+                "maxWidth": "100%",
+                "opacity": 1,
+                "padding": 0,
+                "width": "initial",
+              }
+            }
+          >
+            <img
+              alt=""
+              aria-hidden={true}
+              src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%2730%27%20height=%2730%27/%3e"
+              style={
+                Object {
+                  "background": "none",
+                  "border": 0,
+                  "display": "block",
+                  "height": "initial",
+                  "margin": 0,
+                  "maxWidth": "100%",
+                  "opacity": 1,
+                  "padding": 0,
+                  "width": "initial",
+                }
+              }
+            />
+          </span>
+          <img
+            data-nimg="intrinsic"
+            decoding="async"
+            onError={[Function]}
+            onLoad={[Function]}
+            src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+            style={
+              Object {
+                "border": "none",
+                "bottom": 0,
+                "boxSizing": "border-box",
+                "display": "block",
+                "height": 0,
+                "left": 0,
+                "margin": "auto",
+                "maxHeight": "100%",
+                "maxWidth": "100%",
+                "minHeight": "100%",
+                "minWidth": "100%",
+                "objectFit": undefined,
+                "objectPosition": undefined,
+                "padding": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+                "width": 0,
+              }
+            }
+          />
+          <noscript>
+            <img
+              data-nimg="intrinsic"
+              decoding="async"
+              loading="lazy"
+              src="/images/editInfo.svg"
+              srcSet="/images/editInfo.svg 1x, /images/editInfo.svg 2x"
+              style={
+                Object {
+                  "border": "none",
+                  "bottom": 0,
+                  "boxSizing": "border-box",
+                  "display": "block",
+                  "height": 0,
+                  "left": 0,
+                  "margin": "auto",
+                  "maxHeight": "100%",
+                  "maxWidth": "100%",
+                  "minHeight": "100%",
+                  "minWidth": "100%",
+                  "objectFit": undefined,
+                  "objectPosition": undefined,
+                  "padding": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                  "width": 0,
+                }
+              }
+            />
+          </noscript>
+        </span>
+      </a>
+    </div>
+  </div>
+</div>
+`;
