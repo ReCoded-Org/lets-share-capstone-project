@@ -1,0 +1,721 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div>
+  <div
+    className="flex flex-col items-center justify-center p-5 md:flex-row"
+    id="ourTeam"
+  >
+    <div
+      className=" flex h-72 w-72 flex-col items-center justify-center p-5 "
+      id="singeProfileOurTeam"
+    >
+      <div
+        className="flex h-48 w-48 cursor-pointer flex-row items-center justify-center rounded-full bg-secondary shadow transition duration-300 ease-in-out hover:scale-110 "
+      >
+        <span
+          style={
+            Object {
+              "background": "none",
+              "border": 0,
+              "boxSizing": "border-box",
+              "display": "inline-block",
+              "height": "initial",
+              "margin": 0,
+              "maxWidth": "100%",
+              "opacity": 1,
+              "overflow": "hidden",
+              "padding": 0,
+              "position": "relative",
+              "width": "initial",
+            }
+          }
+        >
+          <span
+            style={
+              Object {
+                "background": "none",
+                "border": 0,
+                "boxSizing": "border-box",
+                "display": "block",
+                "height": "initial",
+                "margin": 0,
+                "maxWidth": "100%",
+                "opacity": 1,
+                "padding": 0,
+                "width": "initial",
+              }
+            }
+          >
+            <img
+              alt=""
+              aria-hidden={true}
+              src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27200%27%20height=%27200%27/%3e"
+              style={
+                Object {
+                  "background": "none",
+                  "border": 0,
+                  "display": "block",
+                  "height": "initial",
+                  "margin": 0,
+                  "maxWidth": "100%",
+                  "opacity": 1,
+                  "padding": 0,
+                  "width": "initial",
+                }
+              }
+            />
+          </span>
+          <img
+            alt="Lets-share-logo"
+            className="rounded-full"
+            data-nimg="intrinsic"
+            decoding="async"
+            onClick={[Function]}
+            onError={[Function]}
+            onLoad={[Function]}
+            onMouseEnter={[Function]}
+            src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+            style={
+              Object {
+                "border": "none",
+                "bottom": 0,
+                "boxSizing": "border-box",
+                "display": "block",
+                "height": 0,
+                "left": 0,
+                "margin": "auto",
+                "maxHeight": "100%",
+                "maxWidth": "100%",
+                "minHeight": "100%",
+                "minWidth": "100%",
+                "objectFit": undefined,
+                "objectPosition": undefined,
+                "padding": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+                "width": 0,
+              }
+            }
+          />
+          <noscript>
+            <img
+              alt="Lets-share-logo"
+              className="rounded-full"
+              data-nimg="intrinsic"
+              decoding="async"
+              loading="lazy"
+              onClick={[Function]}
+              onMouseEnter={[Function]}
+              src="/_next/image?url=%2Fimages%2FLets-share-test-profile.png&w=640&q=75"
+              srcSet="/_next/image?url=%2Fimages%2FLets-share-test-profile.png&w=256&q=75 1x, /_next/image?url=%2Fimages%2FLets-share-test-profile.png&w=640&q=75 2x"
+              style={
+                Object {
+                  "border": "none",
+                  "bottom": 0,
+                  "boxSizing": "border-box",
+                  "display": "block",
+                  "height": 0,
+                  "left": 0,
+                  "margin": "auto",
+                  "maxHeight": "100%",
+                  "maxWidth": "100%",
+                  "minHeight": "100%",
+                  "minWidth": "100%",
+                  "objectFit": undefined,
+                  "objectPosition": undefined,
+                  "padding": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                  "width": 0,
+                }
+              }
+            />
+          </noscript>
+        </span>
+      </div>
+      <div>
+        <span
+          className=" flex flex-col justify-center p-2 text-center"
+        >
+          <b>
+            Name Surname
+          </b>
+          information about team member
+        </span>
+      </div>
+    </div>
+    <div
+      className=" flex h-72 w-72 flex-col items-center justify-center p-5 "
+      id="singeProfileOurTeam "
+    >
+      <div
+        className=" flex h-48 w-48 flex-row items-center justify-center rounded-full bg-secondary shadow transition duration-300 ease-in-out hover:scale-110"
+      >
+        <span
+          style={
+            Object {
+              "background": "none",
+              "border": 0,
+              "boxSizing": "border-box",
+              "display": "inline-block",
+              "height": "initial",
+              "margin": 0,
+              "maxWidth": "100%",
+              "opacity": 1,
+              "overflow": "hidden",
+              "padding": 0,
+              "position": "relative",
+              "width": "initial",
+            }
+          }
+        >
+          <span
+            style={
+              Object {
+                "background": "none",
+                "border": 0,
+                "boxSizing": "border-box",
+                "display": "block",
+                "height": "initial",
+                "margin": 0,
+                "maxWidth": "100%",
+                "opacity": 1,
+                "padding": 0,
+                "width": "initial",
+              }
+            }
+          >
+            <img
+              alt=""
+              aria-hidden={true}
+              src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27200%27%20height=%27200%27/%3e"
+              style={
+                Object {
+                  "background": "none",
+                  "border": 0,
+                  "display": "block",
+                  "height": "initial",
+                  "margin": 0,
+                  "maxWidth": "100%",
+                  "opacity": 1,
+                  "padding": 0,
+                  "width": "initial",
+                }
+              }
+            />
+          </span>
+          <img
+            alt="Lets-share-logo"
+            className="rounded-full"
+            data-nimg="intrinsic"
+            decoding="async"
+            onClick={[Function]}
+            onError={[Function]}
+            onLoad={[Function]}
+            onMouseEnter={[Function]}
+            src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+            style={
+              Object {
+                "border": "none",
+                "bottom": 0,
+                "boxSizing": "border-box",
+                "display": "block",
+                "height": 0,
+                "left": 0,
+                "margin": "auto",
+                "maxHeight": "100%",
+                "maxWidth": "100%",
+                "minHeight": "100%",
+                "minWidth": "100%",
+                "objectFit": undefined,
+                "objectPosition": undefined,
+                "padding": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+                "width": 0,
+              }
+            }
+          />
+          <noscript>
+            <img
+              alt="Lets-share-logo"
+              className="rounded-full"
+              data-nimg="intrinsic"
+              decoding="async"
+              loading="lazy"
+              onClick={[Function]}
+              onMouseEnter={[Function]}
+              src="/_next/image?url=%2Fimages%2FLets-share-test-profile.png&w=640&q=75"
+              srcSet="/_next/image?url=%2Fimages%2FLets-share-test-profile.png&w=256&q=75 1x, /_next/image?url=%2Fimages%2FLets-share-test-profile.png&w=640&q=75 2x"
+              style={
+                Object {
+                  "border": "none",
+                  "bottom": 0,
+                  "boxSizing": "border-box",
+                  "display": "block",
+                  "height": 0,
+                  "left": 0,
+                  "margin": "auto",
+                  "maxHeight": "100%",
+                  "maxWidth": "100%",
+                  "minHeight": "100%",
+                  "minWidth": "100%",
+                  "objectFit": undefined,
+                  "objectPosition": undefined,
+                  "padding": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                  "width": 0,
+                }
+              }
+            />
+          </noscript>
+        </span>
+      </div>
+      <div>
+        <span
+          className=" flex flex-col justify-center p-2 text-center"
+        >
+          <b>
+            Name Surname
+          </b>
+          information about team member
+        </span>
+      </div>
+    </div>
+    <div
+      className=" flex h-72 w-72 flex-col items-center justify-center p-5 "
+      id="singeProfileOurTeam flex-row md:flex-col"
+    >
+      <div
+        className="flex h-48 w-48 flex-row items-center justify-center rounded-full bg-secondary shadow transition duration-300 ease-in-out hover:scale-110"
+      >
+        <span
+          style={
+            Object {
+              "background": "none",
+              "border": 0,
+              "boxSizing": "border-box",
+              "display": "inline-block",
+              "height": "initial",
+              "margin": 0,
+              "maxWidth": "100%",
+              "opacity": 1,
+              "overflow": "hidden",
+              "padding": 0,
+              "position": "relative",
+              "width": "initial",
+            }
+          }
+        >
+          <span
+            style={
+              Object {
+                "background": "none",
+                "border": 0,
+                "boxSizing": "border-box",
+                "display": "block",
+                "height": "initial",
+                "margin": 0,
+                "maxWidth": "100%",
+                "opacity": 1,
+                "padding": 0,
+                "width": "initial",
+              }
+            }
+          >
+            <img
+              alt=""
+              aria-hidden={true}
+              src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27200%27%20height=%27200%27/%3e"
+              style={
+                Object {
+                  "background": "none",
+                  "border": 0,
+                  "display": "block",
+                  "height": "initial",
+                  "margin": 0,
+                  "maxWidth": "100%",
+                  "opacity": 1,
+                  "padding": 0,
+                  "width": "initial",
+                }
+              }
+            />
+          </span>
+          <img
+            alt="Lets-share-logo"
+            className=" rounded-full"
+            data-nimg="intrinsic"
+            decoding="async"
+            onClick={[Function]}
+            onError={[Function]}
+            onLoad={[Function]}
+            onMouseEnter={[Function]}
+            src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+            style={
+              Object {
+                "border": "none",
+                "bottom": 0,
+                "boxSizing": "border-box",
+                "display": "block",
+                "height": 0,
+                "left": 0,
+                "margin": "auto",
+                "maxHeight": "100%",
+                "maxWidth": "100%",
+                "minHeight": "100%",
+                "minWidth": "100%",
+                "objectFit": undefined,
+                "objectPosition": undefined,
+                "padding": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+                "width": 0,
+              }
+            }
+          />
+          <noscript>
+            <img
+              alt="Lets-share-logo"
+              className=" rounded-full"
+              data-nimg="intrinsic"
+              decoding="async"
+              loading="lazy"
+              onClick={[Function]}
+              onMouseEnter={[Function]}
+              src="/_next/image?url=%2Fimages%2FLets-share-test-profile.png&w=640&q=75"
+              srcSet="/_next/image?url=%2Fimages%2FLets-share-test-profile.png&w=256&q=75 1x, /_next/image?url=%2Fimages%2FLets-share-test-profile.png&w=640&q=75 2x"
+              style={
+                Object {
+                  "border": "none",
+                  "bottom": 0,
+                  "boxSizing": "border-box",
+                  "display": "block",
+                  "height": 0,
+                  "left": 0,
+                  "margin": "auto",
+                  "maxHeight": "100%",
+                  "maxWidth": "100%",
+                  "minHeight": "100%",
+                  "minWidth": "100%",
+                  "objectFit": undefined,
+                  "objectPosition": undefined,
+                  "padding": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                  "width": 0,
+                }
+              }
+            />
+          </noscript>
+        </span>
+      </div>
+      <div>
+        <span
+          className=" flex flex-col justify-center p-2 text-center"
+        >
+          <b>
+            Name Surname
+          </b>
+          information about team member
+        </span>
+      </div>
+    </div>
+  </div>
+  <div
+    className="flex flex-col items-center justify-center p-5 md:flex-row"
+    id="ourTeam"
+  >
+    <div
+      className=" flex h-72 w-72 flex-col items-center justify-center p-5 "
+      id="singeProfileOurTeam"
+    >
+      <div
+        className="flex h-48 w-48 cursor-pointer flex-row items-center justify-center rounded-full bg-secondary shadow transition duration-300 ease-in-out hover:scale-110 "
+      >
+        <span
+          style={
+            Object {
+              "background": "none",
+              "border": 0,
+              "boxSizing": "border-box",
+              "display": "inline-block",
+              "height": "initial",
+              "margin": 0,
+              "maxWidth": "100%",
+              "opacity": 1,
+              "overflow": "hidden",
+              "padding": 0,
+              "position": "relative",
+              "width": "initial",
+            }
+          }
+        >
+          <span
+            style={
+              Object {
+                "background": "none",
+                "border": 0,
+                "boxSizing": "border-box",
+                "display": "block",
+                "height": "initial",
+                "margin": 0,
+                "maxWidth": "100%",
+                "opacity": 1,
+                "padding": 0,
+                "width": "initial",
+              }
+            }
+          >
+            <img
+              alt=""
+              aria-hidden={true}
+              src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27200%27%20height=%27200%27/%3e"
+              style={
+                Object {
+                  "background": "none",
+                  "border": 0,
+                  "display": "block",
+                  "height": "initial",
+                  "margin": 0,
+                  "maxWidth": "100%",
+                  "opacity": 1,
+                  "padding": 0,
+                  "width": "initial",
+                }
+              }
+            />
+          </span>
+          <img
+            alt="Lets-share-logo"
+            className="rounded-full"
+            data-nimg="intrinsic"
+            decoding="async"
+            onClick={[Function]}
+            onError={[Function]}
+            onLoad={[Function]}
+            onMouseEnter={[Function]}
+            src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+            style={
+              Object {
+                "border": "none",
+                "bottom": 0,
+                "boxSizing": "border-box",
+                "display": "block",
+                "height": 0,
+                "left": 0,
+                "margin": "auto",
+                "maxHeight": "100%",
+                "maxWidth": "100%",
+                "minHeight": "100%",
+                "minWidth": "100%",
+                "objectFit": undefined,
+                "objectPosition": undefined,
+                "padding": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+                "width": 0,
+              }
+            }
+          />
+          <noscript>
+            <img
+              alt="Lets-share-logo"
+              className="rounded-full"
+              data-nimg="intrinsic"
+              decoding="async"
+              loading="lazy"
+              onClick={[Function]}
+              onMouseEnter={[Function]}
+              src="/_next/image?url=%2Fimages%2FLets-share-test-profile.png&w=640&q=75"
+              srcSet="/_next/image?url=%2Fimages%2FLets-share-test-profile.png&w=256&q=75 1x, /_next/image?url=%2Fimages%2FLets-share-test-profile.png&w=640&q=75 2x"
+              style={
+                Object {
+                  "border": "none",
+                  "bottom": 0,
+                  "boxSizing": "border-box",
+                  "display": "block",
+                  "height": 0,
+                  "left": 0,
+                  "margin": "auto",
+                  "maxHeight": "100%",
+                  "maxWidth": "100%",
+                  "minHeight": "100%",
+                  "minWidth": "100%",
+                  "objectFit": undefined,
+                  "objectPosition": undefined,
+                  "padding": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                  "width": 0,
+                }
+              }
+            />
+          </noscript>
+        </span>
+      </div>
+      <div>
+        <span
+          className=" flex flex-col justify-center p-2 text-center"
+        >
+          <b>
+            Name Surname
+          </b>
+          information about team member
+        </span>
+      </div>
+    </div>
+    <div
+      className=" flex h-72 w-72 flex-col items-center justify-center p-5 "
+      id="singeProfileOurTeam "
+    >
+      <div
+        className="flex h-48 w-48 flex-row items-center justify-center rounded-full bg-secondary shadow transition duration-300 ease-in-out hover:scale-110"
+      >
+        <span
+          style={
+            Object {
+              "background": "none",
+              "border": 0,
+              "boxSizing": "border-box",
+              "display": "inline-block",
+              "height": "initial",
+              "margin": 0,
+              "maxWidth": "100%",
+              "opacity": 1,
+              "overflow": "hidden",
+              "padding": 0,
+              "position": "relative",
+              "width": "initial",
+            }
+          }
+        >
+          <span
+            style={
+              Object {
+                "background": "none",
+                "border": 0,
+                "boxSizing": "border-box",
+                "display": "block",
+                "height": "initial",
+                "margin": 0,
+                "maxWidth": "100%",
+                "opacity": 1,
+                "padding": 0,
+                "width": "initial",
+              }
+            }
+          >
+            <img
+              alt=""
+              aria-hidden={true}
+              src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27200%27%20height=%27200%27/%3e"
+              style={
+                Object {
+                  "background": "none",
+                  "border": 0,
+                  "display": "block",
+                  "height": "initial",
+                  "margin": 0,
+                  "maxWidth": "100%",
+                  "opacity": 1,
+                  "padding": 0,
+                  "width": "initial",
+                }
+              }
+            />
+          </span>
+          <img
+            alt="Lets-share-logo"
+            className="rounded-full"
+            data-nimg="intrinsic"
+            decoding="async"
+            onClick={[Function]}
+            onError={[Function]}
+            onLoad={[Function]}
+            onMouseEnter={[Function]}
+            src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+            style={
+              Object {
+                "border": "none",
+                "bottom": 0,
+                "boxSizing": "border-box",
+                "display": "block",
+                "height": 0,
+                "left": 0,
+                "margin": "auto",
+                "maxHeight": "100%",
+                "maxWidth": "100%",
+                "minHeight": "100%",
+                "minWidth": "100%",
+                "objectFit": undefined,
+                "objectPosition": undefined,
+                "padding": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+                "width": 0,
+              }
+            }
+          />
+          <noscript>
+            <img
+              alt="Lets-share-logo"
+              className="rounded-full"
+              data-nimg="intrinsic"
+              decoding="async"
+              loading="lazy"
+              onClick={[Function]}
+              onMouseEnter={[Function]}
+              src="/_next/image?url=%2Fimages%2FLets-share-test-profile.png&w=640&q=75"
+              srcSet="/_next/image?url=%2Fimages%2FLets-share-test-profile.png&w=256&q=75 1x, /_next/image?url=%2Fimages%2FLets-share-test-profile.png&w=640&q=75 2x"
+              style={
+                Object {
+                  "border": "none",
+                  "bottom": 0,
+                  "boxSizing": "border-box",
+                  "display": "block",
+                  "height": 0,
+                  "left": 0,
+                  "margin": "auto",
+                  "maxHeight": "100%",
+                  "maxWidth": "100%",
+                  "minHeight": "100%",
+                  "minWidth": "100%",
+                  "objectFit": undefined,
+                  "objectPosition": undefined,
+                  "padding": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                  "width": 0,
+                }
+              }
+            />
+          </noscript>
+        </span>
+      </div>
+      <div>
+        <span
+          className=" flex flex-col justify-center p-2 text-center"
+        >
+          <b>
+            Name Surname
+          </b>
+          information about team member
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+`;
