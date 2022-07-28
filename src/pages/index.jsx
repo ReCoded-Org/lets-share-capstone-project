@@ -1,9 +1,10 @@
-import Link from "next/link";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import * as React from "react";
+
+import Link from "next/link";
+
 // import '../styles/global.css';
-import Image from "next/image";
 
 import Layout from "@/components/layout/Layout";
 import HeroSection from "@/components/heroSection";
@@ -65,29 +66,6 @@ export default function HomePage() {
             category: "item",
             location: "istanbul",
             user: "user1",
-        },
-    ];
-
-    const categories = [
-        {
-            id: 1,
-            name: "category",
-            description: "This is my category",
-        },
-        {
-            id: 2,
-            name: "category",
-            description: "This is my category",
-        },
-        {
-            id: 3,
-            name: "category",
-            description: "This is my category",
-        },
-        {
-            id: 4,
-            name: "category",
-            description: "This is my category",
         },
     ];
 
