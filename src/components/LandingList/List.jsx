@@ -13,10 +13,10 @@ function List(props) {
 
     return (
         <>
-            <h2 className='my-10 text-center text-2xl font-bold text-primary'>
+            <h2 className='py-10 text-center text-2xl font-bold text-primary'>
                 {blogs ? "Blogs" : items ? "Items" : null}
             </h2>
-            <div className=' container mx-auto mt-10  flex grid-cols-2 flex-col gap-5 px-4 text-center sm:grid md:grid-cols-4   md:text-left  xl:grid-cols-4'>
+            <div className=' container  mx-auto mt-10 mb-10 flex  grid-cols-2 flex-col gap-5 bg-[#FAFAFA]  text-center sm:grid md:text-left   lg:grid-cols-4  xl:grid-cols-4'>
                 {"" &&
                     list.map((item) =>
                         list === blogs ? (
