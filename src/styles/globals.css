@@ -13,3 +13,22 @@
 .text-primary {
     color: #3c4347;
 }
+
+/* .curve {
+    height:100% ;
+    background-image: url("../../public/Vector\ 1.png");
+} */
+
+.sss {
+    z-index: -1;
+    width: 250%;
+    /* width: 854px; */
+    /* height: 1030px; */
+    height: 280%;
+    border-radius: 50%;
+    background-color: #dcdcdc75;
+    position: absolute;
+    bottom: -50%;
+    left: -130%;
+    /* transform: translate(20%, ); */
+}

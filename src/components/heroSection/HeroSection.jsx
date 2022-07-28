@@ -7,39 +7,43 @@ const HeroSection = () => {
     const { t } = useTranslation("common");
 
     return (
-        <div>
+        <div className=''>
             <div
                 id='firstSection'
-                className='mt-[70px] grid grid-cols-1 items-center px-5 md:mx-20 md:grid-cols-2 md:gap-20'
+                className='mt-[40px] flex flex-col items-center px-5 md:ml-20 md:h-[84vh] md:flex-row md:items-start '
             >
-                <div className='md:order-1'>
+                <div className=' relative  flex h-[450px] w-full flex-row md:order-1  '>
                     <Image
-                        src='/../public/images/undraw.png'
-                        width={850}
-                        height={700}
+                        src='/ggg.svg'
+                        layout='fill'
+                        objectFit='contain'
                         alt='/'
                     />
                 </div>
-                <div className='my-[30px] flex flex-col items-center justify-center text-center'>
-                    <p className='mb-8 py-5 text-2xl md:text-3xl'>
+                <div className='relative  my-[30px] flex   h-[341px] w-[50%] flex-col items-center justify-center text-center md:items-start'>
+                    <div className='sss hidden md:block'></div>
+                    <p className='text-2xll mb-8 py-5 sm:w-[80%] md:text-left md:text-xl'>
                         {t("heroMain")}
                     </p>
                     <button
                         type='submit'
-                        className='rounded-full bg-primary py-3 px-6 text-3xl font-bold  text-[white]'
+                        className='line rounded-full bg-primary py-2 px-4 text-xl font-bold text-[white] transition duration-500 hover:bg-secondary'
                     >
                         {t("donate now")}
                     </button>
                 </div>
             </div>
-            <hr className='my-10 mx-20 border-primary' />
-            <div id='causes' className='my-10'>
-                <h2 className='text-center text-4xl font-black text-fontColor'>
+            <div id='causes' className='   py-12'>
+                <h2 className='text-center text-3xl font-black text-fontColor'>
                     {t("causes")}
                 </h2>
-                <div className='grid grid-cols-1 items-center md:grid-cols-2 lg:grid-cols-3 '>
-                    <div className='mx-10 my-10 flex flex-col items-center gap-5 px-5'>
-                        <IoIosHelpBuoy size={130} color='#F07167' />
+                <div className=' flex grid-cols-1 flex-col flex-wrap items-center justify-center sm:flex-row md:grid-cols-2 lg:grid-cols-3 2xl:grid '>
+                    <div className='mx-10  my-10 flex flex-col items-center gap-5 px-5 sm:w-[30%] lg:w-auto'>
+                        <IoIosHelpBuoy
+                            size={130}
+                            color='#F07167'
+                            className='hover:animate-spin'
+                        />
                         <h3 className='text-2xl font-bold text-fontColor'>
                             {t("causeTitle1")}
                         </h3>
@@ -47,14 +51,14 @@ const HeroSection = () => {
                             {t("causeText1")}
                         </p>
                     </div>
-                    <div className='mx-10 my-10 flex flex-col items-center gap-5 px-5'>
+                    <div className='mx-10 my-10 flex flex-col items-center gap-5 px-5 sm:w-[30%] lg:w-auto'>
                         <IoIosHelpBuoy size={130} color='#F07167' />
                         <h3 className='text-2xl font-bold text-fontColor'>
                             {t("causeTitle2")}
                         </h3>
                         <p className='text-center text-lg'>{t("causeText2")}</p>
                     </div>
-                    <div className='mx-10 my-10 flex flex-col items-center gap-5 px-5'>
+                    <div className='mx-10 my-10 flex flex-col items-center gap-5 px-5 sm:w-[30%] lg:w-auto'>
                         <IoIosHelpBuoy size={130} color='#F07167' />
                         <h3 className='text-2xl font-bold text-fontColor'>
                             {t("causeTitle3")}
