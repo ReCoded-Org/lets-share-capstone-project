@@ -108,6 +108,8 @@ export default function Header() {
                                     className='h-14 w-auto'
                                     src='/images/dummyLogo.svg'
                                     alt='Lets share logo'
+                                    width={80}
+                                    height={80}
                                 />
                                 <div className='flex flex-1 items-center justify-center sm:items-stretch sm:justify-end '>
                                     <div className='flex flex-shrink-0 items-center'>
