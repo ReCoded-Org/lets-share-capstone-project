@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<form
+  className="my-7 flex justify-center"
+>
+  <label
+    className="flex w-[80%] flex-col items-start justify-center md:w-[60%] xl:w-[40%]"
+  >
+    <span
+      className="mb-3 pl-3 text-xl font-semibold text-fontColor"
+    />
+    <select
+      className="w-full rounded-lg border-2 border-primary shadow-md"
+      onChange={[Function]}
+      value=""
+    />
+  </label>
+</form>
+`;
