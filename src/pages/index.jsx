@@ -7,12 +7,80 @@ import Link from "next/link";
 // import '../styles/global.css';
 
 import Layout from "@/components/layout/Layout";
+import HeroSection from "@/components/heroSection";
+import List from "@/components/LandingList";
+import Stats from "@/components/Stats";
+import Partners from "@/components/Partners";
 
 export default function HomePage() {
     const { t } = useTranslation("common");
 
+    const blogs = [
+        {
+            title: "My Blog",
+            date: "01/01/2015",
+            description: "This is my blog",
+        },
+        {
+            title: "My Blog",
+            date: "01/01/2015",
+            description: "This is my blog",
+        },
+        {
+            title: "My Blog",
+            date: "01/01/2015",
+            description: "This is my blog",
+        },
+        {
+            title: "My Blog",
+            date: "01/01/2015",
+            description: "This is my blog",
+        },
+    ];
+
+    const items = [
+        {
+            title: "My item",
+            description: "This is my item",
+            location: "istanbul",
+            category: "item",
+            user: "user1",
+        },
+        {
+            title: "My item",
+            description: "This is my item",
+            location: "istanbul",
+            category: "item",
+            user: "user1",
+        },
+        {
+            title: "My item",
+            description: "This is my item",
+            location: "istanbul",
+            category: "item",
+            user: "user1",
+        },
+        {
+            title: "My item",
+            description: "This is my item",
+            category: "item",
+            location: "istanbul",
+            user: "user1",
+        },
+    ];
+
     return (
-        <Layout>
+        <Layout className=''>
+            <HeroSection />
+            <Stats />
+
+            <div className='bg-[#FAFAFA]'>
+                <List items={items} />
+                <List blogs={blogs} />
+            </div>
+
+            <Partners />
+
             <p>{t("test")}</p>
             <div style={{ display: "flex", flexDirection: "row", gap: "20px" }}>
                 <Link href='/' locale='en'>

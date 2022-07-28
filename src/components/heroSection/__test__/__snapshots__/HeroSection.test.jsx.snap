@@ -1,70 +1,40 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders correctly 1`] = `
-<div>
+<div
+  className=""
+>
   <div
-    className="mt-[70px] grid grid-cols-1 items-center px-5 md:mx-20 md:grid-cols-2 md:gap-20"
+    className="mt-[40px] flex flex-col items-center px-5 md:ml-20 md:h-[84vh] md:flex-row md:items-start "
     id="firstSection"
   >
     <div
-      className="md:order-1"
+      className=" relative flex h-[450px] w-full flex-row md:order-1 "
     >
       <span
         style={
           Object {
             "background": "none",
             "border": 0,
+            "bottom": 0,
             "boxSizing": "border-box",
-            "display": "inline-block",
+            "display": "block",
             "height": "initial",
+            "left": 0,
             "margin": 0,
-            "maxWidth": "100%",
             "opacity": 1,
             "overflow": "hidden",
             "padding": 0,
-            "position": "relative",
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
             "width": "initial",
           }
         }
       >
-        <span
-          style={
-            Object {
-              "background": "none",
-              "border": 0,
-              "boxSizing": "border-box",
-              "display": "block",
-              "height": "initial",
-              "margin": 0,
-              "maxWidth": "100%",
-              "opacity": 1,
-              "padding": 0,
-              "width": "initial",
-            }
-          }
-        >
-          <img
-            alt=""
-            aria-hidden={true}
-            src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27850%27%20height=%27700%27/%3e"
-            style={
-              Object {
-                "background": "none",
-                "border": 0,
-                "display": "block",
-                "height": "initial",
-                "margin": 0,
-                "maxWidth": "100%",
-                "opacity": 1,
-                "padding": 0,
-                "width": "initial",
-              }
-            }
-          />
-        </span>
         <img
           alt="/"
-          data-nimg="intrinsic"
+          data-nimg="fill"
           decoding="async"
           onError={[Function]}
           onLoad={[Function]}
@@ -82,7 +52,7 @@ exports[`renders correctly 1`] = `
               "maxWidth": "100%",
               "minHeight": "100%",
               "minWidth": "100%",
-              "objectFit": undefined,
+              "objectFit": "contain",
               "objectPosition": undefined,
               "padding": 0,
               "position": "absolute",
@@ -95,11 +65,12 @@ exports[`renders correctly 1`] = `
         <noscript>
           <img
             alt="/"
-            data-nimg="intrinsic"
+            data-nimg="fill"
             decoding="async"
             loading="lazy"
-            src="/_next/image?url=%2F..%2Fpublic%2Fimages%2Fundraw.png&w=1920&q=75"
-            srcSet="/_next/image?url=%2F..%2Fpublic%2Fimages%2Fundraw.png&w=1080&q=75 1x, /_next/image?url=%2F..%2Fpublic%2Fimages%2Fundraw.png&w=1920&q=75 2x"
+            sizes="100vw"
+            src="/ggg.svg"
+            srcSet="/ggg.svg 640w, /ggg.svg 750w, /ggg.svg 828w, /ggg.svg 1080w, /ggg.svg 1200w, /ggg.svg 1920w, /ggg.svg 2048w, /ggg.svg 3840w"
             style={
               Object {
                 "border": "none",
@@ -113,7 +84,7 @@ exports[`renders correctly 1`] = `
                 "maxWidth": "100%",
                 "minHeight": "100%",
                 "minWidth": "100%",
-                "objectFit": undefined,
+                "objectFit": "contain",
                 "objectPosition": undefined,
                 "padding": 0,
                 "position": "absolute",
@@ -127,40 +98,41 @@ exports[`renders correctly 1`] = `
       </span>
     </div>
     <div
-      className="my-[30px] flex flex-col items-center justify-center text-center"
+      className="relative my-[30px] flex h-[341px] w-[50%] flex-col items-center justify-center text-center md:items-start"
     >
+      <div
+        className="sss hidden md:block"
+      />
       <p
-        className="mb-8 py-5 text-2xl md:text-3xl"
+        className="text-2xll mb-8 py-5 sm:w-[80%] md:text-left md:text-xl"
       >
         heroMain
       </p>
       <button
-        className="rounded-full bg-primary py-3 px-6 text-3xl font-bold text-[white]"
+        className="line rounded-full bg-primary py-2 px-4 text-xl font-bold text-[white] transition duration-500 hover:bg-secondary"
         type="submit"
       >
         donate now
       </button>
     </div>
   </div>
-  <hr
-    className="my-10 mx-20 border-primary"
-  />
   <div
-    className="my-10"
+    className=" py-12"
     id="causes"
   >
     <h2
-      className="text-center text-4xl font-black text-fontColor"
+      className="text-center text-3xl font-black text-fontColor"
     >
       causes
     </h2>
     <div
-      className="grid grid-cols-1 items-center md:grid-cols-2 lg:grid-cols-3 "
+      className=" flex grid-cols-1 flex-col flex-wrap items-center justify-center sm:flex-row md:grid-cols-2 lg:grid-cols-3 2xl:grid "
     >
       <div
-        className="mx-10 my-10 flex flex-col items-center gap-5 px-5"
+        className="mx-10 my-10 flex flex-col items-center gap-5 px-5 sm:w-[30%] lg:w-auto"
       >
         <svg
+          className="hover:animate-spin"
           color="#F07167"
           fill="currentColor"
           height={130}
@@ -191,7 +163,7 @@ exports[`renders correctly 1`] = `
         </p>
       </div>
       <div
-        className="mx-10 my-10 flex flex-col items-center gap-5 px-5"
+        className="mx-10 my-10 flex flex-col items-center gap-5 px-5 sm:w-[30%] lg:w-auto"
       >
         <svg
           color="#F07167"
@@ -224,7 +196,7 @@ exports[`renders correctly 1`] = `
         </p>
       </div>
       <div
-        className="mx-10 my-10 flex flex-col items-center gap-5 px-5"
+        className="mx-10 my-10 flex flex-col items-center gap-5 px-5 sm:w-[30%] lg:w-auto"
       >
         <svg
           color="#F07167"
