@@ -13,7 +13,6 @@ function index() {
                     Add Item
                 </h1>
                 <form className='mb-12'>
-                    <Button />
                     <Input
                         type='text'
                         title='Title'
@@ -27,8 +26,7 @@ function index() {
                             <label className='mb-3 pl-3 text-xl font-semibold text-fontColor'>
                                 Description
                             </label>
-                            <input
-                                type='text'
+                            <textArea
                                 placeholder='Enter Description'
                                 className='h-40 w-full rounded-lg border-2 border-primary shadow-md'
                             />
@@ -41,7 +39,7 @@ function index() {
                     />
                     <div className='flex flex-row justify-evenly'>
                         <Button fullfilled='Confirm' />
-                        <Button outLinedPrimary='Cancle' />
+                        <Button outLinedPrimary='cancel' />
                     </div>
                 </form>
             </Layout>
