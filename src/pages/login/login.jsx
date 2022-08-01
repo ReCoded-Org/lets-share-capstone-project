@@ -5,7 +5,7 @@ import { FaInstagram } from "react-icons/fa";
 import Layout from "@/components/layout/Layout";
 import Image from "next/image";
 
-export default function LoginPage() {
+export default function login() {
     return (
         <Layout>
             {/*main section*/}
@@ -17,7 +17,7 @@ export default function LoginPage() {
                         className=' items-center text-fontColor'
                     >
                         <h1 className=' text-center text-2xl  font-bold  '>
-                            Log in
+                            Login
                         </h1>
                         <p className='py-1 '>Email</p>
                         <input

@@ -27,7 +27,7 @@ const UserMenu = () => {
                 <Menu.Items className='absolute right-14 top-1 z-50 mt-1 flex w-24 flex-col rounded-md bg-[white] py-1 shadow md:right-0 md:top-10'>
                     <Menu.Item>
                         <a
-                            href='./LoginPage'
+                            href='./login'
                             className='my-1   px-2 text-center text-sm text-fontColor hover:bg-btnBgHover'
                         >
                             Login
