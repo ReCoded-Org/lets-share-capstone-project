@@ -276,7 +276,7 @@ exports[`renders correctly 1`] = `
                     >
                       Open user menu
                     </span>
-                    <img
+                    <imge
                       alt=""
                       className="h-8 w-8 rounded-full"
                       src="/images/noUserPic.svg"
