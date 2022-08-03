@@ -3,30 +3,7 @@ import React from "react";
 import Image from "next/image";
 import Slider from "react-slick";
 import PopularItemCard from "@/components/PopularItemsCard";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { Carousel } from "react-responsive-carousel";
 
-function SampleNextArrow(props) {
-    const { className, style, onClick } = props;
-    return (
-        <div
-            className={className}
-            style={{ ...style, display: "block", background: "red" }}
-            onClick={onClick}
-        />
-    );
-}
-
-function SamplePrevArrow(props) {
-    const { className, style, onClick } = props;
-    return (
-        <div
-            className={className}
-            style={{ ...style, display: "block", background: "green" }}
-            onClick={onClick}
-        />
-    );
-}
 
 function Item() {
     const item = {
@@ -84,10 +61,11 @@ function Item() {
     ];
 
     const settings = {
-        customPaging: function (i) {
+        customPaging: function () {
             return (
                 <a className=' '>
-                    <img src='/Photo.png' className='' />
+                    <Image src='/Photo.png' width={100} height={100} className=''  alt="thumb"/>
+                    
                 </a>
             );
         },
