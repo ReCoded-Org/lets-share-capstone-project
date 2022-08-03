@@ -4,7 +4,6 @@ import Image from "next/image";
 import Slider from "react-slick";
 import PopularItemCard from "@/components/PopularItemsCard";
 
-
 function Item() {
     const item = {
         title: "My item",
@@ -64,8 +63,13 @@ function Item() {
         customPaging: function () {
             return (
                 <a className=' '>
-                    <Image src='/Photo.png' width={100} height={100} className=''  alt="thumb"/>
-                    
+                    <Image
+                        src='/Photo.png'
+                        width={100}
+                        height={100}
+                        className=''
+                        alt='thumb'
+                    />
                 </a>
             );
         },
