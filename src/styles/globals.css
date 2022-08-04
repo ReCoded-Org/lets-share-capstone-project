@@ -32,3 +32,36 @@
     left: -130%;
     /* transform: translate(20%, ); */
 }
+
+.slick-dots li {
+    display: inline-block !important;
+    margin-left: 10px !important;
+    margin-right: 10px;
+    height: 85px !important;
+    width: 85px !important;
+    /* bottom: -50px; */
+}
+
+.slick-dots img {
+    border-radius: 10px;
+}
+
+.slick-dots {
+    display: flex !important;
+    justify-content: center !important;
+    position: relative !important;
+    bottom: px !important;
+}
+
+.slick-next::before,
+.slick-prev::before {
+    color: #33956d !important;
+    right: 10px !important;
+}
+
+.slick-next {
+    right: 10px !important;
+}
+.slick-prev {
+    left: 24px !important;
+}
