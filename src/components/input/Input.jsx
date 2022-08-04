@@ -17,6 +17,7 @@ export default function Input({ title, type, placeholder }) {
                     value={value}
                     onChange={handleChange}
                     placeholder={placeholder}
+                    multiple={type === "file"}
                     className='w-full rounded-lg border-2 border-primary shadow-md'
                 />
             </div>
