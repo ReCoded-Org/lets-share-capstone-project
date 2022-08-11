@@ -3,7 +3,15 @@
         "Home": "Home",
         "blogs": "Blogs",
         "goods": "Goods",
-        "aboutUs": "About us"
+        "aboutUs": "About us",
+        "location": "Location",
+        "signUp": "Sign Up",
+        "name": "Name",
+        "email": "Email",
+        "password": "Password",
+        "password2": "Confirm Password",
+        "phone": "Phone",
+        "logIn": "Log In"
     },
     "Footer": {
         "contactUs": "Contact us",
@@ -35,7 +43,6 @@
         "team": "Our Team"
     },
     "goods": {
-        "location": "Location",
         "category": "Category",
         "search": "Search",
         "recent": "Recent",
@@ -45,39 +52,23 @@
         "addItem": "Add Item",
         "title": "Title",
         "description": "Description",
-        "location": "Location",
         "category": "Category",
         "button": "Add Item"
     },
     "signUp": {
-        "signUp": "Sign Up",
-        "name": "Name",
         "surname": "Surname",
-        "email": "Email",
-        "password": "Password",
-        "password2": "Confirm Password",
-        "phone": "Phone",
-        "location": "Location",
         "button": "Sign Up",
         "with": "or sign up with"
     },
     "logIn": {
-        "logIn": "Log In",
-        "email": "Email",
-        "password": "Password",
         "button": "Log In",
         "remember": "Remember me",
         "noAccount": "Don't have an account?",
-        "signUp": "Sign Up",
         "forgot": "Forgot your password?",
         "with": "or log in with"
     },
     "profile": {
         "profile": "Profile",
-        "name": "Name",
-        "email": "Email",
-        "phone": "Phone",
-        "location": "Location",
         "button": "Update Profile",
         "delete": "Delete Account",
         "myItems": "My Items"
@@ -86,7 +77,6 @@
         "item": "Item",
         "title": "Title",
         "description": "Description",
-        "location": "Location",
         "category": "Category",
         "button": "Update Item",
         "delete": "Delete Item",
