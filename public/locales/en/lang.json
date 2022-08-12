@@ -1,0 +1,85 @@
+{
+    "common": {
+        "Home": "Home",
+        "blogs": "Blogs",
+        "goods": "Goods",
+        "aboutUs": "About us",
+        "location": "Location",
+        "signUp": "Sign Up",
+        "name": "Name",
+        "email": "Email",
+        "password": "Password",
+        "password2": "Confirm Password",
+        "phone": "Phone",
+        "logIn": "Log In"
+    },
+    "Footer": {
+        "contactUs": "Contact us",
+        "adress": "Adress"
+    },
+    "landing": {
+        "heroSection": {
+            "heroText": "The value of life is not in its duration, but in its donation. You are not important because of how long you live, you are important because of how effective you live. \"Myles Munroet\" ",
+            "button": "Donate now"
+        },
+        "causes": {
+            "causes": "Why are we doing this?",
+            "causeText1": "The knowledge that you're helping others is hugely empowering and, in turn, can make you feel happier and more fulfilled. Research has identified a link between making a donation to charity and increased activity in the area of the brain that registers pleasure - proving that as the old adage goes, it really is far better to give than to receive.",
+            "causeText2": "Having the power to improve the lives of others is, to many people, a privilege, and one that comes with its own sense of obligation. Acting on these powerful feelings of responsibility is a great way to reinforce our own personal values and feel like we're living in a way that is true to our own ethical beliefs.",
+            "causeText3": "3-Sharing the experience of donating to charity with your children shows them from a young age that they can make positive changes in the world. Children naturally love to help others, so nurturing their innate generosity is likely to mean that they grow up with a greater appreciation of what they have, and will carry on supporting charity in years to come."
+        },
+        "stats": {
+            "accounts": "Our website has....... active accounts. They have been opened by our users without any additional These numbers increase on daily basis.",
+            "beneficiaries": "The number of beneficiaries is.... although it changes by the hour. 70 % of our users/beneficiaries are under the age of 45.",
+            "GeographicalDistricts": "Our beneficiaries are located in multiple cities. The highest percent of users are in Istanbul and Izmir, but our website have been the most in Gaziantep, Urfa and Mersin. Our website was even used between cities.",
+            "recommendations": "Our website and the services it offers have grown mostly because of recommendations. Beneficiaries recommend us to other new possible beneficiaries online directly and indirectly. We have been shared as a recommendation online for over 500 times."
+        }
+    },
+    "aboutus": {
+        "heroSection": {
+            "heroTitle": "Who We Are",
+            "heroText": "We are a group of people from the middle east, who are passionate about coding. We were selected to be part of one of Re:Coded web development extensive boot camps. Some of us were eager about front-end development, the others preferred back-end development so we were separated into two groups. We have learned valuable skills and integrated our passion for coding with the technical skills that we were taught and became web developers. In August 2022, This website was done officially. It was a result of our teamwork and hard work over the past months and evidence of our persistence."
+        },
+        "team": "Our Team"
+    },
+    "goods": {
+        "category": "Category",
+        "search": "Search",
+        "recent": "Recent",
+        "button": "Add Item"
+    },
+    "addItem": {
+        "addItem": "Add Item",
+        "title": "Title",
+        "description": "Description",
+        "category": "Category",
+        "button": "Add Item"
+    },
+    "signUp": {
+        "surname": "Surname",
+        "button": "Sign Up",
+        "with": "or sign up with"
+    },
+    "logIn": {
+        "button": "Log In",
+        "remember": "Remember me",
+        "noAccount": "Don't have an account?",
+        "forgot": "Forgot your password?",
+        "with": "or log in with"
+    },
+    "profile": {
+        "profile": "Profile",
+        "button": "Update Profile",
+        "delete": "Delete Account",
+        "myItems": "My Items"
+    },
+    "item": {
+        "item": "Item",
+        "title": "Title",
+        "description": "Description",
+        "category": "Category",
+        "button": "Update Item",
+        "delete": "Delete Item",
+        "related": "Related Items"
+    }
+}
