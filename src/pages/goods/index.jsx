@@ -11,17 +11,17 @@ import { useState } from "react";
 // This is an array for test purposes ***WILL BE DELETED LATER***
 const arr = [1, 2, 3, 4, 5];
 
-/*
-This function is important to bring the data from the server ***FOR FUTURE USE***
+
+// This function is important to bring the data from the server ***FOR FUTURE USE***
 export const getStaticProps = async () => {
 
-    const fetchGoods = await fetch('API GOES HERE');
-    const goods = await fetchGoods.json();
+    const fetchGoods = await fetch('http://localhost:3000/items');
+    const items = await fetchGoods.json();
  return {
-     props: {goods}
+     props: {items}
  }
  }
- */
+ 
 
 // This one can be put in a separate folder since it will be used in two different places
 const cities = [
@@ -108,7 +108,7 @@ const cities = [
     "Yozgat",
     "Zonguldak",
 ];
-const GoodsPage = () => {
+const GoodsPage = ( { items }) => {
     /*
 THIS STATE FOR THE REAL DATA ***FOR FUTURE USE***
 The data here should be processd by a FILTER FUNCTION  before it gets assigned to the state
@@ -218,11 +218,11 @@ The data here should be processd by a FILTER FUNCTION  before it gets assigned t
                     <Button outLinedSecondary='Add Item' />
                 </span>
                 <div className='goodsSection order-last my-5  flex flex-wrap justify-center gap-2  md:gap-5 lg:justify-between'>
-                    {arr.map((item) => {
+                    {items.map((item) => {
                         return (
-                            <div key={item} className='w-[200px]'>
+                            <div key={item} className='w-[30%]'>
                                 {" "}
-                                <PopularItemsCard />
+                                <PopularItemsCard  item = {item}/>
                             </div>
                         );
                     })}

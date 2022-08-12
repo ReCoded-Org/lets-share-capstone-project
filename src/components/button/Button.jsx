@@ -8,6 +8,7 @@ export default function Button(props) {
     return (
         <div className='flex justify-center'>
             <button
+            onClick={props.onclick}
                 className={
                     fullfilled
                         ? "my-5 h-9 w-[120px] rounded-full bg-primary text-xl font-semibold text-[white] shadow-md"

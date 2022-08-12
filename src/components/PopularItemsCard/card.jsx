@@ -1,14 +1,14 @@
 import Image from "next/image";
 import React from "react";
 
-function card() {
-    const item = {
-        title: "My item",
-        description: "This is my item",
-        location: "istanbul",
-        category: "item",
-        user: "user1",
-    };
+function card({item}) {
+    // const item = {
+    //     title: "My item",
+    //     description: "This is my item",
+    //     location: "istanbul",
+    //     category: "item",
+    //     user: "user1",
+    // };
 
     return (
         <div className=' group cursor-pointer overflow-hidden  rounded-lg bg-[#F3F3F3] text-primary shadow-xl transition duration-300  hover:scale-105 hover:shadow-2xl'>
@@ -17,13 +17,13 @@ function card() {
                     layout='fill'
                     objectFit='cover'
                     className='abso h-full w-full'
-                    src='/Photo.png'
+                    src={item.images[0]}
                     alt='Sunset in the mountains'
                 />
             </div>
             <div className=' flex justify-between py-4  px-3'>
                 <div className=' flex flex-col justify-between'>
-                    <h2 className='text-brand-primary dark:text-white  text-lg font-semibold tracking-normal'>
+                    <h2 className='text-brand-primary dark:text-white  text-l font-semibold tracking-normal'>
                         <span
                             className='     dark:from-purple-800 dark:to-purple-900 bg-gradient-to-r from-[#4ade80] to-[#dcfce7]
        bg-[length:0px_10px]
@@ -36,9 +36,9 @@ function card() {
                             {item.title}
                         </span>
                     </h2>
-                    <p className='text-gray-700 mt-2  text-base '>
+                    {/* <p className='text-gray-700 mt-2  text-base truncate'>
                         {item.description}
-                    </p>
+                    </p> */}
                 </div>
 
                 <div className='flex flex-col items-center justify-between'>
@@ -58,7 +58,7 @@ function card() {
                         <span className='ml-1'>{item.location}</span>
                     </div>
                     <span className='opacity-0 transition duration-300 group-hover:opacity-100 '>
-                        Category
+                        {item.category.name}
                     </span>
                 </div>
             </div>

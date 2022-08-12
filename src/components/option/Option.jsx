@@ -93,6 +93,7 @@ export default function Option(props) {
     const [value, setValue] = useState("");
     function handleChange(e) {
         setValue(e.target.value);
+        props.setFormData({ ...props.formData, [e.target.name]: e.target.value });
     }
 
     return (
@@ -105,6 +106,7 @@ export default function Option(props) {
                     className='w-full rounded-lg border-2 border-primary shadow-md'
                     value={value}
                     onChange={handleChange}
+                    name={props.name}
                 >
                     {location
                         ? cities.map((city, i) => (

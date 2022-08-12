@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 
-export default function Input({ title, type, placeholder }) {
+export default function Input({ title,name, type, placeholder, setFormData, formData }) {
+
     const [value, setValue] = useState("");
     function handleChange(e) {
         setValue(e.target.value);
+        setFormData({ ...formData, [e.target.name]: e.target.value });
     }
 
     return (
@@ -15,6 +17,7 @@ export default function Input({ title, type, placeholder }) {
                 <input
                     type={type}
                     value={value}
+                    name={name}
                     onChange={handleChange}
                     placeholder={placeholder}
                     multiple={type === "file"}
