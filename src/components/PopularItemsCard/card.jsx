@@ -1,15 +1,7 @@
 import Image from "next/image";
 import React from "react";
 
-function card() {
-    const item = {
-        title: "My item",
-        description: "This is my item",
-        location: "istanbul",
-        category: "item",
-        user: "user1",
-    };
-
+function card({ item }) {
     return (
         <div className=' group cursor-pointer overflow-hidden  rounded-lg bg-[#F3F3F3] text-primary shadow-xl transition duration-300  hover:scale-105 hover:shadow-2xl'>
             <div className='relative aspect-video overflow-hidden rounded-md transition-all  '>

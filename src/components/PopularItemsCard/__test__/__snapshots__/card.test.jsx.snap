@@ -107,13 +107,13 @@ exports[`renders correctly 1`] = `
         <span
           className=" dark:from-purple-800 dark:to-purple-900 bg-gradient-to-r from-[#4ade80] to-[#dcfce7] bg-[length:0px_10px] bg-left-bottom bg-no-repeat transition-[background-size] duration-500 hover:bg-[length:100%_3px] group-hover:bg-[length:100%_10px]"
         >
-          My item
+          Fantastic Frozen Computer
         </span>
       </h2>
       <p
         className="text-gray-700 mt-2 text-base "
       >
-        This is my item
+        The Apollotech B340 is an affordable wireless mouse with reliable connectivity, 12 months battery life and modern design
       </p>
     </div>
     <div
@@ -138,7 +138,7 @@ exports[`renders correctly 1`] = `
         <span
           className="ml-1"
         >
-          istanbul
+          Istanbul
         </span>
       </div>
       <span

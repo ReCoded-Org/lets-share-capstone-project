@@ -12,7 +12,18 @@ import List from "@/components/LandingList";
 import Stats from "@/components/Stats";
 import Partners from "@/components/Partners";
 
-export default function HomePage() {
+export async function getStaticProps({ locale }) {
+    const res = await fetch(`http://localhost:3000/items`);
+    const items = await res.json();
+    return {
+        props: {
+            ...(await serverSideTranslations(locale, ["common"])),
+            items,
+        },
+    };
+}
+
+export default function HomePage({ items }) {
     const { t } = useTranslation("common");
 
     const blogs = [
@@ -38,7 +49,7 @@ export default function HomePage() {
         },
     ];
 
-    const items = [
+    /*const items = [
         {
             title: "My item",
             description: "This is my item",
@@ -67,7 +78,7 @@ export default function HomePage() {
             location: "istanbul",
             user: "user1",
         },
-    ];
+    ];*/
 
     return (
         <Layout className=''>
@@ -97,11 +108,11 @@ export default function HomePage() {
     );
 }
 
-export async function getStaticProps({ locale }) {
+/*export async function getStaticProps({ locale }) {
     return {
         props: {
-            ...(await serverSideTranslations(locale, ["common"])),
+           // ...(await serverSideTranslations(locale, ["common"])),//
             // Will be passed to the page component as props
         },
     };
-}
+}*/
