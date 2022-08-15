@@ -62,7 +62,6 @@ exports[`renders correctly 1`] = `
           />
         </span>
         <img
-          alt="Card image"
           className="card-img"
           data-nimg="intrinsic"
           decoding="async"
@@ -94,7 +93,6 @@ exports[`renders correctly 1`] = `
         />
         <noscript>
           <img
-            alt="Card image"
             className="card-img"
             data-nimg="intrinsic"
             decoding="async"
@@ -136,25 +134,31 @@ exports[`renders correctly 1`] = `
         <h2
           className="pb-2 text-xl font-bold text-fontColor"
         >
-          My Blog
+          blogs.headerBlg2
         </h2>
         <p
           className="text-lg text-fontColor"
         >
-           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum necessitatibus numquam qui ea debitis natus amet ab nobis dignissimos consequatur possimus obcaecati corporis doloremque velit, temporibus praesentium unde sed? Quae?
+          blogs.contentBlg2...
         </p>
         <div
           className="flex h-7 w-10 flex-1"
         >
-          <div
-            className="flex justify-center"
+          <a
+            href="/blogs/My%20Blog"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
           >
-            <button
-              className="my-5 h-9 w-[120px] rounded-full bg-primary text-xl font-semibold text-[white] shadow-md"
+            <div
+              className="flex justify-center"
             >
-              Read more
-            </button>
-          </div>
+              <button
+                className="my-5 h-9 w-[120px] rounded-full bg-primary text-xl font-semibold text-[white] shadow-md"
+              >
+                Read more
+              </button>
+            </div>
+          </a>
         </div>
       </div>
     </div>
