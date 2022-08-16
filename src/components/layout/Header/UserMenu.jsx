@@ -1,5 +1,6 @@
 import * as React from "react";
 import { Fragment } from "react";
+import Image from "next/image";
 import { Menu, Transition } from "@headlessui/react";
 const UserMenu = () => {
     return (
@@ -7,9 +8,11 @@ const UserMenu = () => {
             <div>
                 <Menu.Button className='mr-4 mb-2 flex rounded-full text-sm md:mr-1 md:mb-0  '>
                     <span className='sr-only'>Open user menu</span>
-                    <imge
-                        className='h-8 w-8  rounded-full'
+                    <Image
+                        className='h-8 w-8 rounded-full '
                         src='/images/noUserPic.svg'
+                        height={40}
+                        width={40}
                         alt=''
                     />
                 </Menu.Button>

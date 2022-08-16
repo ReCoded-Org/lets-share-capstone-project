@@ -13,8 +13,6 @@ exports[`renders correctly 1`] = `
     <input
       className="w-full rounded-lg border-2 border-primary shadow-md"
       multiple={false}
-      onChange={[Function]}
-      value=""
     />
   </div>
 </div>

@@ -5,6 +5,7 @@ export default function Button(props) {
     const outLinedPrimary = props.outLinedPrimary;
     const outLinedSecondary = props.outLinedSecondary;
     const extended = props.extended;
+    const handleClick = props.handleClick;
     return (
         <div className='flex justify-center'>
             <button
@@ -19,6 +20,7 @@ export default function Button(props) {
                         ? "my-5 h-9 w-[80%] rounded-full bg-primary text-xl font-semibold text-[white] shadow-md md:w-[60%] xl:w-[40%]"
                         : null
                 }
+                onClick={handleClick}
             >
                 {fullfilled
                     ? fullfilled
