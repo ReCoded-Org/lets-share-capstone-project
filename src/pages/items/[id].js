@@ -2,69 +2,51 @@ import Layout from "@/components/layout/Layout";
 import React from "react";
 import Image from "next/image";
 import Slider from "react-slick";
+
 import PopularItemCard from "@/components/PopularItemsCard";
 
-function Item() {
-    const item = {
-        title: "My item",
-        description:
-            "This is my item This is my item dsagfasd gar wrger ry  r ery eryeryh eery htwlsnhjq;oeri hq;rigu e qrqr r    re ",
-        location: "istanbul",
-        category: "electronics",
-        user: "user1",
+export async function getStaticPaths() {
+    const res = await fetch("http://localhost:3000/items");
+    const items = await res.json();
+    const paths = items.map((item) => ({
+        params: {
+            id: item.id.toString(),
+        },
+    }));
+
+    return {
+        paths,
+        fallback: false,
     };
+}
+
+export async function getStaticProps({ params }) {
+    const res = await fetch(`http://localhost:3000/items/${params.id}`);
+    const item = await res.json();
+    const data = await fetch(`http://localhost:3000/items`);
+    const items = await data.json();
+
+    return {
+        props: {
+            item,
+            items,
+        },
+    };
+}
+
+function Item({ item, items }) {
     const user = {
         name: "user1 user",
         email: "asgaga@fdg.com",
         phone: 123456789,
     };
 
-    const data = ["/Photo.png", "/Photo.png", "/Photo.png", "/Photo.png"];
-
-    const items = [
-        {
-            title: "My item",
-            description: "This is my item",
-            location: "istanbul",
-            category: "item",
-            user: "user1",
-        },
-        {
-            title: "My item",
-            description: "This is my item",
-            location: "istanbul",
-            category: "item",
-            user: "user1",
-        },
-        {
-            title: "My item",
-            description: "This is my item",
-            location: "istanbul",
-            category: "item",
-            user: "user1",
-        },
-        {
-            title: "My item",
-            description: "This is my item",
-            location: "istanbul",
-            category: "item",
-            user: "user1",
-        },
-        {
-            title: "My item",
-            description: "This is my item",
-            category: "item",
-            location: "istanbul",
-            user: "user1",
-        },
-    ];
-
     const settings = {
         customPaging: function () {
             return (
                 <a className=' '>
                     <Image
-                        src='/Photo.png'
+                        src={item.images[0]}
                         width={100}
                         height={100}
                         className=''
@@ -86,21 +68,12 @@ function Item() {
             <div className='container mx-auto mt-5 mb-5  w-[90%]'>
                 <div className='flex flex-col items-center md:flex-row md:items-start md:space-x-14 '>
                     <div className=' '>
-                        {/* <Image
-            src="/Photo.png"
-            width={400}
-            height={300}
-            layout="fixed"
-            alt='item'
-            className=" inset-0 object-cover rounded-2xl" */}
-                        {/* /> */}
-
                         <div className='w-[500px]  '>
                             <Slider {...settings}>
-                                {data.map((item, index) => (
+                                {item.images.map((image, index) => (
                                     <div key={index} className=' ml-14  '>
                                         <Image
-                                            src={item}
+                                            src={image}
                                             width={400}
                                             height={400}
                                             layout='fixed'
@@ -175,7 +148,7 @@ function Item() {
                 <div>
                     <h1 className='my-5 text-xl font-bold'>related items</h1>
                     <div className='container  mx-auto mt-10 mb-10 flex  grid-cols-2 flex-col gap-5   text-center sm:grid md:text-left   lg:grid-cols-5  xl:grid-cols-5'>
-                        {items.map((item) => (
+                        {items.slice(0, 5).map((item) => (
                             <PopularItemCard item={item} key={item.id} />
                         ))}
                     </div>
