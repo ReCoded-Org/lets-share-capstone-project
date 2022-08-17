@@ -35,8 +35,8 @@ function Footer() {
                         </Link>
                     </li>
                     <li className='pb-2  hover:text-fontColor'>
-                        <Link href='#'>
-                            <a>Listed items</a>
+                        <Link href='/goods'>
+                            <a>Goods</a>
                         </Link>
                     </li>
                 </ul>

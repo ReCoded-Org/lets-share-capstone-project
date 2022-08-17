@@ -61,6 +61,7 @@ exports[`renders correctly 1`] = `
         />
       </span>
       <img
+        alt="user-image"
         className=" rounded-full p-2 "
         data-nimg="intrinsic"
         decoding="async"
@@ -92,6 +93,7 @@ exports[`renders correctly 1`] = `
       />
       <noscript>
         <img
+          alt="user-image"
           className=" rounded-full p-2 "
           data-nimg="intrinsic"
           decoding="async"
@@ -123,6 +125,37 @@ exports[`renders correctly 1`] = `
         />
       </noscript>
     </span>
+    <div
+      className=" flex flex-col justify-center md:flex-row "
+    >
+      <button
+        onClick={[Function]}
+      >
+        <svg
+          className="text-md m-1 rounded-full text-primary hover:bg-btnBgHover"
+          fill="currentColor"
+          height="1em"
+          stroke="currentColor"
+          strokeWidth="0"
+          style={
+            Object {
+              "color": undefined,
+            }
+          }
+          viewBox="0 0 24 24"
+          width="1em"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M0 0h24v24H0z"
+            fill="none"
+          />
+          <path
+            d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04a.996.996 0 000-1.41l-2.34-2.34a.996.996 0 00-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
+          />
+        </svg>
+      </button>
+    </div>
     <span
       className=" m-1 flex justify-center p-1 text-center "
     >
@@ -178,7 +211,7 @@ exports[`renders correctly 1`] = `
       className="flex h-[35px] flex-col p-1 hover:rounded-lg hover:bg-[#e8e8e8] md:h-[100%] md:justify-center"
     >
       <a
-        href="/editUser"
+        href="/edit-profile"
         onClick={[Function]}
         onMouseEnter={[Function]}
       >
@@ -236,6 +269,7 @@ exports[`renders correctly 1`] = `
             />
           </span>
           <img
+            alt="edit-icon"
             data-nimg="intrinsic"
             decoding="async"
             onError={[Function]}
@@ -266,6 +300,7 @@ exports[`renders correctly 1`] = `
           />
           <noscript>
             <img
+              alt="edit-icon"
               data-nimg="intrinsic"
               decoding="async"
               loading="lazy"
