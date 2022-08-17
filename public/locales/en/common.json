@@ -81,7 +81,6 @@
         "button": "Update Item",
         "delete": "Delete Item",
         "related": "Related Items"
-
     },
     "blogs": {
         "headerBlg1": "Blog 1 Title",
@@ -90,6 +89,5 @@
         "contentBlg2": " ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliqua",
         "headerBlg3": "Blog 3 Title",
         "contentBlg3": "ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliqua"
-
     }
 }

@@ -81,7 +81,6 @@
         "button": "تحديث العنصر",
         "delete": "حذف العنصر",
         "related": "عناصر مشابهة"
-
     },
     "blogs": {
         "headerBlg1": "Blog 1 عربي",
@@ -90,6 +89,5 @@
         "contentBlg2": "عربي ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliqua",
         "headerBlg3": "Blog 3 عربي",
         "contentBlg3": "ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliqua"
-
     }
 }
