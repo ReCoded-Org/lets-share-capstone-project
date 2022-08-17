@@ -81,5 +81,14 @@
         "button": "アイテムを更新",
         "delete": "アイテムを削除",
         "related": "関連アイテム"
+
+    },
+    "blogs": {
+        "blg1Header": "Blog 1 Title",
+        "blg1content": "  ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliqua",
+        "blg2Header": "Blog 2 Title",
+        "blg2content": " ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliqua",
+        "blg3Header": "Blog 3 Title",
+        "blg3content": "ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliqua"
     }
 }
