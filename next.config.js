@@ -8,7 +8,7 @@ module.exports = {
     },
 
     reactStrictMode: true,
-    
+
     // Uncoment to add domain whitelist
 
     images: {

@@ -1,7 +1,6 @@
 import Image from "next/image";
 import React from "react";
 
-
 function card() {
     const item = {
         id: 13,
