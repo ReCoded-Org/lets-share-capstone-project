@@ -57,7 +57,7 @@ exports[`renders correctly 1`] = `
             >
               <a
                 className=" hover:bg-[gray-700] hover:text-white text-[white] rounded-md px-3 py-2 font-medium "
-                href="/home"
+                href="/"
                 onClick={[Function]}
                 onMouseEnter={[Function]}
               >
@@ -222,7 +222,7 @@ exports[`renders correctly 1`] = `
               >
                 <a
                   className="hover:text-white mx-1 rounded-md px-3 py-2 text-lg font-medium text-fontColor hover:bg-btnBgHover "
-                  href="/home"
+                  href="/"
                   onClick={[Function]}
                   onMouseEnter={[Function]}
                 >
@@ -276,11 +276,124 @@ exports[`renders correctly 1`] = `
                     >
                       Open user menu
                     </span>
-                    <imge
-                      alt=""
-                      className="h-8 w-8 rounded-full"
-                      src="/images/noUserPic.svg"
-                    />
+                    <span
+                      style={
+                        Object {
+                          "background": "none",
+                          "border": 0,
+                          "boxSizing": "border-box",
+                          "display": "inline-block",
+                          "height": "initial",
+                          "margin": 0,
+                          "maxWidth": "100%",
+                          "opacity": 1,
+                          "overflow": "hidden",
+                          "padding": 0,
+                          "position": "relative",
+                          "width": "initial",
+                        }
+                      }
+                    >
+                      <span
+                        style={
+                          Object {
+                            "background": "none",
+                            "border": 0,
+                            "boxSizing": "border-box",
+                            "display": "block",
+                            "height": "initial",
+                            "margin": 0,
+                            "maxWidth": "100%",
+                            "opacity": 1,
+                            "padding": 0,
+                            "width": "initial",
+                          }
+                        }
+                      >
+                        <img
+                          alt=""
+                          aria-hidden={true}
+                          src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%2740%27%20height=%2740%27/%3e"
+                          style={
+                            Object {
+                              "background": "none",
+                              "border": 0,
+                              "display": "block",
+                              "height": "initial",
+                              "margin": 0,
+                              "maxWidth": "100%",
+                              "opacity": 1,
+                              "padding": 0,
+                              "width": "initial",
+                            }
+                          }
+                        />
+                      </span>
+                      <img
+                        alt=""
+                        className="h-8 w-8 rounded-full "
+                        data-nimg="intrinsic"
+                        decoding="async"
+                        onError={[Function]}
+                        onLoad={[Function]}
+                        src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                        style={
+                          Object {
+                            "border": "none",
+                            "bottom": 0,
+                            "boxSizing": "border-box",
+                            "display": "block",
+                            "height": 0,
+                            "left": 0,
+                            "margin": "auto",
+                            "maxHeight": "100%",
+                            "maxWidth": "100%",
+                            "minHeight": "100%",
+                            "minWidth": "100%",
+                            "objectFit": undefined,
+                            "objectPosition": undefined,
+                            "padding": 0,
+                            "position": "absolute",
+                            "right": 0,
+                            "top": 0,
+                            "width": 0,
+                          }
+                        }
+                      />
+                      <noscript>
+                        <img
+                          alt=""
+                          className="h-8 w-8 rounded-full "
+                          data-nimg="intrinsic"
+                          decoding="async"
+                          loading="lazy"
+                          src="/images/noUserPic.svg"
+                          srcSet="/images/noUserPic.svg 1x, /images/noUserPic.svg 2x"
+                          style={
+                            Object {
+                              "border": "none",
+                              "bottom": 0,
+                              "boxSizing": "border-box",
+                              "display": "block",
+                              "height": 0,
+                              "left": 0,
+                              "margin": "auto",
+                              "maxHeight": "100%",
+                              "maxWidth": "100%",
+                              "minHeight": "100%",
+                              "minWidth": "100%",
+                              "objectFit": undefined,
+                              "objectPosition": undefined,
+                              "padding": 0,
+                              "position": "absolute",
+                              "right": 0,
+                              "top": 0,
+                              "width": 0,
+                            }
+                          }
+                        />
+                      </noscript>
+                    </span>
                   </button>
                 </div>
               </div>
@@ -307,11 +420,124 @@ exports[`renders correctly 1`] = `
                     >
                       Open user menu
                     </span>
-                    <img
-                      alt=""
-                      className="h-8 w-8 rounded-full "
-                      src="/images/undefinedFlag.svg"
-                    />
+                    <span
+                      style={
+                        Object {
+                          "background": "none",
+                          "border": 0,
+                          "boxSizing": "border-box",
+                          "display": "inline-block",
+                          "height": "initial",
+                          "margin": 0,
+                          "maxWidth": "100%",
+                          "opacity": 1,
+                          "overflow": "hidden",
+                          "padding": 0,
+                          "position": "relative",
+                          "width": "initial",
+                        }
+                      }
+                    >
+                      <span
+                        style={
+                          Object {
+                            "background": "none",
+                            "border": 0,
+                            "boxSizing": "border-box",
+                            "display": "block",
+                            "height": "initial",
+                            "margin": 0,
+                            "maxWidth": "100%",
+                            "opacity": 1,
+                            "padding": 0,
+                            "width": "initial",
+                          }
+                        }
+                      >
+                        <img
+                          alt=""
+                          aria-hidden={true}
+                          src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%2740%27%20height=%2740%27/%3e"
+                          style={
+                            Object {
+                              "background": "none",
+                              "border": 0,
+                              "display": "block",
+                              "height": "initial",
+                              "margin": 0,
+                              "maxWidth": "100%",
+                              "opacity": 1,
+                              "padding": 0,
+                              "width": "initial",
+                            }
+                          }
+                        />
+                      </span>
+                      <img
+                        alt=""
+                        className="h-8 w-8 rounded-full "
+                        data-nimg="intrinsic"
+                        decoding="async"
+                        onError={[Function]}
+                        onLoad={[Function]}
+                        src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                        style={
+                          Object {
+                            "border": "none",
+                            "bottom": 0,
+                            "boxSizing": "border-box",
+                            "display": "block",
+                            "height": 0,
+                            "left": 0,
+                            "margin": "auto",
+                            "maxHeight": "100%",
+                            "maxWidth": "100%",
+                            "minHeight": "100%",
+                            "minWidth": "100%",
+                            "objectFit": undefined,
+                            "objectPosition": undefined,
+                            "padding": 0,
+                            "position": "absolute",
+                            "right": 0,
+                            "top": 0,
+                            "width": 0,
+                          }
+                        }
+                      />
+                      <noscript>
+                        <img
+                          alt=""
+                          className="h-8 w-8 rounded-full "
+                          data-nimg="intrinsic"
+                          decoding="async"
+                          loading="lazy"
+                          src="/images/undefinedFlag.svg"
+                          srcSet="/images/undefinedFlag.svg 1x, /images/undefinedFlag.svg 2x"
+                          style={
+                            Object {
+                              "border": "none",
+                              "bottom": 0,
+                              "boxSizing": "border-box",
+                              "display": "block",
+                              "height": 0,
+                              "left": 0,
+                              "margin": "auto",
+                              "maxHeight": "100%",
+                              "maxWidth": "100%",
+                              "minHeight": "100%",
+                              "minWidth": "100%",
+                              "objectFit": undefined,
+                              "objectPosition": undefined,
+                              "padding": 0,
+                              "position": "absolute",
+                              "right": 0,
+                              "top": 0,
+                              "width": 0,
+                            }
+                          }
+                        />
+                      </noscript>
+                    </span>
                     <span
                       style={
                         Object {
@@ -366,6 +592,7 @@ exports[`renders correctly 1`] = `
                         />
                       </span>
                       <img
+                        alt=""
                         className="arrow rotate-90 md:rotate-0 "
                         data-nimg="intrinsic"
                         decoding="async"
@@ -397,6 +624,7 @@ exports[`renders correctly 1`] = `
                       />
                       <noscript>
                         <img
+                          alt=""
                           className="arrow rotate-90 md:rotate-0 "
                           data-nimg="intrinsic"
                           decoding="async"

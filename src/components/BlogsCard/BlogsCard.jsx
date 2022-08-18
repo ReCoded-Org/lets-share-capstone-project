@@ -1,8 +1,11 @@
 import React from "react";
 import Image from "next/image";
 import Button from "../button";
+import Link from "next/link";
+import { useTranslation } from "next-i18next";
 
 export default function BlogsCard({ item }) {
+    const { t } = useTranslation("common");
     const index = item.id;
     const evenindex = index % 2 === 0 ? true : false;
 
@@ -19,7 +22,7 @@ export default function BlogsCard({ item }) {
                     <Image
                         src={item.image}
                         className='card-img'
-                        alt='Card image'
+                        alt={item.imageAlt}
                         width={1000}
                         height={800}
                     />
@@ -28,14 +31,19 @@ export default function BlogsCard({ item }) {
                 <div className=' flex flex-col items-start justify-center'>
                     <div className='r-md-8  px-10'>
                         <h2 className='pb-2 text-xl font-bold text-fontColor'>
-                            {item.title}
+                            {t(`blogs.headerBlg${item.id}`)}
                         </h2>
                         <p className='text-lg text-fontColor'>
-                            {item.description}
+                            {t(`blogs.contentBlg${item.id}`).slice(0, 250) +
+                                "..."}
                         </p>
 
                         <div className='flex h-7 w-10 flex-1'>
-                            <Button fullfilled='Read more' />
+                            <Link href={`/blogs/${item.title.toString()}`}>
+                                <a>
+                                    <Button fullfilled='Read more' />
+                                </a>
+                            </Link>
                         </div>
                     </div>
                 </div>
