@@ -3,21 +3,28 @@ import React from "react";
 
 function card() {
     const item = {
-        title: "My item",
-        description: "This is my item",
-        location: "istanbul",
-        category: "item",
-        user: "user1",
-    };
+        id: 13,
+        title: "Fantastic Frozen Computer",
+        location: "Adana",
+        price: 787,
+        description:
+            "The Apollotech B340 is an affordable wireless mouse with reliable connectivity, 12 months battery life and modern design",
+        category: "Furniture",
 
+        images: [
+            "https://api.lorem.space/image/furniture?w=640&h=480&r=9644",
+            "https://api.lorem.space/image/furniture?w=640&h=480&r=9186",
+            "https://api.lorem.space/image/furniture?w=640&h=480&r=6667",
+        ],
+    };
     return (
-        <div className=' group cursor-pointer overflow-hidden  rounded-lg bg-[#F3F3F3] text-primary shadow-xl transition duration-300  hover:scale-105 hover:shadow-2xl'>
+        <div className='group w-[250px] cursor-pointer overflow-hidden  rounded-lg bg-[#F3F3F3] text-primary shadow-xl transition duration-300  hover:scale-105 hover:shadow-2xl'>
             <div className='relative aspect-video overflow-hidden rounded-md transition-all  '>
                 <Image
                     layout='fill'
                     objectFit='cover'
                     className='abso h-full w-full'
-                    src='/Photo.png'
+                    src={item.images[0]}
                     alt='Sunset in the mountains'
                 />
             </div>
@@ -58,7 +65,7 @@ function card() {
                         <span className='ml-1'>{item.location}</span>
                     </div>
                     <span className='opacity-0 transition duration-300 group-hover:opacity-100 '>
-                        Category
+                        {item.category}
                     </span>
                 </div>
             </div>

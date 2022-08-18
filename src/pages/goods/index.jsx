@@ -9,23 +9,21 @@ import PopularItemsCard from "@/components/PopularItemsCard";
 import { useState } from "react";
 
 // This is an array for test purposes ***WILL BE DELETED LATER***
-const arr = [1, 2, 3, 4, 5];
-
+const categories = ["All", "Furniture", "Clothes", "Electronics", "Others"];
 /*
 This function is important to bring the data from the server ***FOR FUTURE USE***
+*/
 export const getStaticProps = async () => {
-
-    const fetchGoods = await fetch('API GOES HERE');
+    const fetchGoods = await fetch(`http://localhost:3004/items`);
     const goods = await fetchGoods.json();
- return {
-     props: {goods}
- }
- }
- */
+    return {
+        props: { goods },
+    };
+};
 
 // This one can be put in a separate folder since it will be used in two different places
 const cities = [
-    "None",
+    "All",
     "Adana",
     "Adiyaman",
     "Afyon",
@@ -108,47 +106,61 @@ const cities = [
     "Yozgat",
     "Zonguldak",
 ];
-const GoodsPage = () => {
-    /*
-THIS STATE FOR THE REAL DATA ***FOR FUTURE USE***
-The data here should be processd by a FILTER FUNCTION  before it gets assigned to the state
-    const [data, setData] = useState([]);
-*/
-
-    // This for the location Menu
+const GoodsPage = ({ goods }) => {
+    const [q, setQ] = useState("");
+    const [searchParam] = useState([
+        "category",
+        "title",
+        "description",
+        "location",
+    ]);
+    const [filterParam, setFilterParam] = useState(["All"]);
     const [listCity, setListCity] = useState(false);
-
-    /* Important States to filter the data
-    //This state to handle filter by City
-    const [byCity, setByCity] = useState("None");
-    
-    // This state should handle the search bar
-    const [byName, setByName] = useState("");
-    onChange={(e) => {setByName(e.target.value); }} // to be put inside the search input
-
-    // This state should handle filter by Category
-    const [byCategory, setByCategory] = useState("None");
-*/
-
     const [sortRecent, setSortRecent] = useState(false);
 
-    const handleSelectCity = () => {
-        setListCity(!listCity);
-        // setByCity(e.target.innerHTML); once we uncomment this, we have to add e to the function
-    };
+    function search(goods) {
+        return goods.filter((item) => {
+            if (item.location == filterParam || item.category == filterParam) {
+                return searchParam.some((newItem) => {
+                    return (
+                        item[newItem]
+                            .toString()
+                            .toLowerCase()
+                            .indexOf(q.toLowerCase()) > -1
+                    );
+                });
+            } else if (filterParam == "All") {
+                return searchParam.some((newItem) => {
+                    return (
+                        item[newItem]
+                            .toString()
+                            .toLowerCase()
+                            .indexOf(q.toLowerCase()) > -1
+                    );
+                });
+            }
+        });
+    }
 
     return (
         <Layout>
             <div className='container m-auto my-5 flex w-[70%] flex-col justify-center'>
                 <div className='order-2 flex flex-wrap justify-center md:order-1 lg:justify-between'>
-                    {arr.map((item) => {
-                        return <CategoryCard key={item} />;
+                    {categories.map((item, i) => {
+                        return (
+                            <CategoryCard
+                                key={i}
+                                cat={item}
+                                setFilterParam={setFilterParam}
+                            />
+                        );
                     })}
                 </div>
                 <div className='filterBar order-1 m-3 flex flex-col justify-center md:flex-row md:justify-between'>
                     <span className=' flex items-center justify-center rounded-full border-2  border-primary shadow-md md:w-[30%] md:flex-initial  '>
                         <input
                             placeholder='Search'
+                            onChange={(e) => setQ(e.target.value)}
                             className=' w-[80%] bg-[transparent] focus:outline-0  '
                         />{" "}
                         <Image
@@ -161,12 +173,8 @@ The data here should be processd by a FILTER FUNCTION  before it gets assigned t
                     </span>
                     <span className=' my-2 flex justify-center gap-5  md:my-0 md:w-[40%] md:flex-initial md:justify-end '>
                         <button
-                            onBlur={() => {
-                                setListCity(false);
-                            }}
-                            onClick={() => {
-                                setListCity(!listCity);
-                            }}
+                            onBlur={() => setListCity(false)}
+                            onClick={() => setListCity(!listCity)}
                             className='relative flex w-[120px] items-center justify-between rounded-full bg-primary px-3  text-sm font-semibold text-[white] shadow-md'
                         >
                             Location
@@ -182,15 +190,17 @@ The data here should be processd by a FILTER FUNCTION  before it gets assigned t
                                 }  z-20 h-[200px] w-[100%] overflow-scroll rounded-md bg-[white] text-left text-[black]`}
                             >
                                 {" "}
-                                {cities.map((city) => {
+                                {cities.map((city, i) => {
                                     return (
-                                        <li
-                                            className='list-none hover:bg-btnBgHover'
-                                            onClick={handleSelectCity}
-                                            key={city}
+                                        <option
+                                            key={i}
+                                            value={city}
+                                            onClick={(e) =>
+                                                setFilterParam(e.target.value)
+                                            }
                                         >
                                             {city}
-                                        </li>
+                                        </option>
                                     );
                                 })}
                             </div>
@@ -217,14 +227,9 @@ The data here should be processd by a FILTER FUNCTION  before it gets assigned t
                 <span className='addItem  order-3 my-5 mr-3 flex justify-center md:justify-end'>
                     <Button outLinedSecondary='Add Item' />
                 </span>
-                <div className='goodsSection order-last my-5  flex flex-wrap justify-center gap-2  md:gap-5 lg:justify-between'>
-                    {arr.map((item) => {
-                        return (
-                            <div key={item} className='w-[200px]'>
-                                {" "}
-                                <PopularItemsCard />
-                            </div>
-                        );
+                <div className='goodsSection order-last my-5 flex w-full flex-row flex-wrap justify-center gap-2  md:gap-5 lg:justify-between'>
+                    {search(goods).map((item, i) => {
+                        return <PopularItemsCard key={i} item={item} />;
                     })}
                 </div>
             </div>
