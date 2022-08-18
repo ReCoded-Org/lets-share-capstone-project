@@ -13,9 +13,11 @@ const LangMenu = () => {
             <div>
                 <Menu.Button className=' z-1 mr-4 flex flex-row-reverse rounded-full text-sm md:mr-0 md:flex-row'>
                     <span className='sr-only'>Open user menu</span>
-                    <img
+                    <Image
                         className='h-8 w-8 rounded-full '
                         src={`/images/${locale}Flag.svg`}
+                        width={40}
+                        height={40}
                         alt=''
                     />
                     <Image
@@ -23,6 +25,7 @@ const LangMenu = () => {
                         height='30px'
                         width='20px'
                         src='/images/arrowIcon.svg'
+                        alt=''
                     />
                 </Menu.Button>
             </div>
@@ -44,6 +47,7 @@ const LangMenu = () => {
                                     height='1'
                                     width='20px'
                                     src='/images/enFlag.svg'
+                                    alt=''
                                 />
                                 <a>English</a>
                             </div>
@@ -57,6 +61,7 @@ const LangMenu = () => {
                                     height='1'
                                     width='20px'
                                     src='/images/arFlag.svg'
+                                    alt=''
                                 />
                                 <a>عربي</a>
                             </div>
@@ -70,6 +75,7 @@ const LangMenu = () => {
                                     height='1'
                                     width='20px'
                                     src='/images/trFlag.svg'
+                                    alt=''
                                 />
                                 <a>Türkçe</a>
                             </div>
@@ -83,6 +89,7 @@ const LangMenu = () => {
                                     height='1'
                                     width='20px'
                                     src='/images/jaFlag.svg'
+                                    alt=''
                                 />
                                 <a>日本語</a>
                             </div>

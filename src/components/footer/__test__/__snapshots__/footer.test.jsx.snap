@@ -160,11 +160,11 @@ exports[`renders correctly 1`] = `
         className="pb-2 hover:text-fontColor"
       >
         <a
-          href="/#"
+          href="/goods"
           onClick={[Function]}
           onMouseEnter={[Function]}
         >
-          Listed items
+          Goods
         </a>
       </li>
     </ul>
