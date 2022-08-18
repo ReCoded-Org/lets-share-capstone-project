@@ -3,6 +3,8 @@
 exports[`renders correctly 1`] = `
 <div
   className=" group cursor-pointer overflow-hidden rounded-lg bg-[#F3F3F3] text-primary shadow-xl transition duration-300 hover:scale-105 hover:shadow-2xl"
+  onClick={[Function]}
+  onMouseEnter={[Function]}
 >
   <div
     className="relative aspect-video overflow-hidden rounded-md transition-all "
@@ -94,11 +96,6 @@ exports[`renders correctly 1`] = `
         />
       </noscript>
     </span>
-    <span
-      className="absolute bottom-0 left-0 rounded-md bg-primary py-1 px-3 text-[white]"
-    >
-      07 july
-    </span>
   </div>
   <div
     className=" py-4 px-3 "
@@ -109,14 +106,14 @@ exports[`renders correctly 1`] = `
       <span
         className=" dark:from-purple-800 dark:to-purple-900 bg-gradient-to-r from-[#4ade80] to-[#dcfce7] bg-[length:0px_10px] bg-left-bottom bg-no-repeat transition-[background-size] duration-500 hover:bg-[length:100%_3px] group-hover:bg-[length:100%_10px]"
       >
-        My Blog
+        blogs.headerBlg1
          
       </span>
     </h2>
     <p
       className="text-gray-700 mt-2 text-base "
     >
-      This is my blog
+      blogs.contentBlg1...
     </p>
   </div>
 </div>

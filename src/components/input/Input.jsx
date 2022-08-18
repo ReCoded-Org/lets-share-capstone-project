@@ -1,11 +1,10 @@
-import React, { useState } from "react";
-
-export default function Input({ title, type, placeholder }) {
-    const [value, setValue] = useState("");
-    function handleChange(e) {
-        setValue(e.target.value);
-    }
-
+export default function Input({
+    title,
+    type,
+    placeholder,
+    value,
+    handleChange,
+}) {
     return (
         <div className='my-7 flex justify-center'>
             <div className='flex w-[80%] flex-col items-start justify-center md:w-[60%] xl:w-[40%]'>
@@ -13,6 +12,7 @@ export default function Input({ title, type, placeholder }) {
                     {title}
                 </label>
                 <input
+                    title={title}
                     type={type}
                     value={value}
                     onChange={handleChange}
