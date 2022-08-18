@@ -18,15 +18,17 @@ function List(props) {
             </h2>
             <div className=' container  mx-auto mt-10 mb-10 flex  grid-cols-2 flex-col gap-5 bg-[#FAFAFA]  text-center sm:grid md:text-left   lg:grid-cols-4  xl:grid-cols-4'>
                 {"" &&
-                    list.map((item) =>
-                        list === blogs ? (
-                            <BlogCard key={item.id} item={item} />
-                        ) : categories ? (
-                            <CategoryCard key={item.id} item={item} />
-                        ) : (
-                            <PopularItemsCard key={item.id} item={item} />
-                        )
-                    )}
+                    list
+                        .slice(0, 4)
+                        .map((item) =>
+                            list === blogs ? (
+                                <BlogCard key={item.id} item={item} />
+                            ) : categories ? (
+                                <CategoryCard key={item.id} item={item} />
+                            ) : (
+                                <PopularItemsCard key={item.id} item={item} />
+                            )
+                        )}
             </div>
         </>
     );

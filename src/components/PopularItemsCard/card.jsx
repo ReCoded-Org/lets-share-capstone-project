@@ -17,6 +17,7 @@ function card() {
             "https://api.lorem.space/image/furniture?w=640&h=480&r=6667",
         ],
     };
+
     return (
         <div className='group w-[250px] cursor-pointer overflow-hidden  rounded-lg bg-[#F3F3F3] text-primary shadow-xl transition duration-300  hover:scale-105 hover:shadow-2xl'>
             <div className='relative aspect-video overflow-hidden rounded-md transition-all  '>

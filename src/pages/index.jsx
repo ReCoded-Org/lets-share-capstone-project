@@ -12,7 +12,18 @@ import List from "@/components/LandingList";
 import Stats from "@/components/Stats";
 import Partners from "@/components/Partners";
 
-export default function HomePage() {
+export async function getStaticProps({ locale }) {
+    const res = await fetch(`http://localhost:3000/items`);
+    const items = await res.json();
+    return {
+        props: {
+            ...(await serverSideTranslations(locale, ["common"])),
+            items,
+        },
+    };
+}
+
+export default function HomePage({ items }) {
     const { t } = useTranslation("common");
 
     const blogs = [
@@ -36,36 +47,6 @@ export default function HomePage() {
             image: "/Photo.png" /*(The path of image should be provided)*/,
             imageAlt:
                 "Sunset in the mountains" /*(An actual ALT should be provided)*/,
-        },
-    ];
-    const items = [
-        {
-            title: "My item",
-            description: "This is my item",
-            location: "istanbul",
-            category: "item",
-            user: "user1",
-        },
-        {
-            title: "My item",
-            description: "This is my item",
-            location: "istanbul",
-            category: "item",
-            user: "user1",
-        },
-        {
-            title: "My item",
-            description: "This is my item",
-            location: "istanbul",
-            category: "item",
-            user: "user1",
-        },
-        {
-            title: "My item",
-            description: "This is my item",
-            category: "item",
-            location: "istanbul",
-            user: "user1",
         },
     ];
 
@@ -97,11 +78,11 @@ export default function HomePage() {
     );
 }
 
-export async function getStaticProps({ locale }) {
+/*export async function getStaticProps({ locale }) {
     return {
         props: {
-            ...(await serverSideTranslations(locale, ["common"])),
+           // ...(await serverSideTranslations(locale, ["common"])),//
             // Will be passed to the page component as props
         },
     };
-}
+}*/
