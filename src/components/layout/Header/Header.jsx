@@ -7,7 +7,7 @@ import LangMenu from "./LangMenu";
 import Image from "next/image";
 
 const navigation = [
-    { name: "Home", href: "/home", current: false },
+    { name: "Home", href: "/", current: false },
     { name: "About us", href: "/aboutus", current: false },
     { name: "Goods", href: "/goods", current: false },
     { name: "Blogs", href: "/blogs", current: false },
@@ -29,16 +29,10 @@ export default function Header() {
         };
     }, []);
 
-    // Example usage with TailwindCSS:
-
-    {
-        /* <div className={`bg-header/75 transition duration-500 ease-in-out ${animateHeader && 'bg-header/[0.95]'}`}> */
-    }
-
     return (
         <div className='relative '>
             <div className=' absolute -z-10 h-96 w-full'>
-                {/* <Image 
+                {/*<Image 
             src='/Vector.png'
             layout="responsive"
             width={1200}

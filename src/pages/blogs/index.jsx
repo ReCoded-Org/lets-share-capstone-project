@@ -3,32 +3,29 @@ import Layout from "@/components/layout/Layout";
 import BlogsCard from "@/components/BlogsCard";
 import BlogCard from "@/components/BlogCard";
 import { useState, useEffect } from "react";
-
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 export default function Blogs() {
-    const items = [
+    const blogs = [
         {
             id: 1,
-            title: "My Blog",
-            description:
-                " Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum necessitatibus numquam qui ea debitis natus amet ab nobis dignissimos consequatur possimus obcaecati corporis doloremque velit, temporibus praesentium unde sed? Quae?",
-            image: "/Photo.png",
-            date: "01/01/2015",
+            title: "My-Blog" /*(An actual title should be provided here for the dynamic routing)*/,
+            image: "/Photo.png" /*(The path of image should be provided)*/,
+            imageAlt:
+                "Sunset in the mountains" /*(An actual ALT should be provided)*/,
         },
         {
             id: 2,
-            title: "My Blog",
-            description:
-                " Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum necessitatibus numquam qui ea debitis natus amet ab nobis dignissimos consequatur possimus obcaecati corporis doloremque velit, temporibus praesentium unde sed? Quae?",
-            image: "/Photo.png",
-            date: "01/01/2015",
+            title: "My-Blog-second" /*(An actual title should be provided here for the dynamic routing)*/,
+            image: "/Photo.png" /*(The path of image should be provided)*/,
+            imageAlt:
+                "Sunset in the mountains" /*(An actual ALT should be provided)*/,
         },
         {
             id: 3,
-            title: "My Blog",
-            description:
-                " Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum necessitatibus numquam qui ea debitis natus amet ab nobis dignissimos consequatur possimus obcaecati corporis doloremque velit, temporibus praesentium unde sed? Quae?",
-            image: "/Photo.png",
-            date: "01/01/2015",
+            title: "My-Blog-third" /*(An actual title should be provided here for the dynamic routing)*/,
+            image: "/Photo.png" /*(The path of image should be provided)*/,
+            imageAlt:
+                "Sunset in the mountains" /*(An actual ALT should be provided)*/,
         },
     ];
 
@@ -48,7 +45,7 @@ export default function Blogs() {
             <Layout>
                 {isDesktop ? (
                     <div className='m-10 p-10'>
-                        {items.map((blog) => {
+                        {blogs.map((blog) => {
                             return (
                                 <div key={blog.id} className='mb-10'>
                                     <BlogsCard item={blog} />
@@ -58,7 +55,7 @@ export default function Blogs() {
                     </div>
                 ) : (
                     <div className='m-10 p-10'>
-                        {items.map((blog) => {
+                        {blogs.map((blog) => {
                             return (
                                 <div key={blog.id} className='mb-10'>
                                     <BlogCard item={blog} />
@@ -70,4 +67,12 @@ export default function Blogs() {
             </Layout>
         </div>
     );
+}
+export async function getStaticProps({ locale }) {
+    return {
+        props: {
+            ...(await serverSideTranslations(locale, ["common"])),
+            // Will be passed to the page component as props
+        },
+    };
 }

@@ -28,26 +28,28 @@ export default function HomePage({ items }) {
 
     const blogs = [
         {
-            title: "My Blog",
-            date: "01/01/2015",
-            description: "This is my blog",
+            id: 1,
+            title: "My-Blog" /*(An actual title should be provided here for the dynamic routing)*/,
+            image: "/Photo.png" /*(The path of image should be provided)*/,
+            imageAlt:
+                "Sunset in the mountains" /*(An actual ALT should be provided)*/,
         },
         {
-            title: "My Blog",
-            date: "01/01/2015",
-            description: "This is my blog",
+            id: 2,
+            title: "My-Blog-second" /*(An actual title should be provided here for the dynamic routing)*/,
+            image: "/Photo.png" /*(The path of image should be provided)*/,
+            imageAlt:
+                "Sunset in the mountains" /*(An actual ALT should be provided)*/,
         },
         {
-            title: "My Blog",
-            date: "01/01/2015",
-            description: "This is my blog",
-        },
-        {
-            title: "My Blog",
-            date: "01/01/2015",
-            description: "This is my blog",
+            id: 3,
+            title: "My-Blog-third" /*(An actual title should be provided here for the dynamic routing)*/,
+            image: "/Photo.png" /*(The path of image should be provided)*/,
+            imageAlt:
+                "Sunset in the mountains" /*(An actual ALT should be provided)*/,
         },
     ];
+
 
     /*const items = [
         {
