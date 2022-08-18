@@ -49,37 +49,6 @@ export default function HomePage({ items }) {
         },
     ];
 
-    /*const items = [
-        {
-            title: "My item",
-            description: "This is my item",
-            location: "istanbul",
-            category: "item",
-            user: "user1",
-        },
-        {
-            title: "My item",
-            description: "This is my item",
-            location: "istanbul",
-            category: "item",
-            user: "user1",
-        },
-        {
-            title: "My item",
-            description: "This is my item",
-            location: "istanbul",
-            category: "item",
-            user: "user1",
-        },
-        {
-            title: "My item",
-            description: "This is my item",
-            category: "item",
-            location: "istanbul",
-            user: "user1",
-        },
-    ];*/
-
     return (
         <Layout className=''>
             <HeroSection />
