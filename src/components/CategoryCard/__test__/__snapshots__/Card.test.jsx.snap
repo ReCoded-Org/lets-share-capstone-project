@@ -2,7 +2,8 @@
 
 exports[`renders correctly 1`] = `
 <div
-  className="group mx-auto flex h-fit w-fit flex-col items-center justify-between rounded-lg p-4 text-center shadow-xl hover:animate-bounce "
+  className="group mx-auto flex h-fit w-fit cursor-pointer flex-col items-center justify-between rounded-lg p-4 text-center shadow-xl hover:animate-bounce "
+  onClick={[Function]}
 >
   <svg
     className="h-6 w-6 "
@@ -20,8 +21,6 @@ exports[`renders correctly 1`] = `
   </svg>
   <span
     className="mt-4 font-bold text-primary"
-  >
-    Category
-  </span>
+  />
 </div>
 `;
