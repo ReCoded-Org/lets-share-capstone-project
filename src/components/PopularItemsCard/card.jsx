@@ -10,7 +10,6 @@ const item = {
     description:
         "The Apollotech B340 is an affordable wireless mouse with reliable connectivity, 12 months battery life and modern design",
     category: "Furniture",
-
     images: [
         "https://api.lorem.space/image/furniture?w=640&h=480&r=9644",
         "https://api.lorem.space/image/furniture?w=640&h=480&r=9186",
@@ -19,6 +18,7 @@ const item = {
 };
 //need to remove above item and pass {item} as props in below function
 function card() {
+    };
     return (
         <Link href={`items/${item.id}`}>
             <div className='group w-[250px] cursor-pointer overflow-hidden rounded-lg  bg-[white] font-primary text-primary shadow-xl transition duration-300  hover:scale-105 hover:shadow-2xl'>
