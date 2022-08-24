@@ -2,7 +2,7 @@
 
 exports[`renders correctly 1`] = `
 <div
-  className="m-3 flex flex-col items-center justify-center md:flex-row "
+  className=" m-3 flex flex-col items-center justify-center font-primary md:flex-row "
 >
   <div
     className="m-4 flex flex-row items-center justify-center md:flex-col "
@@ -132,9 +132,9 @@ exports[`renders correctly 1`] = `
         onClick={[Function]}
       >
         <svg
-          className="text-md m-1 rounded-full text-primary hover:bg-btnBgHover"
+          className="text-md -translate-x-8 translate-y-8 opacity-60 hover:fill-primary hover:opacity-100 md:translate-x-8 md:-translate-y-8"
           fill="currentColor"
-          height="1em"
+          height={30}
           stroke="currentColor"
           strokeWidth="0"
           style={
@@ -143,60 +143,63 @@ exports[`renders correctly 1`] = `
             }
           }
           viewBox="0 0 24 24"
-          width="1em"
+          width={30}
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
             d="M0 0h24v24H0z"
             fill="none"
           />
+          <circle
+            cx="12"
+            cy="12"
+            r="3.2"
+          />
           <path
-            d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04a.996.996 0 000-1.41l-2.34-2.34a.996.996 0 00-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
+            d="M9 2L7.17 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2h-3.17L15 2H9zm3 15c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5z"
           />
         </svg>
       </button>
     </div>
     <span
-      className=" m-1 flex justify-center p-1 text-center "
+      className="flex justify-center text-center font-semibold "
     >
       John Doe
-      <br />
-      Kocaeli
     </span>
   </div>
   <div
-    className="m-4 flex flex-row justify-center rounded-lg bg-userInfoBg text-sm md:h-28 md:w-[60%] "
+    className="m-4 flex flex-row justify-center rounded-lg bg-[#ffffff] text-sm md:h-32 md:w-[60%] "
   >
     <div
-      className=" flex flex-1 flex-col flex-wrap items-start justify-around p-3 md:flex-row md:items-center "
+      className="flex flex-1 flex-col flex-wrap items-start justify-around gap-4 p-3 text-base lg:flex-row lg:items-center "
     >
       <span
-        className=" flex flex-col "
+        className=" flex flex-col gap-4"
       >
         <span
-          className="mb-1 md:mb-2"
+          className=""
         >
           Name: 
           John Doe
         </span>
         <span
-          className="mb-1 md:mb-2"
+          className=""
         >
           Location: 
           Kocaeli
         </span>
       </span>
       <span
-        className=" flex flex-col"
+        className=" flex flex-col gap-4"
       >
         <span
-          className="mb-1 md:mb-2"
+          className=""
         >
           Phone: 
           01234567890
         </span>
         <span
-          className="mb-1 md:mb-2"
+          className=""
         >
           Email: 
           blabla@example.com
@@ -208,7 +211,7 @@ exports[`renders correctly 1`] = `
       </span>
     </div>
     <div
-      className="flex h-[35px] flex-col p-1 hover:rounded-lg hover:bg-[#e8e8e8] md:h-[100%] md:justify-center"
+      className="flex h-[45px] w-[45px] flex-col items-center justify-center rounded-r-lg bg-[#e6e6e6] p-1 hover:bg-[#dbdbdb] md:h-[100%] md:justify-center"
     >
       <a
         href="/edit-profile"

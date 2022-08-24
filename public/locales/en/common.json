@@ -11,7 +11,12 @@
         "password": "Password",
         "password2": "Confirm Password",
         "phone": "Phone",
-        "logIn": "Log In"
+        "logIn": "Log In",
+        "Logout": "Log out",
+        "confirm": "Confirm",
+        "cancel": "Cancel",
+        "update": "Update Profile",
+        "lang": "Language"
     },
     "Footer": {
         "contactUs": "Contact us",
@@ -19,19 +24,24 @@
     },
     "landing": {
         "heroSection": {
-            "heroText": "The value of life is not in its duration, but in its donation. You are not important because of how long you live, you are important because of how effective you live. \"Myles Munroet\" ",
+            "heroText": "The value of life is not in its duration, but in its donation. You are not important because of how long you live, you are important because of how effective you live. ",
+            "myles": " Myles Munroet",
             "button": "Donate now"
         },
         "causes": {
             "causes": "Why are we doing this?",
             "causeText1": "The knowledge that you're helping others is hugely empowering and, in turn, can make you feel happier and more fulfilled. Research has identified a link between making a donation to charity and increased activity in the area of the brain that registers pleasure - proving that as the old adage goes, it really is far better to give than to receive.",
             "causeText2": "Having the power to improve the lives of others is, to many people, a privilege, and one that comes with its own sense of obligation. Acting on these powerful feelings of responsibility is a great way to reinforce our own personal values and feel like we're living in a way that is true to our own ethical beliefs.",
-            "causeText3": "3-Sharing the experience of donating to charity with your children shows them from a young age that they can make positive changes in the world. Children naturally love to help others, so nurturing their innate generosity is likely to mean that they grow up with a greater appreciation of what they have, and will carry on supporting charity in years to come."
+            "causeText3": "Sharing the experience of donating to charity with your children shows them from a young age that they can make positive changes in the world. Children naturally love to help others, so nurturing their innate generosity is likely to mean that they grow up with a greater appreciation of what they have, and will carry on supporting charity in years to come."
         },
         "stats": {
+            "accountsTitle": "Accounts",
             "accounts": "Our website has....... active accounts. They have been opened by our users without any additional These numbers increase on daily basis.",
+            "beneficiariesTitle": "Beneficiaries",
             "beneficiaries": "The number of beneficiaries is.... although it changes by the hour. 70 % of our users/beneficiaries are under the age of 45.",
+            "GeographicalDistrictsTitle": "Geographical Districts",
             "GeographicalDistricts": "Our beneficiaries are located in multiple cities. The highest percent of users are in Istanbul and Izmir, but our website have been the most in Gaziantep, Urfa and Mersin. Our website was even used between cities.",
+            "recommendationsTitle": "Recommendations",
             "recommendations": "Our website and the services it offers have grown mostly because of recommendations. Beneficiaries recommend us to other new possible beneficiaries online directly and indirectly. We have been shared as a recommendation online for over 500 times."
         }
     },
@@ -53,7 +63,8 @@
         "title": "Title",
         "description": "Description",
         "category": "Category",
-        "button": "Add Item"
+        "button": "Add Item",
+        "uploadPhotos": "Upload photos"
     },
     "signUp": {
         "surname": "Surname",
@@ -88,6 +99,16 @@
         "headerBlg2": "Blog 2 Title",
         "contentBlg2": " ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliqua",
         "headerBlg3": "Blog 3 Title",
-        "contentBlg3": "ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliqua"
+        "contentBlg3": "ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliqua",
+        "headerBlg4": "Blog 4 Title",
+        "contentBlg4": "ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliqua",
+        "moreBlogs": "More Blogs"
+    },
+    "categories": {
+        "All": "All",
+        "Furniture": "Furniture",
+        "Clothes": "Clothes",
+        "Electronics": "Electronics",
+        "Others": "Others"
     }
 }

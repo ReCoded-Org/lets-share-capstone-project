@@ -2,6 +2,10 @@ import Layout from "@/components/layout/Layout";
 import React from "react";
 import Image from "next/image";
 import Slider from "react-slick";
+import { useTranslation } from "next-i18next";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { HiLocationMarker, HiUserCircle } from "react-icons/hi";
+import { FiShoppingBag } from "react-icons/fi";
 
 import PopularItemCard from "@/components/PopularItemsCard";
 
@@ -20,7 +24,7 @@ export async function getStaticPaths() {
     };
 }
 
-export async function getStaticProps({ params }) {
+export async function getStaticProps({ params, locale }) {
     const res = await fetch(`http://localhost:3000/items/${params.id}`);
     const item = await res.json();
     const data = await fetch(`http://localhost:3000/items`);
@@ -30,25 +34,27 @@ export async function getStaticProps({ params }) {
         props: {
             item,
             items,
+            ...(await serverSideTranslations(locale, ["common"])),
         },
     };
 }
 
 function Item({ item, items }) {
+    const { t } = useTranslation("common");
     const user = {
         name: "user1 user",
-        email: "asgaga@fdg.com",
+        email: "asgagk@fdglkj.com",
         phone: 123456789,
     };
 
     const settings = {
         customPaging: function () {
             return (
-                <a className=' '>
+                <a className=''>
                     <Image
                         src={item.images[0]}
                         width={100}
-                        height={100}
+                        height={80}
                         className=''
                         alt='thumb'
                     />
@@ -56,8 +62,12 @@ function Item({ item, items }) {
             );
         },
         dots: true,
-        dotsClass: "slick-dots slick-thumb",
+        dotsClass: "slick-dots  ",
         infinite: true,
+        autoplay: true,
+        autoplaySpeed: 4000,
+        fade: true,
+        fadeSpeed: 1000,
         speed: 500,
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -65,18 +75,19 @@ function Item({ item, items }) {
 
     return (
         <Layout>
-            <div className='container mx-auto mt-5 mb-5  w-[90%]'>
-                <div className='flex flex-col items-center md:flex-row md:items-start md:space-x-14 '>
+            <div className='mx-auto my-10 flex w-[80%] flex-col  font-primary md:w-[90%]'>
+                <div className='flex flex-col items-center md:flex-row md:items-start md:space-x-8 xl:space-x-14'>
                     <div className=' '>
-                        <div className='w-[500px]  '>
+                        <div className='w-[290px] sm:w-[350px] xl:w-[500px] 2xl:w-[650px]'>
                             <Slider {...settings}>
                                 {item.images.map((image, index) => (
-                                    <div key={index} className=' ml-14  '>
+                                    <div
+                                        key={index}
+                                        className=' h-[180px] sm:h-[217px] xl:h-[320px] 2xl:h-[403px]'
+                                    >
                                         <Image
                                             src={image}
-                                            width={400}
-                                            height={400}
-                                            layout='fixed'
+                                            layout='fill'
                                             alt='item'
                                             className=' object-conver inset-0 mx-auto rounded-2xl'
                                         />
@@ -85,69 +96,47 @@ function Item({ item, items }) {
                             </Slider>
                         </div>
                     </div>
-                    <div className=' max-w-lg p-5 text-left text-fontColor '>
-                        <h1 className='text-xl font-bold'>{item.title}</h1>
-                        <p className='text-lg md:mb-12'>{item.description}</p>
-                        <div className='flex items-center justify-between font-semibold'>
-                            <div className=' flex flex-col justify-between '>
-                                <div className='my-3 '>
-                                    <svg
-                                        xmlns='http://www.w3.org/2000/svg'
-                                        className='h-5 w-5'
-                                        viewBox='0 0 20 20'
-                                        fill='#F07167'
-                                    >
-                                        <path
-                                            fillRule='evenodd'
-                                            d='M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z'
-                                            clipRule='evenodd'
-                                        />
-                                    </svg>{" "}
-                                    {item.location}
+                    <div className=' mt-5 max-w-2xl p-5 text-left text-fontColor md:mt-0 '>
+                        <div className=' mb-5'>
+                            <h1 className='mb-5 text-lg font-bold lg:text-xl'>
+                                {item.title}
+                            </h1>
+                            <p className='text-md md:mb-12'>
+                                {item.description}
+                            </p>
+                        </div>
+                        <div className='flex items-center justify-start gap-20 '>
+                            <div className=' flex flex-col justify-between gap-4 '>
+                                <div className=''>
+                                    <HiLocationMarker
+                                        color='#F07167'
+                                        size={25}
+                                    />
+                                    <p>{item.location}</p>
                                 </div>
                                 <div>
-                                    <svg
-                                        xmlns='http://www.w3.org/2000/svg'
-                                        className='h-6 w-6'
-                                        fill='#F07167'
-                                        viewBox='0 0 24 24'
-                                        stroke=''
-                                        strokeWidth={2}
-                                    >
-                                        <path
-                                            strokeLinecap='round'
-                                            strokeLinejoin='round'
-                                            d='M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10'
-                                        />
-                                    </svg>{" "}
+                                    <FiShoppingBag color='#F07167' size={25} />
                                     {item.category}
                                 </div>
                             </div>
-                            <div className='flex flex-col items-center '>
+                            <div className='flex flex-col '>
                                 <div className='flex  justify-between'>
-                                    <svg
-                                        xmlns='http://www.w3.org/2000/svg'
-                                        className='h-5 w-5'
-                                        viewBox='0 0 20 20'
-                                        fill='#F07167'
-                                    >
-                                        <path
-                                            fillRule='evenodd'
-                                            d='M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zm-2 4a5 5 0 00-4.546 2.916A5.986 5.986 0 0010 16a5.986 5.986 0 004.546-2.084A5 5 0 0010 11z'
-                                            clipRule='evenodd'
-                                        />
-                                    </svg>
-                                    <span className='text-sm'>{user.name}</span>
+                                    <HiUserCircle color='#F07167' size={25} />
                                 </div>
-                                <span className='my-2'>{user.email}</span>
-                                <span>{user.phone}</span>
+                                <div className='flex flex-col gap-2 break-all'>
+                                    <p>{user.name}</p>
+                                    <p className=''>{user.email}</p>
+                                    <p>{user.phone}</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div>
-                    <h1 className='my-5 text-xl font-bold'>related items</h1>
-                    <div className='container  mx-auto mt-10 mb-10 flex  grid-cols-2 flex-col gap-5   text-center sm:grid md:text-left   lg:grid-cols-5  xl:grid-cols-5'>
+                <div className='mt-10 flex flex-col items-center'>
+                    <h1 className='mt-5 font-head text-3xl font-semibold tracking-wider text-fontColor'>
+                        {t("item.related")}
+                    </h1>
+                    <div className='mx-auto mt-10 mb-10 grid grid-cols-1 gap-5 text-center sm:grid-cols-2 md:text-left lg:grid-cols-3 lg:gap-10 xl:grid-cols-4 xl:gap-16 2xl:grid-cols-5'>
                         {items.slice(0, 5).map((item) => (
                             <PopularItemCard item={item} key={item.id} />
                         ))}

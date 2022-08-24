@@ -5,7 +5,20 @@ import Option from "@/components/option";
 import Button from "@/components/button";
 import Link from "next/link";
 import { useState } from "react";
+import { useTranslation } from "next-i18next";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+
+export async function getStaticProps({ locale }) {
+    return {
+        props: {
+            ...(await serverSideTranslations(locale, ["common"])),
+            // Will be passed to the page component as props
+        },
+    };
+}
+
 export default function EditProfile(/*{ userData }*/) {
+    const { t } = useTranslation("common");
     const [updateForm, setUpdateForm] = useState({
         /* here, we have to put the default values of user's info "userData" */
     });
@@ -14,41 +27,41 @@ export default function EditProfile(/*{ userData }*/) {
         setUpdateForm({ ...updateForm, [title]: value });
     };
     return (
-        <div>
-            <Layout>
-                <div className='text-center text-2xl font-bold text-fontColor'>
-                    <h1>Update profile</h1>
+        <Layout>
+            <div className='my-10'>
+                <div className='text-center font-head text-4xl font-semibold tracking-wider text-fontColor'>
+                    <h1>{t("common.update")}</h1>
                 </div>
                 <Input
-                    title='Name'
+                    title={t("common.name")}
                     type='text'
-                    placeholder='Name Surename'
+                    placeholder={`${t("common.name")} ${t("signUp.surname")}`}
                     value={updateForm.title}
                     handleChange={handleInputChange}
                 />
                 <Input
-                    title='Email'
+                    title={t("common.email")}
                     type='email'
                     placeholder='mail@mail.com'
                     value={updateForm.title}
                     handleChange={handleInputChange}
                 />
                 <Input
-                    title='Password'
+                    title={t("common.password")}
                     type='password'
                     placeholder='at least 8 characters'
                     value={updateForm.title}
                     handleChange={handleInputChange}
                 />
                 <Input
-                    title='Confirm Password'
+                    title={t("common.password2")}
                     type='password'
                     placeholder='at least 8 characters'
                     value={updateForm.title}
                     handleChange={handleInputChange}
                 />
                 <Input
-                    title='Phone'
+                    title={t("common.phone")}
                     type='tel'
                     placeholder='eg:0011223344'
                     value={updateForm.title}
@@ -78,8 +91,8 @@ export default function EditProfile(/*{ userData }*/) {
                         </a>
                     </Link>
                 </div>
-            </Layout>
-        </div>
+            </div>
+        </Layout>
     );
 }
 /*

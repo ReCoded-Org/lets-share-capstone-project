@@ -11,7 +11,12 @@
         "password": "كلمة المرور",
         "password2": "تأكيد كلمة المرور",
         "phone": "رقم الهاتف",
-        "logIn": "تسجيل الدخول"
+        "logIn": "تسجيل الدخول",
+        "Logout": "تسجيل الخروج",
+        "confirm": "تأكيد",
+        "cancel": "إلغاء",
+        "update": "تحديث ملف المستخدم",
+        "lang": "اللغة"
     },
     "Footer": {
         "contactUs": "اتصل بنا",
@@ -19,7 +24,8 @@
     },
     "landing": {
         "heroSection": {
-            "heroText": "قيمة الحياة ليست بمدتها، وإنما بعطائك فيها. قيمتك ليست بمدة حياتك، إنما تأتي قيمتك بمقدار أثرك في حياتك. \"مايلز مونرو\" ",
+            "heroText": "قيمة الحياة ليست بمدتها، وإنما بعطائك فيها. قيمتك ليست بمدة حياتك، إنما تأتي قيمتك بمقدار أثرك في حياتك.",
+            "myles": "مايلز مونرو ",
             "button": "تبرع الآن"
         },
         "causes": {
@@ -29,9 +35,13 @@
             "causeText3": "إن مشاركة تجربة التبرع للأعمال الخيرية مع أطفالك تظهر لهم منذ الصغر أنهم يستطيعون إحداث تغييرات إيجابية في العالم. يحب الأطفال بشكل طبيعي مساعدة الآخرين ، لذا فإن رعاية كرمهم الفطري من المرجح أن يعني أنهم يكبرون مع تقدير أكبر لما لديهم ، وسيواصلون دعم الأعمال الخيرية في السنوات القادمة."
         },
         "stats": {
+            "accountsTitle": "الحسابات",
             "accounts": "يحتوي موقعنا على .... حساباً نشطاً. تم فتح هذه الحسابات من قبل مستخدمينا دون أي إضافة. وهذه الحسابات تزيد بشكل يومي.",
+            "beneficiariesTitle": "المستفيدون",
             "beneficiaries": "عدد المستفيدين .... يتغير بشكل مستمر، 70% من المستخدمين/المستفيدين هم تحت سن 45 عاماً.",
+            "GeographicalDistrictsTitle": "المناطق الجغرافية",
             "GeographicalDistricts": "يسكن المستفيدون في مناطق مختلفة، النسبة الأكبر من المستخدمين هم في اسطنبول وإزمير، وأعلى الزيارات لموقعنا كانت في غازي عنتاب، أورفا ومرسين. كما تم استخدام موقعنا بين مدن مختلفة.",
+            "recommendationsTitle": "توصيات",
             "recommendations": "حقق موقعنا والخدمات التي يتم تقديمها فيه نمواً أعلى بسبب التوصيات. يقوم المستفيدون من الخدمات التي يقدمها موقعنا بالتوصية بنا لمستفيدين آخرين محتملين من خلال الانترنت بشكل مباشر أو غير مباشر. تم مشاركة موقعنا كتوصية عن طريق الانترنت أكثر من 500 مرة."
         }
     },
@@ -53,7 +63,8 @@
         "title": "العنوان",
         "description": "الوصف",
         "category": "التصنيف",
-        "button": "أضف عنصراً"
+        "button": "أضف عنصراً",
+        "uploadPhotos": "تحميل صور"
     },
     "signUp": {
         "surname": "الكنية",
@@ -88,6 +99,16 @@
         "headerBlg2": "Blog 2 عربي",
         "contentBlg2": "عربي ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliqua",
         "headerBlg3": "Blog 3 عربي",
-        "contentBlg3": "ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliqua"
+        "contentBlg3": "ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliqua",
+        "headerBlg4": "Blog 4 عربي",
+        "contentBlg4": "ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliqua",
+        "moreBlogs": "المزيد من التدوينات"
+    },
+    "categories": {
+        "All": "الكل",
+        "Furniture": "مفروشات",
+        "Clothes": "ملابس",
+        "Electronics": "الكترونيات",
+        "Others": "عناصر أخرى"
     }
 }

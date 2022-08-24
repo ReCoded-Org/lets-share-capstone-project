@@ -1,8 +1,6 @@
-import { useTranslation } from "next-i18next";
+// import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import * as React from "react";
-
-import Link from "next/link";
 
 // import '../styles/global.css';
 
@@ -23,12 +21,31 @@ export async function getStaticProps({ locale }) {
     };
 }
 
-export default function HomePage({ items }) {
-    const { t } = useTranslation("common");
+export default function HomePage() {
+    // const { t } = useTranslation("common");
+    //need to remove below item object and pass {items} as props in this function
+    const items = [
+        {
+            id: 13,
+            title: "Fantastic Frozen Computer",
+            location: "Adana",
+            price: 787,
+            description:
+                "The Apollotech B340 is an affordable wireless mouse with reliable connectivity, 12 months battery life and modern design",
+            category: "Furniture",
+
+            images: [
+                "https://api.lorem.space/image/furniture?w=640&h=480&r=9644",
+                "https://api.lorem.space/image/furniture?w=640&h=480&r=9186",
+                "https://api.lorem.space/image/furniture?w=640&h=480&r=6667",
+            ],
+        },
+    ];
 
     const blogs = [
         {
             id: 1,
+            date: "7 july 2022",
             title: "My-Blog" /*(An actual title should be provided here for the dynamic routing)*/,
             image: "/Photo.png" /*(The path of image should be provided)*/,
             imageAlt:
@@ -36,6 +53,7 @@ export default function HomePage({ items }) {
         },
         {
             id: 2,
+            date: "7 july 2022",
             title: "My-Blog-second" /*(An actual title should be provided here for the dynamic routing)*/,
             image: "/Photo.png" /*(The path of image should be provided)*/,
             imageAlt:
@@ -43,7 +61,16 @@ export default function HomePage({ items }) {
         },
         {
             id: 3,
+            date: "7 july 2022",
             title: "My-Blog-third" /*(An actual title should be provided here for the dynamic routing)*/,
+            image: "/Photo.png" /*(The path of image should be provided)*/,
+            imageAlt:
+                "Sunset in the mountains" /*(An actual ALT should be provided)*/,
+        },
+        {
+            id: 4,
+            date: "7 july 2022",
+            title: "My-Blog-forth" /*(An actual title should be provided here for the dynamic routing)*/,
             image: "/Photo.png" /*(The path of image should be provided)*/,
             imageAlt:
                 "Sunset in the mountains" /*(An actual ALT should be provided)*/,
@@ -58,21 +85,7 @@ export default function HomePage({ items }) {
             <div className='bg-[#FAFAFA]'>
                 <List items={items} />
                 <List blogs={blogs} />
-            </div>
-
-            <Partners />
-
-            <p>{t("test")}</p>
-            <div style={{ display: "flex", flexDirection: "row", gap: "20px" }}>
-                <Link href='/' locale='en'>
-                    <a>English</a>
-                </Link>
-                <Link href='/' locale='ar'>
-                    <a>Arabic</a>
-                </Link>
-                <Link href='/' locale='tr'>
-                    <a>Turkish</a>
-                </Link>
+                <Partners />
             </div>
         </Layout>
     );

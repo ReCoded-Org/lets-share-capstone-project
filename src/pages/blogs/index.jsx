@@ -8,6 +8,7 @@ export default function Blogs() {
     const blogs = [
         {
             id: 1,
+            date: "7 July 2022",
             title: "My-Blog" /*(An actual title should be provided here for the dynamic routing)*/,
             image: "/Photo.png" /*(The path of image should be provided)*/,
             imageAlt:
@@ -15,6 +16,7 @@ export default function Blogs() {
         },
         {
             id: 2,
+            date: "7 July 2022",
             title: "My-Blog-second" /*(An actual title should be provided here for the dynamic routing)*/,
             image: "/Photo.png" /*(The path of image should be provided)*/,
             imageAlt:
@@ -22,6 +24,7 @@ export default function Blogs() {
         },
         {
             id: 3,
+            date: "7 July 2022",
             title: "My-Blog-third" /*(An actual title should be provided here for the dynamic routing)*/,
             image: "/Photo.png" /*(The path of image should be provided)*/,
             imageAlt:
@@ -54,7 +57,7 @@ export default function Blogs() {
                         })}
                     </div>
                 ) : (
-                    <div className='m-10 p-10'>
+                    <div className='m-10 flex flex-col items-center p-10'>
                         {blogs.map((blog) => {
                             return (
                                 <div key={blog.id} className='mb-10'>

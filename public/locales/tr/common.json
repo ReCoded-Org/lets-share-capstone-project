@@ -11,7 +11,12 @@
         "password": "Parola",
         "password2": "Parola (Tekrar)",
         "phone": "Telefon",
-        "logIn": "Giriş Yap"
+        "logIn": "Giriş Yap",
+        "Logout": "Log out",
+        "confirm": "Confirm",
+        "cancel": "Cancel",
+        "update": "Update Profile",
+        "lang": "Language"
     },
     "Footer": {
         "contactUs": "Bize Ulaşın",
@@ -19,7 +24,8 @@
     },
     "landing": {
         "heroSection": {
-            "heroText": "Hayatın değeri süresinde değildir, Bağıştadır. Ne kadar yaşadığın için önemli değilsin, ne kadar etkili yaşadığın için önemlisin. \"Myles Munroet\" ",
+            "heroText": "Hayatın değeri süresinde değildir, Bağıştadır. Ne kadar yaşadığın için önemli değilsin, ne kadar etkili yaşadığın için önemlisin. ",
+            "myles": " Myles Munroet",
             "button": "Bağış Yap"
         },
         "causes": {
@@ -29,9 +35,13 @@
             "causeText3": "Çocuklarınız ile hayır kurumuna bağış yapma deneyimini paylaşmak,  küçük yaştan itibaren dünyada olumlu değişiklikler yapabileceklerini gösterir. Çocuklar doğal olarak başkalarına yardım etmeyi severler, bu nedenle doğuştan gelen cömertliklerini beslemek,  sahip olduklarına daha fazla değer vererek. Gelecek yıllarda hayırseverliği desteklemeye devam edecekleri anlamına gelir."
         },
         "stats": {
+            "accountsTitle": "Accounts",
             "accounts": "Sitemizde 900 aktif hesap bulunmaktadır. Kullanıcılarımız tarafından herhangi bir ücret ödemeden açılmıştır. Bu sayılar gün geçtikçe artmakdaır.",
+            "beneficiariesTitle": "Beneficiaries",
             "beneficiaries": "Yararlanıcı sayısı saat başı değişse de şu anda 400'dür. Kullanıcılarımızın/faydalanıcılarımızın %70'i 45 yaşın altındadır.",
+            "GeographicalDistrictsTitle": "Geographical Districts",
             "GeographicalDistricts": "Yararlanıcılarımız birden fazla şehirde bulunmaktadırlar. Kullanıcıların en yüksek yüzdesi İstanbul ve İzmir'de, ancak web sitemiz en çok Gaziantep, Urfa ve Mersin'de yaygın. Web sitemiz şehirler arasında bile kullanılmaktadır.",
+            "recommendationsTitle": "Recommendations",
             "recommendations": "Web sitemiz ve sunduğu hizmetler çoğunlukla tavsiyeler sayesinde büyümüştür. Yararlanıcılar, bizi diğer olası kullanıcılara doğrudan ve dolaylı olarak çevrimiçi  tavsiye ettiler. 500'den fazla kez online olarak paylaşıldık."
         }
     },
@@ -53,7 +63,8 @@
         "title": "Ürün Adı",
         "description": "Açıklama",
         "category": "Kategori",
-        "button": "Ürün Ekle"
+        "button": "Ürün Ekle",
+        "uploadPhotos": "Upload photos"
     },
     "signUp": {
         "surname": "Soyad",
@@ -88,6 +99,16 @@
         "headerBlg2": "Blog 2 Title",
         "contentBlg2": " ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliqua",
         "headerBlg3": "Blog 3 Title",
-        "contentBlg3": "ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliqua"
+        "contentBlg3": "ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliqua",
+        "headerBlg4": "Blog 4 Title",
+        "contentBlg4": "ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliqua",
+        "moreBlogs": "More Blogs"
+    },
+    "categories": {
+        "All": "All",
+        "Furniture": "Furniture",
+        "Clothes": "Clothes",
+        "Electronics": "Electronics",
+        "Others": "Others"
     }
 }

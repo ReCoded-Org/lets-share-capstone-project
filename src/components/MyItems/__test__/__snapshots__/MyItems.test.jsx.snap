@@ -2,15 +2,15 @@
 
 exports[`renders correctly 1`] = `
 <div
-  className="mt-12 flex flex-col items-center"
+  className="my-12 flex flex-col items-center"
 >
   <h1
-    className="mb-10 text-2xl font-bold text-fontColor"
+    className="mb-10 font-head text-3xl font-semibold tracking-wider text-fontColor"
   >
     My Items
   </h1>
   <div
-    className="mb-6 flex w-11/12 flex-row items-center justify-between rounded-full bg-secondary py-1 px-2 md:w-9/12 lg:w-9/12 xl:w-9/12"
+    className="mb-6 flex w-9/12 flex-row items-center justify-between rounded-full bg-[#ffffff] py-1 px-2"
   >
     <span
       style={
@@ -146,6 +146,8 @@ exports[`renders correctly 1`] = `
     >
       <div
         className="hover:-mt-2 hover:cursor-pointer"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
       >
         <span
           style={
@@ -266,6 +268,8 @@ exports[`renders correctly 1`] = `
       </div>
       <div
         className="ml-8 hover:-mt-2 hover:cursor-pointer"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
       >
         <span
           style={
@@ -387,7 +391,7 @@ exports[`renders correctly 1`] = `
     </div>
   </div>
   <div
-    className="mb-6 flex w-11/12 flex-row items-center justify-between rounded-full bg-secondary py-1 px-2 md:w-9/12 lg:w-9/12 xl:w-9/12"
+    className="mb-6 flex w-9/12 flex-row items-center justify-between rounded-full bg-[#ffffff] py-1 px-2"
   >
     <span
       style={
@@ -523,6 +527,8 @@ exports[`renders correctly 1`] = `
     >
       <div
         className="hover:-mt-2 hover:cursor-pointer"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
       >
         <span
           style={
@@ -643,6 +649,8 @@ exports[`renders correctly 1`] = `
       </div>
       <div
         className="ml-8 hover:-mt-2 hover:cursor-pointer"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
       >
         <span
           style={
@@ -764,7 +772,7 @@ exports[`renders correctly 1`] = `
     </div>
   </div>
   <div
-    className="mb-6 flex w-11/12 flex-row items-center justify-between rounded-full bg-secondary py-1 px-2 md:w-9/12 lg:w-9/12 xl:w-9/12"
+    className="mb-6 flex w-9/12 flex-row items-center justify-between rounded-full bg-[#ffffff] py-1 px-2"
   >
     <span
       style={
@@ -900,6 +908,8 @@ exports[`renders correctly 1`] = `
     >
       <div
         className="hover:-mt-2 hover:cursor-pointer"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
       >
         <span
           style={
@@ -1020,6 +1030,8 @@ exports[`renders correctly 1`] = `
       </div>
       <div
         className="ml-8 hover:-mt-2 hover:cursor-pointer"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
       >
         <span
           style={
