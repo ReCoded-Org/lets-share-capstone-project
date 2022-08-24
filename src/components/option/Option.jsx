@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "next-i18next";
 
 const cities = [
     "Adana",
@@ -93,17 +94,18 @@ export default function Option(props) {
     const lang = props.lang;
     const value = props.value;
     const handleChange = props.handleChange;
+    const { t } = useTranslation("common");
 
     return (
-        <form className='my-7 flex justify-center'>
+        <form className='my-7 flex justify-center font-primary'>
             <label className='flex w-[80%] flex-col items-start justify-center md:w-[60%] xl:w-[40%]'>
-                <span className='mb-3 pl-3 text-xl font-semibold text-fontColor'>
+                <span className='mb-3 pl-3 text-lg font-semibold tracking-wider text-fontColor'>
                     {location
-                        ? "Location"
+                        ? `${t("common.location")}`
                         : category
-                        ? "Category"
+                        ? `${t("addItem.category")}`
                         : lang
-                        ? "Language"
+                        ? `${t("common.lang")}`
                         : null}
                 </span>
                 <select
@@ -116,7 +118,7 @@ export default function Option(props) {
                             ? "language"
                             : null
                     }
-                    className='w-full rounded-lg border-2 border-primary shadow-md'
+                    className='w-full rounded-lg border-0 text-[#797979] shadow-lg focus:text-fontColor'
                     value={value}
                     onChange={handleChange}
                 >

@@ -11,7 +11,12 @@
         "password": "パスワード",
         "password2": "パスワードをもう一度入力してください",
         "phone": "携帯電話番号",
-        "logIn": "ログイン"
+        "logIn": "ログイン",
+        "Logout": "Log out",
+        "confirm": "Confirm",
+        "cancel": "Cancel",
+        "update": "Update Profile",
+        "lang": "Language"
     },
     "Footer": {
         "contactUs": "連絡",
@@ -19,7 +24,8 @@
     },
     "landing": {
         "heroSection": {
-            "heroText": "”人生の価値は、その時間ではなく、寄付にあります。あなたを重要するのは、あなたはどれだけ長く生きていたのかではなくあなたがどれほど有効的な人生を過ごしたなのかです”　\"Myles Munroet\" ",
+            "heroText": "”人生の価値は、その時間ではなく、寄付にあります。あなたを重要するのは、あなたはどれだけ長く生きていたのかではなくあなたがどれほど有効的な人生を過ごしたなのかです” ",
+            "myles": " Myles Munroet",
             "button": "寄付する"
         },
         "causes": {
@@ -29,9 +35,13 @@
             "causeText3": "寄付するという経験を幼い子供たちと共有することで、世界に変化をもたらすことができることを子供たちに示すことができます。子供たちは自然に他人を助けるのが大好きなので、この感情を育って大切にする事によって、子供たちが持っているものにもっと感謝して、将来にも慈善活動に支援します。"
         },
         "stats": {
+            "accountsTitle": "Accounts",
             "accounts": "このサイトに会員登録することは簡単です。アカウントの数は毎日増えています。",
+            "beneficiariesTitle": "Beneficiaries",
             "beneficiaries": "時間による変わる可能性がありますが、受益者の数は役に。。。。。　ユーザー/受益者の 70% は 45 歳未満です。",
+            "GeographicalDistrictsTitle": "Geographical Districts",
             "GeographicalDistricts": "サイトのユーザーや受益者はいろんな県にいます。大勢のユーザーたちはイスタンブールとイズミルにいますが、このサイトの影響はガズィアンテプ、シャンルウルファ、メルシンみたいな県にあります。",
+            "recommendationsTitle": "Recommendations",
             "recommendations": "我々のサイトとのサービスが知られていたのは高い評価をもらったからです。受益者はオンラインで直接的および間接的に他の新しい受益者候補に我々を勧めました。500回以上オンラインで推奨事項として共有されています。"
         }
     },
@@ -53,7 +63,8 @@
         "title": "タイトル",
         "description": "説明",
         "category": "カテゴリ",
-        "button": "追加"
+        "button": "追加",
+        "uploadPhotos": "Upload photos"
     },
     "signUp": {
         "surname": "苗字",
@@ -83,11 +94,21 @@
         "related": "関連アイテム"
     },
     "blogs": {
-        "blg1Header": "Blog 1 Title",
-        "blg1content": "  ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliqua",
-        "blg2Header": "Blog 2 Title",
-        "blg2content": " ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliqua",
-        "blg3Header": "Blog 3 Title",
-        "blg3content": "ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliqua"
+        "headerBlg1": "Blog 1 Title",
+        "contentBlg1": "  ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliqua",
+        "headerBlg2": "Blog 2 Title",
+        "contentBlg2": " ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliqua",
+        "headerBlg3": "Blog 3 Title",
+        "contentBlg3": "ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliqua",
+        "headerBlg4": "Blog 4 Title",
+        "contentBlg4": "ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliqua",
+        "moreBlogs": "More Blogs"
+    },
+    "categories": {
+        "All": "All",
+        "Furniture": "Furniture",
+        "Clothes": "Clothes",
+        "Electronics": "Electronics",
+        "Others": "Others"
     }
 }

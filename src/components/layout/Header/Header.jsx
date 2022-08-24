@@ -5,17 +5,19 @@ import { MenuIcon, XIcon } from "@heroicons/react/outline";
 import UserMenu from "./UserMenu";
 import LangMenu from "./LangMenu";
 import Image from "next/image";
+import { useTranslation } from "next-i18next";
 
-const navigation = [
-    { name: "Home", href: "/", current: false },
-    { name: "About us", href: "/aboutus", current: false },
-    { name: "Goods", href: "/goods", current: false },
-    { name: "Blogs", href: "/blogs", current: false },
-];
 export function classNames(...classes) {
     return classes.filter(Boolean).join(" ");
 }
 export default function Header() {
+    const { t } = useTranslation("common");
+    const navigation = [
+        { name: `${t("common.Home")}`, href: "/", current: false },
+        { name: `${t("common.aboutUs")}`, href: "/aboutus", current: false },
+        { name: `${t("common.goods")}`, href: "/goods", current: false },
+        { name: `${t("common.blogs")}`, href: "/blogs", current: false },
+    ];
     const [animateHeader, setAnimateHeader] = useState(false);
 
     useEffect(() => {
@@ -30,7 +32,7 @@ export default function Header() {
     }, []);
 
     return (
-        <div className='relative '>
+        <div className='relative flex justify-center font-primary'>
             <div className=' absolute -z-10 h-96 w-full'>
                 {/*<Image 
             src='/Vector.png'
@@ -42,11 +44,14 @@ export default function Header() {
             /> */}
             </div>
 
-            <Disclosure as='nav' className='bg-transperent  '>
+            <Disclosure
+                as='nav'
+                className='bg-transperent mx-3 w-full md:mx-6 lg:mx-14'
+            >
                 {({ open }) => (
                     <>
                         <div
-                            className={`max-w-auto  opacity-1 top-0 z-30 mb-2   px-2 transition duration-1000   ease-in-out sm:px-3 lg:px-4 ${
+                            className={`max-w-auto  opacity-1 top-0 z-30 mb-2 transition duration-1000   ease-in-out ${
                                 animateHeader && "bg-[#ddd] opacity-0"
                             }`}
                         >
@@ -61,18 +66,18 @@ export default function Header() {
                                             <XIcon
                                                 className='w-10y block h-10'
                                                 aria-hidden='true'
-                                                stroke='#97dbbf'
+                                                stroke='#33956D'
                                             />
                                         ) : (
                                             <MenuIcon
                                                 className='block h-10 w-10'
                                                 aria-hidden='true'
-                                                stroke='#97dbbf'
+                                                stroke='#33956D'
                                             />
                                         )}
                                     </Disclosure.Button>
                                     <div className='hidden sm:ml-6 md:block '>
-                                        <div className='flex space-x-4  '>
+                                        <div className='flex space-x-4 '>
                                             {navigation.map((item) => (
                                                 <Link
                                                     key={item.name}
@@ -98,17 +103,19 @@ export default function Header() {
                                         </div>
                                     </div>
                                 </div>
-                                <Image
-                                    className='h-14 w-auto'
-                                    src='/images/dummyLogo.svg'
-                                    alt='Lets share logo'
-                                    width={80}
-                                    height={80}
-                                />
-                                <div className='flex flex-1 items-center justify-center sm:items-stretch sm:justify-end '>
+                                <Link href='/'>
+                                    <Image
+                                        className=' relative translate-x-[-10%] scale-75 cursor-pointer md:scale-100'
+                                        src='/images/lets share logo.svg'
+                                        alt='Lets share logo'
+                                        width={240}
+                                        height={120}
+                                    />
+                                </Link>
+                                <div className='flex flex-1 items-center justify-center sm:items-stretch sm:justify-end'>
                                     <div className='flex flex-shrink-0 items-center'>
                                         <div className='hidden sm:ml-6 md:block '>
-                                            <div className='mr-5 flex space-x-4 '>
+                                            <div className='mr-0 flex space-x-0 lg:mr-5 lg:space-x-4 '>
                                                 {navigation.map((item) => (
                                                     <Link
                                                         key={item.name}
@@ -116,7 +123,7 @@ export default function Header() {
                                                     >
                                                         <a
                                                             className='hover:text-white mx-1 rounded-md px-3
-                                                        py-2 text-lg  font-medium text-fontColor hover:bg-btnBgHover '
+                                                        py-2 text-fontColor hover:opacity-70 lg:text-lg'
                                                             aria-current={
                                                                 item.current
                                                                     ? "page"
@@ -139,12 +146,12 @@ export default function Header() {
                                 </div>
                             </div>
                         </div>
-                        <Disclosure.Panel className='bg-[white] md:hidden'>
-                            <div className='mx-10  space-y-1  rounded-lg px-2  shadow-lg   '>
-                                <div className='flex cursor-pointer justify-center hover:bg-[#dce6ef] '>
+                        <Disclosure.Panel className='md:hidden'>
+                            <div className='mx-10 rounded-lg bg-[white] px-2 shadow-lg   '>
+                                <div className='flex cursor-pointer justify-center py-2 hover:bg-[#dce6ef] '>
                                     <UserMenu />
                                 </div>
-                                <div className='flex cursor-pointer justify-center border-t border-[rgba(179,178,187,0.4)] hover:bg-[#dce6ef]'>
+                                <div className='flex cursor-pointer justify-center border-t border-[rgba(179,178,187,0.4)] py-2 hover:bg-[#dce6ef]'>
                                     <LangMenu />
                                 </div>
                                 {navigation.map((item) => (

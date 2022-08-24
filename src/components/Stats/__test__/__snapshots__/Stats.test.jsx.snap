@@ -2,7 +2,7 @@
 
 exports[`renders correctly 1`] = `
 <div
-  className="bg-[#FAFAFA]"
+  className="bg-[#FAFAFA] font-primary"
 >
   <div
     className="flex h-60 justify-center bg-primary md:h-80 xl:h-80"
@@ -127,552 +127,151 @@ exports[`renders correctly 1`] = `
     </span>
   </div>
   <div
-    className="container relative mx-auto -mt-12 grid grid-cols-1 items-center gap-x-6 gap-y-6 rounded-2xl bg-[white] px-4 py-8 shadow-lg sm:grid-cols-2 md:-mt-24 lg:grid-cols-4 xl:-mt-24"
+    className="container relative mx-auto -mt-12 grid grid-cols-1 gap-x-6 gap-y-6 rounded-2xl bg-[white] px-4 py-8 shadow-lg sm:grid-cols-2 md:-mt-24 lg:grid-cols-4 xl:-mt-24"
   >
     <div
-      className="group basis-1/4 rounded-lg p-3 text-center transition-all duration-500 hover:-translate-y-5 hover:bg-[#168940c2] hover:text-[white]"
+      className="group flex basis-1/4 flex-col items-center gap-3 rounded-lg p-3 text-center transition-all duration-300 hover:-translate-y-3 hover:bg-[#f3f3f3] hover:shadow-lg"
     >
-      <span
+      <svg
+        color="#F07167"
+        fill="currentColor"
+        height={60}
+        stroke="currentColor"
+        strokeWidth="0"
         style={
           Object {
-            "background": "none",
-            "border": 0,
-            "boxSizing": "border-box",
-            "display": "inline-block",
-            "height": "initial",
-            "margin": 0,
-            "maxWidth": "100%",
-            "opacity": 1,
-            "overflow": "hidden",
-            "padding": 0,
-            "position": "relative",
-            "width": "initial",
+            "color": "#F07167",
           }
         }
+        viewBox="0 0 24 24"
+        width={60}
+        xmlns="http://www.w3.org/2000/svg"
       >
-        <span
-          style={
-            Object {
-              "background": "none",
-              "border": 0,
-              "boxSizing": "border-box",
-              "display": "block",
-              "height": "initial",
-              "margin": 0,
-              "maxWidth": "100%",
-              "opacity": 1,
-              "padding": 0,
-              "width": "initial",
-            }
-          }
-        >
-          <img
-            alt=""
-            aria-hidden={true}
-            src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%2760%27%20height=%2760%27/%3e"
-            style={
-              Object {
-                "background": "none",
-                "border": 0,
-                "display": "block",
-                "height": "initial",
-                "margin": 0,
-                "maxWidth": "100%",
-                "opacity": 1,
-                "padding": 0,
-                "width": "initial",
-              }
-            }
-          />
-        </span>
-        <img
-          alt="icon"
-          className=""
-          data-nimg="intrinsic"
-          decoding="async"
-          onError={[Function]}
-          onLoad={[Function]}
-          src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-          style={
-            Object {
-              "border": "none",
-              "bottom": 0,
-              "boxSizing": "border-box",
-              "display": "block",
-              "height": 0,
-              "left": 0,
-              "margin": "auto",
-              "maxHeight": "100%",
-              "maxWidth": "100%",
-              "minHeight": "100%",
-              "minWidth": "100%",
-              "objectFit": undefined,
-              "objectPosition": undefined,
-              "padding": 0,
-              "position": "absolute",
-              "right": 0,
-              "top": 0,
-              "width": 0,
-            }
-          }
+        <path
+          d="M0 0h24v24H0z"
+          fill="none"
         />
-        <noscript>
-          <img
-            alt="icon"
-            className=""
-            data-nimg="intrinsic"
-            decoding="async"
-            loading="lazy"
-            src="/_next/image?url=%2Fimages%2FIcon1.png&w=128&q=75"
-            srcSet="/_next/image?url=%2Fimages%2FIcon1.png&w=64&q=75 1x, /_next/image?url=%2Fimages%2FIcon1.png&w=128&q=75 2x"
-            style={
-              Object {
-                "border": "none",
-                "bottom": 0,
-                "boxSizing": "border-box",
-                "display": "block",
-                "height": 0,
-                "left": 0,
-                "margin": "auto",
-                "maxHeight": "100%",
-                "maxWidth": "100%",
-                "minHeight": "100%",
-                "minWidth": "100%",
-                "objectFit": undefined,
-                "objectPosition": undefined,
-                "padding": 0,
-                "position": "absolute",
-                "right": 0,
-                "top": 0,
-                "width": 0,
-              }
-            }
-          />
-        </noscript>
-      </span>
+        <path
+          d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-6 2c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm6 12H8v-1.5c0-1.99 4-3 6-3s6 1.01 6 3V16z"
+        />
+      </svg>
       <h2
-        className="font-bold text-fontColor group-hover:text-[#eaffef]"
+        className="font-bold text-fontColor"
       >
-        1/3
+        landing.stats.accountsTitle
       </h2>
       <p
-        className="text-fontColor group-hover:text-[#eaffef]"
+        className="text-fontColor "
       >
-        Lorem ipsum dolor sit amet,
-        <br />
-         consectetur adipiscing elit,
-        <br />
-         sed do eiusmod tempor incididunt ut
-        <br />
-         labore et dolore magna aliqua.
+        landing.stats.accounts
       </p>
     </div>
     <div
-      className="group basis-1/4 rounded-lg p-3 text-center transition-all duration-500 hover:-translate-y-5 hover:bg-[#168940c2] hover:text-[white]"
+      className="group flex basis-1/4 flex-col items-center gap-3 rounded-lg p-3 text-center transition-all duration-300 hover:-translate-y-3 hover:bg-[#f3f3f3] hover:shadow-lg"
     >
-      <span
+      <svg
+        color="#F07167"
+        fill="currentColor"
+        height={60}
+        stroke="currentColor"
+        strokeWidth="0"
         style={
           Object {
-            "background": "none",
-            "border": 0,
-            "boxSizing": "border-box",
-            "display": "inline-block",
-            "height": "initial",
-            "margin": 0,
-            "maxWidth": "100%",
-            "opacity": 1,
-            "overflow": "hidden",
-            "padding": 0,
-            "position": "relative",
-            "width": "initial",
+            "color": "#F07167",
           }
         }
+        viewBox="0 0 512 512"
+        width={60}
+        xmlns="http://www.w3.org/2000/svg"
       >
-        <span
-          style={
-            Object {
-              "background": "none",
-              "border": 0,
-              "boxSizing": "border-box",
-              "display": "block",
-              "height": "initial",
-              "margin": 0,
-              "maxWidth": "100%",
-              "opacity": 1,
-              "padding": 0,
-              "width": "initial",
-            }
-          }
-        >
-          <img
-            alt=""
-            aria-hidden={true}
-            src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%2760%27%20height=%2760%27/%3e"
-            style={
-              Object {
-                "background": "none",
-                "border": 0,
-                "display": "block",
-                "height": "initial",
-                "margin": 0,
-                "maxWidth": "100%",
-                "opacity": 1,
-                "padding": 0,
-                "width": "initial",
-              }
-            }
-          />
-        </span>
-        <img
-          alt="icon"
-          data-nimg="intrinsic"
-          decoding="async"
-          onError={[Function]}
-          onLoad={[Function]}
-          src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-          style={
-            Object {
-              "border": "none",
-              "bottom": 0,
-              "boxSizing": "border-box",
-              "display": "block",
-              "height": 0,
-              "left": 0,
-              "margin": "auto",
-              "maxHeight": "100%",
-              "maxWidth": "100%",
-              "minHeight": "100%",
-              "minWidth": "100%",
-              "objectFit": undefined,
-              "objectPosition": undefined,
-              "padding": 0,
-              "position": "absolute",
-              "right": 0,
-              "top": 0,
-              "width": 0,
-            }
-          }
+        <path
+          d="M496 384H64V80c0-8.84-7.16-16-16-16H16C7.16 64 0 71.16 0 80v336c0 17.67 14.33 32 32 32h464c8.84 0 16-7.16 16-16v-32c0-8.84-7.16-16-16-16zM464 96H345.94c-21.38 0-32.09 25.85-16.97 40.97l32.4 32.4L288 242.75l-73.37-73.37c-12.5-12.5-32.76-12.5-45.25 0l-68.69 68.69c-6.25 6.25-6.25 16.38 0 22.63l22.62 22.62c6.25 6.25 16.38 6.25 22.63 0L192 237.25l73.37 73.37c12.5 12.5 32.76 12.5 45.25 0l96-96 32.4 32.4c15.12 15.12 40.97 4.41 40.97-16.97V112c.01-8.84-7.15-16-15.99-16z"
         />
-        <noscript>
-          <img
-            alt="icon"
-            data-nimg="intrinsic"
-            decoding="async"
-            loading="lazy"
-            src="/_next/image?url=%2Fimages%2FIcon2.png&w=128&q=75"
-            srcSet="/_next/image?url=%2Fimages%2FIcon2.png&w=64&q=75 1x, /_next/image?url=%2Fimages%2FIcon2.png&w=128&q=75 2x"
-            style={
-              Object {
-                "border": "none",
-                "bottom": 0,
-                "boxSizing": "border-box",
-                "display": "block",
-                "height": 0,
-                "left": 0,
-                "margin": "auto",
-                "maxHeight": "100%",
-                "maxWidth": "100%",
-                "minHeight": "100%",
-                "minWidth": "100%",
-                "objectFit": undefined,
-                "objectPosition": undefined,
-                "padding": 0,
-                "position": "absolute",
-                "right": 0,
-                "top": 0,
-                "width": 0,
-              }
-            }
-          />
-        </noscript>
-      </span>
+      </svg>
       <h2
-        className="font-bold text-fontColor group-hover:text-[#eaffef]"
+        className="font-bold text-fontColor"
       >
-        75%
+        landing.stats.beneficiariesTitle
       </h2>
       <p
-        className="text-fontColor group-hover:text-[#eaffef]"
+        className="text-fontColor"
       >
-        Lorem ipsum dolor sit amet,
-        <br />
-         consectetur adipiscing elit,
-        <br />
-         sed do eiusmod tempor incididunt ut
-        <br />
-         labore et dolore magna aliqua.
+        landing.stats.beneficiaries
       </p>
     </div>
     <div
-      className="group basis-1/4 rounded-lg p-3 text-center transition-all duration-500 hover:-translate-y-5 hover:bg-[#168940c2] hover:text-[white]"
+      className="group flex basis-1/4 flex-col items-center gap-3 rounded-lg p-3 text-center transition-all duration-300 hover:-translate-y-3 hover:bg-[#f3f3f3] hover:shadow-lg"
     >
-      <span
+      <svg
+        color="#F07167"
+        fill="currentColor"
+        height={60}
+        stroke="currentColor"
+        strokeWidth="0"
         style={
           Object {
-            "background": "none",
-            "border": 0,
-            "boxSizing": "border-box",
-            "display": "inline-block",
-            "height": "initial",
-            "margin": 0,
-            "maxWidth": "100%",
-            "opacity": 1,
-            "overflow": "hidden",
-            "padding": 0,
-            "position": "relative",
-            "width": "initial",
+            "color": "#F07167",
           }
         }
+        viewBox="0 0 16 16"
+        width={60}
+        xmlns="http://www.w3.org/2000/svg"
       >
-        <span
-          style={
-            Object {
-              "background": "none",
-              "border": 0,
-              "boxSizing": "border-box",
-              "display": "block",
-              "height": "initial",
-              "margin": 0,
-              "maxWidth": "100%",
-              "opacity": 1,
-              "padding": 0,
-              "width": "initial",
-            }
-          }
-        >
-          <img
-            alt=""
-            aria-hidden={true}
-            src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%2760%27%20height=%2760%27/%3e"
-            style={
-              Object {
-                "background": "none",
-                "border": 0,
-                "display": "block",
-                "height": "initial",
-                "margin": 0,
-                "maxWidth": "100%",
-                "opacity": 1,
-                "padding": 0,
-                "width": "initial",
-              }
-            }
-          />
-        </span>
-        <img
-          alt="icon"
-          data-nimg="intrinsic"
-          decoding="async"
-          onError={[Function]}
-          onLoad={[Function]}
-          src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-          style={
-            Object {
-              "border": "none",
-              "bottom": 0,
-              "boxSizing": "border-box",
-              "display": "block",
-              "height": 0,
-              "left": 0,
-              "margin": "auto",
-              "maxHeight": "100%",
-              "maxWidth": "100%",
-              "minHeight": "100%",
-              "minWidth": "100%",
-              "objectFit": undefined,
-              "objectPosition": undefined,
-              "padding": 0,
-              "position": "absolute",
-              "right": 0,
-              "top": 0,
-              "width": 0,
-            }
-          }
+        <path
+          d="M3.1 11.2a.5.5 0 0 1 .4-.2H6a.5.5 0 0 1 0 1H3.75L1.5 15h13l-2.25-3H10a.5.5 0 0 1 0-1h2.5a.5.5 0 0 1 .4.2l3 4a.5.5 0 0 1-.4.8H.5a.5.5 0 0 1-.4-.8l3-4z"
+          fillRule="evenodd"
         />
-        <noscript>
-          <img
-            alt="icon"
-            data-nimg="intrinsic"
-            decoding="async"
-            loading="lazy"
-            src="/_next/image?url=%2Fimages%2FIcon3.png&w=128&q=75"
-            srcSet="/_next/image?url=%2Fimages%2FIcon3.png&w=64&q=75 1x, /_next/image?url=%2Fimages%2FIcon3.png&w=128&q=75 2x"
-            style={
-              Object {
-                "border": "none",
-                "bottom": 0,
-                "boxSizing": "border-box",
-                "display": "block",
-                "height": 0,
-                "left": 0,
-                "margin": "auto",
-                "maxHeight": "100%",
-                "maxWidth": "100%",
-                "minHeight": "100%",
-                "minWidth": "100%",
-                "objectFit": undefined,
-                "objectPosition": undefined,
-                "padding": 0,
-                "position": "absolute",
-                "right": 0,
-                "top": 0,
-                "width": 0,
-              }
-            }
-          />
-        </noscript>
-      </span>
+        <path
+          d="M4 4a4 4 0 1 1 4.5 3.969V13.5a.5.5 0 0 1-1 0V7.97A4 4 0 0 1 4 3.999z"
+          fillRule="evenodd"
+        />
+      </svg>
       <h2
-        className="font-bold text-fontColor group-hover:text-[#eaffef]"
+        className="font-bold text-fontColor"
       >
-        300
+        landing.stats.GeographicalDistrictsTitle
       </h2>
       <p
-        className="text-fontColor group-hover:text-[#eaffef]"
+        className="text-fontColor "
       >
-        Lorem ipsum dolor sit amet,
-        <br />
-         consectetur adipiscing elit,
-        <br />
-         sed do eiusmod tempor incididunt ut
-        <br />
-         labore et dolore magna aliqua.
+        landing.stats.GeographicalDistricts
       </p>
     </div>
     <div
-      className="group basis-1/4 rounded-lg p-3 text-center transition-all duration-500 hover:-translate-y-5 hover:bg-[#168940c2] hover:text-[white]"
+      className="group flex basis-1/4 flex-col items-center gap-3 rounded-lg p-3 text-center transition-all duration-300 hover:-translate-y-3 hover:bg-[#f3f3f3] hover:shadow-lg"
     >
-      <span
+      <svg
+        color="#F07167"
+        fill="currentColor"
+        height={60}
+        stroke="currentColor"
+        strokeWidth="0"
         style={
           Object {
-            "background": "none",
-            "border": 0,
-            "boxSizing": "border-box",
-            "display": "inline-block",
-            "height": "initial",
-            "margin": 0,
-            "maxWidth": "100%",
-            "opacity": 1,
-            "overflow": "hidden",
-            "padding": 0,
-            "position": "relative",
-            "width": "initial",
+            "color": "#F07167",
           }
         }
+        viewBox="0 0 24 24"
+        width={60}
+        xmlns="http://www.w3.org/2000/svg"
       >
-        <span
-          style={
-            Object {
-              "background": "none",
-              "border": 0,
-              "boxSizing": "border-box",
-              "display": "block",
-              "height": "initial",
-              "margin": 0,
-              "maxWidth": "100%",
-              "opacity": 1,
-              "padding": 0,
-              "width": "initial",
-            }
-          }
-        >
-          <img
-            alt=""
-            aria-hidden={true}
-            src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%2790%27%20height=%2750%27/%3e"
-            style={
-              Object {
-                "background": "none",
-                "border": 0,
-                "display": "block",
-                "height": "initial",
-                "margin": 0,
-                "maxWidth": "100%",
-                "opacity": 1,
-                "padding": 0,
-                "width": "initial",
-              }
-            }
-          />
-        </span>
-        <img
-          alt="icon"
-          data-nimg="intrinsic"
-          decoding="async"
-          onError={[Function]}
-          onLoad={[Function]}
-          src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-          style={
-            Object {
-              "border": "none",
-              "bottom": 0,
-              "boxSizing": "border-box",
-              "display": "block",
-              "height": 0,
-              "left": 0,
-              "margin": "auto",
-              "maxHeight": "100%",
-              "maxWidth": "100%",
-              "minHeight": "100%",
-              "minWidth": "100%",
-              "objectFit": undefined,
-              "objectPosition": undefined,
-              "padding": 0,
-              "position": "absolute",
-              "right": 0,
-              "top": 0,
-              "width": 0,
-            }
-          }
+        <path
+          d="M0 0h24v24H0z"
+          fill="none"
         />
-        <noscript>
-          <img
-            alt="icon"
-            data-nimg="intrinsic"
-            decoding="async"
-            loading="lazy"
-            src="/_next/image?url=%2Fimages%2FIcon4.png&w=256&q=75"
-            srcSet="/_next/image?url=%2Fimages%2FIcon4.png&w=96&q=75 1x, /_next/image?url=%2Fimages%2FIcon4.png&w=256&q=75 2x"
-            style={
-              Object {
-                "border": "none",
-                "bottom": 0,
-                "boxSizing": "border-box",
-                "display": "block",
-                "height": 0,
-                "left": 0,
-                "margin": "auto",
-                "maxHeight": "100%",
-                "maxWidth": "100%",
-                "minHeight": "100%",
-                "minWidth": "100%",
-                "objectFit": undefined,
-                "objectPosition": undefined,
-                "padding": 0,
-                "position": "absolute",
-                "right": 0,
-                "top": 0,
-                "width": 0,
-              }
-            }
-          />
-        </noscript>
-      </span>
+        <path
+          d="M12 2a10 10 0 1010 10A10 10 0 0012 2zm6 9.8a.9.9 0 01-.1.5l-2.1 4.9a1.34 1.34 0 01-1.3.8H9a2 2 0 01-2-2v-5a1.28 1.28 0 01.4-1L12 5l.69.69a1.08 1.08 0 01.3.7v.2L12.41 10H17a1 1 0 011 1z"
+        />
+      </svg>
       <h2
-        className="font-bold text-fontColor group-hover:text-[#eaffef]"
+        className="font-bold text-fontColor"
       >
-        Facts
+        landing.stats.recommendationsTitle
       </h2>
       <p
-        className="text-fontColor group-hover:text-[#eaffef]"
+        className="text-fontColor "
       >
-        Lorem ipsum dolor sit amet,
-        <br />
-         consectetur adipiscing elit,
-        <br />
-         sed do eiusmod tempor incididunt ut
-        <br />
-         labore et dolore magna aliqua.
+        landing.stats.recommendations
       </p>
     </div>
   </div>

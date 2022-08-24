@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caveat&family=Poppins:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Almarai:wght@400;700&family=Aref+Ruqaa&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -35,7 +37,7 @@
 
 .slick-dots li {
     display: inline-block !important;
-    margin-left: 10px !important;
+    margin-left: 20px !important;
     margin-right: 10px;
     height: 85px !important;
     width: 85px !important;
@@ -43,7 +45,14 @@
 }
 
 .slick-dots img {
-    border-radius: 10px;
+    border-radius: 8px;
+    opacity: 0.5;
+}
+
+li.slick-active img {
+    border-radius: 13px;
+    transform: scale(1.05);
+    opacity: 1;
 }
 
 .slick-dots {
@@ -53,15 +62,19 @@
     bottom: px !important;
 }
 
-.slick-next::before,
+.slick-next::before {
+    color: #33956d !important;
+    font-size: 20px !important;
+}
 .slick-prev::before {
     color: #33956d !important;
-    right: 10px !important;
+    font-size: 20px !important;
+    transform: translate(10px);
 }
 
-.slick-next {
+/* .slick-next {
     right: 10px !important;
 }
 .slick-prev {
     left: 24px !important;
-}
+} */

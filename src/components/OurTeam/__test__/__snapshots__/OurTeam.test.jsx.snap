@@ -2,21 +2,21 @@
 
 exports[`renders correctly 1`] = `
 <div
-  className="justify-self-center"
+  className=" my-5 font-primary"
 >
   <h1
-    className=" mb-5 py-5 text-center text-2xl font-bold "
+    className=" mb-5 py-5 text-center font-head text-4xl font-bold tracking-wider text-fontColor "
   >
-    Our Team
+    aboutus.team
   </h1>
   <div
-    className="grid-col-1 mx-[7rem] grid justify-items-center md:grid-cols-2 lg:grid-cols-4"
+    className="grid-col-1 mx-[7rem] grid justify-items-center sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5"
   >
     <div
       className=" my-6 w-48 justify-center"
     >
       <div
-        className=" h-48 w-48 cursor-pointer rounded-full bg-secondary shadow transition duration-300 ease-in-out hover:scale-110 "
+        className=" h-48 w-48 rounded-full bg-secondary "
       >
         <span
           style={
@@ -141,10 +141,10 @@ exports[`renders correctly 1`] = `
         className=" p-2 text-center "
       >
         <div
-          className="flex justify-center gap-2 p-2 text-3xl"
+          className="flex justify-center gap-3 p-2 text-3xl"
         >
           <svg
-            className="cursor-pointer hover:text-fontColor "
+            className="cursor-pointer hover:text-fontColor"
             fill="currentColor"
             height="1em"
             onClick={[Function]}
@@ -187,12 +187,12 @@ exports[`renders correctly 1`] = `
           </svg>
         </div>
         <h2
-          className="font-bold"
+          className="my-1 font-bold"
         >
           Name Surname1
         </h2>
         <p
-          className="max-w-[200px]"
+          className="text-md"
         >
           information about team member
         </p>
@@ -202,7 +202,7 @@ exports[`renders correctly 1`] = `
       className=" my-6 w-48 justify-center"
     >
       <div
-        className=" h-48 w-48 cursor-pointer rounded-full bg-secondary shadow transition duration-300 ease-in-out hover:scale-110 "
+        className=" h-48 w-48 rounded-full bg-secondary "
       >
         <span
           style={
@@ -327,10 +327,10 @@ exports[`renders correctly 1`] = `
         className=" p-2 text-center "
       >
         <div
-          className="flex justify-center gap-2 p-2 text-3xl"
+          className="flex justify-center gap-3 p-2 text-3xl"
         >
           <svg
-            className="cursor-pointer hover:text-fontColor "
+            className="cursor-pointer hover:text-fontColor"
             fill="currentColor"
             height="1em"
             onClick={[Function]}
@@ -373,12 +373,12 @@ exports[`renders correctly 1`] = `
           </svg>
         </div>
         <h2
-          className="font-bold"
+          className="my-1 font-bold"
         >
           Name Surname2
         </h2>
         <p
-          className="max-w-[200px]"
+          className="text-md"
         >
           information about team member
         </p>
@@ -388,7 +388,7 @@ exports[`renders correctly 1`] = `
       className=" my-6 w-48 justify-center"
     >
       <div
-        className=" h-48 w-48 cursor-pointer rounded-full bg-secondary shadow transition duration-300 ease-in-out hover:scale-110 "
+        className=" h-48 w-48 rounded-full bg-secondary "
       >
         <span
           style={
@@ -513,10 +513,10 @@ exports[`renders correctly 1`] = `
         className=" p-2 text-center "
       >
         <div
-          className="flex justify-center gap-2 p-2 text-3xl"
+          className="flex justify-center gap-3 p-2 text-3xl"
         >
           <svg
-            className="cursor-pointer hover:text-fontColor "
+            className="cursor-pointer hover:text-fontColor"
             fill="currentColor"
             height="1em"
             onClick={[Function]}
@@ -559,12 +559,12 @@ exports[`renders correctly 1`] = `
           </svg>
         </div>
         <h2
-          className="font-bold"
+          className="my-1 font-bold"
         >
           Name Surname3
         </h2>
         <p
-          className="max-w-[200px]"
+          className="text-md"
         >
           information about team member
         </p>
@@ -574,7 +574,7 @@ exports[`renders correctly 1`] = `
       className=" my-6 w-48 justify-center"
     >
       <div
-        className=" h-48 w-48 cursor-pointer rounded-full bg-secondary shadow transition duration-300 ease-in-out hover:scale-110 "
+        className=" h-48 w-48 rounded-full bg-secondary "
       >
         <span
           style={
@@ -699,10 +699,10 @@ exports[`renders correctly 1`] = `
         className=" p-2 text-center "
       >
         <div
-          className="flex justify-center gap-2 p-2 text-3xl"
+          className="flex justify-center gap-3 p-2 text-3xl"
         >
           <svg
-            className="cursor-pointer hover:text-fontColor "
+            className="cursor-pointer hover:text-fontColor"
             fill="currentColor"
             height="1em"
             onClick={[Function]}
@@ -745,12 +745,12 @@ exports[`renders correctly 1`] = `
           </svg>
         </div>
         <h2
-          className="font-bold"
+          className="my-1 font-bold"
         >
           Name Surname4
         </h2>
         <p
-          className="max-w-[200px]"
+          className="text-md"
         >
           information about team member
         </p>
@@ -760,7 +760,7 @@ exports[`renders correctly 1`] = `
       className=" my-6 w-48 justify-center"
     >
       <div
-        className=" h-48 w-48 cursor-pointer rounded-full bg-secondary shadow transition duration-300 ease-in-out hover:scale-110 "
+        className=" h-48 w-48 rounded-full bg-secondary "
       >
         <span
           style={
@@ -885,10 +885,10 @@ exports[`renders correctly 1`] = `
         className=" p-2 text-center "
       >
         <div
-          className="flex justify-center gap-2 p-2 text-3xl"
+          className="flex justify-center gap-3 p-2 text-3xl"
         >
           <svg
-            className="cursor-pointer hover:text-fontColor "
+            className="cursor-pointer hover:text-fontColor"
             fill="currentColor"
             height="1em"
             onClick={[Function]}
@@ -931,12 +931,12 @@ exports[`renders correctly 1`] = `
           </svg>
         </div>
         <h2
-          className="font-bold"
+          className="my-1 font-bold"
         >
           Name Surname5
         </h2>
         <p
-          className="max-w-[200px]"
+          className="text-md"
         >
           information about team member
         </p>
