@@ -2,6 +2,10 @@ import Button from "@/components/button";
 import Input from "@/components/input";
 import Layout from "@/components/layout/Layout";
 import Option from "@/components/option";
+import { collection, addDoc, doc, setDoc, updateDoc } from "firebase/firestore"; 
+import { getDownloadURL, ref, uploadString } from "firebase/storage";
+import { db, storage } from "firebaseConfig";
+import { auth } from "firebaseConfig";
 
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
@@ -23,20 +27,49 @@ function Index() {
 
 
     const [formData, setFormData] = useState({});
+
+    const [ imageToPost, setImageToPost ] = useState(null)
+
+    const storageRef = ref(storage , `items/${Date.now()}`)
+
+
+    const { title, description, category, location } = formData
+
+    console.log(category);
+    
+    console.log(auth.currentUser);
   
 
 
-    function handleSubmit(e) {
+   async function handleSubmit(e) {
         e.preventDefault();
-        fetch("http://localhost:3000/items", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify(formData),
-        })
-            .then((res) => res.json())
-            .then((data) => console.log(data));
+        try {
+            const  itemsRef = collection(db, auth.currentUser.uid )
+            const docRef = await addDoc( itemsRef , {
+              title,
+              description,
+              category,
+              location
+            });
+
+            if (imageToPost) {
+                uploadString(storageRef, imageToPost, 'data_url').then((snapshot) => {
+                  getDownloadURL(snapshot.ref).then((url) => {
+                    console.log(url);
+                    updateDoc(doc(itemsRef,  docRef.id), {
+                      itemImage: url
+                    }, { merge: true })
+                  })
+                })
+              }
+
+
+              console.log();
+
+            console.log("Document written with ID: ", docRef);
+          } catch (e) {
+            console.error("Error adding document: ", e);
+          }
 
             
     }
@@ -46,6 +79,16 @@ function Index() {
 
     const { t } = useTranslation("common");
 
+    const addImageToPost = (e) => {
+        const reader = new FileReader();
+        if (e.target.files[0]) {
+          reader.readAsDataURL(e.target.files[0]);
+        }
+    
+        reader.onload = (readerEvent) => {
+          setImageToPost(readerEvent.target.result);
+        };
+      };
 
     return (
         <>
@@ -55,7 +98,7 @@ function Index() {
                 </h1>
                 <div className='mb-12 grid '>
                     <Input
-                        
+                        value={formData.title}
                         setFormData={setFormData}
                         formData={formData}
                         name='title'
@@ -72,7 +115,7 @@ function Index() {
 
                     />
                     <Option category='Category'
-                    
+                    value={formData.category}
                     setFormData={setFormData}
                     formData={formData}
                     
@@ -85,7 +128,10 @@ function Index() {
                             <label className='mb-3 pl-3 text-lg font-semibold text-fontColor'>
                                 {t("addItem.description")}
                             </label>
-                            <textArea
+                            <textarea
+                            value={formData.description}
+                            name="description"
+                                onChange={(e)=> setFormData({...formData, [e.target.name] : e.target.value})}
                                 placeholder='Enter Description'
 
                                 className='h-40 w-full rounded-lg border-0 shadow-lg'                            />
@@ -96,7 +142,7 @@ function Index() {
                     
                     setFormData={setFormData}
                     formData={formData}
-                    
+                    onChange={addImageToPost}
                     name='images'
                         type='file'
                         title={t("addItem.uploadPhotos")}

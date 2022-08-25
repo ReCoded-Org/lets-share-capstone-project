@@ -2,26 +2,85 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { useTranslation } from "next-i18next";
-function MyItems() {
-    const { t } = useTranslation();
+    
     const items = [
         { id: 1, title: "Product Title", image: "/images/item pic.png" },
         { id: 2, title: "Product Title", image: "/images/item pic.png" },
         { id: 3, title: "Product Title", image: "/images/item pic.png" },
     ];
+import { collection, getDocs } from "firebase/firestore";
+import { auth, db } from "firebaseConfig";
+import { useEffect } from "react";
+import { useState } from "react";
+
+
+
+
+
+export const getStaticProps = async () => {
+    let items = []
+
+    
+    
+    const querySnapshot = await getDocs(collection(db, auth.currentUser.uid ));
+    querySnapshot.forEach((doc) => {
+        items.push("fg")
+// doc.data() is never undefined for query doc snapshots
+console.log(doc.id, " => ", doc.data());
+console.log("hello");
+    });
+
+    return {
+        props: {
+            items
+        }
+    }
+}
+
+
+
+
+function MyItems() {
+    const { t } = useTranslation();
+
+    const [items , setItems] = useState([])
+
+    useEffect (() => {
+        const getItems = async () => {
+            let itemss = []
+    
+        const querySnapshot = await getDocs(collection(db, auth.currentUser.uid ));
+        querySnapshot.forEach((doc) => {
+            setItems((items) => [...items, doc.data()])
+    // doc.data() is never undefined for query doc snapshots
+    console.log(doc.id, " => ", doc.data());
+    console.log("hello");
+        });
+        }
+        getItems()
+    }, [])
+
+
+
+    console.log(items);
+    // const items = [
+    //     { id: 1, title: "Product Title", image: "/images/item pic.png" },
+    //     { id: 2, title: "Product Title", image: "/images/item pic.png" },
+    //     { id: 3, title: "Product Title", image: "/images/item pic.png" },
+    // ];
     return (
         <>
             <div className='my-12 flex flex-col items-center'>
                 <h1 className='mb-10 font-head text-3xl font-semibold tracking-wider text-fontColor'>
                     {t("profile.myItems")}
                 </h1>
-                {items.map((item) => (
+                { items.map((item) => (
                     <div
                         key={item.id}
                         className='mb-6 flex w-9/12 flex-row items-center justify-between rounded-full bg-[#ffffff] py-1 px-2'
                     >
                         <Image
-                            src={item.image}
+                            src={item.itemImage ? item.itemImage : "/Photo.png"}
                             alt={item.title}
                             width={60}
                             height={60}

@@ -1,5 +1,6 @@
 import React from "react";
 import { useTranslation } from "next-i18next";
+import { useState } from "react";
 
 const cities = [
     "Adana",
@@ -85,9 +86,20 @@ const cities = [
     "Zonguldak",
 ];
 
-const categories = ["first", "second", "third"];
+
 const langs = ["AR", "EN", "TR", "JA"];
 
+const categories =[
+    'Books',
+    'Clothing',
+    'Electronics',
+    'Food',
+    'Furniture',
+    'Kitchenware',
+    'Linens',
+    'Toys',
+    'Other',
+  ]
 export default function Option(props) {
     const location = props.location;
     const category = props.category;

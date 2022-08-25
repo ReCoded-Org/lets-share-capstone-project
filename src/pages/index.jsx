@@ -11,12 +11,12 @@ import Stats from "@/components/Stats";
 import Partners from "@/components/Partners";
 
 export async function getStaticProps({ locale }) {
-    const res = await fetch(`http://localhost:3000/items`);
-    const items = await res.json();
+    // const res = await fetch(`http://localhost:3000/items`);
+    // const items = await res.json();
     return {
         props: {
             ...(await serverSideTranslations(locale, ["common"])),
-            items,
+            // items,
         },
     };
 }

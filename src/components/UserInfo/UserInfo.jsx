@@ -5,6 +5,10 @@ import { useTranslation } from "next-i18next";
 import { MdCameraAlt } from "react-icons/md";
 import { AiOutlineClose } from "react-icons/ai";
 import { useRouter } from "next/router";
+import { auth, db } from "firebaseConfig";
+import { async } from "@firebase/util";
+import { collection, getDocs } from "firebase/firestore";
+
 // The props is necessary for the actual data... ***TO BE USED IN THE FUTURE***
 const UserInfo = () => {
     const { locale } = useRouter();

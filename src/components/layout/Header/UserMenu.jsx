@@ -3,28 +3,35 @@ import { Fragment } from "react";
 import Image from "next/image";
 import { Menu, Transition } from "@headlessui/react";
 import { useTranslation } from "next-i18next";
-
+import { useAuth } from 'context /AuthContext.js'
+import { useRouter } from 'next/router'
+import { auth } from "firebaseConfig";
 const UserMenu = () => {
     const { t } = useTranslation("common");
+
+
+
+
+    const { user, logout } = useAuth()
+    const router = useRouter()
+    
+
+    // console.log(user);
+
     return (
         <Menu as='div' className='relative ml-2'>
             <div>
                 <Menu.Button className='mr-4 flex flex-row-reverse items-center rounded-full text-sm md:mr-1 md:mb-0 md:flex-row  '>
                     <span className='sr-only'>Open user menu</span>
-                    <Image
-                        className='h-8 w-8 rounded-full '
-                        src='/images/noUserPic.svg'
-                        height={35}
-                        width={35}
+                    <span>{user ? user.displayName : ""}</span>
+                    {/* <Image
+                    src={auth.currentUser ? auth.currentUser.photoURL : "/profile.png"}
+                    width={40}
+                    height={40}
+                        className='h-8 w-8  rounded-full'
                         alt=''
-                    />
-                    <Image
-                        className='arrow rotate-90 md:rotate-0'
-                        height={35}
-                        width={35}
-                        src='/images/arrowIcon.svg'
-                        alt=''
-                    />
+                    /> */}
+                    
                 </Menu.Button>
             </div>
 
@@ -71,6 +78,10 @@ const UserMenu = () => {
                     <hr className='mx-2 border-fontColor/20' />
                     <Menu.Item>
                         <a
+                            onClick={() => {
+                              logout()
+                              router.push('/login')
+                            }}
                             href='#'
                             className='py-2   px-2 text-center  text-sm text-fontColor hover:bg-btnBgHover'
                         >

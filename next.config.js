@@ -10,19 +10,16 @@ module.exports = {
     reactStrictMode: true,
 
     // Uncoment to add domain whitelist
-<<<<<<< HEAD
     images: {
       domains: [
         'res.cloudinary.com',
-        "api.lorem.space"
+        "api.lorem.space",
+        "firebasestorage.googleapis.com",
+        "lh3.googleusercontent.com"
       ],
     },
-=======
->>>>>>> develop
 
-    images: {
-        domains: ["res.cloudinary.com", "api.lorem.space"],
-    },
+    
     // SVGR
     webpack(config) {
         config.module.rules.push({

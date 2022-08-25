@@ -9,7 +9,7 @@ export default function Button(props) {
     return (
         <div className='flex justify-center font-primary'>
             <button
-            onClick={props.onclick}
+            onClick={props.onClick}
                 className={
                     fullfilled
                         ? "my-5 h-9 w-[120px] rounded-full bg-primary text-lg text-[white] shadow-md transition duration-200 hover:scale-[105%] hover:bg-secondary hover:shadow-md"
