@@ -149,7 +149,7 @@ exports[`renders correctly 1`] = `
               onClick={[Function]}
               onMouseEnter={[Function]}
             >
-              About us
+              common.aboutUs
             </a>
           </li>
           <li
@@ -160,7 +160,7 @@ exports[`renders correctly 1`] = `
               onClick={[Function]}
               onMouseEnter={[Function]}
             >
-              Blogs
+              common.blogs
             </a>
           </li>
           <li
@@ -171,7 +171,7 @@ exports[`renders correctly 1`] = `
               onClick={[Function]}
               onMouseEnter={[Function]}
             >
-              Goods
+              common.goods
             </a>
           </li>
         </ul>
@@ -185,7 +185,7 @@ exports[`renders correctly 1`] = `
           <p
             className=""
           >
-            Contact us
+            Footer.contactUs
           </p>
           <div
             className="flex gap-3 text-3xl "
@@ -278,7 +278,9 @@ exports[`renders correctly 1`] = `
           <p
             className=" pb-2"
           >
-             Adress 
+             
+            Footer.adress
+             
           </p>
           <p
             className=" pb-2"

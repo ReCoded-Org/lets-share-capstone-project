@@ -3,8 +3,10 @@ import Image from "next/image";
 import Button from "../button";
 import Link from "next/link";
 import { useTranslation } from "next-i18next";
+import { useRouter } from "next/router";
 
 export default function BlogsCard({ item }) {
+    const { locale } = useRouter();
     const { t } = useTranslation("common");
     const index = item.id;
     const evenindex = index % 2 === 0 ? true : false;
@@ -14,8 +16,12 @@ export default function BlogsCard({ item }) {
             <div
                 className={
                     evenindex
-                        ? "flex flex-col items-center px-5 font-primary lg:mt-5 lg:h-[60vh] lg:flex-row lg:items-center xl:mx-20 "
-                        : "flex flex-col items-center px-5 font-primary lg:mt-5 lg:h-[60vh] lg:flex-row-reverse lg:items-center xl:mx-20 "
+                        ? `flex flex-col items-center ${
+                              locale === "ar" ? "text-right" : null
+                          } px-5 font-primary lg:mt-5 lg:h-[60vh] lg:flex-row lg:items-center xl:mx-20`
+                        : `flex flex-col items-center ${
+                              locale === "ar" ? "text-right" : null
+                          } px-5 font-primary lg:mt-5 lg:h-[60vh] lg:flex-row-reverse lg:items-center xl:mx-20 `
                 }
             >
                 <div className='relative w-full p-10 px-10'>

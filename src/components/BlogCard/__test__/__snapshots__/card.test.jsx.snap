@@ -105,7 +105,7 @@ exports[`renders correctly 1`] = `
     </div>
   </div>
   <div
-    className=" py-4 px-3 "
+    className="py-4 px-3 null"
   >
     <h2
       className="text-brand-primary dark:text-white mt-2 text-lg font-semibold tracking-normal"

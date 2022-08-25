@@ -7,16 +7,21 @@
         "location": "Konum",
         "signUp": "Kayıt Ol",
         "name": "Ad",
+        "firstName": "Ad",
+        "lastName": "Soyad",
         "email": "E-posta",
         "password": "Parola",
         "password2": "Parola (Tekrar)",
         "phone": "Telefon",
         "logIn": "Giriş Yap",
-        "Logout": "Log out",
-        "confirm": "Confirm",
-        "cancel": "Cancel",
-        "update": "Update Profile",
-        "lang": "Language"
+        "Logout": "Çıkış Yap",
+        "confirm": "Onayla",
+        "cancel": "İptal",
+        "update": "Hesabı Güncelle",
+        "lang": "Dil",
+        "popularItems": "Popüler Ürünler",
+        "partners": "Ortaklar",
+        "myProfile": "Hesabım"
     },
     "Footer": {
         "contactUs": "Bize Ulaşın",
@@ -35,13 +40,13 @@
             "causeText3": "Çocuklarınız ile hayır kurumuna bağış yapma deneyimini paylaşmak,  küçük yaştan itibaren dünyada olumlu değişiklikler yapabileceklerini gösterir. Çocuklar doğal olarak başkalarına yardım etmeyi severler, bu nedenle doğuştan gelen cömertliklerini beslemek,  sahip olduklarına daha fazla değer vererek. Gelecek yıllarda hayırseverliği desteklemeye devam edecekleri anlamına gelir."
         },
         "stats": {
-            "accountsTitle": "Accounts",
+            "accountsTitle": "Hesaplar",
             "accounts": "Sitemizde 900 aktif hesap bulunmaktadır. Kullanıcılarımız tarafından herhangi bir ücret ödemeden açılmıştır. Bu sayılar gün geçtikçe artmakdaır.",
-            "beneficiariesTitle": "Beneficiaries",
+            "beneficiariesTitle": "yararlanıcılar",
             "beneficiaries": "Yararlanıcı sayısı saat başı değişse de şu anda 400'dür. Kullanıcılarımızın/faydalanıcılarımızın %70'i 45 yaşın altındadır.",
-            "GeographicalDistrictsTitle": "Geographical Districts",
+            "GeographicalDistrictsTitle": "Coğrafi Bölgeler",
             "GeographicalDistricts": "Yararlanıcılarımız birden fazla şehirde bulunmaktadırlar. Kullanıcıların en yüksek yüzdesi İstanbul ve İzmir'de, ancak web sitemiz en çok Gaziantep, Urfa ve Mersin'de yaygın. Web sitemiz şehirler arasında bile kullanılmaktadır.",
-            "recommendationsTitle": "Recommendations",
+            "recommendationsTitle": "Tavsiyeler",
             "recommendations": "Web sitemiz ve sunduğu hizmetler çoğunlukla tavsiyeler sayesinde büyümüştür. Yararlanıcılar, bizi diğer olası kullanıcılara doğrudan ve dolaylı olarak çevrimiçi  tavsiye ettiler. 500'den fazla kez online olarak paylaşıldık."
         }
     },
@@ -50,7 +55,8 @@
             "heroTitle": "Hakkımızda",
             "heroText": "Biz Orta Doğu'dan kodlama konusunda tutkulu bir grup insanız. Re:Coded 'in  web geliştirme alanında eğitim kampına seçildik. Bazılarımız front-end konusunda istekliydik, diğerleri ise back-end geliştirmeyi tercih etti, bu yüzden iki gruba ayrıldık. Çok kıymetli bilgiler öğrendik ve bize öğretilen teknik becerileri kodlama tutkumuzu ile birleştirdik bu sayide web geliştiricileri olduk. Ağustos 2022'de web sitesi resmi olarak tamamlanmıştır. Bu, geçtiğimiz aylar ekip çalışmasının ve tutkulu çalışmanın bir sonucu ve kararlılığımızın kanıtıydı."
         },
-        "team": "Ekip Üyeleri"
+        "front-end-team": "Front-End Timi",
+        "back-end-team": "Back-End Timi"
     },
     "goods": {
         "category": "Kategori",
@@ -64,7 +70,7 @@
         "description": "Açıklama",
         "category": "Kategori",
         "button": "Ürün Ekle",
-        "uploadPhotos": "Upload photos"
+        "uploadPhotos": "Fotoğraf Yükle"
     },
     "signUp": {
         "surname": "Soyad",
@@ -82,7 +88,8 @@
         "profile": "Profil",
         "button": "Profili Güncelle",
         "delete": "Profili Sil",
-        "myItems": "Ürünlerim"
+        "myItems": "Ürünlerim",
+        "changePassword": "Parola Değiştir"
     },
     "item": {
         "item": "Ürün",
@@ -105,10 +112,10 @@
         "moreBlogs": "More Blogs"
     },
     "categories": {
-        "All": "All",
-        "Furniture": "Furniture",
-        "Clothes": "Clothes",
-        "Electronics": "Electronics",
-        "Others": "Others"
+        "All": "Tüm Kategoriler",
+        "Furniture": "Eşya",
+        "Clothes": "Elbise",
+        "Electronics": "Elektronik",
+        "Others": "Diğer"
     }
 }

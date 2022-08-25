@@ -9,17 +9,19 @@ import { FiShoppingBag } from "react-icons/fi";
 
 import PopularItemCard from "@/components/PopularItemsCard";
 
-export async function getStaticPaths() {
+export async function getStaticPaths({ locales }) {
     const res = await fetch("http://localhost:3000/items");
     const items = await res.json();
-    const paths = items.map((item) => ({
-        params: {
-            id: item.id.toString(),
-        },
-    }));
-
+    const paths = items.flatMap((item) => {
+        return locales.map((locale) => {
+            return {
+                params: { id: item.id.toString() },
+                locale: locale,
+            };
+        });
+    });
     return {
-        paths,
+        paths: paths,
         fallback: false,
     };
 }

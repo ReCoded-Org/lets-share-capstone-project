@@ -39,6 +39,19 @@ const UserMenu = () => {
             >
                 <Menu.Items className='absolute right-20 top-1 z-50 mt-1 flex w-28 flex-col rounded-md border border-fontColor/20 bg-[white] py-1 shadow-lg md:right-0 md:top-10'>
                     <Menu.Item>
+                        <span className='border-b-2 border-dotted border-[#aaaaaa]  p-1 text-center text-xs'>
+                            My Cool Name
+                        </span>
+                    </Menu.Item>
+                    <Menu.Item>
+                        <a
+                            href='./my-profile'
+                            className='py-2   px-2 text-center text-sm text-fontColor hover:bg-btnBgHover'
+                        >
+                            {t("common.myProfile")}
+                        </a>
+                    </Menu.Item>
+                    <Menu.Item>
                         <a
                             href='./login'
                             className='py-2   px-2 text-center text-sm text-fontColor hover:bg-btnBgHover'

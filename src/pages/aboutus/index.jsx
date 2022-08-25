@@ -4,8 +4,9 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import OurTeam from "@/components/OurTeam";
 import Image from "next/image";
 import Layout from "@/components/layout/Layout";
-
+import { useRouter } from "next/router";
 export default function Aboutus() {
+    const { locale } = useRouter();
     const { t } = useTranslation("common");
     return (
         <Layout>
@@ -18,11 +19,19 @@ export default function Aboutus() {
                         alt='/'
                     />
                 </div>
-                <div className='   my-[30px] flex h-[341px] w-[90%] flex-col items-center justify-center text-center md:items-start xl:mx-5'>
-                    <h2 className=' font-head text-4xl font-bold tracking-wider text-fontColor'>
+                <div
+                    className={`   my-[30px] flex h-[341px] w-[90%] flex-col items-center justify-center   md:items-${
+                        locale === "ar" ? "end" : "start"
+                    } xl:mx-5`}
+                >
+                    <h2 className=' font-head  text-4xl font-bold tracking-wider text-fontColor'>
                         {t("aboutus.heroSection.heroTitle")}
                     </h2>
-                    <p className='text-md mb-8 py-5 sm:w-[100%] md:text-left  xl:text-lg'>
+                    <p
+                        className={`text-md mb-8 py-5 sm:w-[100%] md:${
+                            locale === "ar" ? "text-right" : null
+                        }  xl:text-lg`}
+                    >
                         {t("aboutus.heroSection.heroText")}
                     </p>
                 </div>

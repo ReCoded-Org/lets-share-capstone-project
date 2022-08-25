@@ -171,7 +171,7 @@ exports[`renders correctly 1`] = `
     className="m-4 flex flex-row justify-center rounded-lg bg-[#ffffff] text-sm md:h-32 md:w-[60%] "
   >
     <div
-      className="flex flex-1 flex-col flex-wrap items-start justify-around gap-4 p-3 text-base lg:flex-row lg:items-center "
+      className="flex flex-1 flex-col flex-wrap items-start justify-around gap-4 p-3 text-base  lg:flex-row lg:items-center  "
     >
       <span
         className=" flex flex-col gap-4"
@@ -179,13 +179,15 @@ exports[`renders correctly 1`] = `
         <span
           className=""
         >
-          Name: 
+          common.name
+          : 
           John Doe
         </span>
         <span
           className=""
         >
-          Location: 
+          common.location
+          : 
           Kocaeli
         </span>
       </span>
@@ -195,19 +197,28 @@ exports[`renders correctly 1`] = `
         <span
           className=""
         >
-          Phone: 
-          01234567890
+          common.phone
+          : 
+          +90234567890
         </span>
         <span
           className=""
         >
-          Email: 
+          common.email
+          : 
           blabla@example.com
         </span>
       </span>
-      <span>
-        Language: 
-        En
+      <span
+        className="rounded-full border-2 border-solid border-[black] bg-userInfoBg p-2 hover:bg-[#dbdbdb]"
+      >
+        <a
+          href="/change-password"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+        >
+          profile.changePassword
+        </a>
       </span>
     </div>
     <div

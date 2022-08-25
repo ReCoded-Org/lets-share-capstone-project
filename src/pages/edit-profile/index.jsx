@@ -33,9 +33,16 @@ export default function EditProfile(/*{ userData }*/) {
                     <h1>{t("common.update")}</h1>
                 </div>
                 <Input
-                    title={t("common.name")}
+                    title={t("common.firstName")}
                     type='text'
-                    placeholder={`${t("common.name")} ${t("signUp.surname")}`}
+                    placeholder={`${t("common.firstName")}`}
+                    value={updateForm.title}
+                    handleChange={handleInputChange}
+                />
+                <Input
+                    title={t("common.lastName")}
+                    type='text'
+                    placeholder={`${t("signUp.surname")}`}
                     value={updateForm.title}
                     handleChange={handleInputChange}
                 />
@@ -43,20 +50,6 @@ export default function EditProfile(/*{ userData }*/) {
                     title={t("common.email")}
                     type='email'
                     placeholder='mail@mail.com'
-                    value={updateForm.title}
-                    handleChange={handleInputChange}
-                />
-                <Input
-                    title={t("common.password")}
-                    type='password'
-                    placeholder='at least 8 characters'
-                    value={updateForm.title}
-                    handleChange={handleInputChange}
-                />
-                <Input
-                    title={t("common.password2")}
-                    type='password'
-                    placeholder='at least 8 characters'
                     value={updateForm.title}
                     handleChange={handleInputChange}
                 />
@@ -69,11 +62,6 @@ export default function EditProfile(/*{ userData }*/) {
                 />
                 <Option
                     location
-                    value={updateForm.title}
-                    handleChange={handleInputChange}
-                />
-                <Option
-                    lang
                     value={updateForm.title}
                     handleChange={handleInputChange}
                 />
