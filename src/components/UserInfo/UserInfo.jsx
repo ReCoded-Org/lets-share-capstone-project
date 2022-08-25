@@ -1,18 +1,21 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-// import { useTranslation } from "next-i18next";
+import { useTranslation } from "next-i18next";
 import { MdCameraAlt } from "react-icons/md";
 import { AiOutlineClose } from "react-icons/ai";
+import { useRouter } from "next/router";
 // The props is necessary for the actual data... ***TO BE USED IN THE FUTURE***
 const UserInfo = () => {
+    const { locale } = useRouter();
+    const { t } = useTranslation("common");
     //  ***to be removed later, FOR TEST PURPOSES ONLY***
     const dummyUser = {
         name: "John Doe",
         lang: "En",
         email: "blabla@example.com",
         location: "Kocaeli",
-        phone: "01234567890",
+        phone: "+90234567890",
         image: "/images/noPicInfo.svg",
     };
 
@@ -26,7 +29,11 @@ const UserInfo = () => {
         dummyUser.image = "/images/noPicInfo.svg"; //it is just a dummy line to pass ESLINT test
     };
     return (
-        <div className=' m-3 flex flex-col items-center justify-center font-primary md:flex-row '>
+        <div
+            className={` m-3 flex flex-col items-center justify-center font-primary ${
+                locale === "ar" ? "md:flex-row-reverse" : "md:flex-row"
+            } `}
+        >
             <div className='m-4 flex flex-row items-center justify-center md:flex-col '>
                 <Image
                     className=' rounded-full p-2 '
@@ -54,16 +61,32 @@ const UserInfo = () => {
                 </span>
             </div>
             <div className='m-4 flex flex-row justify-center rounded-lg bg-[#ffffff] text-sm  md:h-32 md:w-[60%] '>
-                <div className='flex flex-1 flex-col flex-wrap items-start justify-around gap-4 p-3 text-base lg:flex-row lg:items-center  '>
+                <div
+                    className={`flex flex-1 flex-col flex-wrap items-start justify-around gap-4 p-3 text-base  ${
+                        locale === "ar" ? "lg:flex-row-reverse" : "lg:flex-row"
+                    } lg:items-center  `}
+                >
                     <span className=' flex flex-col gap-4'>
-                        <span className=''>Name: {dummyUser.name}</span>
-                        <span className=''>Location: {dummyUser.location}</span>
+                        <span className=''>
+                            {t("common.name")}: {dummyUser.name}
+                        </span>
+                        <span className=''>
+                            {t("common.location")}: {dummyUser.location}
+                        </span>
                     </span>
                     <span className=' flex flex-col gap-4'>
-                        <span className=''>Phone: {dummyUser.phone}</span>
-                        <span className=''>Email: {dummyUser.email}</span>
+                        <span className=''>
+                            {t("common.phone")}: {dummyUser.phone}
+                        </span>
+                        <span className=''>
+                            {t("common.email")}: {dummyUser.email}
+                        </span>
                     </span>
-                    <span>Language: {dummyUser.lang}</span>
+                    <span className='rounded-full border-2 border-solid border-[black] bg-userInfoBg p-2 hover:bg-[#dbdbdb]'>
+                        <Link href='/change-password'>
+                            <a>{t("profile.changePassword")}</a>
+                        </Link>
+                    </span>
                 </div>
                 <div className='flex h-[45px] w-[45px] flex-col items-center justify-center rounded-r-lg bg-[#e6e6e6] p-1 hover:bg-[#dbdbdb] md:h-[100%] md:justify-center'>
                     <Link href='/edit-profile'>

@@ -1,8 +1,9 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-
+import { useTranslation } from "next-i18next";
 function MyItems() {
+    const { t } = useTranslation();
     const items = [
         { id: 1, title: "Product Title", image: "/images/item pic.png" },
         { id: 2, title: "Product Title", image: "/images/item pic.png" },
@@ -12,7 +13,7 @@ function MyItems() {
         <>
             <div className='my-12 flex flex-col items-center'>
                 <h1 className='mb-10 font-head text-3xl font-semibold tracking-wider text-fontColor'>
-                    My Items
+                    {t("profile.myItems")}
                 </h1>
                 {items.map((item) => (
                     <div

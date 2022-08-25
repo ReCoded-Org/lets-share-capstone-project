@@ -101,7 +101,7 @@ exports[`renders correctly 1`] = `
       className=" my-5 flex h-[380px] w-[80%] flex-col items-center justify-center text-center md:w-1/2"
     >
       <p
-        className="mb-1 py-5 font-qoute text-3xl text-fontColor md:w-[80%] md:text-left md:text-4xl lg:leading-relaxed"
+        className="mb-1 py-5 font-qoute text-3xl  text-fontColor md:w-[80%] md:null md:text-4xl lg:leading-relaxed"
       >
         landing.heroSection.heroText
       </p>

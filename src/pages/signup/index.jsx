@@ -5,7 +5,7 @@ import Layout from "@/components/layout/Layout";
 import Input from "@/components/input";
 import Option from "@/components/option";
 import Button from "@/components/button";
-import { FaFacebookSquare, FaGoogle, FaLinkedin } from "react-icons/fa";
+import { FaFacebookSquare, FaGoogle } from "react-icons/fa";
 
 export async function getStaticProps({ locale }) {
     return {
@@ -27,12 +27,17 @@ export default function Signup() {
                 <Input
                     title={t("common.name")}
                     type='text'
-                    placeholder={t("common.name") + " " + t("signUp.surname")}
+                    placeholder={t("common.name")}
+                />
+                <Input
+                    title={t("signUp.surname")}
+                    type='text'
+                    placeholder={t("signUp.surname")}
                 />
                 <Input
                     title={t("common.email")}
                     type='email'
-                    placeholder='mail@mail.com'
+                    placeholder='mail@example.com'
                 />
                 <Input
                     title={t("common.password")}
@@ -47,7 +52,7 @@ export default function Signup() {
                 <Input
                     title={t("common.phone")}
                     type='tel'
-                    placeholder='eg:0011223344'
+                    placeholder='eg: +901234567890'
                 />
                 <Option location />
                 <Button fullfilled={t("signUp.button")} />
@@ -63,13 +68,6 @@ export default function Signup() {
                         </a>
                         <a href='#'>
                             <FaGoogle
-                                size={35}
-                                color='#33956D'
-                                className=' transition duration-200 hover:fill-secondary'
-                            />
-                        </a>
-                        <a href='#'>
-                            <FaLinkedin
                                 size={35}
                                 color='#33956D'
                                 className=' transition duration-200 hover:fill-secondary'

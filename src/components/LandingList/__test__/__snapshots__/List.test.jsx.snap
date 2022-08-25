@@ -5,7 +5,7 @@ Array [
   <h2
     className="pt-20 pb-14 text-center font-head text-4xl font-bold tracking-wider text-fontColor"
   >
-    Popular Items
+    common.popularItems
   </h2>,
   <div
     className="mx-20 flex flex-wrap justify-center gap-10"

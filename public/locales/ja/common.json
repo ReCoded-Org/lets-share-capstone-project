@@ -7,16 +7,21 @@
         "location": "県",
         "signUp": "新規登録",
         "name": "名前",
+        "firstName": "下の名前",
+        "lastName": "名字",
         "email": "電子メイル",
         "password": "パスワード",
         "password2": "パスワードをもう一度入力してください",
         "phone": "携帯電話番号",
         "logIn": "ログイン",
-        "Logout": "Log out",
-        "confirm": "Confirm",
-        "cancel": "Cancel",
-        "update": "Update Profile",
-        "lang": "Language"
+        "Logout": "ログアウト",
+        "confirm": "確認",
+        "cancel": "キャンセル",
+        "update": "プロファイルを更新",
+        "lang": "言語",
+        "popularItems": "人気グッズ",
+        "partners": "パトラー",
+        "myProfile": "プロファイル"
     },
     "Footer": {
         "contactUs": "連絡",
@@ -35,13 +40,13 @@
             "causeText3": "寄付するという経験を幼い子供たちと共有することで、世界に変化をもたらすことができることを子供たちに示すことができます。子供たちは自然に他人を助けるのが大好きなので、この感情を育って大切にする事によって、子供たちが持っているものにもっと感謝して、将来にも慈善活動に支援します。"
         },
         "stats": {
-            "accountsTitle": "Accounts",
+            "accountsTitle": "アカウントス",
             "accounts": "このサイトに会員登録することは簡単です。アカウントの数は毎日増えています。",
-            "beneficiariesTitle": "Beneficiaries",
-            "beneficiaries": "時間による変わる可能性がありますが、受益者の数は役に。。。。。　ユーザー/受益者の 70% は 45 歳未満です。",
-            "GeographicalDistrictsTitle": "Geographical Districts",
+            "beneficiariesTitle": "受益者",
+            "beneficiaries": "時間による変わる可能性がありますが、受益者の数は役に400ユーザー/受益者の 70% は 45 歳未満です。",
+            "GeographicalDistrictsTitle": "都道府県",
             "GeographicalDistricts": "サイトのユーザーや受益者はいろんな県にいます。大勢のユーザーたちはイスタンブールとイズミルにいますが、このサイトの影響はガズィアンテプ、シャンルウルファ、メルシンみたいな県にあります。",
-            "recommendationsTitle": "Recommendations",
+            "recommendationsTitle": "サイトのおすすめ",
             "recommendations": "我々のサイトとのサービスが知られていたのは高い評価をもらったからです。受益者はオンラインで直接的および間接的に他の新しい受益者候補に我々を勧めました。500回以上オンラインで推奨事項として共有されています。"
         }
     },
@@ -50,7 +55,8 @@
             "heroTitle": "私たちは誰ですか？",
             "heroText": "我々はコーディングに関して情熱を持つ中東から集まれた人達です。Re:Codedの集約的ブートキャンプに参加するために選ばれました。我々の一部はバックエンド開発に興味があり他の一部はフロントエンド開発を望んだ。二つのグループに別れました。このブートキャンプに重要な技術を学んだ。我々の情熱も教えられた技術を統合してウェブ開発者になりました。八月2022年で、このサイトは正式に仕上げられました。このサイトは過ぎた数ヶ月にあったチームワークと努力の結果であり我々の覚悟の証です。"
         },
-        "team": "私たちのチーム"
+        "front-end-team": "Front-end チーム",
+        "back-end-team": "Back-end チーム"
     },
     "goods": {
         "category": "カテゴリ",
@@ -64,7 +70,7 @@
         "description": "説明",
         "category": "カテゴリ",
         "button": "追加",
-        "uploadPhotos": "Upload photos"
+        "uploadPhotos": "写真をアップロード"
     },
     "signUp": {
         "surname": "苗字",
@@ -82,7 +88,8 @@
         "profile": "プロファイル",
         "button": "プロファイルを更新",
         "delete": "アカウントを削除",
-        "myItems": "私のアイテム"
+        "myItems": "私のアイテム",
+        "changePassword": "パスワード変更"
     },
     "item": {
         "item": "アイテム",
@@ -105,10 +112,10 @@
         "moreBlogs": "More Blogs"
     },
     "categories": {
-        "All": "All",
-        "Furniture": "Furniture",
-        "Clothes": "Clothes",
-        "Electronics": "Electronics",
-        "Others": "Others"
+        "All": "全部",
+        "Furniture": "家具",
+        "Clothes": "衣服",
+        "Electronics": "电子",
+        "Others": "その他"
     }
 }

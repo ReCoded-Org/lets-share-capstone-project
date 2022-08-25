@@ -3,8 +3,9 @@ import { FaChair } from "react-icons/fa";
 import { GiClothes } from "react-icons/gi";
 import { FcElectronics, FcAcceptDatabase } from "react-icons/fc";
 import { BiCategory } from "react-icons/bi";
-
+import { useTranslation } from "next-i18next";
 function Card({ cat, setFilterParam }) {
+    const { t } = useTranslation();
     return (
         <>
             <div
@@ -23,7 +24,9 @@ function Card({ cat, setFilterParam }) {
                     <BiCategory color='#F07167' size={40} />
                 ) : null}
 
-                <span className='mt-4 font-bold text-primary'>{cat}</span>
+                <span className='mt-4 font-bold text-primary'>
+                    {t(`categories.${cat}`)}
+                </span>
             </div>
         </>
     );
