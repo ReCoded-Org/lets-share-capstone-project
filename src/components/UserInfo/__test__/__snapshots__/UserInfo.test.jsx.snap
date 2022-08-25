@@ -210,7 +210,7 @@ exports[`renders correctly 1`] = `
         </span>
       </span>
       <span
-        className="bg-userInfoBg rounded-full border-solid border-2 p-2 hover:bg-[#dbdbdb] border-[black]"
+        className="rounded-full border-2 border-solid border-[black] bg-userInfoBg p-2 hover:bg-[#dbdbdb]"
       >
         <a
           href="/change-password"

@@ -10,7 +10,7 @@ exports[`renders correctly 1`] = `
     aboutus.front-end-team
   </h1>
   <div
-    className="mx-[7rem] justify-items-center flex flex-wrap justify-center gap-10"
+    className="mx-[7rem] flex flex-wrap justify-center justify-items-center gap-10"
   >
     <div
       className=" my-6 w-48 justify-center"
@@ -1135,7 +1135,7 @@ exports[`renders correctly 1`] = `
     aboutus.back-end-team
   </h1>
   <div
-    className="mx-[7rem] justify-items-center flex flex-wrap justify-center gap-10"
+    className="mx-[7rem] flex flex-wrap justify-center justify-items-center gap-10"
   >
     <div
       className=" my-6 w-48 justify-center"
