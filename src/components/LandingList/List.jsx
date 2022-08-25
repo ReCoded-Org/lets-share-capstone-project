@@ -3,6 +3,7 @@ import React from "react";
 import BlogCard from "../BlogCard/";
 import PopularItemsCard from "../PopularItemsCard/";
 import CategoryCard from "../CategoryCard/";
+import { useTranslation } from "next-i18next";
 
 const items = [
     {
@@ -22,6 +23,7 @@ const items = [
     },
 ];
 function List(props) {
+    const { t } = useTranslation();
     const blogs = props.blogs;
     // const items = props.items; delete above items array and uncomment this line to pass items as props in other pages
     const categories = props.categories;
@@ -31,7 +33,11 @@ function List(props) {
     return (
         <>
             <h2 className='pt-20 pb-14 text-center font-head text-4xl font-bold tracking-wider text-fontColor'>
-                {blogs ? "Blogs" : items ? "Popular Items" : null}
+                {blogs
+                    ? t("common.blogs")
+                    : items
+                    ? t("common.popularItems")
+                    : null}
             </h2>
             <div className='mx-20 flex flex-wrap justify-center gap-10'>
                 {list

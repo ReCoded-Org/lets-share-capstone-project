@@ -7,6 +7,8 @@ exports[`renders correctly 1`] = `
 >
   <span
     className="mt-4 font-bold text-primary"
-  />
+  >
+    categories.undefined
+  </span>
 </div>
 `;

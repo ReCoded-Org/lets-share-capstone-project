@@ -2,7 +2,6 @@ import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import * as React from "react";
 import { AiFillFacebook } from "react-icons/ai";
-import { AiFillLinkedin } from "react-icons/ai";
 import { FaInstagram } from "react-icons/fa";
 import Layout from "@/components/layout/Layout";
 import Image from "next/image";
@@ -99,13 +98,6 @@ export default function Login() {
                         </a>
                         <a href='#'>
                             <FaInstagram
-                                color='#33956D'
-                                size={30}
-                                className='cursor-pointer transition duration-200 hover:fill-secondary'
-                            />
-                        </a>
-                        <a href='#'>
-                            <AiFillLinkedin
                                 color='#33956D'
                                 size={30}
                                 className='cursor-pointer transition duration-200 hover:fill-secondary'

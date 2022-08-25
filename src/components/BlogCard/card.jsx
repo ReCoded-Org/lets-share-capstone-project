@@ -2,8 +2,9 @@ import React from "react";
 import { useTranslation } from "next-i18next";
 import Link from "next/link";
 import Image from "next/image";
-
+import { useRouter } from "next/router";
 export default function Card({ item }) {
+    const { locale } = useRouter();
     const { t } = useTranslation("common");
     return (
         <Link href={`/blogs/${item.title}`}>
@@ -22,7 +23,11 @@ export default function Card({ item }) {
                         </p>
                     </div>
                 </div>
-                <div className=' py-4 px-3 '>
+                <div
+                    className={`py-4 px-3 ${
+                        locale === "ar" ? "text-right" : null
+                    }`}
+                >
                     <h2 className='text-brand-primary dark:text-white mt-2 text-lg font-semibold tracking-normal'>
                         <span
                             className=' dark:from-purple-800 dark:to-purple-900 bg-gradient-to-r from-[#F07167] to-[#fceceb] bg-[length:0px_10px]

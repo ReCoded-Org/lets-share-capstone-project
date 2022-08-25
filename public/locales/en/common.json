@@ -7,6 +7,8 @@
         "location": "Location",
         "signUp": "Sign Up",
         "name": "Name",
+        "firstName": "First Name",
+        "lastName": "Last Name",
         "email": "Email",
         "password": "Password",
         "password2": "Confirm Password",
@@ -16,7 +18,10 @@
         "confirm": "Confirm",
         "cancel": "Cancel",
         "update": "Update Profile",
-        "lang": "Language"
+        "lang": "Language",
+        "popularItems": "Popular Items",
+        "partners": "Parteners",
+        "myProfile": "My Profile"
     },
     "Footer": {
         "contactUs": "Contact us",
@@ -50,7 +55,8 @@
             "heroTitle": "Who We Are",
             "heroText": "We are a group of people from the middle east, who are passionate about coding. We were selected to be part of one of Re:Coded web development extensive boot camps. Some of us were eager about front-end development, the others preferred back-end development so we were separated into two groups. We have learned valuable skills and integrated our passion for coding with the technical skills that we were taught and became web developers. In August 2022, This website was done officially. It was a result of our teamwork and hard work over the past months and evidence of our persistence."
         },
-        "team": "Our Team"
+        "front-end-team": "Front-end Team",
+        "back-end-team": "Back-end Team"
     },
     "goods": {
         "category": "Category",
@@ -82,7 +88,8 @@
         "profile": "Profile",
         "button": "Update Profile",
         "delete": "Delete Account",
-        "myItems": "My Items"
+        "myItems": "My Items",
+        "changePassword": "Change Password"
     },
     "item": {
         "item": "Item",

@@ -5,8 +5,10 @@ import { AiFillFacebook } from "react-icons/ai";
 import { AiFillLinkedin } from "react-icons/ai";
 import { BsShareFill } from "react-icons/bs";
 import { FaInstagram } from "react-icons/fa";
+import { useTranslation } from "next-i18next";
 
 function Footer() {
+    const { t } = useTranslation();
     return (
         <div className='flex justify-center bg-primary p-5 font-primary text-xl text-[white]'>
             <div className=' grid w-[90%] grid-cols-1 justify-items-center md:grid-cols-4 md:justify-items-stretch '>
@@ -25,17 +27,17 @@ function Footer() {
                         <ul className='flex flex-col items-center md:items-start'>
                             <li className='pb-2 opacity-80 hover:opacity-100'>
                                 <Link href='/aboutus'>
-                                    <a className=' '>About us</a>
+                                    <a className=' '>{t("common.aboutUs")}</a>
                                 </Link>
                             </li>
                             <li className='pb-2 opacity-80 hover:opacity-100'>
                                 <Link href='/blogs'>
-                                    <a>Blogs</a>
+                                    <a>{t("common.blogs")}</a>
                                 </Link>
                             </li>
                             <li className='pb-2 opacity-80 hover:opacity-100'>
                                 <Link href='/goods'>
-                                    <a>Goods</a>
+                                    <a>{t("common.goods")}</a>
                                 </Link>
                             </li>
                         </ul>
@@ -43,7 +45,7 @@ function Footer() {
 
                     <div className='  p-3   '>
                         <ul className='flex flex-col items-center gap-2'>
-                            <p className=''>Contact us</p>
+                            <p className=''>{t("Footer.contactUs")}</p>
                             <div className='flex gap-3 text-3xl '>
                                 <AiFillFacebook className='cursor-pointer opacity-80 hover:opacity-100' />
                                 <FaInstagram className='cursor-pointer opacity-80 hover:opacity-100' />
@@ -54,7 +56,7 @@ function Footer() {
                     </div>
                     <div className='p-5'>
                         <ul className='flex flex-col items-center opacity-80 md:items-start'>
-                            <p className=' pb-2'> Adress </p>
+                            <p className=' pb-2'> {t("Footer.adress")} </p>
                             <p className=' pb-2'> Street 01,17 </p>
                             <p className=' pb-2'> City, Country</p>
                         </ul>

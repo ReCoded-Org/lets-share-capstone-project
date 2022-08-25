@@ -7,7 +7,7 @@ exports[`renders correctly 1`] = `
   <h1
     className="mb-10 font-head text-3xl font-semibold tracking-wider text-fontColor"
   >
-    My Items
+    profile.myItems
   </h1>
   <div
     className="mb-6 flex w-9/12 flex-row items-center justify-between rounded-full bg-[#ffffff] py-1 px-2"

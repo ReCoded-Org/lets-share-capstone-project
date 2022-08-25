@@ -3,9 +3,11 @@ import { useTranslation } from "next-i18next";
 import Image from "next/image";
 import { BiHappyBeaming, BiDonateHeart } from "react-icons/bi";
 import { MdFamilyRestroom } from "react-icons/md";
+import { useRouter } from "next/router";
 import Link from "next/link";
 
 const HeroSection = () => {
+    const { locale } = useRouter();
     const { t } = useTranslation("common");
 
     return (
@@ -23,7 +25,11 @@ const HeroSection = () => {
                     />
                 </div>
                 <div className='  my-5 flex h-[380px] w-[80%] flex-col items-center justify-center text-center md:w-1/2'>
-                    <p className='mb-1 py-5 font-qoute text-3xl text-fontColor md:w-[80%] md:text-left md:text-4xl lg:leading-relaxed'>
+                    <p
+                        className={`mb-1 py-5 font-qoute text-3xl  text-fontColor md:w-[80%] md:${
+                            locale === "ar" ? "text-right" : null
+                        } md:text-4xl lg:leading-relaxed`}
+                    >
                         {t("landing.heroSection.heroText")}
                     </p>
                     <p className='text-2xll mb-8 py-5 text-fontColor sm:w-[80%] md:text-right md:text-xl'>

@@ -1,6 +1,6 @@
 import renderer from "react-test-renderer";
 import BlogsCard from "../BlogsCard";
-
+import * as nextRouter from "next/router";
 const item = {
     id: 2,
     title: "My Blog",
@@ -13,3 +13,8 @@ it("renders correctly", () => {
     const tree = renderer.create(<BlogsCard item={item} />).toJSON();
     expect(tree).toMatchSnapshot();
 });
+function tryRoute(packacge) {
+    packacge.useRouter = jest.fn();
+    packacge.useRouter.mockImplementation(() => ({ route: "/" }));
+}
+tryRoute(nextRouter);
