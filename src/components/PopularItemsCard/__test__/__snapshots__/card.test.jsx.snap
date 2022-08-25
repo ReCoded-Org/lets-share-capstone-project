@@ -2,7 +2,9 @@
 
 exports[`renders correctly 1`] = `
 <div
-  className=" group cursor-pointer overflow-hidden rounded-lg bg-[#F3F3F3] text-primary shadow-xl transition duration-300 hover:scale-105 hover:shadow-2xl"
+  className="group w-[250px] cursor-pointer overflow-hidden rounded-lg bg-[white] font-primary text-primary shadow-xl transition duration-300 hover:scale-105 hover:shadow-2xl"
+  onClick={[Function]}
+  onMouseEnter={[Function]}
 >
   <div
     className="relative aspect-video overflow-hidden rounded-md transition-all "
@@ -67,8 +69,8 @@ exports[`renders correctly 1`] = `
           decoding="async"
           loading="lazy"
           sizes="100vw"
-          src="/_next/image?url=%2FPhoto.png&w=3840&q=75"
-          srcSet="/_next/image?url=%2FPhoto.png&w=640&q=75 640w, /_next/image?url=%2FPhoto.png&w=750&q=75 750w, /_next/image?url=%2FPhoto.png&w=828&q=75 828w, /_next/image?url=%2FPhoto.png&w=1080&q=75 1080w, /_next/image?url=%2FPhoto.png&w=1200&q=75 1200w, /_next/image?url=%2FPhoto.png&w=1920&q=75 1920w, /_next/image?url=%2FPhoto.png&w=2048&q=75 2048w, /_next/image?url=%2FPhoto.png&w=3840&q=75 3840w"
+          src="/_next/image?url=https%3A%2F%2Fapi.lorem.space%2Fimage%2Ffurniture%3Fw%3D640%26h%3D480%26r%3D9644&w=3840&q=75"
+          srcSet="/_next/image?url=https%3A%2F%2Fapi.lorem.space%2Fimage%2Ffurniture%3Fw%3D640%26h%3D480%26r%3D9644&w=640&q=75 640w, /_next/image?url=https%3A%2F%2Fapi.lorem.space%2Fimage%2Ffurniture%3Fw%3D640%26h%3D480%26r%3D9644&w=750&q=75 750w, /_next/image?url=https%3A%2F%2Fapi.lorem.space%2Fimage%2Ffurniture%3Fw%3D640%26h%3D480%26r%3D9644&w=828&q=75 828w, /_next/image?url=https%3A%2F%2Fapi.lorem.space%2Fimage%2Ffurniture%3Fw%3D640%26h%3D480%26r%3D9644&w=1080&q=75 1080w, /_next/image?url=https%3A%2F%2Fapi.lorem.space%2Fimage%2Ffurniture%3Fw%3D640%26h%3D480%26r%3D9644&w=1200&q=75 1200w, /_next/image?url=https%3A%2F%2Fapi.lorem.space%2Fimage%2Ffurniture%3Fw%3D640%26h%3D480%26r%3D9644&w=1920&q=75 1920w, /_next/image?url=https%3A%2F%2Fapi.lorem.space%2Fimage%2Ffurniture%3Fw%3D640%26h%3D480%26r%3D9644&w=2048&q=75 2048w, /_next/image?url=https%3A%2F%2Fapi.lorem.space%2Fimage%2Ffurniture%3Fw%3D640%26h%3D480%26r%3D9644&w=3840&q=75 3840w"
           style={
             Object {
               "border": "none",
@@ -101,51 +103,50 @@ exports[`renders correctly 1`] = `
     <div
       className=" flex flex-col justify-between"
     >
+      <div
+        className="mb-2 flex justify-between"
+      >
+        <div
+          className="flex"
+        >
+          <svg
+            className="mt-1 h-4 w-4 group-hover:animate-bounce"
+            fill="#F07167"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              clipRule="evenodd"
+              d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+              fillRule="evenodd"
+            />
+          </svg>
+          <span
+            className="ml-1"
+          >
+            Adana
+          </span>
+        </div>
+        <span
+          className="text-base font-semibold text-secondary"
+        >
+          Furniture
+        </span>
+      </div>
       <h2
-        className="text-brand-primary dark:text-white text-lg font-semibold tracking-normal"
+        className=" dark:text-white text-base font-semibold md:text-lg"
       >
         <span
-          className=" dark:from-purple-800 dark:to-purple-900 bg-gradient-to-r from-[#4ade80] to-[#dcfce7] bg-[length:0px_10px] bg-left-bottom bg-no-repeat transition-[background-size] duration-500 hover:bg-[length:100%_3px] group-hover:bg-[length:100%_10px]"
+          className="dark:from-purple-800 dark:to-purple-900 bg-gradient-to-r from-[#4ade80] to-[#dcfce7] bg-[length:0px_10px] bg-left-bottom bg-no-repeat transition-[background-size] duration-500 hover:bg-[length:100%_3px] group-hover:bg-[length:100%_10px]"
         >
-          My item
+          Fantastic Frozen Computer
         </span>
       </h2>
       <p
-        className="text-gray-700 mt-2 text-base "
+        className="mt-2 text-sm md:text-base "
       >
-        This is my item
+        The Apollotech B340 is an affordable wireless mouse with reliable connectivity, ......
       </p>
-    </div>
-    <div
-      className="flex flex-col items-center justify-between"
-    >
-      <div
-        className="flex"
-      >
-        <svg
-          className="mt-1 h-4 w-4 group-hover:animate-bounce"
-          fill="#F07167"
-          viewBox="0 0 20 20"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            clipRule="evenodd"
-            d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
-            fillRule="evenodd"
-          />
-        </svg>
-         
-        <span
-          className="ml-1"
-        >
-          istanbul
-        </span>
-      </div>
-      <span
-        className="opacity-0 transition duration-300 group-hover:opacity-100 "
-      >
-        Category
-      </span>
     </div>
   </div>
 </div>

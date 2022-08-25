@@ -3,10 +3,10 @@
 exports[`renders correctly 1`] = `
 <div>
   <div
-    className="mb-3 flex  flex-row justify-between p-10"
+    className="flex flex-col items-center px-5 font-primary lg:mt-5 lg:h-[60vh] lg:flex-row lg:items-center xl:mx-20 "
   >
     <div
-      className=" p-10 px-10"
+      className="relative w-full p-10 px-10"
     >
       <span
         style={
@@ -45,7 +45,7 @@ exports[`renders correctly 1`] = `
           <img
             alt=""
             aria-hidden={true}
-            src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%271000%27%20height=%27800%27/%3e"
+            src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%271200%27%20height=%27800%27/%3e"
             style={
               Object {
                 "background": "none",
@@ -62,8 +62,7 @@ exports[`renders correctly 1`] = `
           />
         </span>
         <img
-          alt="Card image"
-          className="card-img"
+          className="card-img "
           data-nimg="intrinsic"
           decoding="async"
           onError={[Function]}
@@ -94,13 +93,12 @@ exports[`renders correctly 1`] = `
         />
         <noscript>
           <img
-            alt="Card image"
-            className="card-img"
+            className="card-img "
             data-nimg="intrinsic"
             decoding="async"
             loading="lazy"
-            src="/_next/image?url=%2FPhoto.png&w=2048&q=75"
-            srcSet="/_next/image?url=%2FPhoto.png&w=1080&q=75 1x, /_next/image?url=%2FPhoto.png&w=2048&q=75 2x"
+            src="/_next/image?url=%2FPhoto.png&w=3840&q=75"
+            srcSet="/_next/image?url=%2FPhoto.png&w=1200&q=75 1x, /_next/image?url=%2FPhoto.png&w=3840&q=75 2x"
             style={
               Object {
                 "border": "none",
@@ -131,30 +129,36 @@ exports[`renders correctly 1`] = `
       className=" flex flex-col items-start justify-center"
     >
       <div
-        className="r-md-8 px-10"
+        className=" px-10"
       >
         <h2
-          className="pb-2 text-xl font-bold text-fontColor"
+          className="pb-2 font-head text-3xl font-bold tracking-wider text-fontColor"
         >
-          My Blog
+          blogs.headerBlg2
         </h2>
         <p
           className="text-lg text-fontColor"
         >
-           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum necessitatibus numquam qui ea debitis natus amet ab nobis dignissimos consequatur possimus obcaecati corporis doloremque velit, temporibus praesentium unde sed? Quae?
+          blogs.contentBlg2...
         </p>
         <div
           className="flex h-7 w-10 flex-1"
         >
-          <div
-            className="flex justify-center"
+          <a
+            href="/blogs/My%20Blog"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
           >
-            <button
-              className="my-5 h-9 w-[120px] rounded-full bg-primary text-xl font-semibold text-[white] shadow-md"
+            <div
+              className="flex justify-center font-primary"
             >
-              Read more
-            </button>
-          </div>
+              <button
+                className="my-5 h-9 w-[120px] rounded-full bg-primary text-lg text-[white] shadow-md transition duration-200 hover:scale-[105%] hover:bg-secondary hover:shadow-md"
+              >
+                Read more
+              </button>
+            </div>
+          </a>
         </div>
       </div>
     </div>

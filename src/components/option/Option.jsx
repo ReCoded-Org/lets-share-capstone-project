@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React from "react";
+import { useTranslation } from "next-i18next";
 
 const cities = [
     "Adana",
@@ -85,6 +86,7 @@ const cities = [
 ];
 
 const categories = ["first", "second", "third"];
+const langs = ["AR", "EN", "TR", "JA"];
 
 export default function Option(props) {
     const location = props.location;
@@ -95,15 +97,32 @@ export default function Option(props) {
         setValue(e.target.value);
         props.setFormData({ ...props.formData, [e.target.name]: e.target.value });
     }
+    const lang = props.lang;
+    const { t } = useTranslation("common");
 
     return (
-        <form className='my-7 flex justify-center'>
+        <form className='my-7 flex justify-center font-primary'>
             <label className='flex w-[80%] flex-col items-start justify-center md:w-[60%] xl:w-[40%]'>
-                <span className='mb-3 pl-3 text-xl font-semibold text-fontColor'>
-                    {location ? "Location" : category ? "Category" : null}
+                <span className='mb-3 pl-3 text-lg font-semibold tracking-wider text-fontColor'>
+                    {location
+                        ? `${t("common.location")}`
+                        : category
+                        ? `${t("addItem.category")}`
+                        : lang
+                        ? `${t("common.lang")}`
+                        : null}
                 </span>
                 <select
-                    className='w-full rounded-lg border-2 border-primary shadow-md'
+                    title={
+                        location
+                            ? "location"
+                            : category
+                            ? "category"
+                            : lang
+                            ? "language"
+                            : null
+                    }
+                    className='w-full rounded-lg border-0 text-[#797979] shadow-lg focus:text-fontColor'
                     value={value}
                     onChange={handleChange}
                     name={props.name}
@@ -116,6 +135,12 @@ export default function Option(props) {
                           ))
                         : category
                         ? categories.map((city, i) => (
+                              <option key={i} value={city}>
+                                  {city}
+                              </option>
+                          ))
+                        : lang
+                        ? langs.map((city, i) => (
                               <option key={i} value={city}>
                                   {city}
                               </option>

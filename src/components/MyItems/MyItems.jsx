@@ -10,14 +10,14 @@ function MyItems() {
     ];
     return (
         <>
-            <div className='mt-12 flex flex-col items-center'>
-                <h1 className='mb-10 text-2xl font-bold text-fontColor'>
+            <div className='my-12 flex flex-col items-center'>
+                <h1 className='mb-10 font-head text-3xl font-semibold tracking-wider text-fontColor'>
                     My Items
                 </h1>
                 {items.map((item) => (
                     <div
                         key={item.id}
-                        className='mb-6 flex w-11/12 flex-row items-center justify-between rounded-full bg-secondary py-1 px-2 md:w-9/12 lg:w-9/12 xl:w-9/12'
+                        className='mb-6 flex w-9/12 flex-row items-center justify-between rounded-full bg-[#ffffff] py-1 px-2'
                     >
                         <Image
                             src={item.image}
@@ -26,7 +26,7 @@ function MyItems() {
                             height={60}
                             className=' h-8 w-8 rounded-full'
                         />
-                        <Link href='#'>
+                        <Link href={`items/${item.id}`}>
                             <div className='min-w-0 flex-1'>
                                 <h3 className='px-2   text-lg text-fontColor hover:-mt-2 hover:cursor-pointer md:px-4 md:py-4 md:text-xl xl:px-4 xl:py-4 xl:text-xl'>
                                     {item.title}
@@ -34,22 +34,26 @@ function MyItems() {
                             </div>
                         </Link>
                         <div className='mx-4 inline-flex items-center '>
-                            <div className='hover:-mt-2 hover:cursor-pointer'>
-                                <Image
-                                    src='/images/IconEdit.png'
-                                    alt='Edit'
-                                    width={20}
-                                    height={20}
-                                />
-                            </div>
-                            <div className='ml-8 hover:-mt-2 hover:cursor-pointer'>
-                                <Image
-                                    src='/images/IconDelete.png'
-                                    alt='Delete'
-                                    width={20}
-                                    height={25}
-                                />
-                            </div>
+                            <Link href='/add-item'>
+                                <div className='hover:-mt-2 hover:cursor-pointer'>
+                                    <Image
+                                        src='/images/IconEdit.png'
+                                        alt='Edit'
+                                        width={20}
+                                        height={20}
+                                    />
+                                </div>
+                            </Link>
+                            <Link href='#'>
+                                <div className='ml-8 hover:-mt-2 hover:cursor-pointer'>
+                                    <Image
+                                        src='/images/IconDelete.png'
+                                        alt='Delete'
+                                        width={20}
+                                        height={25}
+                                    />
+                                </div>
+                            </Link>
                         </div>
                     </div>
                 ))}

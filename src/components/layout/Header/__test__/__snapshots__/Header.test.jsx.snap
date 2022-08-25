@@ -2,16 +2,16 @@
 
 exports[`renders correctly 1`] = `
 <div
-  className="relative "
+  className="relative flex justify-center font-primary"
 >
   <div
     className=" absolute -z-10 h-96 w-full"
   />
   <nav
-    className="bg-transperent "
+    className="bg-transperent mx-3 w-full md:mx-6 lg:mx-14"
   >
     <div
-      className="max-w-auto  opacity-1 top-0 z-30 mb-2   px-2 transition duration-1000   ease-in-out sm:px-3 lg:px-4 false"
+      className="max-w-auto  opacity-1 top-0 z-30 mb-2 transition duration-1000   ease-in-out false"
     >
       <div
         className=" flex items-center justify-end"
@@ -37,7 +37,7 @@ exports[`renders correctly 1`] = `
               aria-hidden="true"
               className="block h-10 w-10"
               fill="none"
-              stroke="#97dbbf"
+              stroke="#33956D"
               strokeWidth={2}
               viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg"
@@ -57,11 +57,11 @@ exports[`renders correctly 1`] = `
             >
               <a
                 className=" hover:bg-[gray-700] hover:text-white text-[white] rounded-md px-3 py-2 font-medium "
-                href="/home"
+                href="/"
                 onClick={[Function]}
                 onMouseEnter={[Function]}
               >
-                Home
+                common.Home
               </a>
               <a
                 className=" hover:bg-[gray-700] hover:text-white text-[white] rounded-md px-3 py-2 font-medium "
@@ -69,7 +69,7 @@ exports[`renders correctly 1`] = `
                 onClick={[Function]}
                 onMouseEnter={[Function]}
               >
-                About us
+                common.aboutUs
               </a>
               <a
                 className=" hover:bg-[gray-700] hover:text-white text-[white] rounded-md px-3 py-2 font-medium "
@@ -77,7 +77,7 @@ exports[`renders correctly 1`] = `
                 onClick={[Function]}
                 onMouseEnter={[Function]}
               >
-                Goods
+                common.goods
               </a>
               <a
                 className=" hover:bg-[gray-700] hover:text-white text-[white] rounded-md px-3 py-2 font-medium "
@@ -85,7 +85,7 @@ exports[`renders correctly 1`] = `
                 onClick={[Function]}
                 onMouseEnter={[Function]}
               >
-                Blogs
+                common.blogs
               </a>
             </div>
           </div>
@@ -127,7 +127,7 @@ exports[`renders correctly 1`] = `
             <img
               alt=""
               aria-hidden={true}
-              src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%2780%27%20height=%2780%27/%3e"
+              src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27240%27%20height=%27120%27/%3e"
               style={
                 Object {
                   "background": "none",
@@ -145,11 +145,13 @@ exports[`renders correctly 1`] = `
           </span>
           <img
             alt="Lets share logo"
-            className="h-14 w-auto"
+            className=" relative translate-x-[-10%] scale-75 cursor-pointer md:scale-100"
             data-nimg="intrinsic"
             decoding="async"
+            onClick={[Function]}
             onError={[Function]}
             onLoad={[Function]}
+            onMouseEnter={[Function]}
             src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
             style={
               Object {
@@ -177,12 +179,14 @@ exports[`renders correctly 1`] = `
           <noscript>
             <img
               alt="Lets share logo"
-              className="h-14 w-auto"
+              className=" relative translate-x-[-10%] scale-75 cursor-pointer md:scale-100"
               data-nimg="intrinsic"
               decoding="async"
               loading="lazy"
-              src="/images/dummyLogo.svg"
-              srcSet="/images/dummyLogo.svg 1x, /images/dummyLogo.svg 2x"
+              onClick={[Function]}
+              onMouseEnter={[Function]}
+              src="/images/lets share logo.svg"
+              srcSet="/images/lets share logo.svg 1x, /images/lets share logo.svg 2x"
               style={
                 Object {
                   "border": "none",
@@ -209,7 +213,7 @@ exports[`renders correctly 1`] = `
           </noscript>
         </span>
         <div
-          className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-end "
+          className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-end"
         >
           <div
             className="flex flex-shrink-0 items-center"
@@ -218,39 +222,39 @@ exports[`renders correctly 1`] = `
               className="hidden sm:ml-6 md:block "
             >
               <div
-                className="mr-5 flex space-x-4 "
+                className="mr-0 flex space-x-0 lg:mr-5 lg:space-x-4 "
               >
                 <a
-                  className="hover:text-white mx-1 rounded-md px-3 py-2 text-lg font-medium text-fontColor hover:bg-btnBgHover "
-                  href="/home"
+                  className="hover:text-white mx-1 rounded-md px-3 py-2 text-fontColor hover:opacity-70 lg:text-lg"
+                  href="/"
                   onClick={[Function]}
                   onMouseEnter={[Function]}
                 >
-                  Home
+                  common.Home
                 </a>
                 <a
-                  className="hover:text-white mx-1 rounded-md px-3 py-2 text-lg font-medium text-fontColor hover:bg-btnBgHover "
+                  className="hover:text-white mx-1 rounded-md px-3 py-2 text-fontColor hover:opacity-70 lg:text-lg"
                   href="/aboutus"
                   onClick={[Function]}
                   onMouseEnter={[Function]}
                 >
-                  About us
+                  common.aboutUs
                 </a>
                 <a
-                  className="hover:text-white mx-1 rounded-md px-3 py-2 text-lg font-medium text-fontColor hover:bg-btnBgHover "
+                  className="hover:text-white mx-1 rounded-md px-3 py-2 text-fontColor hover:opacity-70 lg:text-lg"
                   href="/goods"
                   onClick={[Function]}
                   onMouseEnter={[Function]}
                 >
-                  Goods
+                  common.goods
                 </a>
                 <a
-                  className="hover:text-white mx-1 rounded-md px-3 py-2 text-lg font-medium text-fontColor hover:bg-btnBgHover "
+                  className="hover:text-white mx-1 rounded-md px-3 py-2 text-fontColor hover:opacity-70 lg:text-lg"
                   href="/blogs"
                   onClick={[Function]}
                   onMouseEnter={[Function]}
                 >
-                  Blogs
+                  common.blogs
                 </a>
               </div>
             </div>
@@ -258,13 +262,13 @@ exports[`renders correctly 1`] = `
               className="hidden md:block "
             >
               <div
-                className="relative ml-3"
+                className="relative ml-2"
               >
                 <div>
                   <button
                     aria-expanded={false}
                     aria-haspopup={true}
-                    className="mr-4 mb-2 flex rounded-full text-sm md:mr-1 md:mb-0 "
+                    className="mr-4 flex flex-row-reverse items-center rounded-full text-sm md:mr-1 md:mb-0 md:flex-row "
                     id="headlessui-menu-button-:r2:"
                     onClick={[Function]}
                     onKeyDown={[Function]}
@@ -276,42 +280,6 @@ exports[`renders correctly 1`] = `
                     >
                       Open user menu
                     </span>
-                    <imge
-                      alt=""
-                      className="h-8 w-8 rounded-full"
-                      src="/images/noUserPic.svg"
-                    />
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div
-              className="hidden md:block"
-            >
-              <div
-                className="relative ml-3"
-              >
-                <div>
-                  <button
-                    aria-expanded={false}
-                    aria-haspopup={true}
-                    className=" z-1 mr-4 flex flex-row-reverse rounded-full text-sm md:mr-0 md:flex-row"
-                    id="headlessui-menu-button-:r3:"
-                    onClick={[Function]}
-                    onKeyDown={[Function]}
-                    onKeyUp={[Function]}
-                    type="button"
-                  >
-                    <span
-                      className="sr-only"
-                    >
-                      Open user menu
-                    </span>
-                    <img
-                      alt=""
-                      className="h-8 w-8 rounded-full "
-                      src="/images/undefinedFlag.svg"
-                    />
                     <span
                       style={
                         Object {
@@ -349,7 +317,7 @@ exports[`renders correctly 1`] = `
                         <img
                           alt=""
                           aria-hidden={true}
-                          src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%2720%27%20height=%2730%27/%3e"
+                          src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%2735%27%20height=%2735%27/%3e"
                           style={
                             Object {
                               "background": "none",
@@ -366,7 +334,8 @@ exports[`renders correctly 1`] = `
                         />
                       </span>
                       <img
-                        className="arrow rotate-90 md:rotate-0 "
+                        alt=""
+                        className="h-8 w-8 rounded-full "
                         data-nimg="intrinsic"
                         decoding="async"
                         onError={[Function]}
@@ -397,7 +366,388 @@ exports[`renders correctly 1`] = `
                       />
                       <noscript>
                         <img
-                          className="arrow rotate-90 md:rotate-0 "
+                          alt=""
+                          className="h-8 w-8 rounded-full "
+                          data-nimg="intrinsic"
+                          decoding="async"
+                          loading="lazy"
+                          src="/images/noUserPic.svg"
+                          srcSet="/images/noUserPic.svg 1x, /images/noUserPic.svg 2x"
+                          style={
+                            Object {
+                              "border": "none",
+                              "bottom": 0,
+                              "boxSizing": "border-box",
+                              "display": "block",
+                              "height": 0,
+                              "left": 0,
+                              "margin": "auto",
+                              "maxHeight": "100%",
+                              "maxWidth": "100%",
+                              "minHeight": "100%",
+                              "minWidth": "100%",
+                              "objectFit": undefined,
+                              "objectPosition": undefined,
+                              "padding": 0,
+                              "position": "absolute",
+                              "right": 0,
+                              "top": 0,
+                              "width": 0,
+                            }
+                          }
+                        />
+                      </noscript>
+                    </span>
+                    <span
+                      style={
+                        Object {
+                          "background": "none",
+                          "border": 0,
+                          "boxSizing": "border-box",
+                          "display": "inline-block",
+                          "height": "initial",
+                          "margin": 0,
+                          "maxWidth": "100%",
+                          "opacity": 1,
+                          "overflow": "hidden",
+                          "padding": 0,
+                          "position": "relative",
+                          "width": "initial",
+                        }
+                      }
+                    >
+                      <span
+                        style={
+                          Object {
+                            "background": "none",
+                            "border": 0,
+                            "boxSizing": "border-box",
+                            "display": "block",
+                            "height": "initial",
+                            "margin": 0,
+                            "maxWidth": "100%",
+                            "opacity": 1,
+                            "padding": 0,
+                            "width": "initial",
+                          }
+                        }
+                      >
+                        <img
+                          alt=""
+                          aria-hidden={true}
+                          src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%2735%27%20height=%2735%27/%3e"
+                          style={
+                            Object {
+                              "background": "none",
+                              "border": 0,
+                              "display": "block",
+                              "height": "initial",
+                              "margin": 0,
+                              "maxWidth": "100%",
+                              "opacity": 1,
+                              "padding": 0,
+                              "width": "initial",
+                            }
+                          }
+                        />
+                      </span>
+                      <img
+                        alt=""
+                        className="arrow rotate-90 md:rotate-0"
+                        data-nimg="intrinsic"
+                        decoding="async"
+                        onError={[Function]}
+                        onLoad={[Function]}
+                        src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                        style={
+                          Object {
+                            "border": "none",
+                            "bottom": 0,
+                            "boxSizing": "border-box",
+                            "display": "block",
+                            "height": 0,
+                            "left": 0,
+                            "margin": "auto",
+                            "maxHeight": "100%",
+                            "maxWidth": "100%",
+                            "minHeight": "100%",
+                            "minWidth": "100%",
+                            "objectFit": undefined,
+                            "objectPosition": undefined,
+                            "padding": 0,
+                            "position": "absolute",
+                            "right": 0,
+                            "top": 0,
+                            "width": 0,
+                          }
+                        }
+                      />
+                      <noscript>
+                        <img
+                          alt=""
+                          className="arrow rotate-90 md:rotate-0"
+                          data-nimg="intrinsic"
+                          decoding="async"
+                          loading="lazy"
+                          src="/images/arrowIcon.svg"
+                          srcSet="/images/arrowIcon.svg 1x, /images/arrowIcon.svg 2x"
+                          style={
+                            Object {
+                              "border": "none",
+                              "bottom": 0,
+                              "boxSizing": "border-box",
+                              "display": "block",
+                              "height": 0,
+                              "left": 0,
+                              "margin": "auto",
+                              "maxHeight": "100%",
+                              "maxWidth": "100%",
+                              "minHeight": "100%",
+                              "minWidth": "100%",
+                              "objectFit": undefined,
+                              "objectPosition": undefined,
+                              "padding": 0,
+                              "position": "absolute",
+                              "right": 0,
+                              "top": 0,
+                              "width": 0,
+                            }
+                          }
+                        />
+                      </noscript>
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div
+              className="hidden md:block"
+            >
+              <div
+                className="relative ml-2"
+              >
+                <div>
+                  <button
+                    aria-expanded={false}
+                    aria-haspopup={true}
+                    className=" z-1 mr-4 flex flex-row-reverse items-center rounded-full text-sm md:mr-0 md:flex-row"
+                    id="headlessui-menu-button-:r3:"
+                    onClick={[Function]}
+                    onKeyDown={[Function]}
+                    onKeyUp={[Function]}
+                    type="button"
+                  >
+                    <span
+                      className="sr-only"
+                    >
+                      Open user menu
+                    </span>
+                    <span
+                      style={
+                        Object {
+                          "background": "none",
+                          "border": 0,
+                          "boxSizing": "border-box",
+                          "display": "inline-block",
+                          "height": "initial",
+                          "margin": 0,
+                          "maxWidth": "100%",
+                          "opacity": 1,
+                          "overflow": "hidden",
+                          "padding": 0,
+                          "position": "relative",
+                          "width": "initial",
+                        }
+                      }
+                    >
+                      <span
+                        style={
+                          Object {
+                            "background": "none",
+                            "border": 0,
+                            "boxSizing": "border-box",
+                            "display": "block",
+                            "height": "initial",
+                            "margin": 0,
+                            "maxWidth": "100%",
+                            "opacity": 1,
+                            "padding": 0,
+                            "width": "initial",
+                          }
+                        }
+                      >
+                        <img
+                          alt=""
+                          aria-hidden={true}
+                          src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%2735%27%20height=%2735%27/%3e"
+                          style={
+                            Object {
+                              "background": "none",
+                              "border": 0,
+                              "display": "block",
+                              "height": "initial",
+                              "margin": 0,
+                              "maxWidth": "100%",
+                              "opacity": 1,
+                              "padding": 0,
+                              "width": "initial",
+                            }
+                          }
+                        />
+                      </span>
+                      <img
+                        alt=""
+                        className="h-8 w-8 rounded-full "
+                        data-nimg="intrinsic"
+                        decoding="async"
+                        onError={[Function]}
+                        onLoad={[Function]}
+                        src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                        style={
+                          Object {
+                            "border": "none",
+                            "bottom": 0,
+                            "boxSizing": "border-box",
+                            "display": "block",
+                            "height": 0,
+                            "left": 0,
+                            "margin": "auto",
+                            "maxHeight": "100%",
+                            "maxWidth": "100%",
+                            "minHeight": "100%",
+                            "minWidth": "100%",
+                            "objectFit": undefined,
+                            "objectPosition": undefined,
+                            "padding": 0,
+                            "position": "absolute",
+                            "right": 0,
+                            "top": 0,
+                            "width": 0,
+                          }
+                        }
+                      />
+                      <noscript>
+                        <img
+                          alt=""
+                          className="h-8 w-8 rounded-full "
+                          data-nimg="intrinsic"
+                          decoding="async"
+                          loading="lazy"
+                          src="/images/undefinedFlag.svg"
+                          srcSet="/images/undefinedFlag.svg 1x, /images/undefinedFlag.svg 2x"
+                          style={
+                            Object {
+                              "border": "none",
+                              "bottom": 0,
+                              "boxSizing": "border-box",
+                              "display": "block",
+                              "height": 0,
+                              "left": 0,
+                              "margin": "auto",
+                              "maxHeight": "100%",
+                              "maxWidth": "100%",
+                              "minHeight": "100%",
+                              "minWidth": "100%",
+                              "objectFit": undefined,
+                              "objectPosition": undefined,
+                              "padding": 0,
+                              "position": "absolute",
+                              "right": 0,
+                              "top": 0,
+                              "width": 0,
+                            }
+                          }
+                        />
+                      </noscript>
+                    </span>
+                    <span
+                      style={
+                        Object {
+                          "background": "none",
+                          "border": 0,
+                          "boxSizing": "border-box",
+                          "display": "inline-block",
+                          "height": "initial",
+                          "margin": 0,
+                          "maxWidth": "100%",
+                          "opacity": 1,
+                          "overflow": "hidden",
+                          "padding": 0,
+                          "position": "relative",
+                          "width": "initial",
+                        }
+                      }
+                    >
+                      <span
+                        style={
+                          Object {
+                            "background": "none",
+                            "border": 0,
+                            "boxSizing": "border-box",
+                            "display": "block",
+                            "height": "initial",
+                            "margin": 0,
+                            "maxWidth": "100%",
+                            "opacity": 1,
+                            "padding": 0,
+                            "width": "initial",
+                          }
+                        }
+                      >
+                        <img
+                          alt=""
+                          aria-hidden={true}
+                          src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%2735%27%20height=%2735%27/%3e"
+                          style={
+                            Object {
+                              "background": "none",
+                              "border": 0,
+                              "display": "block",
+                              "height": "initial",
+                              "margin": 0,
+                              "maxWidth": "100%",
+                              "opacity": 1,
+                              "padding": 0,
+                              "width": "initial",
+                            }
+                          }
+                        />
+                      </span>
+                      <img
+                        alt=""
+                        className="arrow rotate-90 md:rotate-0"
+                        data-nimg="intrinsic"
+                        decoding="async"
+                        onError={[Function]}
+                        onLoad={[Function]}
+                        src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                        style={
+                          Object {
+                            "border": "none",
+                            "bottom": 0,
+                            "boxSizing": "border-box",
+                            "display": "block",
+                            "height": 0,
+                            "left": 0,
+                            "margin": "auto",
+                            "maxHeight": "100%",
+                            "maxWidth": "100%",
+                            "minHeight": "100%",
+                            "minWidth": "100%",
+                            "objectFit": undefined,
+                            "objectPosition": undefined,
+                            "padding": 0,
+                            "position": "absolute",
+                            "right": 0,
+                            "top": 0,
+                            "width": 0,
+                          }
+                        }
+                      />
+                      <noscript>
+                        <img
+                          alt=""
+                          className="arrow rotate-90 md:rotate-0"
                           data-nimg="intrinsic"
                           decoding="async"
                           loading="lazy"

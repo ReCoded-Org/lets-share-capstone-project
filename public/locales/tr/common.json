@@ -1,12 +1,114 @@
 {
-    "test": "Merhaba",
-    "heroMain": "Türkçe metin burada geliyor ",
-    "donate now": "şimdi Bağış yap",
-    "causes": "neden bu proje",
-    "causeTitle1": "Başlık1",
-    "causeText1": "Metin1",
-    "causeTitle2": "Başlık2",
-    "causeText2": "Metin2",
-    "causeTitle3": "Başlık3",
-    "causeText3": "Metin3"
+    "common": {
+        "Home": "Anasayfa",
+        "blogs": "Bloglar",
+        "goods": "Ürünler",
+        "aboutUs": "Hakkımızda",
+        "location": "Konum",
+        "signUp": "Kayıt Ol",
+        "name": "Ad",
+        "email": "E-posta",
+        "password": "Parola",
+        "password2": "Parola (Tekrar)",
+        "phone": "Telefon",
+        "logIn": "Giriş Yap",
+        "Logout": "Log out",
+        "confirm": "Confirm",
+        "cancel": "Cancel",
+        "update": "Update Profile",
+        "lang": "Language"
+    },
+    "Footer": {
+        "contactUs": "Bize Ulaşın",
+        "adress": "Adres"
+    },
+    "landing": {
+        "heroSection": {
+            "heroText": "Hayatın değeri süresinde değildir, Bağıştadır. Ne kadar yaşadığın için önemli değilsin, ne kadar etkili yaşadığın için önemlisin. ",
+            "myles": " Myles Munroet",
+            "button": "Bağış Yap"
+        },
+        "causes": {
+            "causes": "Bunu neden yapıyoruz?",
+            "causeText1": "Başkalarına yardım etmenin farkındalığı son derece güçlendiricidir ve karşılığında kendinizi daha mutlu ve daha tatmin edici hissetmenizi sağlayabilir.  Araştırmalar, hayır kurumuna bağış yapmak ile beyninde zevki kaydeden alanlarda artan aktivite arasında bir bağlantı tespit etmiştir. Atasözünün söylediği gibi, vermek, almaktan çok daha iyidir.",
+            "causeText2": "Başkalarının hayatlarını iyileştirme gücüne sahip olmak, birçok insan için bir ayrıcalıktır ve kendi sorumluluk hissiyle gelen bir şeydir. Bu güçlü sorumluluk duygularına göre hareket etmek,  kişisel değerlerimizi güçlendirmenin ve kendi etik inançlarımıza uygun bir şekilde yaşadığımızı hissetmenin harika bir yoludur.",
+            "causeText3": "Çocuklarınız ile hayır kurumuna bağış yapma deneyimini paylaşmak,  küçük yaştan itibaren dünyada olumlu değişiklikler yapabileceklerini gösterir. Çocuklar doğal olarak başkalarına yardım etmeyi severler, bu nedenle doğuştan gelen cömertliklerini beslemek,  sahip olduklarına daha fazla değer vererek. Gelecek yıllarda hayırseverliği desteklemeye devam edecekleri anlamına gelir."
+        },
+        "stats": {
+            "accountsTitle": "Accounts",
+            "accounts": "Sitemizde 900 aktif hesap bulunmaktadır. Kullanıcılarımız tarafından herhangi bir ücret ödemeden açılmıştır. Bu sayılar gün geçtikçe artmakdaır.",
+            "beneficiariesTitle": "Beneficiaries",
+            "beneficiaries": "Yararlanıcı sayısı saat başı değişse de şu anda 400'dür. Kullanıcılarımızın/faydalanıcılarımızın %70'i 45 yaşın altındadır.",
+            "GeographicalDistrictsTitle": "Geographical Districts",
+            "GeographicalDistricts": "Yararlanıcılarımız birden fazla şehirde bulunmaktadırlar. Kullanıcıların en yüksek yüzdesi İstanbul ve İzmir'de, ancak web sitemiz en çok Gaziantep, Urfa ve Mersin'de yaygın. Web sitemiz şehirler arasında bile kullanılmaktadır.",
+            "recommendationsTitle": "Recommendations",
+            "recommendations": "Web sitemiz ve sunduğu hizmetler çoğunlukla tavsiyeler sayesinde büyümüştür. Yararlanıcılar, bizi diğer olası kullanıcılara doğrudan ve dolaylı olarak çevrimiçi  tavsiye ettiler. 500'den fazla kez online olarak paylaşıldık."
+        }
+    },
+    "aboutus": {
+        "heroSection": {
+            "heroTitle": "Hakkımızda",
+            "heroText": "Biz Orta Doğu'dan kodlama konusunda tutkulu bir grup insanız. Re:Coded 'in  web geliştirme alanında eğitim kampına seçildik. Bazılarımız front-end konusunda istekliydik, diğerleri ise back-end geliştirmeyi tercih etti, bu yüzden iki gruba ayrıldık. Çok kıymetli bilgiler öğrendik ve bize öğretilen teknik becerileri kodlama tutkumuzu ile birleştirdik bu sayide web geliştiricileri olduk. Ağustos 2022'de web sitesi resmi olarak tamamlanmıştır. Bu, geçtiğimiz aylar ekip çalışmasının ve tutkulu çalışmanın bir sonucu ve kararlılığımızın kanıtıydı."
+        },
+        "team": "Ekip Üyeleri"
+    },
+    "goods": {
+        "category": "Kategori",
+        "search": "Ara",
+        "recent": "Son Ürünler",
+        "button": "Ürün Ekle"
+    },
+    "addItem": {
+        "addItem": "Ürün Ekle",
+        "title": "Ürün Adı",
+        "description": "Açıklama",
+        "category": "Kategori",
+        "button": "Ürün Ekle",
+        "uploadPhotos": "Upload photos"
+    },
+    "signUp": {
+        "surname": "Soyad",
+        "button": "Kayıt Ol",
+        "with": "veya ile Kayıt Ol"
+    },
+    "logIn": {
+        "button": "Giriş Yap",
+        "remember": "Beni Hatırla",
+        "noAccount": "Hesabın yok mu?",
+        "forgot": "Parolnı unuttun mu?",
+        "with": "veya ile Giriş Yap"
+    },
+    "profile": {
+        "profile": "Profil",
+        "button": "Profili Güncelle",
+        "delete": "Profili Sil",
+        "myItems": "Ürünlerim"
+    },
+    "item": {
+        "item": "Ürün",
+        "title": "Ürün Adı",
+        "description": "Açıklama",
+        "category": "Kategori",
+        "button": "Ürünü güncelle",
+        "delete": "Ürünü Sil",
+        "related": "Benzer Ürünler"
+    },
+    "blogs": {
+        "headerBlg1": "Blog 1 Title",
+        "contentBlg1": "  ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliqua",
+        "headerBlg2": "Blog 2 Title",
+        "contentBlg2": " ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliqua",
+        "headerBlg3": "Blog 3 Title",
+        "contentBlg3": "ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliqua",
+        "headerBlg4": "Blog 4 Title",
+        "contentBlg4": "ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliquam, nisl nisi consectetur nisl, eget consectetur nisl nisi vel nisl. Donec euismod, nisi vel consectetur aliqua",
+        "moreBlogs": "More Blogs"
+    },
+    "categories": {
+        "All": "All",
+        "Furniture": "Furniture",
+        "Clothes": "Clothes",
+        "Electronics": "Electronics",
+        "Others": "Others"
+    }
 }

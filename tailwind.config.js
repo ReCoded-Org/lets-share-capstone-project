@@ -6,7 +6,9 @@ module.exports = {
     theme: {
         extend: {
             fontFamily: {
-                primary: ["Inter", ...fontFamily.sans],
+                primary: ["Poppins", "Almarai", ...fontFamily.sans],
+                head: ["Bebas Neue", "Almarai", ...fontFamily.sans],
+                qoute: ["Caveat", "Aref Ruqaa", ...fontFamily.sans],
             },
         },
         colors: {

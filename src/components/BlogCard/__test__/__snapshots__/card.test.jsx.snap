@@ -2,7 +2,9 @@
 
 exports[`renders correctly 1`] = `
 <div
-  className=" group cursor-pointer overflow-hidden rounded-lg bg-[#F3F3F3] text-primary shadow-xl transition duration-300 hover:scale-105 hover:shadow-2xl"
+  className=" group max-w-[300px] cursor-pointer overflow-hidden rounded-lg bg-[white] font-primary shadow-xl transition duration-300 hover:scale-[102%] hover:shadow-2xl"
+  onClick={[Function]}
+  onMouseEnter={[Function]}
 >
   <div
     className="relative aspect-video overflow-hidden rounded-md transition-all "
@@ -94,11 +96,13 @@ exports[`renders correctly 1`] = `
         />
       </noscript>
     </span>
-    <span
-      className="absolute bottom-0 left-0 rounded-md bg-primary py-1 px-3 text-[white]"
+    <div
+      className=" absolute top-32 h-9 w-24 translate-y-2 bg-primary"
     >
-      07 july
-    </span>
+      <p
+        className="px-2 py-1 text-sm text-[white]"
+      />
+    </div>
   </div>
   <div
     className=" py-4 px-3 "
@@ -107,16 +111,16 @@ exports[`renders correctly 1`] = `
       className="text-brand-primary dark:text-white mt-2 text-lg font-semibold tracking-normal"
     >
       <span
-        className=" dark:from-purple-800 dark:to-purple-900 bg-gradient-to-r from-[#4ade80] to-[#dcfce7] bg-[length:0px_10px] bg-left-bottom bg-no-repeat transition-[background-size] duration-500 hover:bg-[length:100%_3px] group-hover:bg-[length:100%_10px]"
+        className=" dark:from-purple-800 dark:to-purple-900 bg-gradient-to-r from-[#F07167] to-[#fceceb] bg-[length:0px_10px] bg-left-bottom bg-no-repeat text-lg transition-[background-size] duration-500 hover:bg-[length:100%_3px] group-hover:bg-[length:100%_10px]"
       >
-        My Blog
+        blogs.headerBlg1
          
       </span>
     </h2>
     <p
       className="text-gray-700 mt-2 text-base "
     >
-      This is my blog
+      blogs.contentBlg1...
     </p>
   </div>
 </div>
