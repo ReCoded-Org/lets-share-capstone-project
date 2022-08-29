@@ -2,31 +2,35 @@ import Image from "next/image";
 import React from "react";
 import Link from "next/link";
 
-const item = {
-    id: 13,
-    title: "Fantastic Frozen Computer",
-    location: "Adana",
-    price: 787,
-    description:
-        "The Apollotech B340 is an affordable wireless mouse with reliable connectivity, 12 months battery life and modern design",
-    category: "Furniture",
-    images: [
-        "https://api.lorem.space/image/furniture?w=640&h=480&r=9644",
-        "https://api.lorem.space/image/furniture?w=640&h=480&r=9186",
-        "https://api.lorem.space/image/furniture?w=640&h=480&r=6667",
-    ],
-};
+// const item = {
+//     id: 13,
+//     title: "Fantastic Frozen Computer",
+//     location: "Adana",
+//     price: 787,
+//     description:
+//         "The Apollotech B340 is an affordable wireless mouse with reliable connectivity, 12 months battery life and modern design",
+//     category: "Furniture",
+//     images: [
+//         "https://api.lorem.space/image/furniture?w=640&h=480&r=9644",
+//         "https://api.lorem.space/image/furniture?w=640&h=480&r=9186",
+//         "https://api.lorem.space/image/furniture?w=640&h=480&r=6667",
+//     ],
+// };
 //need to remove above item and pass {item} as props in below function
-function card() {
+function card({ item, id }) {
+    if (!item) {
+        return <p>ssdf</p>;
+    }
+
     return (
-        <Link href={`items/${item.id}`}>
+        <Link href={`items/${id}`}>
             <div className='group w-[250px] cursor-pointer overflow-hidden rounded-lg  bg-[white] font-primary text-primary shadow-xl transition duration-300  hover:scale-105 hover:shadow-2xl'>
                 <div className='relative aspect-video overflow-hidden rounded-md transition-all  '>
                     <Image
                         layout='fill'
                         objectFit='cover'
                         className='abso h-full w-full'
-                        src={item.images[0]}
+                        src={item.itemImage}
                         alt='Sunset in the mountains'
                     />
                 </div>
@@ -69,6 +73,9 @@ function card() {
                             {`${item.description.substring(0, 80)}......`}
                         </p>
                     </div>
+                    <span className='opacity-0 transition duration-300 group-hover:opacity-100 '>
+                        {item.category.name}
+                    </span>
                 </div>
             </div>
         </Link>

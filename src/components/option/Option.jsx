@@ -1,5 +1,6 @@
 import React from "react";
 import { useTranslation } from "next-i18next";
+import { useState } from "react";
 
 const cities = [
     "Adana",
@@ -85,15 +86,22 @@ const cities = [
     "Zonguldak",
 ];
 
-const categories = ["first", "second", "third"];
 const langs = ["AR", "EN", "TR", "JA"];
 
+const categories = ["All", "Clothes", "Electronics", "Furniture", "Others"];
 export default function Option(props) {
     const location = props.location;
     const category = props.category;
+
+    const [value, setValue] = useState("");
+    function handleChange(e) {
+        setValue(e.target.value);
+        props.setFormData({
+            ...props.formData,
+            [e.target.name]: e.target.value,
+        });
+    }
     const lang = props.lang;
-    const value = props.value;
-    const handleChange = props.handleChange;
     const { t } = useTranslation("common");
 
     return (
@@ -121,6 +129,7 @@ export default function Option(props) {
                     className='w-full rounded-lg border-0 text-[#797979] shadow-lg focus:text-fontColor'
                     value={value}
                     onChange={handleChange}
+                    name={props.name}
                 >
                     {location
                         ? cities.map((city, i) => (

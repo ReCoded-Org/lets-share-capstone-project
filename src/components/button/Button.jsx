@@ -9,6 +9,7 @@ export default function Button(props) {
     return (
         <div className='flex justify-center font-primary'>
             <button
+                onClick={props.onClick}
                 className={
                     fullfilled
                         ? "my-5 h-9 w-[120px] rounded-full bg-primary text-lg text-[white] shadow-md transition duration-200 hover:scale-[105%] hover:bg-secondary hover:shadow-md"
@@ -20,7 +21,6 @@ export default function Button(props) {
                         ? "my-5 h-9 w-[80%] rounded-full bg-primary text-lg text-[white] shadow-md md:w-[60%] xl:w-[40%]"
                         : null
                 }
-                onClick={handleClick}
             >
                 {fullfilled
                     ? fullfilled

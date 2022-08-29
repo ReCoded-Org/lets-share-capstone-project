@@ -9,14 +9,17 @@ import HeroSection from "@/components/heroSection";
 import List from "@/components/LandingList";
 import Stats from "@/components/Stats";
 import Partners from "@/components/Partners";
+import { useCollection } from "react-firebase-hooks/firestore";
+import { db } from "firebaseConfig";
+import { collection, query } from "firebase/firestore";
 
 export async function getStaticProps({ locale }) {
-    const res = await fetch(`http://localhost:3000/items`);
-    const items = await res.json();
+    // const res = await fetch(`http://localhost:3000/items`);
+    // const items = await res.json();
     return {
         props: {
             ...(await serverSideTranslations(locale, ["common"])),
-            items,
+            // items,
         },
     };
 }
@@ -24,23 +27,14 @@ export async function getStaticProps({ locale }) {
 export default function HomePage() {
     // const { t } = useTranslation("common");
     //need to remove below item object and pass {items} as props in this function
-    const items = [
-        {
-            id: 13,
-            title: "Fantastic Frozen Computer",
-            location: "Adana",
-            price: 787,
-            description:
-                "The Apollotech B340 is an affordable wireless mouse with reliable connectivity, 12 months battery life and modern design",
-            category: "Furniture",
 
-            images: [
-                "https://api.lorem.space/image/furniture?w=640&h=480&r=9644",
-                "https://api.lorem.space/image/furniture?w=640&h=480&r=9186",
-                "https://api.lorem.space/image/furniture?w=640&h=480&r=6667",
-            ],
-        },
-    ];
+    const [list, loading, error] = useCollection(
+        query(collection(db, "items"))
+    );
+
+    let itemsList = list?.docs;
+
+    console.log(itemsList);
 
     const blogs = [
         {
@@ -83,7 +77,7 @@ export default function HomePage() {
             <Stats />
 
             <div className='bg-[#FAFAFA]'>
-                <List items={items} />
+                {!loading && <List items={itemsList} />}
                 <List blogs={blogs} />
                 <Partners />
             </div>

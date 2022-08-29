@@ -3,26 +3,37 @@ import { Fragment } from "react";
 import Image from "next/image";
 import { Menu, Transition } from "@headlessui/react";
 import { useTranslation } from "next-i18next";
-
+import { useAuth } from "context/AuthContext.js";
+import { useRouter } from "next/router";
+import { auth } from "firebaseConfig";
+import Link from "next/link";
 const UserMenu = () => {
     const { t } = useTranslation("common");
+
+    const { user, logout, loading } = useAuth();
+    const router = useRouter();
+
+    console.log(loading);
+
     return (
         <Menu as='div' className='relative ml-2'>
             <div>
                 <Menu.Button className='mr-4 flex flex-row-reverse items-center rounded-full text-sm md:mr-1 md:mb-0 md:flex-row  '>
                     <span className='sr-only'>Open user menu</span>
+                    <span className='mx-3'>
+                        {auth?.currentUser?.displayName
+                            ? auth?.currentUser?.displayName
+                            : ""}
+                    </span>
                     <Image
-                        className='h-8 w-8 rounded-full '
-                        src='/images/noUserPic.svg'
-                        height={35}
-                        width={35}
-                        alt=''
-                    />
-                    <Image
-                        className='arrow rotate-90 md:rotate-0'
-                        height={35}
-                        width={35}
-                        src='/images/arrowIcon.svg'
+                        src={
+                            auth?.currentUser?.photoURL
+                                ? auth?.currentUser?.photoURL
+                                : "/profile.png"
+                        }
+                        width={40}
+                        height={40}
+                        className=' h-8 w-8  rounded-full'
                         alt=''
                     />
                 </Menu.Button>
@@ -40,43 +51,64 @@ const UserMenu = () => {
                 <Menu.Items className='absolute right-20 top-1 z-50 mt-1 flex w-28 flex-col rounded-md border border-fontColor/20 bg-[white] py-1 shadow-lg md:right-0 md:top-10'>
                     <Menu.Item>
                         <span className='border-b-2 border-dotted border-[#aaaaaa]  p-1 text-center text-xs'>
-                            My Cool Name
+                            {auth?.currentUser?.displayName
+                                ? auth?.currentUser?.displayName
+                                : "sign in"}
                         </span>
                     </Menu.Item>
-                    <Menu.Item>
-                        <a
-                            href='./my-profile'
-                            className='py-2   px-2 text-center text-sm text-fontColor hover:bg-btnBgHover'
-                        >
-                            {t("common.myProfile")}
-                        </a>
-                    </Menu.Item>
-                    <Menu.Item>
-                        <a
-                            href='./login'
-                            className='py-2   px-2 text-center text-sm text-fontColor hover:bg-btnBgHover'
-                        >
-                            {t("common.logIn")}
-                        </a>
-                    </Menu.Item>
+                    {user && (
+                        <Menu.Item>
+                            <Link href='/my-profile'>
+                                <a
+                                    href=''
+                                    className='py-2 px-2 text-center text-sm text-fontColor hover:bg-btnBgHover'
+                                >
+                                    {t("common.myProfile")}
+                                </a>
+                            </Link>
+                        </Menu.Item>
+                    )}
+                    {!user && (
+                        <Menu.Item>
+                            <Link href='/login'>
+                                <a
+                                    href=''
+                                    aria-disabled='true'
+                                    className='py-2   px-2 text-center text-sm text-fontColor hover:bg-btnBgHover'
+                                >
+                                    {t("common.logIn")}
+                                </a>
+                            </Link>
+                        </Menu.Item>
+                    )}
                     <hr className='mx-2 border-fontColor/20' />
-                    <Menu.Item>
-                        <a
-                            href='./signup'
-                            className=' py-2  px-2 text-center  text-sm text-fontColor hover:bg-btnBgHover'
-                        >
-                            {t("common.signUp")}
-                        </a>
-                    </Menu.Item>
+                    {!user && (
+                        <Menu.Item>
+                            <Link href='/signup'>
+                                <a
+                                    href=''
+                                    className=' py-2  px-2 text-center  text-sm text-fontColor hover:bg-btnBgHover'
+                                >
+                                    {t("common.signUp")}
+                                </a>
+                            </Link>
+                        </Menu.Item>
+                    )}
                     <hr className='mx-2 border-fontColor/20' />
-                    <Menu.Item>
-                        <a
-                            href='#'
-                            className='py-2   px-2 text-center  text-sm text-fontColor hover:bg-btnBgHover'
-                        >
-                            {t("common.Logout")}
-                        </a>
-                    </Menu.Item>
+                    {user && (
+                        <Menu.Item>
+                            <a
+                                onClick={() => {
+                                    logout();
+                                    router.push("/login");
+                                }}
+                                href=''
+                                className='py-2   px-2 text-center  text-sm text-fontColor hover:bg-btnBgHover'
+                            >
+                                {t("common.Logout")}
+                            </a>
+                        </Menu.Item>
+                    )}
                 </Menu.Items>
             </Transition>
         </Menu>

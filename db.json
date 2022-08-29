@@ -3,7 +3,7 @@
         {
             "id": 13,
             "title": "Fantastic Frozen Computer",
-            "location": "Adana",
+            "location": "Istanbul",
             "price": 787,
             "description": "The Apollotech B340 is an affordable wireless mouse with reliable connectivity, 12 months battery life and modern design",
             "category": "Furniture",
@@ -17,7 +17,7 @@
         {
             "id": 14,
             "title": "Licensed Granite Pants",
-            "location": "Adiyaman",
+            "location": "Istanbul",
             "price": 21,
             "description": "The Apollotech B340 is an affordable wireless mouse with reliable connectivity, 12 months battery life and modern design",
             "category": "Others",
@@ -31,7 +31,7 @@
         {
             "id": 15,
             "title": "Licensed Cotton Car",
-            "location": "Ankara",
+            "location": "Istanbul",
             "price": 672,
             "description": "The automobile layout consists of a front-engine design, with transaxle-type transmissions mounted at the rear of the engine and four wheel drive",
             "category": "Others",
@@ -45,10 +45,10 @@
         {
             "id": 16,
             "title": "Fantastic Granite Chair",
-            "location": "Afyon",
+            "location": "Istanbul",
             "price": 750,
             "description": "The automobile layout consists of a front-engine design, with transaxle-type transmissions mounted at the rear of the engine and four wheel drive",
-            "category": "Clothes",
+            "category": "clothes",
 
             "images": [
                 "https://api.lorem.space/image/shoes?w=640&h=480&r=9008",
@@ -59,7 +59,7 @@
         {
             "id": 17,
             "title": "Practical Concrete Gloves",
-            "location": "Agri",
+            "location": "Istanbul",
             "price": 406,
             "description": "New ABC 13 9370, 13.3, 5th Gen CoreA5-8250U, 8GB RAM, 256GB SSD, power UHD Graphics, OS 10 Home, OS Office A & J 2016",
             "category": "Electronics",
