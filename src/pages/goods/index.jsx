@@ -11,6 +11,9 @@ import { useState } from "react";
 import { ImSearch } from "react-icons/im";
 import { IoIosArrowDown } from "react-icons/io";
 import Link from "next/link";
+import { useCollection } from "react-firebase-hooks/firestore";
+import { auth, db } from "firebaseConfig";
+import { collection, collectionGroup, query } from "firebase/firestore";
 
 // This is an array for test purposes ***WILL BE DELETED LATER***
 
@@ -19,10 +22,10 @@ const categories = ["All", "Furniture", "Clothes", "Electronics", "Others"];
 This function is important to bring the data from the server ***FOR FUTURE USE***
 */
 export const getStaticProps = async ({ locale }) => {
-    const fetchGoods = await fetch(`http://localhost:3000/items`);
-    const goods = await fetchGoods.json();
+    // const fetchGoods = await fetch(`http://localhost:3000/items`);
+    // const goods = await fetchGoods.json();
     return {
-        props: { goods, ...(await serverSideTranslations(locale, ["common"])) },
+        props: { ...(await serverSideTranslations(locale, ["common"])) },
     };
 };
 
@@ -121,7 +124,7 @@ The data here should be processd by a FILTER FUNCTION  before it gets assigned t
 */
 
     // This for the location Menu
-const GoodsPage = ({ goods }) => {
+const GoodsPage = () => {
     const { t } = useTranslation("common");
     const [q, setQ] = useState("");
     const [searchParam] = useState([
@@ -135,8 +138,17 @@ const GoodsPage = ({ goods }) => {
     const [listCity, setListCity] = useState(false);
     const [sortRecent, setSortRecent] = useState(false);
 
-    function search(goods) {
-        return goods.filter((item) => {
+
+    const [items, loading, error] = useCollection(
+        query(collection(db, "items"))
+       ); 
+
+       console.log(items?.docs[0].data());
+ 
+
+    function search(items) {
+        return items?.docs?.filter((itemm) => {
+            let item = itemm.data()
             if (item.location == filterParam || item.category == filterParam) {
                 return searchParam.some((newItem) => {
                     return (
@@ -158,6 +170,8 @@ const GoodsPage = ({ goods }) => {
             }
         });
     }
+
+    console.log(search(items));
 
     return (
         <Layout>
@@ -241,8 +255,8 @@ const GoodsPage = ({ goods }) => {
                 </span>
 
                 <div className='goodsSection order-last my-5 flex w-full flex-row flex-wrap justify-center gap-5  md:gap-5 md:gap-y-8 lg:justify-center'>
-                    {search(goods).map((item, i) => {
-                        return <PopularItemsCard key={i} item={item} />;
+                    {items?.docs.map((item,i) => {
+                        return <PopularItemsCard key={i} id={item.id} item={item.data()} />;
 
                     })}
                 </div>

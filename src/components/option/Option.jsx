@@ -90,15 +90,11 @@ const cities = [
 const langs = ["AR", "EN", "TR", "JA"];
 
 const categories =[
-    'Books',
-    'Clothing',
+    'All',
+    'Clothes',
     'Electronics',
-    'Food',
     'Furniture',
-    'Kitchenware',
-    'Linens',
-    'Toys',
-    'Other',
+    'Others',
   ]
 export default function Option(props) {
     const location = props.location;

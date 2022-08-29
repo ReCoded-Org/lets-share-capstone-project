@@ -9,9 +9,11 @@ import {
   GoogleAuthProvider
 } from 'firebase/auth'
 import { getDownloadURL, ref, uploadString, getStorage, uploadBytes } from 'firebase/storage'
-import { storage , Provider } from '../firebaseConfig'
+import { storage , Provider, db } from '../firebaseConfig'
 
 import { auth } from '../firebaseConfig'
+import { useDocument } from 'react-firebase-hooks/firestore'
+import { doc } from 'firebase/firestore'
 
 const AuthContext = createContext({})
 
@@ -38,11 +40,15 @@ export function AuthProvider ({ children }) {
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       if (user) {
-        setUser(auth.currentUser)
+        setUser({
+          uid : user.uid,
+          email: user.email,
+          displayName: user.displayName,
+        })
       } else {
         setUser(null)
       }
-      // setLoading(false)
+      setLoading(false)
     })
 
     return () => unsubscribe()
@@ -52,14 +58,14 @@ export function AuthProvider ({ children }) {
 const upload = async  (file, email,user, setLoading) => {
     const fileRef = ref(storage, email + '.png');
   
-    setLoading(true);
+    // setLoading(true);
     
     const snapshot = await uploadBytes(fileRef, file);
     const photoURL = await getDownloadURL(fileRef);
   
     
     
-    setLoading(false);
+    // setLoading(false);
     alert("Uploaded file!");
     return photoURL
   }
@@ -73,9 +79,12 @@ const upload = async  (file, email,user, setLoading) => {
   }
 
 
+
+
+
   return (
-    <AuthContext.Provider value={{user,signup,login,logout, upload, signInWithGoogle}}>
-      {!loading && children}
+    <AuthContext.Provider value={{user, signup,login,logout, upload,loading, setLoading, signInWithGoogle}}>
+      {loading ? null : children}
     </AuthContext.Provider>
   )
 }    

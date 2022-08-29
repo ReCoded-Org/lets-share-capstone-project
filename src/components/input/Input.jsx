@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 
-export default function Input({ title,name, type, placeholder, setFormData, formData }) {
+export default function Input({ title,name,value, type, placeholder, setFormData, formData }) {
 
-    const [value, setValue] = useState("");
+    // const [value, setValue] = useState("");
     function handleChange(e) {
-        setValue(e.target.value);
+        // setValue(e.target.value);
         setFormData({ ...formData, [e.target.name]: e.target.value });
     }
 

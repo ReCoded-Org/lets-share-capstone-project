@@ -1,5 +1,5 @@
 import Layout from "@/components/layout/Layout";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Slider from "react-slick";
 import { useTranslation } from "next-i18next";
@@ -8,18 +8,34 @@ import { HiLocationMarker, HiUserCircle } from "react-icons/hi";
 import { FiShoppingBag } from "react-icons/fi";
 
 import PopularItemCard from "@/components/PopularItemsCard";
+import { useCollection, useDocument } from "react-firebase-hooks/firestore";
+import { db } from "firebaseConfig";
+import { collection, doc, getDoc, getDocs, query } from "firebase/firestore";
+import { BsListStars } from "react-icons/bs";
+import { useAuth } from "context/AuthContext";
+import { auth } from "firebaseConfig";
 
 export async function getStaticPaths({ locales }) {
-    const res = await fetch("http://localhost:3000/items");
-    const items = await res.json();
-    const paths = items.flatMap((item) => {
-        return locales.map((locale) => {
+    
+    let itemss = []
+    const querySnapshot = await getDocs(collection(db, "items"));
+querySnapshot.forEach((doc) => {
+    itemss.push(doc.id)
+  // doc.data() is never undefined for query doc snapshots
+  console.log(doc.id, " => ", doc.data());
+});
+
+    // let items = Object.keys(itemss)
+
+
+    const paths = itemss.map((id) => {
+        
             return {
-                params: { id: item.id.toString() },
-                locale: locale,
+                params: { id : id.toString() },
             };
-        });
+        
     });
+    console.log(paths)
     return {
         paths: paths,
         fallback: false,
@@ -27,34 +43,55 @@ export async function getStaticPaths({ locales }) {
 }
 
 export async function getStaticProps({ params, locale }) {
-    const res = await fetch(`http://localhost:3000/items/${params.id}`);
-    const item = await res.json();
-    const data = await fetch(`http://localhost:3000/items`);
-    const items = await data.json();
+    console.log(params);
+    const docRef = doc(db, "items", params.id);
+const itema = await getDoc(docRef);  
+console.log({I : itema.data()})
 
     return {
         props: {
-            item,
-            items,
+            item : itema.data() ,
             ...(await serverSideTranslations(locale, ["common"])),
         },
     };
 }
 
 function Item({ item, items }) {
+    console.log(item.user);
     const { t } = useTranslation("common");
-    const user = {
-        name: "user1 user",
-        email: "asgagk@fdglkj.com",
-        phone: 123456789,
-    };
+   
+    const {profile} = useAuth()
+
+    const [user, setUser] = useState({})
+
+    useEffect( ()=> {
+
+        const update = async () => {
+            const docRef = doc(db, "users", item.user);
+        const docSnap = await getDoc(docRef)
+        let    data =docSnap.data() 
+        console.log(data);
+        setUser(data)
+        
+        
+        }
+        update()
+        
+        
+    }, [])
+
+    const [list, loading, error] = useCollection(
+        query(collection(db, "items"))
+       ); 
+
+        console.log(user);
 
     const settings = {
         customPaging: function () {
             return (
                 <a className=''>
                     <Image
-                        src={item.images[0]}
+                        src={item.itemImage}
                         width={100}
                         height={80}
                         className=''
@@ -75,14 +112,21 @@ function Item({ item, items }) {
         slidesToScroll: 1,
     };
 
+    const images = [
+        item.itemImage,
+        item.itemImage,
+        item.itemImage,
+    ]
+
     return (
         <Layout>
+            
             <div className='mx-auto my-10 flex w-[80%] flex-col  font-primary md:w-[90%]'>
                 <div className='flex flex-col items-center md:flex-row md:items-start md:space-x-8 xl:space-x-14'>
                     <div className=' '>
                         <div className='w-[290px] sm:w-[350px] xl:w-[500px] 2xl:w-[650px]'>
                             <Slider {...settings}>
-                                {item.images.map((image, index) => (
+                                {images.map((image, index) => (
                                     <div
                                         key={index}
                                         className=' h-[180px] sm:h-[217px] xl:h-[320px] 2xl:h-[403px]'
@@ -126,7 +170,7 @@ function Item({ item, items }) {
                                     <HiUserCircle color='#F07167' size={25} />
                                 </div>
                                 <div className='flex flex-col gap-2 break-all'>
-                                    <p>{user.name}</p>
+                                    <p>{user.displayName} {user.surName}</p>
                                     <p className=''>{user.email}</p>
                                     <p>{user.phone}</p>
                                 </div>
@@ -139,8 +183,8 @@ function Item({ item, items }) {
                         {t("item.related")}
                     </h1>
                     <div className='mx-auto mt-10 mb-10 grid grid-cols-1 gap-5 text-center sm:grid-cols-2 md:text-left lg:grid-cols-3 lg:gap-10 xl:grid-cols-4 xl:gap-16 2xl:grid-cols-5'>
-                        {items.slice(0, 5).map((item) => (
-                            <PopularItemCard item={item} key={item.id} />
+                        {list?.docs.slice(0, 5).map((item) => (
+                            <PopularItemCard item={item.data()} key={item.id} />
                         ))}
                     </div>
                 </div>

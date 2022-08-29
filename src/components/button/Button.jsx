@@ -21,7 +21,7 @@ export default function Button(props) {
                         ? "my-5 h-9 w-[80%] rounded-full bg-primary text-lg text-[white] shadow-md md:w-[60%] xl:w-[40%]"
                         : null
                 }
-                onClick={handleClick}
+                
             >
                 {fullfilled
                     ? fullfilled

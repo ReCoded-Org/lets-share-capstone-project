@@ -12,6 +12,7 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { AiOutlineCloudUpload } from "react-icons/ai";
 
 import React, { useState } from "react";
+import { useAuth } from "context/AuthContext";
 
 
 export async function getStaticProps({ locale }) {
@@ -30,6 +31,8 @@ function Index() {
 
     const [ imageToPost, setImageToPost ] = useState(null)
 
+    const { user } = useAuth()
+
     const storageRef = ref(storage , `items/${Date.now()}`)
 
 
@@ -44,12 +47,13 @@ function Index() {
    async function handleSubmit(e) {
         e.preventDefault();
         try {
-            const  itemsRef = collection(db, auth.currentUser.uid )
+            const  itemsRef = collection(db, "items" )
             const docRef = await addDoc( itemsRef , {
               title,
               description,
               category,
-              location
+              location,
+              user : user.uid
             });
 
             if (imageToPost) {
@@ -79,7 +83,7 @@ function Index() {
 
     const { t } = useTranslation("common");
 
-    const addImageToPost = (e) => {
+    const addImage = (e) => {
         const reader = new FileReader();
         if (e.target.files[0]) {
           reader.readAsDataURL(e.target.files[0]);
@@ -176,6 +180,7 @@ function Index() {
                                 </p>
                             </div>
                             <input
+                            onChange={addImage}
                                 type='file'
                                 multiple='multiple'
                                 className=' w-40 font-primary text-sm text-[#8d8d8d] file:hidden focus:outline-none focus:ring-0 '
@@ -185,7 +190,9 @@ function Index() {
                     </div>
 
                     <div className=' flex w-[70%] flex-row justify-between justify-self-center md:w-[50%] xl:w-[35%]'>
-                        <Button fullfilled={t("common.confirm")} />
+                        <Button
+                        onClick={handleSubmit}
+                        fullfilled={t("common.confirm")} />
                         <Button outLinedPrimary={t("common.cancel")} />
                     </div>
                 </div>

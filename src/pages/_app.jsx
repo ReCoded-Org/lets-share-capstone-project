@@ -1,5 +1,5 @@
 import { appWithTranslation } from "next-i18next";
-import { AuthProvider } from "context /AuthContext";
+import { AuthProvider } from "context/AuthContext";
 
 import "@/styles/globals.css";
 import "slick-carousel/slick/slick.css";

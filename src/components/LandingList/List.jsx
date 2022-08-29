@@ -5,30 +5,32 @@ import PopularItemsCard from "../PopularItemsCard/";
 import CategoryCard from "../CategoryCard/";
 import { useTranslation } from "next-i18next";
 
-const items = [
-    {
-        id: 13,
-        title: "Fantastic Frozen Computer",
-        location: "Adana",
-        price: 787,
-        description:
-            "The Apollotech B340 is an affordable wireless mouse with reliable connectivity, 12 months battery life and modern design",
-        category: "Furniture",
+// const items = [
+//     {
+//         id: 13,
+//         title: "Fantastic Frozen Computer",
+//         location: "Adana",
+//         price: 787,
+//         description:
+//             "The Apollotech B340 is an affordable wireless mouse with reliable connectivity, 12 months battery life and modern design",
+//         category: "Furniture",
 
-        images: [
-            "https://api.lorem.space/image/furniture?w=640&h=480&r=9644",
-            "https://api.lorem.space/image/furniture?w=640&h=480&r=9186",
-            "https://api.lorem.space/image/furniture?w=640&h=480&r=6667",
-        ],
-    },
-];
+//         images: [
+//             "https://api.lorem.space/image/furniture?w=640&h=480&r=9644",
+//             "https://api.lorem.space/image/furniture?w=640&h=480&r=9186",
+//             "https://api.lorem.space/image/furniture?w=640&h=480&r=6667",
+//         ],
+//     },
+// ];
 function List(props) {
     const { t } = useTranslation();
     const blogs = props.blogs;
+    const items = props.items
     // const items = props.items; delete above items array and uncomment this line to pass items as props in other pages
     const categories = props.categories;
 
     const list = blogs ? blogs : items ? items : categories;
+    console.log(items);
 
     return (
         <>
@@ -50,7 +52,7 @@ function List(props) {
                         ) : categories ? (
                             <CategoryCard key={item.id} item={item} />
                         ) : (
-                            <PopularItemsCard key={item.id} item={item} />
+                            <PopularItemsCard key={item.id} id={item.id} item={item.data()} />
                         )
                     )}
             </div>

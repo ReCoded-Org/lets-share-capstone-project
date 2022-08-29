@@ -15,6 +15,7 @@ module.exports = {
         'res.cloudinary.com',
         "api.lorem.space",
         "firebasestorage.googleapis.com",
+        "firebasestorage.googleapis.com",
         "lh3.googleusercontent.com"
       ],
     },
