@@ -17,11 +17,9 @@ import Link from "next/link";
 //     ],
 // };
 //need to remove above item and pass {item} as props in below function
-function card({item, id}) {
-
-
+function card({ item, id }) {
     if (!item) {
-        return <p>ssdf</p>
+        return <p>ssdf</p>;
     }
 
     return (

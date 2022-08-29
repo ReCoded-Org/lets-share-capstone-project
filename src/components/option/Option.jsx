@@ -86,16 +86,9 @@ const cities = [
     "Zonguldak",
 ];
 
-
 const langs = ["AR", "EN", "TR", "JA"];
 
-const categories =[
-    'All',
-    'Clothes',
-    'Electronics',
-    'Furniture',
-    'Others',
-  ]
+const categories = ["All", "Clothes", "Electronics", "Furniture", "Others"];
 export default function Option(props) {
     const location = props.location;
     const category = props.category;
@@ -103,7 +96,10 @@ export default function Option(props) {
     const [value, setValue] = useState("");
     function handleChange(e) {
         setValue(e.target.value);
-        props.setFormData({ ...props.formData, [e.target.name]: e.target.value });
+        props.setFormData({
+            ...props.formData,
+            [e.target.name]: e.target.value,
+        });
     }
     const lang = props.lang;
     const { t } = useTranslation("common");

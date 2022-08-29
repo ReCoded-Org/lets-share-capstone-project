@@ -17,7 +17,6 @@ import { useRouter } from "next/router";
 import { AiOutlineCloudUpload } from "react-icons/ai";
 import { getDownloadURL, ref, uploadBytes } from "firebase/storage";
 
-
 export async function getStaticProps({ locale }) {
     return {
         props: {
@@ -30,11 +29,13 @@ export async function getStaticProps({ locale }) {
 export default function Signup() {
     const { t } = useTranslation("common");
 
-        const router = useRouter()
+    const router = useRouter();
 
     const { user, signup, loading, setLoading } = useAuth();
     const [photo, setPhoto] = useState(null);
-    const [photoURL, setPhotoURL] = useState("https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png");
+    const [photoURL, setPhotoURL] = useState(
+        "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
+    );
     // const [loading, setLoading] = useState(false);
 
     // console.log(auth.currentUser);
@@ -45,8 +46,8 @@ export default function Signup() {
         password: "",
         confirmPassword: "",
         displayName: "",
-        surName : "",
-        phone : "",
+        surName: "",
+        phone: "",
         location: "",
     });
 
@@ -56,55 +57,53 @@ export default function Signup() {
         confirmPassword,
         displayName,
         surName,
-        phone ,
+        phone,
         location,
-    } = formData
+    } = formData;
 
     function handleChange(e) {
         if (e.target.files[0]) {
-          setPhoto(e.target.files[0])
+            setPhoto(e.target.files[0]);
         }
-      }
-
+    }
 
     const handleSubmit = async (e) => {
         console.log(formData);
         e.preventDefault();
-        await signup(formData.email, formData.password).then((response) => {
-            console.log(response);
-           updateProfile( response.user, {
-                displayName: formData.displayName,
+        await signup(formData.email, formData.password)
+            .then((response) => {
+                console.log(response);
+                updateProfile(response.user, {
+                    displayName: formData.displayName,
+                });
+                const usersRef = doc(db, "users", response.user.uid);
+                const docRef = setDoc(usersRef, {
+                    displayName,
+                    surName,
+                    location,
+                    phone,
+                    email,
+                });
             })
-            const  usersRef = doc(db, "users" ,  response.user.uid )
-            const docRef =  setDoc( usersRef , {
-                            displayName,
-                            surName,
-                            location,
-                            phone,
-                            email
-
+            .then(() => {
+                router.push("/");
             });
-        }).then(() => {
-             router.push("/")})
-             const fileRef = ref(storage, email + '.png')
-             uploadBytes(fileRef, photo).then(() => getDownloadURL(fileRef) ).then((url) => {updateProfile(auth.currentUser , {photoURL : url})}).then(()=> setLoading(false))
-      
+        const fileRef = ref(storage, email + ".png");
+        uploadBytes(fileRef, photo)
+            .then(() => getDownloadURL(fileRef))
+            .then((url) => {
+                updateProfile(auth.currentUser, { photoURL: url });
+            })
+            .then(() => setLoading(false));
     };
 
     useEffect(() => {
         if (user?.photoURL) {
-          setPhotoURL(user.photoURL);
+            setPhotoURL(user.photoURL);
         }
-      }, [user])
+    }, [user]);
 
-
-
-      console.log(auth.currentUser);
-
-
-
-
-
+    console.log(auth.currentUser);
 
     return (
         <Layout>
@@ -113,99 +112,98 @@ export default function Signup() {
                     <h1>{t("common.signUp")}</h1>
                 </div>
                 <Input
-                formData={formData}
-                setFormData={setFormData}
-                value={formData.displayName}
-                name="displayName"
+                    formData={formData}
+                    setFormData={setFormData}
+                    value={formData.displayName}
+                    name='displayName'
                     title={t("common.name")}
                     type='text'
                     placeholder={t("common.name")}
                 />
                 <Input
-                formData={formData}
-                setFormData={setFormData}
-                value={formData.surName}
-                name="surName"
+                    formData={formData}
+                    setFormData={setFormData}
+                    value={formData.surName}
+                    name='surName'
                     title={t("signUp.surname")}
                     type='text'
                     placeholder={t("signUp.surname")}
                 />
                 <Input
-                 formData={formData}
-                 setFormData={setFormData}
-                 value={formData.email}
-                 name="email"
+                    formData={formData}
+                    setFormData={setFormData}
+                    value={formData.email}
+                    name='email'
                     title={t("common.email")}
                     type='email'
                     placeholder='mail@example.com'
                 />
                 <Input
-                formData={formData}
-                setFormData={setFormData}
-                value={formData.password}
-                name='password'
+                    formData={formData}
+                    setFormData={setFormData}
+                    value={formData.password}
+                    name='password'
                     title={t("common.password")}
                     type='password'
                     placeholder='at least 8 characters'
                 />
                 <Input
-                formData={formData}
-                setFormData={setFormData}
-                value={formData.confirmPassword}
-                name='confirmPassword'
+                    formData={formData}
+                    setFormData={setFormData}
+                    value={formData.confirmPassword}
+                    name='confirmPassword'
                     title={t("common.password2")}
                     type='password'
                     placeholder='at least 8 characters'
                 />
                 <Input
-                formData={formData}
-                setFormData={setFormData}
-                value={formData.phone}
-                name="phone"
+                    formData={formData}
+                    setFormData={setFormData}
+                    value={formData.phone}
+                    name='phone'
                     title={t("common.phone")}
                     type='tel'
                     placeholder='eg: +901234567890'
                 />
                 <Option
-                setFormData={setFormData}
-                formData={formData}
-                value={formData.location}
-                name='location'
-                location />
+                    setFormData={setFormData}
+                    formData={formData}
+                    value={formData.location}
+                    name='location'
+                    location
+                />
 
-<label className='flex h-64 my-8 mx-auto cursor-pointer flex-col items-center justify-center rounded-lg border-0 bg-[white] shadow-lg w-[80%] md:w-[60%] xl:w-[40%] mb-3 pl-3 text-lg font-semibold text-fontColor '>
-    add a profile picture
-                            <div className='flex flex-col items-center justify-center pt-5 pb-6'>
-                                <AiOutlineCloudUpload
-                                    color='gray'
-                                    size={50}
-                                    className='mb-3'
-                                />
-                                <p className='mb-2 text-sm text-fontColor'>
-                                    <span className='font-semibold'>
-                                        Click to upload
-                                    </span>{" "}
-                                    or{" "}
-                                    <span className='font-semibold'>
-                                        drag and drop
-                                    </span>
-                                </p>
-                                <p className='text-xs text-fontColor'>
-                                    SVG, PNG, JPG or GIF (MAX. 800x600px)
-                                </p>
-                            </div>
-                            <input
-                            onChange={handleChange}
-                                type='file'
-                                multiple='multiple'
-                                className=' w-40 font-primary text-sm text-[#8d8d8d] file:hidden focus:outline-none focus:ring-0 '
-                            />
-                        </label>
-
+                <label className='my-8 mx-auto mb-3 flex h-64 w-[80%] cursor-pointer flex-col items-center justify-center rounded-lg border-0 bg-[white] pl-3 text-lg font-semibold text-fontColor shadow-lg md:w-[60%] xl:w-[40%] '>
+                    add a profile picture
+                    <div className='flex flex-col items-center justify-center pt-5 pb-6'>
+                        <AiOutlineCloudUpload
+                            color='gray'
+                            size={50}
+                            className='mb-3'
+                        />
+                        <p className='mb-2 text-sm text-fontColor'>
+                            <span className='font-semibold'>
+                                Click to upload
+                            </span>{" "}
+                            or{" "}
+                            <span className='font-semibold'>drag and drop</span>
+                        </p>
+                        <p className='text-xs text-fontColor'>
+                            SVG, PNG, JPG or GIF (MAX. 800x600px)
+                        </p>
+                    </div>
+                    <input
+                        onChange={handleChange}
+                        type='file'
+                        multiple='multiple'
+                        className=' w-40 font-primary text-sm text-[#8d8d8d] file:hidden focus:outline-none focus:ring-0 '
+                    />
+                </label>
 
                 <Button
-                onClick={handleSubmit}
-                fullfilled={t("signUp.button")} />
+                    onClick={handleSubmit}
+                    fullfilled={t("signUp.button")}
+                />
                 <div className='mt-5 mb-10 flex flex-col items-center text-center'>
                     <h3 className='mb-1 text-lg'>{t("signUp.with")}</h3>
                     <div className='my-5 flex gap-5'>

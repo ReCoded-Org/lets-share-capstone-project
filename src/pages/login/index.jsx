@@ -11,10 +11,6 @@ import { useAuth } from "context/AuthContext";
 import Link from "next/link";
 
 export async function getStaticProps({ locale }) {
-
-    
-
-
     return {
         props: {
             ...(await serverSideTranslations(locale, ["common"])),
@@ -30,31 +26,26 @@ export default function Login() {
         password: "",
     });
 
-    const [ email, setEmail ] = useState("");
+    const [email, setEmail] = useState("");
 
-        const router = useRouter()
-      
-            
-    
+    const router = useRouter();
 
+    const { user, login, signInWithGoogle } = useAuth();
 
-        const { user, login, signInWithGoogle } = useAuth()
-
-        const handleSubmit = async (e) => {
-            e.preventDefault()
-            try {
-                await login(formData.email, formData.password).then(() => {
-                    router.push("/")
-                })
-            } catch(error){
-                alert(error)
-            }
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        try {
+            await login(formData.email, formData.password).then(() => {
+                router.push("/");
+            });
+        } catch (error) {
+            alert(error);
         }
+    };
 
-        function handleChange(e) {
-            
-            setFormData({ ...formData, [e.target.name]: e.target.value });
-        }
+    function handleChange(e) {
+        setFormData({ ...formData, [e.target.name]: e.target.value });
+    }
 
     return (
         <Layout>
@@ -76,9 +67,9 @@ export default function Login() {
                                 {t("common.email")}
                             </label>
                             <input
-                        name="email"
-                        value={formData.email}
-                        onChange={handleChange}
+                                name='email'
+                                value={formData.email}
+                                onChange={handleChange}
                                 type='email'
                                 placeholder={t("common.email")}
                                 className='form-control h-10 w-full rounded-lg border-0 bg-[white] bg-clip-padding shadow-lg'
@@ -91,9 +82,9 @@ export default function Login() {
                                 {t("common.password")}
                             </label>
                             <input
-                            name="password"
-                            value={formData.password}
-                            onChange={handleChange}
+                                name='password'
+                                value={formData.password}
+                                onChange={handleChange}
                                 type='password'
                                 placeholder={t("common.password")}
                                 className='form-control h-10 w-full rounded-lg border-0 bg-[white] bg-clip-padding shadow-lg'
@@ -108,21 +99,22 @@ export default function Login() {
                     </div>
                     <div className='flex w-full justify-center font-primary'>
                         <button
-                        onClick={handleSubmit}
-                        className='my-5 h-9 w-full rounded-full bg-primary text-lg text-[white] shadow-md transition duration-300 hover:scale-[103%] hover:bg-secondary'>
+                            onClick={handleSubmit}
+                            className='my-5 h-9 w-full rounded-full bg-primary text-lg text-[white] shadow-md transition duration-300 hover:scale-[103%] hover:bg-secondary'
+                        >
                             {t("common.logIn")}
                         </button>
                     </div>
                     <div className=' mb-3 py-2 text-center text-base'>
                         <p className='mb-2'>
                             {t("logIn.noAccount")}{" "}
-                            <Link href="/signup" >
-                            <a
-                                className=' p-2 underline underline-offset-4 hover:text-primary'
-                                href='#'
-                            >
-                                {t("common.signUp")}
-                            </a>
+                            <Link href='/signup'>
+                                <a
+                                    className=' p-2 underline underline-offset-4 hover:text-primary'
+                                    href='#'
+                                >
+                                    {t("common.signUp")}
+                                </a>
                             </Link>
                         </p>
                         <a
@@ -146,8 +138,8 @@ export default function Login() {
                             />
                         </a>
                         <a href='#'>
-                        <FaGoogle
-                        onClick={signInWithGoogle}
+                            <FaGoogle
+                                onClick={signInWithGoogle}
                                 size={25}
                                 color='#33956D'
                                 className=' transition duration-200 hover:fill-secondary'

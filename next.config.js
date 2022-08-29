@@ -11,16 +11,15 @@ module.exports = {
 
     // Uncoment to add domain whitelist
     images: {
-      domains: [
-        'res.cloudinary.com',
-        "api.lorem.space",
-        "firebasestorage.googleapis.com",
-        "firebasestorage.googleapis.com",
-        "lh3.googleusercontent.com"
-      ],
+        domains: [
+            "res.cloudinary.com",
+            "api.lorem.space",
+            "firebasestorage.googleapis.com",
+            "firebasestorage.googleapis.com",
+            "lh3.googleusercontent.com",
+        ],
     },
 
-    
     // SVGR
     webpack(config) {
         config.module.rules.push({

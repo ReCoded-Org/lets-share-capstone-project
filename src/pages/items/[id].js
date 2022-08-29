@@ -16,26 +16,22 @@ import { useAuth } from "context/AuthContext";
 import { auth } from "firebaseConfig";
 
 export async function getStaticPaths({ locales }) {
-    
-    let itemss = []
+    let itemss = [];
     const querySnapshot = await getDocs(collection(db, "items"));
-querySnapshot.forEach((doc) => {
-    itemss.push(doc.id)
-  // doc.data() is never undefined for query doc snapshots
-  console.log(doc.id, " => ", doc.data());
-});
+    querySnapshot.forEach((doc) => {
+        itemss.push(doc.id);
+        // doc.data() is never undefined for query doc snapshots
+        console.log(doc.id, " => ", doc.data());
+    });
 
     // let items = Object.keys(itemss)
 
-
     const paths = itemss.map((id) => {
-        
-            return {
-                params: { id : id.toString() },
-            };
-        
+        return {
+            params: { id: id.toString() },
+        };
     });
-    console.log(paths)
+    console.log(paths);
     return {
         paths: paths,
         fallback: false,
@@ -45,12 +41,12 @@ querySnapshot.forEach((doc) => {
 export async function getStaticProps({ params, locale }) {
     console.log(params);
     const docRef = doc(db, "items", params.id);
-const itema = await getDoc(docRef);  
-console.log({I : itema.data()})
+    const itema = await getDoc(docRef);
+    console.log({ I: itema.data() });
 
     return {
         props: {
-            item : itema.data() ,
+            item: itema.data(),
             ...(await serverSideTranslations(locale, ["common"])),
         },
     };
@@ -59,32 +55,27 @@ console.log({I : itema.data()})
 function Item({ item, items }) {
     console.log(item.user);
     const { t } = useTranslation("common");
-   
-    const {profile} = useAuth()
 
-    const [user, setUser] = useState({})
+    const { profile } = useAuth();
 
-    useEffect( ()=> {
+    const [user, setUser] = useState({});
 
+    useEffect(() => {
         const update = async () => {
             const docRef = doc(db, "users", item.user);
-        const docSnap = await getDoc(docRef)
-        let    data =docSnap.data() 
-        console.log(data);
-        setUser(data)
-        
-        
-        }
-        update()
-        
-        
-    }, [])
+            const docSnap = await getDoc(docRef);
+            let data = docSnap.data();
+            console.log(data);
+            setUser(data);
+        };
+        update();
+    }, []);
 
     const [list, loading, error] = useCollection(
         query(collection(db, "items"))
-       ); 
+    );
 
-        console.log(user);
+    console.log(user);
 
     const settings = {
         customPaging: function () {
@@ -112,15 +103,10 @@ function Item({ item, items }) {
         slidesToScroll: 1,
     };
 
-    const images = [
-        item.itemImage,
-        item.itemImage,
-        item.itemImage,
-    ]
+    const images = [item.itemImage, item.itemImage, item.itemImage];
 
     return (
         <Layout>
-            
             <div className='mx-auto my-10 flex w-[80%] flex-col  font-primary md:w-[90%]'>
                 <div className='flex flex-col items-center md:flex-row md:items-start md:space-x-8 xl:space-x-14'>
                     <div className=' '>
@@ -170,7 +156,9 @@ function Item({ item, items }) {
                                     <HiUserCircle color='#F07167' size={25} />
                                 </div>
                                 <div className='flex flex-col gap-2 break-all'>
-                                    <p>{user.displayName} {user.surName}</p>
+                                    <p>
+                                        {user.displayName} {user.surName}
+                                    </p>
                                     <p className=''>{user.email}</p>
                                     <p>{user.phone}</p>
                                 </div>

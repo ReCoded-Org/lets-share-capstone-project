@@ -15,20 +15,15 @@ import { useAuth } from "context/AuthContext";
 const UserInfo = () => {
     const { locale } = useRouter();
     const { t } = useTranslation("common");
-    
 
-    const {user } = useAuth()
+    const { user } = useAuth();
 
-    const [profile, loading, error] = useDocument(
-        doc(db, "users", user?.uid)
-       );  
+    const [profile, loading, error] = useDocument(doc(db, "users", user?.uid));
 
-     const profileData = profile?.data()
+    const profileData = profile?.data();
 
     //    console.log(auth.currentUser.photoURL);
     // console.log(user.uid );
-
-
 
     // This function should be changed when using real data to REPLACE the image URL located in the server with a NULL IMAGE
     const removeImage = () => {
@@ -79,7 +74,8 @@ const UserInfo = () => {
                 >
                     <span className=' flex flex-col gap-4'>
                         <span className=''>
-                            {t("common.name")}: {profileData?.displayName} {profileData?.surName}
+                            {t("common.name")}: {profileData?.displayName}{" "}
+                            {profileData?.surName}
                         </span>
                         <span className=''>
                             {t("common.location")}: {profileData?.location}

@@ -12,7 +12,9 @@ exports[`renders correctly 1`] = `
     />
     <select
       className="w-full rounded-lg border-0 text-[#797979] shadow-lg focus:text-fontColor"
+      onChange={[Function]}
       title={null}
+      value=""
     />
   </label>
 </form>

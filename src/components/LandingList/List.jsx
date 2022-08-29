@@ -25,7 +25,7 @@ import { useTranslation } from "next-i18next";
 function List(props) {
     const { t } = useTranslation();
     const blogs = props.blogs;
-    const items = props.items
+    const items = props.items;
     // const items = props.items; delete above items array and uncomment this line to pass items as props in other pages
     const categories = props.categories;
 
@@ -52,7 +52,11 @@ function List(props) {
                         ) : categories ? (
                             <CategoryCard key={item.id} item={item} />
                         ) : (
-                            <PopularItemsCard key={item.id} id={item.id} item={item.data()} />
+                            <PopularItemsCard
+                                key={item.id}
+                                id={item.id}
+                                item={item.data()}
+                            />
                         )
                     )}
             </div>

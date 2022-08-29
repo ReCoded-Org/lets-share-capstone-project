@@ -13,6 +13,7 @@ exports[`renders correctly 1`] = `
     <input
       className="form-control h-10 w-full rounded-lg border-0 bg-[white] bg-clip-padding shadow-lg"
       multiple={false}
+      onChange={[Function]}
     />
   </div>
 </div>

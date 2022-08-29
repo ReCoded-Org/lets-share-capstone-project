@@ -29,7 +29,6 @@ export const getStaticProps = async ({ locale }) => {
     };
 };
 
-
 // This one can be put in a separate folder since it will be used in two different places
 const cities = [
     "All",
@@ -116,14 +115,13 @@ const cities = [
     "Zonguldak",
 ];
 
-
-    /*
+/*
 THIS STATE FOR THE REAL DATA ***FOR FUTURE USE***
 The data here should be processd by a FILTER FUNCTION  before it gets assigned to the state
     const [data, setData] = useState([]);
 */
 
-    // This for the location Menu
+// This for the location Menu
 const GoodsPage = () => {
     const { t } = useTranslation("common");
     const [q, setQ] = useState("");
@@ -138,17 +136,15 @@ const GoodsPage = () => {
     const [listCity, setListCity] = useState(false);
     const [sortRecent, setSortRecent] = useState(false);
 
-
     const [items, loading, error] = useCollection(
         query(collection(db, "items"))
-       ); 
+    );
 
-       console.log(items?.docs[0].data());
- 
+    console.log(items?.docs[0].data());
 
     function search(items) {
         return items?.docs?.filter((itemm) => {
-            let item = itemm.data()
+            let item = itemm.data();
             if (item.location == filterParam || item.category == filterParam) {
                 return searchParam.some((newItem) => {
                     return (
@@ -255,9 +251,14 @@ const GoodsPage = () => {
                 </span>
 
                 <div className='goodsSection order-last my-5 flex w-full flex-row flex-wrap justify-center gap-5  md:gap-5 md:gap-y-8 lg:justify-center'>
-                    {items?.docs.map((item,i) => {
-                        return <PopularItemsCard key={i} id={item.id} item={item.data()} />;
-
+                    {items?.docs.map((item, i) => {
+                        return (
+                            <PopularItemsCard
+                                key={i}
+                                id={item.id}
+                                item={item.data()}
+                            />
+                        );
                     })}
                 </div>
             </div>

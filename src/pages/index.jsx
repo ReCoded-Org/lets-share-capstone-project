@@ -27,19 +27,14 @@ export async function getStaticProps({ locale }) {
 export default function HomePage() {
     // const { t } = useTranslation("common");
     //need to remove below item object and pass {items} as props in this function
-    
 
     const [list, loading, error] = useCollection(
         query(collection(db, "items"))
-       ); 
+    );
 
-       let itemsList = list?.docs
+    let itemsList = list?.docs;
 
-       console.log(itemsList);
-
-       
-
-
+    console.log(itemsList);
 
     const blogs = [
         {
