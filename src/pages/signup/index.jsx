@@ -98,10 +98,8 @@ export default function Signup() {
     useEffect(() => {
         if (user?.photoURL) {
             setPhotoURL(user.photoURL);
-        } else {
-            setPhotoURL(photoURL);
         }
-    }, [photoURL, user.photoURL]);
+    }, [user]);
 
     return (
         <Layout>
