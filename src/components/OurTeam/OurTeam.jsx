@@ -68,7 +68,7 @@ const profiles = [
         {
             name: "Amjad Alkhatib",
             description: "Junior Engineer",
-            image: "/images/amjad khatib.png",
+            image: "/images/amjadkhatib.png",
             Likedin: "https://www.linkedin.com/in/name-surname1/",
             Github: "/github/name-surname1",
         },
