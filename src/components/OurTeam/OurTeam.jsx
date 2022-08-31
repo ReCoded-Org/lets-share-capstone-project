@@ -25,7 +25,7 @@ const profiles = [
             name: "Heni Muhammed",
             description: "Junior Engineer",
             image: "/images/Hani.jpg",
-            Likedin: "https://www.linkedin.com/in/muhammed-heni-b8a8a1164/",
+            Likedin: "https://www.linkedin.com/in/hani-md/",
             Github: "https://github.com/hanimuh",
         },
         {
@@ -52,37 +52,44 @@ const profiles = [
     ],
     [
         {
-            name: "Back-end",
+            name: "Khaled Batur",
             description: "Lead Engineer",
-            image: "/images/Lets-share-test-profile.png",
+            image: "/images/halit.png",
             Likedin: "https://www.linkedin.com/in/salah-aldhaferi/",
             Github: "/github/name-surname1",
         },
         {
-            name: "lorem",
+            name: "Ezgi Okur",
             description: "Junior Engineer",
-            image: "/images/Lets-share-test-profile.png",
+            image: "/images/ezgi.png",
             Likedin: "https://www.linkedin.com/in/amjad-maqsouma-54bb91234/",
             Github: "https://github.com/amjadmak",
         },
         {
-            name: "Name Surname3",
-            description: "information about team member",
-            image: "/images/Lets-share-test-profile.png",
+            name: "Amjad Alkhatib",
+            description: "Junior Engineer",
+            image: "/images/amjad khatib.png",
             Likedin: "https://www.linkedin.com/in/name-surname1/",
             Github: "/github/name-surname1",
         },
         {
-            name: "Name Surname4",
-            description: "information about team member",
-            image: "/images/Lets-share-test-profile.png",
+            name: "Nilay Aydin",
+            description: "Junior Engineer",
+            image: "/images/nilay.png",
             Likedin: "https://www.linkedin.com/in/name-surname1/",
             Github: "/github/name-surname1",
         },
         {
-            name: "Name Surname5",
-            description: "information about team member",
-            image: "/images/Lets-share-test-profile.png",
+            name: "Adnan Khaldar",
+            description: "Junior Engineer",
+            image: "/images/adnan.png",
+            Likedin: "https://www.linkedin.com/in/name-surname1/",
+            Github: "/github/name-surname1",
+        },
+        {
+            name: "Noor Aweid",
+            description: "Junior Engineer",
+            image: "/images/noor.png",
             Likedin: "https://www.linkedin.com/in/name-surname1/",
             Github: "/github/name-surname1",
         },
@@ -111,10 +118,14 @@ function OurTeam() {
                         <div className=' p-2 text-center '>
                             <div className='flex justify-center gap-3 p-2 text-3xl'>
                                 <Link href={profile.Likedin}>
-                                    <AiFillLinkedin className='cursor-pointer hover:text-fontColor' />
+                                    <a target='blank'>
+                                        <AiFillLinkedin className='cursor-pointer hover:text-fontColor' />
+                                    </a>
                                 </Link>
                                 <Link href={profile.Github}>
-                                    <AiFillGithub className='cursor-pointer hover:text-fontColor' />
+                                    <a target='blank'>
+                                        <AiFillGithub className='cursor-pointer hover:text-fontColor' />
+                                    </a>
                                 </Link>
                             </div>
                             <h2 className='my-1 font-bold'>{profile.name}</h2>
@@ -123,7 +134,7 @@ function OurTeam() {
                     </div>
                 ))}
             </div>
-            <h1 className=' mb-5 py-5 text-center font-head text-4xl font-bold tracking-wider text-fontColor '>
+            <h1 className=' mb-5 mt-10 py-5 text-center font-head text-4xl font-bold tracking-wider text-fontColor '>
                 {t("aboutus.back-end-team")}
             </h1>
             <div className='mx-[7rem]  flex flex-wrap justify-center justify-items-center gap-10'>

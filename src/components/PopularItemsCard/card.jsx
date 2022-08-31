@@ -23,14 +23,14 @@ function card({ item, id }) {
     }
 
     return (
-        <Link href={`items/${id}`}>
+        <Link href={`/items/${id}`}>
             <div className='group w-[250px] cursor-pointer overflow-hidden rounded-lg  bg-[white] font-primary text-primary shadow-xl transition duration-300  hover:scale-105 hover:shadow-2xl'>
                 <div className='relative aspect-video overflow-hidden rounded-md transition-all  '>
                     <Image
                         layout='fill'
                         objectFit='cover'
-                        className='abso h-full w-full'
-                        src={item.itemImage}
+                        className=' h-full w-full'
+                        src={item.itemImage[2]}
                         alt='Sunset in the mountains'
                     />
                 </div>

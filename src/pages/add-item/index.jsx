@@ -2,10 +2,11 @@ import Button from "@/components/button";
 import Input from "@/components/input";
 import Layout from "@/components/layout/Layout";
 import Option from "@/components/option";
-import { collection, addDoc, doc, setDoc, updateDoc } from "firebase/firestore";
-import { getDownloadURL, ref, uploadString } from "firebase/storage";
+import Router from "next/router";
+import { collection, addDoc, updateDoc, arrayUnion } from "firebase/firestore";
+import { getDownloadURL, ref, uploadBytes } from "firebase/storage";
 import { db, storage } from "firebaseConfig";
-import { auth } from "firebaseConfig";
+// import { auth } from "firebaseConfig";
 
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
@@ -26,17 +27,17 @@ export async function getStaticProps({ locale }) {
 function Index() {
     const [formData, setFormData] = useState({});
 
-    const [imageToPost, setImageToPost] = useState(null);
+    const [imageToPost, setImageToPost] = useState([]);
 
     const { user } = useAuth();
 
-    const storageRef = ref(storage, `items/${Date.now()}`);
+    // const storageRef = ref(storage, `items/${Date.now()}`);
 
     const { title, description, category, location } = formData;
 
-    console.log(category);
-
-    console.log(auth.currentUser);
+    // for (let i in imageToPost){
+    //     console.log(imageToPost[i]);
+    // }
 
     async function handleSubmit(e) {
         e.preventDefault();
@@ -48,44 +49,43 @@ function Index() {
                 category,
                 location,
                 user: user.uid,
+                itemImage: [],
             });
 
             if (imageToPost) {
-                uploadString(storageRef, imageToPost, "data_url").then(
-                    (snapshot) => {
-                        getDownloadURL(snapshot.ref).then((url) => {
-                            console.log(url);
-                            updateDoc(
-                                doc(itemsRef, docRef.id),
-                                {
-                                    itemImage: url,
-                                },
-                                { merge: true }
-                            );
+                for (let i = 0; i < 3; i++) {
+                    const fileRef = ref(storage, docRef.id + i + ".png");
+                    uploadBytes(fileRef, imageToPost[i])
+                        .then(() => getDownloadURL(fileRef))
+                        .then((url) => {
+                            updateDoc(docRef, { itemImage: arrayUnion(url) });
+                        })
+                        .then(() => {
+                            Router.push("/my-profile");
                         });
-                    }
-                );
+                }
             }
-
-            console.log();
-
-            console.log("Document written with ID: ", docRef);
         } catch (e) {
-            console.error("Error adding document: ", e);
+            // console.error("Error adding document: ", e);
         }
     }
 
     const { t } = useTranslation("common");
 
     const addImage = (e) => {
-        const reader = new FileReader();
-        if (e.target.files[0]) {
-            reader.readAsDataURL(e.target.files[0]);
-        }
+        // for(let i in e.target.files) {
+        //     console.log(e.target.files);
+        //     const reader = new FileReader();
+        //     if (e.target.files[i]) {
+        //         reader.readAsDataURL(e.target.files[i]);
+        //     }
 
-        reader.onload = (readerEvent) => {
-            setImageToPost(readerEvent.target.result);
-        };
+        //     reader.onload = (readerEvent) => {
+        //         setImageToPost([...imageToPost , readerEvent.target.result]);
+        //     };
+        // }
+
+        setImageToPost(e.target.files);
     };
 
     return (
@@ -189,7 +189,12 @@ function Index() {
                             onClick={handleSubmit}
                             fullfilled={t("common.confirm")}
                         />
-                        <Button outLinedPrimary={t("common.cancel")} />
+                        <Button
+                            outLinedPrimary={t("common.cancel")}
+                            onClick={() => {
+                                Router.push("/");
+                            }}
+                        />
                     </div>
                 </div>
             </Layout>

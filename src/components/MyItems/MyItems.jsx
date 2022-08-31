@@ -3,18 +3,11 @@ import Link from "next/link";
 import Image from "next/image";
 import { useTranslation } from "next-i18next";
 
-import {
-    collection,
-    getDocs,
-    deleteDoc,
-    doc,
-    query,
-    where,
-} from "firebase/firestore";
+import { collection, deleteDoc, doc, query, where } from "firebase/firestore";
 import { auth, db } from "firebaseConfig";
-import { useEffect } from "react";
-import { useState } from "react";
-import { useAuth } from "context/AuthContext";
+// import { useEffect } from "react";
+// import { useState } from "react";
+// import { useAuth } from "context/AuthContext";
 import { useCollection } from "react-firebase-hooks/firestore";
 
 // MyItems.getInitialProps = async () => {
@@ -34,20 +27,20 @@ import { useCollection } from "react-firebase-hooks/firestore";
 //     }
 // }
 
-function MyItems() {
+function MyItems({ test }) {
     const { t } = useTranslation();
 
-    const [realtimePosts, loading, error] = useCollection(
+    const [realtimePosts] = useCollection(
         query(
             collection(db, "items"),
-            where("user", "==", auth.currentUser.uid)
+            where("user", "==", test ? "" : auth.currentUser.uid)
         )
     );
 
-    const [items, setItems] = useState([]);
-    const [item, setItem] = useState(null);
+    // const [items, setItems] = useState([]);
+    // const [item, setItem] = useState(null);
 
-    const { user } = useAuth();
+    // const { user } = useAuth();
 
     // console.log(realtimePosts?.docs[0].data())
 
@@ -71,7 +64,6 @@ function MyItems() {
 
     const handleDelete = (e) => {
         e.preventDefault();
-        console.log(e.target.id);
         deleteDoc(doc(db, "items", e.target.id));
     };
 
@@ -82,7 +74,7 @@ function MyItems() {
     // ];
     return (
         <>
-            <div className='my-12 flex flex-col items-center'>
+            <div className='my-12 flex min-h-[350px] flex-col items-center'>
                 <h1 className='mb-10 font-head text-3xl font-semibold tracking-wider text-fontColor'>
                     {t("profile.myItems")}
                 </h1>
@@ -94,11 +86,12 @@ function MyItems() {
                         {/* <span>{item.data().title}</span> */}
                         <Image
                             src={
-                                item.data().itemImage
-                                    ? item.data().itemImage
+                                item.data().itemImage[0]
+                                    ? item.data().itemImage[0]
                                     : "/Photo.png"
                             }
                             alt={item.data().title}
+                            priority={true}
                             width={60}
                             height={60}
                             className=' h-8 w-8 rounded-full'

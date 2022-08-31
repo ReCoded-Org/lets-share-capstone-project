@@ -7,19 +7,12 @@ import Link from "next/link";
 import { useState } from "react";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import { auth, db } from "firebaseConfig";
-import { async } from "@firebase/util";
-import {
-    collection,
-    doc,
-    getDoc,
-    getDocs,
-    query,
-    setDoc,
-    updateDoc,
-} from "firebase/firestore";
-import { useCollection, useDocument } from "react-firebase-hooks/firestore";
+import { db } from "firebaseConfig";
+// import { async } from "@firebase/util";
+import { doc, getDoc, setDoc } from "firebase/firestore";
+// import { useCollection, useDocument } from "react-firebase-hooks/firestore";
 import { useAuth } from "context/AuthContext";
+// import { Router } from "next/router";
 
 export async function getStaticProps({ locale }) {
     return {
@@ -55,9 +48,9 @@ export default function EditProfile(/*{ userData }*/) {
             const docRef = doc(db, "users", user.uid);
             const docSnap = await getDoc(docRef);
             let data = docSnap.data();
-            console.log(data);
             if (data) {
                 setFormData(data);
+                loading;
             }
 
             setLoading(false);
@@ -70,7 +63,7 @@ export default function EditProfile(/*{ userData }*/) {
         //     location : profile?.data().location
         // })
         update();
-    }, []);
+    }, [loading, user.uid]);
 
     //    console.log(info);
 
@@ -83,12 +76,13 @@ export default function EditProfile(/*{ userData }*/) {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log(formData);
         await setDoc(doc(db, "users", user.uid), {
             displayName: formData.displayName,
             surName: formData.surName,
             phone: formData.phone,
             location: formData.location,
+        }).then(() => {
+            window.location.href = "/my-profile";
         });
     };
 

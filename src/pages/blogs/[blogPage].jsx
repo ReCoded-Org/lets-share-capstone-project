@@ -4,26 +4,28 @@ import * as React from "react";
 import Image from "next/image";
 import Layout from "@/components/layout/Layout";
 import Link from "next/link";
+import ReactMarkdown from "react-markdown";
+import { useRouter } from "next/router";
 
 const blogs = [
     {
         id: 1,
-        title: "My-Blog" /*(An actual title should be provided here for the dynamic routing)*/,
-        image: "/Photo.png" /*(The path of image should be provided)*/,
+        title: "4-reasons-why-donating-is-important" /*(An actual title should be provided here for the dynamic routing)*/,
+        image: "/1.svg" /*(The path of image should be provided)*/,
         imageAlt:
             "Sunset in the mountains" /*(An actual ALT should be provided)*/,
     },
     {
         id: 2,
-        title: "My-Blog-second" /*(An actual title should be provided here for the dynamic routing)*/,
-        image: "/Photo.png" /*(The path of image should be provided)*/,
+        title: "Why-donating-is-better-than-recycling" /*(An actual title should be provided here for the dynamic routing)*/,
+        image: "/2.svg" /*(The path of image should be provided)*/,
         imageAlt:
             "Sunset in the mountains" /*(An actual ALT should be provided)*/,
     },
     {
         id: 3,
-        title: "My-Blog-third" /*(An actual title should be provided here for the dynamic routing)*/,
-        image: "/Photo.png" /*(The path of image should be provided)*/,
+        title: "What-should-I-do-before-donating-my-device" /*(An actual title should be provided here for the dynamic routing)*/,
+        image: "/3.svg" /*(The path of image should be provided)*/,
         imageAlt:
             "Sunset in the mountains" /*(An actual ALT should be provided)*/,
     },
@@ -54,6 +56,7 @@ export const getStaticProps = async (context) => {
     };
 };
 const BlogPage = ({ oneBlog }) => {
+    const { locale } = useRouter();
     const { t } = useTranslation("common");
     return (
         <Layout>
@@ -73,9 +76,13 @@ const BlogPage = ({ oneBlog }) => {
                         />
                     </div>
 
-                    <p className='text-start leading-relaxed lg:mx-10'>
+                    <ReactMarkdown
+                        className={`${
+                            locale === "ar" ? "text-right" : "text-left"
+                        } lg:mx-10" leading-loose`}
+                    >
                         {t(`blogs.contentBlg${oneBlog.id}`)}
-                    </p>
+                    </ReactMarkdown>
                 </div>
                 <div className=' mt-8 mb-10 flex flex-col items-center justify-center gap-8 justify-self-center lg:mt-0 lg:w-1/2'>
                     <h2 className='h-14 w-full py-3 text-center font-head text-3xl text-fontColor lg:text-start '>
@@ -95,7 +102,9 @@ const BlogPage = ({ oneBlog }) => {
                                             width={240}
                                             height={150}
                                         />
-                                        <p>{t(`blogs.headerBlg${blog.id}`)}</p>
+                                        <p className='px-2'>
+                                            {t(`blogs.headerBlg${blog.id}`)}
+                                        </p>
                                     </div>
                                 </Link>
                             );

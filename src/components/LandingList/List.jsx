@@ -29,8 +29,8 @@ function List(props) {
     // const items = props.items; delete above items array and uncomment this line to pass items as props in other pages
     const categories = props.categories;
 
-    const list = blogs ? blogs : items ? items : categories;
-    console.log(items);
+    const test = props.test;
+    const list = blogs ? blogs : items ? items : categories ? categories : test;
 
     return (
         <>
@@ -51,12 +51,14 @@ function List(props) {
                             <BlogCard key={item.id} item={item} />
                         ) : categories ? (
                             <CategoryCard key={item.id} item={item} />
-                        ) : (
+                        ) : items ? (
                             <PopularItemsCard
                                 key={item.id}
                                 id={item.id}
                                 item={item.data()}
                             />
+                        ) : (
+                            <div key={item}>test</div>
                         )
                     )}
             </div>

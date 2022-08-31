@@ -5,14 +5,13 @@ export default function Button(props) {
     const outLinedPrimary = props.outLinedPrimary;
     const outLinedSecondary = props.outLinedSecondary;
     const extended = props.extended;
-    const handleClick = props.handleClick;
     return (
         <div className='flex justify-center font-primary'>
             <button
                 onClick={props.onClick}
                 className={
                     fullfilled
-                        ? "my-5 h-9 w-[120px] rounded-full bg-primary text-lg text-[white] shadow-md transition duration-200 hover:scale-[105%] hover:bg-secondary hover:shadow-md"
+                        ? "my-5 h-9 min-w-[120px] rounded-full bg-primary px-2 text-lg text-[white] shadow-md transition duration-200 hover:scale-[105%] hover:bg-secondary hover:shadow-md"
                         : outLinedPrimary
                         ? "my-5 h-9 w-[120px] rounded-full border-2 border-primary text-lg text-primary shadow-md transition duration-300 hover:scale-[105%] hover:border-secondary hover:shadow-md"
                         : outLinedSecondary
