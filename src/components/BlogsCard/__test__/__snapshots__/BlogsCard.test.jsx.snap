@@ -153,7 +153,7 @@ exports[`renders correctly 1`] = `
               className="flex justify-center font-primary"
             >
               <button
-                className="my-5 h-9 w-[120px] rounded-full bg-primary text-lg text-[white] shadow-md transition duration-200 hover:scale-[105%] hover:bg-secondary hover:shadow-md"
+                className="my-5 h-9 min-w-[120px] rounded-full bg-primary px-2 text-lg text-[white] shadow-md transition duration-200 hover:scale-[105%] hover:bg-secondary hover:shadow-md"
               >
                 Read more
               </button>

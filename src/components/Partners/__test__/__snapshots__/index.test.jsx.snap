@@ -13,7 +13,7 @@ exports[`renders correctly 1`] = `
     className=" container mx-auto mt-10 flex grid-cols-2 flex-col items-center gap-10 px-4 text-center sm:grid md:grid-cols-4 md:px-10 lg:flex-row lg:justify-around xl:grid-cols-4"
   >
     <div
-      className="relative mx-auto aspect-video w-64 md:w-40"
+      className=" mx-auto w-40 md:w-40"
     >
       <span
         style={
@@ -43,7 +43,7 @@ exports[`renders correctly 1`] = `
               "margin": 0,
               "opacity": 1,
               "padding": 0,
-              "paddingTop": "60%",
+              "paddingTop": "36.36363636363637%",
               "width": "initial",
             }
           }
@@ -116,7 +116,7 @@ exports[`renders correctly 1`] = `
       </span>
     </div>
     <div
-      className="relative mx-auto aspect-video w-64 md:w-40"
+      className="mx-auto w-40 md:w-32"
     >
       <span
         style={
@@ -146,7 +146,7 @@ exports[`renders correctly 1`] = `
               "margin": 0,
               "opacity": 1,
               "padding": 0,
-              "paddingTop": "60%",
+              "paddingTop": "100%",
               "width": "initial",
             }
           }
@@ -219,7 +219,7 @@ exports[`renders correctly 1`] = `
       </span>
     </div>
     <div
-      className="relative mx-auto aspect-video w-64 md:w-40"
+      className="mx-auto w-40 md:w-40"
     >
       <span
         style={
@@ -249,7 +249,7 @@ exports[`renders correctly 1`] = `
               "margin": 0,
               "opacity": 1,
               "padding": 0,
-              "paddingTop": "60%",
+              "paddingTop": "41.66666666666667%",
               "width": "initial",
             }
           }
@@ -322,7 +322,7 @@ exports[`renders correctly 1`] = `
       </span>
     </div>
     <div
-      className="relative mx-auto aspect-video w-64 md:w-40"
+      className=" mx-auto w-40 md:w-40"
     >
       <span
         style={
@@ -352,7 +352,7 @@ exports[`renders correctly 1`] = `
               "margin": 0,
               "opacity": 1,
               "padding": 0,
-              "paddingTop": "60%",
+              "paddingTop": "41.66666666666667%",
               "width": "initial",
             }
           }

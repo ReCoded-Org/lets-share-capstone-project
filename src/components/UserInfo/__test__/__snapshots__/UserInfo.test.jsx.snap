@@ -98,8 +98,8 @@ exports[`renders correctly 1`] = `
           data-nimg="intrinsic"
           decoding="async"
           loading="lazy"
-          src="/images/noPicInfo.svg"
-          srcSet="/images/noPicInfo.svg 1x, /images/noPicInfo.svg 2x"
+          src="/images/noUserPic.svg"
+          srcSet="/images/noUserPic.svg 1x, /images/noUserPic.svg 2x"
           style={
             Object {
               "border": "none",
@@ -128,11 +128,9 @@ exports[`renders correctly 1`] = `
     <div
       className=" flex flex-col justify-center md:flex-row "
     >
-      <button
-        onClick={[Function]}
-      >
+      <button>
         <svg
-          className="text-md -translate-x-8 translate-y-8 opacity-60 hover:fill-primary hover:opacity-100 md:translate-x-8 md:-translate-y-8"
+          className="text-md -translate-x-8 translate-y-8 opacity-60 hover:fill-secondary hover:opacity-100 md:translate-x-8 md:-translate-y-8"
           fill="currentColor"
           height={30}
           stroke="currentColor"
@@ -164,7 +162,7 @@ exports[`renders correctly 1`] = `
     <span
       className="flex justify-center text-center font-semibold "
     >
-      John Doe
+       
     </span>
   </div>
   <div
@@ -181,14 +179,13 @@ exports[`renders correctly 1`] = `
         >
           common.name
           : 
-          John Doe
+           
         </span>
         <span
           className=""
         >
           common.location
           : 
-          Kocaeli
         </span>
       </span>
       <span
@@ -199,18 +196,16 @@ exports[`renders correctly 1`] = `
         >
           common.phone
           : 
-          +90234567890
         </span>
         <span
           className=""
         >
           common.email
           : 
-          blabla@example.com
         </span>
       </span>
       <span
-        className="rounded-full border-2 border-solid border-[black] bg-userInfoBg p-2 hover:bg-[#dbdbdb]"
+        className="rounded-full border-2 border-solid border-primary p-2 hover:bg-[#dbdbdb]"
       >
         <a
           href="/change-password"

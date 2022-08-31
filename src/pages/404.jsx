@@ -1,8 +1,16 @@
 import * as React from "react";
-
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import Layout from "@/components/layout/Layout";
 import Link from "next/link";
 
+export async function getStaticProps({ locale }) {
+    return {
+        props: {
+            ...(await serverSideTranslations(locale, ["common"])),
+            // Will be passed to the page component as props
+        },
+    };
+}
 export default function NotFoundPage() {
     return (
         <Layout>

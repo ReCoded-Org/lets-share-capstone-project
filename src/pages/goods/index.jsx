@@ -12,8 +12,8 @@ import { ImSearch } from "react-icons/im";
 import { IoIosArrowDown } from "react-icons/io";
 import Link from "next/link";
 import { useCollection } from "react-firebase-hooks/firestore";
-import { auth, db } from "firebaseConfig";
-import { collection, collectionGroup, query } from "firebase/firestore";
+import { db } from "firebaseConfig";
+import { collection, query } from "firebase/firestore";
 
 // This is an array for test purposes ***WILL BE DELETED LATER***
 
@@ -136,11 +136,7 @@ const GoodsPage = () => {
     const [listCity, setListCity] = useState(false);
     const [sortRecent, setSortRecent] = useState(false);
 
-    const [items, loading, error] = useCollection(
-        query(collection(db, "items"))
-    );
-
-    console.log(items?.docs[0].data());
+    const [items] = useCollection(query(collection(db, "items")));
 
     function search(items) {
         return items?.docs?.filter((itemm) => {
@@ -166,8 +162,6 @@ const GoodsPage = () => {
             }
         });
     }
-
-    console.log(search(items));
 
     return (
         <Layout>
@@ -251,15 +245,25 @@ const GoodsPage = () => {
                 </span>
 
                 <div className='goodsSection order-last my-5 flex w-full flex-row flex-wrap justify-center gap-5  md:gap-5 md:gap-y-8 lg:justify-center'>
-                    {items?.docs.map((item, i) => {
-                        return (
-                            <PopularItemsCard
-                                key={i}
-                                id={item.id}
-                                item={item.data()}
-                            />
-                        );
-                    })}
+                    {search(items)
+                        ? search(items).map((item, i) => {
+                              return (
+                                  <PopularItemsCard
+                                      key={i}
+                                      id={item.id}
+                                      item={item.data()}
+                                  />
+                              );
+                          })
+                        : items?.docs.map((item, i) => {
+                              return (
+                                  <PopularItemsCard
+                                      key={i}
+                                      id={item.id}
+                                      item={item.data()}
+                                  />
+                              );
+                          })}
                 </div>
             </div>
         </Layout>

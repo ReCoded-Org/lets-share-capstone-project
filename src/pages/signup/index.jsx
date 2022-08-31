@@ -7,12 +7,12 @@ import Option from "@/components/option";
 import Button from "@/components/button";
 import { FaFacebookSquare, FaGoogle } from "react-icons/fa";
 
-import { useAuth, upload } from "context/AuthContext";
+import { useAuth } from "context/AuthContext";
 import { useState } from "react";
 import { updateProfile } from "firebase/auth";
 import { auth, db, storage } from "firebaseConfig";
 import { useEffect } from "react";
-import { addDoc, collection, doc, setDoc } from "firebase/firestore";
+import { doc, setDoc } from "firebase/firestore";
 import { useRouter } from "next/router";
 import { AiOutlineCloudUpload } from "react-icons/ai";
 import { getDownloadURL, ref, uploadBytes } from "firebase/storage";
@@ -31,7 +31,7 @@ export default function Signup() {
 
     const router = useRouter();
 
-    const { user, signup, loading, setLoading } = useAuth();
+    const { user, signup, setLoading } = useAuth();
     const [photo, setPhoto] = useState(null);
     const [photoURL, setPhotoURL] = useState(
         "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
@@ -53,8 +53,8 @@ export default function Signup() {
 
     const {
         email,
-        password,
-        confirmPassword,
+        // password,
+        // confirmPassword,
         displayName,
         surName,
         phone,
@@ -68,16 +68,14 @@ export default function Signup() {
     }
 
     const handleSubmit = async (e) => {
-        console.log(formData);
         e.preventDefault();
         await signup(formData.email, formData.password)
             .then((response) => {
-                console.log(response);
                 updateProfile(response.user, {
                     displayName: formData.displayName,
                 });
                 const usersRef = doc(db, "users", response.user.uid);
-                const docRef = setDoc(usersRef, {
+                setDoc(usersRef, {
                     displayName,
                     surName,
                     location,
@@ -100,10 +98,10 @@ export default function Signup() {
     useEffect(() => {
         if (user?.photoURL) {
             setPhotoURL(user.photoURL);
+        } else {
+            setPhotoURL(photoURL);
         }
-    }, [user]);
-
-    console.log(auth.currentUser);
+    }, [photoURL, user.photoURL]);
 
     return (
         <Layout>

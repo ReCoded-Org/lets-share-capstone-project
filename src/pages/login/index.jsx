@@ -2,7 +2,7 @@ import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import * as React from "react";
 import { AiFillFacebook } from "react-icons/ai";
-import { FaGoogle, FaInstagram } from "react-icons/fa";
+import { FaGoogle } from "react-icons/fa";
 import Layout from "@/components/layout/Layout";
 import Image from "next/image";
 import { useState } from "react";
@@ -26,11 +26,9 @@ export default function Login() {
         password: "",
     });
 
-    const [email, setEmail] = useState("");
-
     const router = useRouter();
 
-    const { user, login, signInWithGoogle } = useAuth();
+    const { login, signInWithGoogle } = useAuth();
 
     const handleSubmit = async (e) => {
         e.preventDefault();

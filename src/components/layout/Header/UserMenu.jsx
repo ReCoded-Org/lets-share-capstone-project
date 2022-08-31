@@ -10,10 +10,8 @@ import Link from "next/link";
 const UserMenu = () => {
     const { t } = useTranslation("common");
 
-    const { user, logout, loading } = useAuth();
+    const { user, logout } = useAuth();
     const router = useRouter();
-
-    console.log(loading);
 
     return (
         <Menu as='div' className='relative ml-2'>
@@ -98,9 +96,9 @@ const UserMenu = () => {
                     {user && (
                         <Menu.Item>
                             <a
-                                onClick={() => {
-                                    logout();
-                                    router.push("/login");
+                                onClick={async () => {
+                                    router.push("/login").then;
+                                    await logout();
                                 }}
                                 href=''
                                 className='py-2   px-2 text-center  text-sm text-fontColor hover:bg-btnBgHover'

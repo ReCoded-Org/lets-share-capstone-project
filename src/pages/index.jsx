@@ -28,20 +28,16 @@ export default function HomePage() {
     // const { t } = useTranslation("common");
     //need to remove below item object and pass {items} as props in this function
 
-    const [list, loading, error] = useCollection(
-        query(collection(db, "items"))
-    );
+    const [list, loading] = useCollection(query(collection(db, "items")));
 
     let itemsList = list?.docs;
-
-    console.log(itemsList);
 
     const blogs = [
         {
             id: 1,
             date: "7 july 2022",
             title: "My-Blog" /*(An actual title should be provided here for the dynamic routing)*/,
-            image: "/Photo.png" /*(The path of image should be provided)*/,
+            image: "/1.svg" /*(The path of image should be provided)*/,
             imageAlt:
                 "Sunset in the mountains" /*(An actual ALT should be provided)*/,
         },
@@ -49,7 +45,7 @@ export default function HomePage() {
             id: 2,
             date: "7 july 2022",
             title: "My-Blog-second" /*(An actual title should be provided here for the dynamic routing)*/,
-            image: "/Photo.png" /*(The path of image should be provided)*/,
+            image: "/2.svg" /*(The path of image should be provided)*/,
             imageAlt:
                 "Sunset in the mountains" /*(An actual ALT should be provided)*/,
         },
@@ -57,15 +53,7 @@ export default function HomePage() {
             id: 3,
             date: "7 july 2022",
             title: "My-Blog-third" /*(An actual title should be provided here for the dynamic routing)*/,
-            image: "/Photo.png" /*(The path of image should be provided)*/,
-            imageAlt:
-                "Sunset in the mountains" /*(An actual ALT should be provided)*/,
-        },
-        {
-            id: 4,
-            date: "7 july 2022",
-            title: "My-Blog-forth" /*(An actual title should be provided here for the dynamic routing)*/,
-            image: "/Photo.png" /*(The path of image should be provided)*/,
+            image: "/3.svg" /*(The path of image should be provided)*/,
             imageAlt:
                 "Sunset in the mountains" /*(An actual ALT should be provided)*/,
         },

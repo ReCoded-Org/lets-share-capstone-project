@@ -10,42 +10,42 @@ function List() {
                 {t("common.partners")}
             </h2>
             <div className=' container mx-auto mt-10 flex grid-cols-2 flex-col items-center gap-10 px-4 text-center sm:grid md:grid-cols-4 md:px-10 lg:flex-row  lg:justify-around xl:grid-cols-4'>
-                <div className='relative mx-auto aspect-video w-64  md:w-40'>
+                <div className=' mx-auto w-40 md:w-40'>
                     <Image
                         src='/images/ReCoded.webp'
                         alt='partner'
-                        width={50}
-                        height={30}
+                        width={55}
+                        height={20}
                         layout='responsive'
                         className='rounded-md'
                     />
                 </div>
-                <div className='relative mx-auto aspect-video w-64 md:w-40'>
+                <div className='mx-auto w-40 md:w-32'>
                     <Image
                         src='/images/US_Department.svg.png'
                         alt='partner'
-                        width={50}
+                        width={30}
                         height={30}
                         layout='responsive'
                         className='rounded-md'
                     />
                 </div>
-                <div className='relative mx-auto aspect-video w-64 md:w-40'>
+                <div className='mx-auto w-40 md:w-40'>
                     <Image
                         src='/images/QatarCharity.png'
                         alt='partner'
-                        width={50}
-                        height={30}
+                        width={60}
+                        height={25}
                         layout='responsive'
                         className='rounded-md'
                     />
                 </div>
-                <div className='relative mx-auto aspect-video w-64 md:w-40'>
+                <div className=' mx-auto w-40 md:w-40'>
                     <Image
                         src='/images/Flatiron_School.png'
                         alt='partner'
-                        width={50}
-                        height={30}
+                        width={60}
+                        height={25}
                         layout='responsive'
                         className='rounded-md'
                     />

@@ -8,30 +8,43 @@ import { HiLocationMarker, HiUserCircle } from "react-icons/hi";
 import { FiShoppingBag } from "react-icons/fi";
 
 import PopularItemCard from "@/components/PopularItemsCard";
-import { useCollection, useDocument } from "react-firebase-hooks/firestore";
+import { useCollection } from "react-firebase-hooks/firestore";
 import { db } from "firebaseConfig";
 import { collection, doc, getDoc, getDocs, query } from "firebase/firestore";
-import { BsListStars } from "react-icons/bs";
-import { useAuth } from "context/AuthContext";
-import { auth } from "firebaseConfig";
+// import { useAuth } from "context/AuthContext";
 
 export async function getStaticPaths({ locales }) {
+    // const paths = items.flatMap((item) => {
+    //     return locales.map((locale) => {
+    //         return {
+    //             params: { id: item.id.toString() },
+    //             locale: locale,
+    //         };
+    //     });
+    // });
+    // return {
+    //     paths: paths,
+    //     fallback: false,
+    // };
+
     let itemss = [];
     const querySnapshot = await getDocs(collection(db, "items"));
+
     querySnapshot.forEach((doc) => {
         itemss.push(doc.id);
         // doc.data() is never undefined for query doc snapshots
-        console.log(doc.id, " => ", doc.data());
     });
 
     // let items = Object.keys(itemss)
 
-    const paths = itemss.map((id) => {
-        return {
-            params: { id: id.toString() },
-        };
+    const paths = itemss.flatMap((id) => {
+        return locales.map((locale) => {
+            return {
+                params: { id: id.toString() },
+                locale: locale,
+            };
+        });
     });
-    console.log(paths);
     return {
         paths: paths,
         fallback: false,
@@ -39,10 +52,8 @@ export async function getStaticPaths({ locales }) {
 }
 
 export async function getStaticProps({ params, locale }) {
-    console.log(params);
     const docRef = doc(db, "items", params.id);
     const itema = await getDoc(docRef);
-    console.log({ I: itema.data() });
 
     return {
         props: {
@@ -52,11 +63,10 @@ export async function getStaticProps({ params, locale }) {
     };
 }
 
-function Item({ item, items }) {
-    console.log(item.user);
+function Item({ item }) {
     const { t } = useTranslation("common");
 
-    const { profile } = useAuth();
+    // const { profile } = useAuth();
 
     const [user, setUser] = useState({});
 
@@ -65,24 +75,19 @@ function Item({ item, items }) {
             const docRef = doc(db, "users", item.user);
             const docSnap = await getDoc(docRef);
             let data = docSnap.data();
-            console.log(data);
             setUser(data);
         };
         update();
-    }, []);
+    }, [item.user]);
 
-    const [list, loading, error] = useCollection(
-        query(collection(db, "items"))
-    );
-
-    console.log(user);
+    const [list] = useCollection(query(collection(db, "items")));
 
     const settings = {
-        customPaging: function () {
+        customPaging: function (i) {
             return (
                 <a className=''>
                     <Image
-                        src={item.itemImage}
+                        src={item.itemImage[i]}
                         width={100}
                         height={80}
                         className=''
@@ -92,7 +97,7 @@ function Item({ item, items }) {
             );
         },
         dots: true,
-        dotsClass: "slick-dots  ",
+        dotsClass: "slick-dots slick-thumb",
         infinite: true,
         autoplay: true,
         autoplaySpeed: 4000,
@@ -103,7 +108,7 @@ function Item({ item, items }) {
         slidesToScroll: 1,
     };
 
-    const images = [item.itemImage, item.itemImage, item.itemImage];
+    const images = item.itemImage;
 
     return (
         <Layout>
@@ -172,7 +177,11 @@ function Item({ item, items }) {
                     </h1>
                     <div className='mx-auto mt-10 mb-10 grid grid-cols-1 gap-5 text-center sm:grid-cols-2 md:text-left lg:grid-cols-3 lg:gap-10 xl:grid-cols-4 xl:gap-16 2xl:grid-cols-5'>
                         {list?.docs.slice(0, 5).map((item) => (
-                            <PopularItemCard item={item.data()} key={item.id} />
+                            <PopularItemCard
+                                item={item.data()}
+                                key={item.id}
+                                id={item.id}
+                            />
                         ))}
                     </div>
                 </div>
