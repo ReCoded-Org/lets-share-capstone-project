@@ -35,24 +35,24 @@ export default function HomePage() {
     const blogs = [
         {
             id: 1,
-            date: "7 july 2022",
-            title: "My-Blog" /*(An actual title should be provided here for the dynamic routing)*/,
+            date: "7 July 2022",
+            title: "4-reasons-why-donating-is-important" /*(An actual title should be provided here for the dynamic routing)*/,
             image: "/1.svg" /*(The path of image should be provided)*/,
             imageAlt:
                 "Sunset in the mountains" /*(An actual ALT should be provided)*/,
         },
         {
             id: 2,
-            date: "7 july 2022",
-            title: "My-Blog-second" /*(An actual title should be provided here for the dynamic routing)*/,
+            date: "7 July 2022",
+            title: "Why-donating-is-better-than-recycling" /*(An actual title should be provided here for the dynamic routing)*/,
             image: "/2.svg" /*(The path of image should be provided)*/,
             imageAlt:
                 "Sunset in the mountains" /*(An actual ALT should be provided)*/,
         },
         {
             id: 3,
-            date: "7 july 2022",
-            title: "My-Blog-third" /*(An actual title should be provided here for the dynamic routing)*/,
+            date: "7 July 2022",
+            title: "What-should-I-do-before-donating-my-device" /*(An actual title should be provided here for the dynamic routing)*/,
             image: "/3.svg" /*(The path of image should be provided)*/,
             imageAlt:
                 "Sunset in the mountains" /*(An actual ALT should be provided)*/,
